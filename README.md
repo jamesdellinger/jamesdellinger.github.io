@@ -1,6 +1,2 @@
----
-layout: default
-title: "James Dellinger's Homepage"
----
+My [personal website](https://jamesdellinger.net).
 
-* [Updated CV](/cv)
