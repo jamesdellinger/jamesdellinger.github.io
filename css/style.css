@@ -1,14 +1,14 @@
 @font-face {
     font-family: MinionPro;
     src:url("/fonts/minionpro-regular.otf");
-    src:url("/fonts/minionpro-it.otf");
-    src:url("/fonts/minionpro-semibold.otf");
+    /* src:url("/fonts/minionpro-it.otf"); */
+    /* src:url("/fonts/minionpro-semibold.otf"); */
 }
 
 @font-face {
     font-family: MyriadPro;
-    src:url("/fonts/myriadpro-regular.otf");
-    src:url("/fonts/myriadpro-light.otf");
+    /* src:url("/fonts/myriadpro-regular.otf"); */
+    /* src:url("/fonts/myriadpro-light.otf"); */
     src:url("/fonts/myriadpro-semibold.otf");
 }
 
