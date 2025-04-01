@@ -1,2 +1,3 @@
-# jamesdellinger.github.io
-Personal website.
+James Dellinger's Homepage
+
+* [Updated CV](/cv)
