@@ -1,3 +1,5 @@
-James Dellinger's Homepage
+---
+title: "James Dellinger's Homepage"
+---
 
 * [Updated CV](/cv)
