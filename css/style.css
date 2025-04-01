@@ -1,8 +1,13 @@
+@font-face {
+    font-family: MinionPro;
+    src:url("/fonts/minionpro-regular.otf");
+}
+
 html {
     background-color: #181c27;
 }
 
 p {
     color: #b2b5be;
-    font: Arial;
+    font-family: MinionPro;
 }
