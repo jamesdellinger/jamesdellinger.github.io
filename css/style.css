@@ -17,11 +17,25 @@ html {
 }
 
 p {
-    color: #b2b5be;
+    color: #ffefcb;
+    /* color: #b2b5be;  */
     font-family: MinionPro;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #b2b5be;
+    /* color: #b2b5be; */
+    color: #ffefcb;
     font-family: MyriadPro;
 }
+
+/* h2 {
+    TODO: increase lead vertical spacing
+} */
+
+a:link {
+    color: greenyellow;
+  }
+
+a:visited {
+    color: #FDB515;
+  }
