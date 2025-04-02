@@ -1,55 +1,15 @@
-@font-face {
-    font-family: 'Minion Pro';
-    font-style: normal;
-    font-weight: 200;
-    src:url("/fonts/minionpro-regular.otf");
-}
 
-@font-face {
-    font-family: 'Minion Pro';
-    font-style: italic;
-    src:url("/fonts/minionpro-it.otf");
-}
-
-@font-face {
-    font-family: 'Minion Pro';
-    font-style: bold;
-    src:url("/fonts/minionpro-semibold.otf");
-}
-
-@font-face {
-    font-family: 'Myriad Pro';
-    font-style: normal;
-    src:url("/fonts/myriadpro-regular.otf");
-}
-
-@font-face {
-    font-family: 'Myriad Pro';
-    font-style: bold;
-    src:url("/fonts/myriadpro-semibold.otf");
-}
-
-@font-face {
-    font-family: 'Myriad Pro Light';
-    font-style: normal;
-    src:url("/fonts/myriadpro-light.otf");
-}
 
 html {
-    background-color: #f6f1e3;
+    background-color: #fffffe;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #181c27;
 }
 
-p {
-    font-family: 'Myriad Pro';
-}
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Myriad Pro';
-}
 
 /* h2 {
     TODO: increase lead vertical spacing
