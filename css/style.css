@@ -36,7 +36,7 @@
 }
 
 html {
-    background-color: #e6ddc5;
+    background-color: #f6f1e3;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -54,11 +54,3 @@ h1, h2, h3, h4, h5, h6 {
 /* h2 {
     TODO: increase lead vertical spacing
 } */
-
-a:link {
-    color: greenyellow;
-  }
-
-a:visited {
-    color: #FDB515;
-  }
