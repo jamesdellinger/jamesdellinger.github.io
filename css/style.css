@@ -6,19 +6,10 @@ html {
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* padding:50px; */
+    padding:50px;
     color: #181c27;
     font-size: 16px;
     line-height: 1.5;
     width: 80ch;
 }
 
-/* p {
-    font-size: 18px;
-} */
-
-
-
-/* h2 {
-    TODO: increase lead vertical spacing
-} */
