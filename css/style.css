@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Minion Pro';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     src:url("/fonts/minionpro-regular.otf");
 }
 
@@ -39,15 +39,15 @@ html {
     background-color: #cfb284;
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6 {
     color: #181c27;
-    /* color: #b2b5be;  */
+}
+
+p {
     font-family: 'Minion Pro';
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* color: #b2b5be; */
-    color: #181c27;
     font-family: 'Myriad Pro';
 }
 
