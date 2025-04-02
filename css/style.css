@@ -1,15 +1,37 @@
 @font-face {
-    font-family: MinionPro;
+    font-family: 'Minion Pro';
+    font-style: normal;
     src:url("/fonts/minionpro-regular.otf");
-    /* src:url("/fonts/minionpro-it.otf"); */
-    /* src:url("/fonts/minionpro-semibold.otf"); */
 }
 
 @font-face {
-    font-family: MyriadPro;
-    /* src:url("/fonts/myriadpro-regular.otf"); */
-    /* src:url("/fonts/myriadpro-light.otf"); */
+    font-family: 'Minion Pro';
+    font-style: italic;
+    src:url("/fonts/minionpro-it.otf");
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    font-style: bold;
+    src:url("/fonts/minionpro-semibold.otf");
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    src:url("/fonts/myriadpro-regular.otf");
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: bold;
     src:url("/fonts/myriadpro-semibold.otf");
+}
+
+@font-face {
+    font-family: 'Myriad Pro Light';
+    font-style: normal;
+    src:url("/fonts/myriadpro-light.otf");
 }
 
 html {
@@ -19,13 +41,13 @@ html {
 p {
     color: #cfb284;
     /* color: #b2b5be;  */
-    font-family: MinionPro;
+    font-family: 'Minion Pro';
 }
 
 h1, h2, h3, h4, h5, h6 {
     /* color: #b2b5be; */
     color: #cfb284;
-    font-family: MyriadPro;
+    font-family: 'Myriad Pro';
 }
 
 /* h2 {
