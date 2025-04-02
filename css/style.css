@@ -44,11 +44,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    font: 'Myriad Pro';
+    font-family: 'Myriad Pro';
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font: 'Myriad Pro';
+    font-family: 'Myriad Pro';
 }
 
 /* h2 {
