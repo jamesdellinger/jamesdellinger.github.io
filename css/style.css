@@ -12,6 +12,7 @@ body {
     /* font-size: 18px; */
     line-height: 1.5;
     max-width: 80ch;
+    left: 50%;
 }
 
 a {
