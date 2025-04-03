@@ -13,6 +13,7 @@ body {
     line-height: 1.5;
     width: 80ch;
     overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 a {
