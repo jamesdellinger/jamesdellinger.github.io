@@ -1,8 +1,17 @@
----
-layout: default
----
-
-<h1 id="logo"><a href="/"><img src="../images/cv_pic_circle_500.png" alt="profile pic" style="width:100px;"/></a></h1>
-
-{{ content }}
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1 id="profile_pic"><a href="/"><img src="../images/cv_pic_circle_500.png" alt="profile pic" style="width:100px;"/></a> {{ page.title }}</h1>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      &copy; James Dellinger <script>document.write(/\d{4}/.exec(Date())[0])</script>
+    </footer>
+  </body>
+</html>
