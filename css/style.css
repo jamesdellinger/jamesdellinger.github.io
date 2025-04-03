@@ -12,9 +12,7 @@ body {
     /* font-size: 18px; */
     line-height: 1.5;
     max-width: 80ch;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    display: block;
+    justify-content: center;
 }
 
 a {
