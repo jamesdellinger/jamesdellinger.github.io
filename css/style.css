@@ -14,6 +14,7 @@ body {
     width: 80ch;
     overflow-wrap: break-word;
     word-break: break-word;
+    display: block;
 }
 
 a {
