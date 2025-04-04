@@ -16,7 +16,7 @@ body {
     margin-left: auto;
 }
 
-#highlights {
+.centered_list {
     display: flex;
     justify-content: center;
 }
