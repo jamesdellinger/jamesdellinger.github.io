@@ -16,6 +16,10 @@ body {
     margin-left: auto;
 }
 
+ol {
+    justify-content: center;
+}
+
 a {
     color: rgb(65,110,210);
     text-decoration: none;
