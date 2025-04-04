@@ -18,7 +18,9 @@ body {
 
 #highlights {
     display: flex;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    /* justify-content: center; */
 }
 
 a {
