@@ -16,11 +16,6 @@ body {
     margin-left: auto;
 }
 
-span { display: flex; 
-       justify-content: center;
-       align-items: center;
-}
-
 a {
     color: rgb(65,110,210);
     text-decoration: none;
