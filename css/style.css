@@ -31,7 +31,7 @@ a {
     justify-content: space-between;
 }
 
-.date_city_box {
+.date_city_text {
     /* flex-direction: column; */
     font-size: 15px;
     text-align: right;
