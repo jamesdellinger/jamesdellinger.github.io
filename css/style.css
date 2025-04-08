@@ -29,6 +29,7 @@ a {
 .date_city_heading {
     display: flex;
     justify-content: space-between;
+    vertical-align:middle;
 }
 
 .date_city_text {
