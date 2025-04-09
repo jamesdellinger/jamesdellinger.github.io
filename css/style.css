@@ -32,13 +32,18 @@ a {
     vertical-align:middle;
 }
 
-.date_city_text {
-    /* flex-direction: column; */
+.date_city_box {
+    flex-direction: column;
     font-size: 15px;
     text-align: right;
     line-height:1.5;
     color:#797979;
+    /* margin-top: 0;
+    margin-bottom:0; */
+}
+
+.no_margin_text {
     margin-top: 0;
-    margin-bottom:0;
+    margin-bottom:0;  
 }
 
