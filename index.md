@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: "James Dellinger's Homepage"
 ---
 ### My Recent Work
