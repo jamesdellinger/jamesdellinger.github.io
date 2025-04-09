@@ -29,11 +29,10 @@ a {
 .date_city_heading {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .date_city_text {
-    /* flex-direction: column; */
     font-size: 15px;
     text-align: right;
     line-height:1.5;
@@ -41,9 +40,3 @@ a {
     margin-top: 0;
     margin-bottom:0;
 }
-
-.no_margin_text {
-    margin-top: 0;
-    margin-bottom:0;  
-}
-
