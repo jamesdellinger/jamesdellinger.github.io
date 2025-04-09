@@ -9,4 +9,4 @@ title: "James Dellinger's Homepage"
 * [Buying Your First Potentiometer]()—The right and wrong ways to adjust volume.
 
 ### What's Interesting
-* [*Distant Force*](https://archive.org/details/distantforcememo0000robe/page/n3/mode/2up)—A history of the Teledyne Corporation and its founder, Dr. Henry Singleton. By Dr. George A. Roberts. Learned of it from my friend [@zachcaceres](https://x.com/zachcaceres/status/1849803042478055883).
+* [*Distant Force*](https://archive.org/details/distantforcememo0000robe/page/n3/mode/2up)—A history of the Teledyne Corporation and its founder, Dr. Henry Singleton. By Dr. George A. Roberts. Learned about it from my friend [@zachcaceres](https://x.com/zachcaceres/status/1849803042478055883).
