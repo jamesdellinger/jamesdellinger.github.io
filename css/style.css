@@ -21,6 +21,12 @@ a {
     text-decoration: none;
 }
 
+.title_heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .centered_list {
     display: flex;
     justify-content: center;
