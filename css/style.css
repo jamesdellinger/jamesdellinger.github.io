@@ -12,6 +12,7 @@ html {
 
 body {
     line-height: 26px;
+    max-width: 65ch;
 }
 
 a {
