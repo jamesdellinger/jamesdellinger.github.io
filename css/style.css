@@ -8,11 +8,10 @@ html {
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 10px;
-    padding-top: 10px;
+    /* padding: 10px; */
+    /* padding-top: 10px; */
     color: #181c27;
     font-size: 16px;
-    /* font-size: 18px; */
     line-height: 1.5;
     max-width: 80ch;
     margin-right: auto;
