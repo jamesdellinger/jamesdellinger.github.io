@@ -1,6 +1,7 @@
 
 html {
     background-color: #fffffe;
+    max-width: 80ch;
 }
 
 body {
