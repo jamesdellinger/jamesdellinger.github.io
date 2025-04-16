@@ -1,4 +1,6 @@
-
+:root {
+    --slight_transparent: rgba(0, 0, 0, 0.75);
+  }
 
 html {
     background-color: #fffffe;
@@ -41,7 +43,7 @@ a {
     font-size: 15px;
     text-align: right;
     line-height:1.3;
-    color:#000000;
+    color:var(--slight_transparent);
     margin-top: 0;
     margin-bottom:0;
 }
