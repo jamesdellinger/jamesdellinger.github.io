@@ -1,7 +1,7 @@
 
 html {
     background-color: #fffffe;
-    max-width: 65ch;
+    max-width: 60ch;
     margin-right: auto;
     margin-left: auto;
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,7 +12,6 @@ html {
 
 body {
     line-height: 26px;
-    max-width: 65ch;
 }
 
 a {
