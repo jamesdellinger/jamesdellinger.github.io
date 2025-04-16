@@ -43,12 +43,6 @@ h1 {
     justify-content: center;
 }
 
-.date_city_heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 .date_city_text {
     font-size: 15px;
     line-height:1.3;
