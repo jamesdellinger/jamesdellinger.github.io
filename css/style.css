@@ -45,7 +45,7 @@ h1 {
 .date_city_heading {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: flex-start;
     align-items: center;
 }
 
