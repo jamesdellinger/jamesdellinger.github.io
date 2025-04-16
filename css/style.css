@@ -21,6 +21,15 @@ a {
     text-decoration: none;
 }
 
+footer {
+    text-align: center; 
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
 .title_heading {
     display: flex;
     vertical-align: middle;
