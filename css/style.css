@@ -35,6 +35,7 @@ h1 {
     vertical-align: middle;
     justify-content: flex-start;
     align-items: center;
+    line-height:0;
 }
 
 .centered_list {
