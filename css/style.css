@@ -36,6 +36,10 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     line-height:0;
+
+    p {
+        font-size: 15px;
+    }
 }
 
 .centered_list {
@@ -50,7 +54,7 @@ h1 {
 }
 
 .date_city_text {
-    font-size: 15px;
+    /* font-size: 15px; */
     line-height:1.3;
     color:var(--slight_transparent);
     margin-top: 0;
