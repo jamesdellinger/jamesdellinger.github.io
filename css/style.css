@@ -20,6 +20,7 @@ a {
 
 .title_heading {
     display: flex;
+    vertical-align: middle;
     justify-content: flex-start;
     align-items: center;
 }
