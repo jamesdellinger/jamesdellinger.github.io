@@ -52,7 +52,7 @@ h1 {
 
 .index_title {
     line-height: 44px; 
-    width:400px;
+    max-width:400px;
 }
 
 @media all and (max-width: 550px) {
