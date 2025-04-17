@@ -49,7 +49,6 @@ h1 {
     /* If stacking city/date in a left-aligned column just under the heading: */
     flex-direction: column;
     line-height:0px;
-    align-content: flex-start;
 }
 
 @media all and (max-width: 500px) {
