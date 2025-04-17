@@ -50,7 +50,7 @@ h1 {
     line-height:0px;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 550px) {
 
     h1 {
         font-size: 2em;
