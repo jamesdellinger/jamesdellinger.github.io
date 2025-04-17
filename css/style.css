@@ -41,7 +41,7 @@ h1 {
 .date_city_text {
     display: flex;
     justify-content: space-between;
-    line-height:1.4;
+    line-height:0;
     color:var(--slight_transparent);
     /* margin-top: 0;
     margin-bottom:0; */
