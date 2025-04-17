@@ -1,14 +1,23 @@
 <!doctype html>
 <html lang="en" style="padding-top: 0; margin-top: 0;
                       background: url('../images/sh.jpg') no-repeat top center fixed; 
-                      background-size: auto 140px">
+                      background-size: auto 140px;
+                      
+                      min-height: calc(100% + env(safe-area-inset-top));
+                      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);">
   <head>
     <link rel="icon" type="image/png" href="../images/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/style.css">
-    <meta name="theme-color" content="#000000"/>
+
+    <!-- <meta name="theme-color" content="#000000"/> -->
+
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width"></meta>
+    <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta> 
+
   </head>
   <body style="padding-top: 150px;">
     <h1 class="index_title">{{ page.title }}</h1>
