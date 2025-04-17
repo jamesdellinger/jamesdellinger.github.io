@@ -50,10 +50,19 @@ h1 {
     line-height:0px;
 }
 
+.index_title {
+    line-height: 44px; 
+    width:400px;
+}
+
 @media all and (max-width: 550px) {
 
     .resume_title {
         font-size: 2em;
+    }
+
+    .index_title {
+        font-size: 3em;
     }
 
 }
