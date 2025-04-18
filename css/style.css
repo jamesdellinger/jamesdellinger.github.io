@@ -51,6 +51,7 @@ h1 {
 
 .city_text {
     width: 200px;
+    text-indent: 1em;
 }
 
 .index_title {
