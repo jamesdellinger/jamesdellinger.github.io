@@ -29,6 +29,10 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    margin-top: 21.165px;
+}
+
 .title_heading {
     display: flex;
     vertical-align: middle;
