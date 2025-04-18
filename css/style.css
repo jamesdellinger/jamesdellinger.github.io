@@ -50,8 +50,8 @@ h1 {
     line-height:0px;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 40px;
-    /* justify-content: space-evenly; */
+    /* gap: 40px; */
+    justify-content: space-evenly;
 }
 
 .index_title {
