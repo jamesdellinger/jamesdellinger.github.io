@@ -1,7 +1,14 @@
 <!doctype html>
 <html lang="en" style="padding-top: 0; margin-top: 0;
                       background: url('../images/sh.jpg') no-repeat top center fixed; 
-                      background-size: auto 140px;">
+                      background-size: auto 140px;
+                      
+                      @supports(padding:max(0px)) {
+                          body, header, footer {
+                          padding-left: min(0vmin, env(safe-area-inset-left));
+                          padding-right: min(0vmin, env(safe-area-inset-right));
+                          }
+                      }">
   <head>
     <link rel="icon" type="image/png" href="../images/favicon.png"/>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -13,14 +20,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Status Bar">
     <meta name="apple-mobile-web-app-status-bar-style" content="light-content">
-    <!-- <style>
-        @supports(padding:max(0px)) {
-            body, header, footer {
-                padding-left: min(0vmin, env(safe-area-inset-left));
-                padding-right: min(0vmin, env(safe-area-inset-right));
-            }
-        }
-    </style> -->
 
   </head>
   <body style="padding-top: 150px;">
