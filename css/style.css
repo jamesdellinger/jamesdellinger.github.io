@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-    margin-top: auto;
+    margin-top: 30px;
 }
 
 .title_heading {
@@ -64,6 +64,10 @@ h2 {
 }
 
 @media all and (max-width: 550px) {
+
+    h2 {
+        margin-top: auto;
+    }
 
     .resume_title {
         font-size: 2em;
