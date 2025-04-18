@@ -46,7 +46,11 @@ h1 {
     flex-direction: row;
     justify-content: flex-start;
     /* gap: 40px; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
+}
+
+.city_text {
+    width: 150px;
 }
 
 .index_title {
