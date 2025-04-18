@@ -51,7 +51,7 @@ h1 {
 
 .city_text {
     width: 220px;
-    text-indent: 2em;
+    text-indent: 1em;
 }
 
 .index_title {
@@ -74,10 +74,11 @@ h1 {
         flex-direction: column;
         line-height:0px;
         justify-content: flex-start;
+        text-indent: 1em;
     }
     
     .city_text {
         width: auto;
-        text-indent: 0;
+        /* text-indent: 0; */
     }
 }
