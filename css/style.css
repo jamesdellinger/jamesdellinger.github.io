@@ -70,4 +70,14 @@ h1 {
         line-height:42px;
     }
 
+    .date_city_text {
+        flex-direction: column;
+        line-height:0px;
+        justify-content: flex-start;
+    }
+    
+    .city_text {
+        width: auto;
+        text-indent: 0;
+    }
 }
