@@ -40,18 +40,13 @@ h1 {
 .date_city_text {
     display: flex;
     color:var(--slight_transparent);
-
-    /* If placing city/date text on the same line underneath the heading: */
-    /* justify-content: space-between;
-    line-height:0; */
     
-    /* If stacking city/date in a left-aligned column just under the heading: */
     /* flex-direction: column; */
     line-height:0px;
     flex-direction: row;
     justify-content: flex-start;
     /* gap: 40px; */
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .index_title {
