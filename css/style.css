@@ -39,9 +39,10 @@ h2 {
 }
 
 .resume_body {
-    /* background-color: rgb(255,255,255); */
-    background-color: auto;
+    background-color: rgb(255,255,255);
     line-height: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -92,6 +93,8 @@ h2 {
         line-height: 28px;
         padding-left: 8px;
         padding-right: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 
     .resume_title {
