@@ -35,6 +35,9 @@ h2 {
 
 .resume_html {
     font-size: 15px;
+}
+
+.resume_body {
     line-height: 20px;
 }
 
@@ -77,6 +80,9 @@ h2 {
 
     .resume_html {
         font-size: 17px;
+    }
+
+    .resume_body {
         line-height: 28px;
     }
 
