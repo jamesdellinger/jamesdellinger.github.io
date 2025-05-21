@@ -35,7 +35,8 @@ h2 {
 
 .resume_html {
     background-color: rgb(244, 242, 238);
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .resume_body {
@@ -43,8 +44,8 @@ h2 {
     line-height: 24px;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .title_heading {
@@ -87,6 +88,7 @@ h2 {
     .resume_html {
         background-color: rgb(255,255,255);
         font-size: 17px;
+        font-weight: auto;
     }
 
     .resume_body {
