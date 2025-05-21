@@ -83,14 +83,14 @@ h2 {
     }
 
     .resume_html {
-        background-color: auto;
+        background-color: rgb(255,255,255);
         font-size: 17px;
     }
 
     .resume_body {
-        background-color: default;
         line-height: 28px;
-        padding: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .resume_title {
