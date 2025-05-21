@@ -39,7 +39,8 @@ h2 {
 }
 
 .resume_body {
-    background-color: rgb(255,255,255);
+    /* background-color: rgb(255,255,255); */
+    background-color: auto;
     line-height: 24px;
     padding-left: 16px;
     padding-right: 16px;
