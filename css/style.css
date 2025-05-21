@@ -33,8 +33,9 @@ h2 {
     margin-top: 36px;
 }
 
-.resume_text {
+.resume_html {
     font-size: 15px;
+    line-height: 20px;
 }
 
 .title_heading {
@@ -61,7 +62,6 @@ h2 {
 
 .city_text {
     width: 200px;
-    /* text-indent: 0em; */
 }
 
 .index_title {
@@ -75,8 +75,9 @@ h2 {
         margin-top: auto;
     }
 
-    .resume_text {
+    .resume_html {
         font-size: 17px;
+        line-height: 28px;
     }
 
     .resume_title {
