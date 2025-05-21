@@ -46,6 +46,7 @@ h2 {
     margin-bottom: 0px;
     padding-left: 48px;
     padding-right: 48px;
+    border-style: solid;
     border-left-width: 2px;
     border-right-width: 2px;
     border-left-color: rgb(223,222,219);
