@@ -34,10 +34,12 @@ h2 {
 }
 
 .resume_html {
+    background-color: default;
     font-size: 15px;
 }
 
 .resume_body {
+    background-color: default;
     line-height: 24px;
 }
 
@@ -79,10 +81,12 @@ h2 {
     }
 
     .resume_html {
+        background-color: default;
         font-size: 17px;
     }
 
     .resume_body {
+        background-color: default;
         line-height: 28px;
     }
 
