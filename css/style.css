@@ -66,9 +66,12 @@ h2 {
     margin-bottom: 50px;
 }
 
-.date_city_text {
+.date_city_block {
     color:var(--slight_transparent);
     display: block;
+}
+
+.date_city_text {
     margin-block: 0px;
 }
 
@@ -117,7 +120,7 @@ h2 {
         line-height:42px;
     }
 
-    .date_city_text {
+    .date_city_block {
         display: flex;
         flex-direction: column;
         line-height:0px;
