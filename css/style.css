@@ -71,7 +71,7 @@ h2 {
     color:var(--slight_transparent);
     
     flex-direction: column;
-    line-height:0px;
+    line-height:20px;
     justify-content: flex-start;
     text-indent: 1em;
 }
