@@ -40,7 +40,7 @@ h3 {
 }
 
 hr {
-    width: 1px;
+    height: 1px;
     color: rgb(223,222,219);
 }
 
@@ -109,7 +109,7 @@ hr {
     }
 
     hr {
-        width: 0px;
+        height: 0px;
     }
 
     .resume_html {
