@@ -85,7 +85,7 @@ h3 {
 }
 
 .index_header {
-    margin-bottom: inherit;
+    margin-bottom: unset;
 }
 
 @media all and (max-width: 550px) {
