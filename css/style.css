@@ -70,16 +70,10 @@ h2 {
     display: flex;
     color:var(--slight_transparent);
     
-    /* flex-direction: column; */
+    flex-direction: column;
     line-height:0px;
-    flex-direction: row;
     justify-content: flex-start;
-    /* gap: 40px; */
-    /* justify-content: space-around; */
-}
-
-.city_text {
-    width: 200px;
+    text-indent: 1em;
 }
 
 .index_title {
@@ -132,9 +126,5 @@ h2 {
         line-height:0px;
         justify-content: flex-start;
         text-indent: 1em;
-    }
-    
-    .city_text {
-        width: auto;
     }
 }
