@@ -157,3 +157,9 @@ hr {
         text-indent: 0em;
     }
 }
+
+@media print {
+    body {
+        border-width: 0px !important;
+    }
+}
