@@ -85,7 +85,7 @@ h3 {
 }
 
 .index_header {
-    margin-bottom: auto;
+    margin-bottom: initial;
 }
 
 @media all and (max-width: 550px) {
