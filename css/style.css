@@ -69,6 +69,7 @@ h2 {
 .date_city_text {
     color:var(--slight_transparent);
     display: block;
+    margin-block: 0px;
 }
 
 .index_title {
