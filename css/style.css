@@ -67,13 +67,8 @@ h2 {
 }
 
 .date_city_text {
-    display: flex;
     color:var(--slight_transparent);
-    
-    flex-direction: column;
-    line-height:20px;
-    justify-content: flex-start;
-    text-indent: 1em;
+    display: block;
 }
 
 .index_title {
@@ -122,6 +117,7 @@ h2 {
     }
 
     .date_city_text {
+        display: flex;
         flex-direction: column;
         line-height:0px;
         justify-content: flex-start;
