@@ -41,7 +41,9 @@ h3 {
 
 hr {
     height: 1px;
-    color: rgb(223,222,219);
+    border-width:0px;
+    color:rgb(223,222,219);
+    background-color:rgb(223,222,219);
 }
 
 .resume_html {
@@ -110,6 +112,7 @@ hr {
 
     hr {
         height: 0px;
+        border-width:0px;
     }
 
     .resume_html {
