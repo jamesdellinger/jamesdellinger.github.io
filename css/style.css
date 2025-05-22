@@ -39,6 +39,11 @@ h3 {
     line-height: 24px;
 }
 
+hr {
+    width: 1px;
+    color: rgb(223,222,219);
+}
+
 .resume_html {
     max-width: 800px;
     background-color: rgb(244, 242, 238);
@@ -101,6 +106,10 @@ h3 {
 
     h2 {
         margin-top: auto;
+    }
+
+    hr {
+        width: 0px;
     }
 
     .resume_html {
