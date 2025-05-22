@@ -81,6 +81,11 @@ h3 {
     margin-block: 0px;
 }
 
+.company_text {
+    margin-block: 0px;
+    color: black;
+}
+
 .index_title {
     line-height: 52px; 
     max-width:400px;
