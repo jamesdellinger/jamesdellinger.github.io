@@ -85,7 +85,7 @@ h3 {
 }
 
 .index_header {
-    margin-bottom: unset;
+    margin-bottom: default;
 }
 
 @media all and (max-width: 550px) {
