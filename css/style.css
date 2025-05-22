@@ -33,6 +33,10 @@ h2 {
     margin-top: 36px;
 }
 
+h3 {
+    margin-bottom: 0px;
+}
+
 .resume_html {
     max-width: 800px;
     background-color: rgb(244, 242, 238);
@@ -78,6 +82,10 @@ h2 {
 .index_title {
     line-height: 52px; 
     max-width:400px;
+}
+
+.index_header {
+    margin-bottom: auto;
 }
 
 @media all and (max-width: 550px) {
