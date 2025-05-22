@@ -125,6 +125,6 @@ h2 {
         flex-direction: column;
         line-height:0px;
         justify-content: flex-start;
-        text-indent: 1em;
+        text-indent: 0em;
     }
 }
