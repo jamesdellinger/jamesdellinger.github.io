@@ -70,6 +70,8 @@ hr {
     border-left-color: rgb(223,222,219);
     border-right-color: rgb(223,222,219);
     border-bottom-color: rgb(223,222,219);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .title_heading {
@@ -138,6 +140,8 @@ hr {
         border-left-color: rgb(255,255,255);
         border-right-color: rgb(255,255,255);
         border-bottom-color: rgb(255,255,255);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 
     .resume_title {
