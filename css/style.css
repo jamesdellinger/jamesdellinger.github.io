@@ -54,7 +54,7 @@ hr {
 .resume_body {
     background-color: rgb(255,255,255);
     line-height: 20px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 100px;
     margin-left: 0px;
     margin-right: 0px;
@@ -63,14 +63,19 @@ hr {
     border-left-style: solid;
     border-right-style: solid;
     border-bottom-style: solid;
+    border-top-style: solid;
     border-left-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
+    border-top-width: 1px;
     border-left-color: rgb(223,222,219);
     border-right-color: rgb(223,222,219);
     border-bottom-color: rgb(223,222,219);
+    border-top-color: rgb(223,222,219);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .title_heading {
@@ -136,12 +141,17 @@ hr {
         border-left-width: 0px;
         border-right-width: 0px;
         border-bottom-width: 0px;
+        border-top-width: 0px;
         border-left-color: rgb(255,255,255);
         border-right-color: rgb(255,255,255);
         border-bottom-color: rgb(255,255,255);
+        border-top-color: rgb(255,255,255);
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
+
 
     .resume_title {
         font-size: 2em;
