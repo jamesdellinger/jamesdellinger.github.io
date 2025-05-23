@@ -65,8 +65,10 @@ hr {
     border-right-style: solid;
     border-left-width: 1px;
     border-right-width: 1px;
+    border-bottom-width: 1px;
     border-left-color: rgb(223,222,219);
     border-right-color: rgb(223,222,219);
+    border-bottom-color: rgb(223,222,219);
 }
 
 .title_heading {
@@ -131,8 +133,10 @@ hr {
         margin-right: 8px;
         border-left-width: 0px;
         border-right-width: 0px;
+        border-bottom-width: 0px;
         border-left-color: rgb(255,255,255);
         border-right-color: rgb(255,255,255);
+        border-bottom-color: rgb(255,255,255);
     }
 
     .resume_title {
