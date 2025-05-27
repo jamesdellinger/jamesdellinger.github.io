@@ -23,10 +23,10 @@ or worse, it has become the standard, I suppose.
 
     {{ define "main" }}
     {{ $sectionBreak := "<p>[SECTION-BREAK]</p>" }}
-    {{ $sections := split content $sectionBreak }}
+    {{ $sections := split .Content $sectionBreak }}
     
     {{ if eq (len $sections) 1 }}
-      {{ content }}
+      {{ .Content }}
     {{ else }}
       {{ range $k, $v := $sections }}
         {{ $id := printf "section-%d" (add 1 $k) }}
