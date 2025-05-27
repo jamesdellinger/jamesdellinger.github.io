@@ -26,7 +26,7 @@ or worse, it has become the standard, I suppose.
     {{ $sections := split content $sectionBreak }}
     
     {{ if eq (len $sections) 1 }}
-      {{ .Content }}
+      {{ content }}
     {{ else }}
       {{ range $k, $v := $sections }}
         {{ $id := printf "section-%d" (add 1 $k) }}
