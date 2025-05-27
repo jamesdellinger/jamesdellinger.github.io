@@ -13,18 +13,19 @@ or worse, it has become the standard, I suppose.
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body class="resume_body">
+  <body>
     <div class="title_heading">
         <a href="/"><img style="width:65px;" src="../images/cv_pic_circle_500.png" alt="profile pic"></a>
         <h1 class="resume_title">&nbsp;&nbsp;{{ page.title }}</h1>
     </div>
-    <section>
+    <section class="resume_body">
       {{ content }}
     </section>
-    </body>
-    <br /><br />
+    <br/><br/>
+    <section>
     <footer>
       © <script>document.write(/\d{4}/.exec(Date())[0])</script> James Dellinger
     </footer>
-  <!-- </body> -->
+    </section>
+  </body>
 </html>
