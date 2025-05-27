@@ -21,7 +21,7 @@ or worse, it has become the standard, I suppose.
 
 
 
-
+    {{ define "main" }}
     {{ $sectionBreak := "<p>[SECTION-BREAK]</p>" }}
     {{ $sections := split content $sectionBreak }}
     
@@ -34,6 +34,7 @@ or worse, it has become the standard, I suppose.
           {{ $v | strings.TrimSpace | safeHTML }}
         </div>
       {{ end }}
+    {{ end }}
     {{ end }}
 
     <!-- <section class="resume_body">
