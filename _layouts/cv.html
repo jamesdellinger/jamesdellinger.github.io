@@ -18,14 +18,30 @@ or worse, it has become the standard, I suppose.
         <a href="/"><img style="width:65px;" src="../images/cv_pic_circle_500.png" alt="profile pic"></a>
         <h1 class="resume_title">&nbsp;&nbsp;{{ page.title }}</h1>
     </div>
-    <section class="resume_body">
+
+
+
+
+    {{ $sectionBreak := "<p>[SECTION-BREAK]</p>" }}
+    {{ $sections := split content $sectionBreak }}
+    
+    {{ if eq (len $sections) 1 }}
+      {{ .Content }}
+    {{ else }}
+      {{ range $k, $v := $sections }}
+        {{ $id := printf "section-%d" (add 1 $k) }}
+        <div id="{{ $id }}">
+          {{ $v | strings.TrimSpace | safeHTML }}
+        </div>
+      {{ end }}
+    {{ end }}
+
+    <!-- <section class="resume_body">
       {{ content }}
-    </section>
+    </section> -->
     <br/><br/>
-    <!-- <section> -->
     <footer>
       © <script>document.write(/\d{4}/.exec(Date())[0])</script> James Dellinger
     </footer>
-    <!-- </section> -->
   </body>
 </html>
