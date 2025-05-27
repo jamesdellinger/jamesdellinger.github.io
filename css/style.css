@@ -177,7 +177,7 @@ hr {
 }
 
 @media print {
-    body {
+    section {
         border-width: 0px !important;
     }
 }
