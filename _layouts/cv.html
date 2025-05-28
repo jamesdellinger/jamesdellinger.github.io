@@ -24,7 +24,7 @@ or worse, it has become the standard, I suppose.
     is used to denote section splits in the .md file.) -->
     
     {% assign sectionBreak = "<p>[SECTION-BREAK]</p>" %}
-    {% assign sectionArray = page.content | split: sectionBreak %}
+    {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
         <section class="resume_body">
           {{ section }}
