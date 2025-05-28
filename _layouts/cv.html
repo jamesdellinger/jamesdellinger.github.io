@@ -1,7 +1,7 @@
 <!-- 
-The look and feel of this resume is best summed up by the 
-expression, "more LinkedIn than LinkedIn." Well, for better
-or worse, it has become the standard, I suppose. 
+The look and feel of this resume is best summed up as 
+"more LinkedIn than LinkedIn." For better or worse, it 
+has become the standard. 
 -->
 
 <!doctype html>
@@ -21,7 +21,9 @@ or worse, it has become the standard, I suppose.
 
     <!-- Github uses Jekyll to build static webpages. So use Liquid to 
     split the .md file into sections. (The string "[SECTION-BREAK]"
-    is used to denote section splits in the .md file.) -->
+    is used to denote section splits in the .md file. It is of course
+    rendered as <p>[SECTION-BREAK]</p> once that .md file has been
+    parsed.) -->
     
     {% assign sectionBreak = "<p>[SECTION-BREAK]</p>" %}
     {% assign sectionArray = content | split: sectionBreak %}
