@@ -226,8 +226,4 @@ hr {
     @page: first {
         header { display:block; } 
     }
-
-    .resume_top_bar {
-        @page:first header { display:block; }
-    }
 }
