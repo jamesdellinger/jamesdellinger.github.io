@@ -80,6 +80,14 @@ hr {
     border-top-right-radius: 8px;
 }
 
+.resume_top_bar {
+    background-color: rgb(255,255,255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .title_heading {
     display: flex;
     vertical-align: middle;
