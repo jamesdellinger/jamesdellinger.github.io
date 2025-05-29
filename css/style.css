@@ -92,6 +92,7 @@ hr {
 }
 
 .title_heading {
+    max-width: 620px;
     display: flex;
     vertical-align: middle;
     justify-content: flex-start;
