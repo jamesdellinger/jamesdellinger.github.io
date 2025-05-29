@@ -90,6 +90,7 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
+    margin-bottom: 105px;
     width: 100%;
     border-bottom-color: rgba(140, 140, 140, 0.2);
     border-bottom-style: solid;
