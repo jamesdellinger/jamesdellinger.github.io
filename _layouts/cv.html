@@ -28,7 +28,7 @@ has become the standard.
     {% assign sectionBreak = "<p>[SECTION-BREAK]</p>" %}
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
-        <section class="resume_body">
+        <section class="resume_section">
           {{ section }}
         </section>
     {% endfor %}
