@@ -223,6 +223,8 @@ hr {
         margin-bottom: 0px;
     }
 
+    header { display:none; }
+
     @page: first {
         header { display:block; } 
     }
