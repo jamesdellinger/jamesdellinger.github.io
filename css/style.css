@@ -98,6 +98,12 @@ hr {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     box-shadow: 0px 0px 0px 1px rgba(140, 140, 140, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.3);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition-behavior: normal, normal, normal;
+    transition-delay: 0s, 0s, 0s;
+    transition-duration: 0.667s, 0.667s, 0s;
+    transition-property: box-shadow, transform, visibility;
+    transition-timing-function: ease-in-out, ease-in-out, linear;
 }
 
 .resume_top_margin {
@@ -166,8 +172,8 @@ hr {
 
     .resume_section {
         line-height: 28px;
-        padding-left: 8px;
-        padding-right: 8px;
+        /* padding-left: 8px;
+        padding-right: 8px; */
         margin-top: 8px;
         margin-bottom: 8px;
         margin-left: 8px;
@@ -215,5 +221,13 @@ hr {
         border-width: 0px !important;
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+
+    @page: first {
+        header { display:block; } 
+    }
+
+    .resume_top_bar {
+        @page:first header { display:block; }
     }
 }
