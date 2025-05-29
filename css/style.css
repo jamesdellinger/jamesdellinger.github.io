@@ -132,7 +132,7 @@ hr {
         font-weight: auto;
     }
 
-    .resume_body {
+    .resume_section {
         line-height: 28px;
         padding-left: 8px;
         padding-right: 8px;
@@ -179,7 +179,9 @@ hr {
 }
 
 @media print {
-    section {
+    .resume_section {
         border-width: 0px !important;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
