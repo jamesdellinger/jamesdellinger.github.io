@@ -47,8 +47,13 @@ hr {
 }
 
 .resume_html {
-    max-width: 800px;
+    /* max-width: 800px; */
     background-color: rgb(244, 242, 238);
+    /* font-size: 14px; */
+}
+
+.resume_body {
+    max-width: 800px;
     font-size: 14px;
 }
 
