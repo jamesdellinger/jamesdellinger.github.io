@@ -105,10 +105,14 @@ hr {
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
     /* transition: transform 200ms linear; */
 }
-.headroom--unpinned {
+/* .headroom--unpinned {
     transform: translateY(0%);
 }
 .headroom--pinned {
+    transform: translateY(-100%);
+} */
+
+.headroom--not-top {
     transform: translateY(-100%);
 }
 
