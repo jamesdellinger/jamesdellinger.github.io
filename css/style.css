@@ -113,7 +113,7 @@ hr {
 } */
 
 .headroom--not-top {
-    transform: translateY(-100%);
+    transform: translateY(0%);
 }
 
 .resume_top_margin {
