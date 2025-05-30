@@ -111,9 +111,11 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
-
-.headroom--not-top {
+.headroom--top {
     transform: translateY(0%);
+}
+.headroom--not-top {
+    transform: translateY(-100%);
 }
 
 .resume_top_margin {
