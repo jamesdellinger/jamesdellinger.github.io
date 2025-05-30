@@ -108,7 +108,8 @@ hr {
 
 .headroom {
     will-change: transform;
-    transition: transform 200ms linear;
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
+    /* transition: transform 200ms linear; */
 }
 .headroom--pinned {
     transform: translateY(0%);
