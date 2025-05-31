@@ -33,11 +33,11 @@ has become the standard.
     <script>
         // select your header or whatever element you wish
         const header = document.querySelector("header");
-        const headroom = new Headroom(header);
         const options = {
           offset: 100
         }
-        headroom.init(options);
+        const headroom = new Headroom(header, options);
+        headroom.init();
     </script>
 
     <!-- Github uses Jekyll to build static webpages. So use Liquid to 
