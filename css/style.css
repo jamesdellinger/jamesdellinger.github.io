@@ -90,8 +90,8 @@ hr {
 
 .resume_top_bar {
     background-color: rgb(255,255,255);
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -101px;
     left: 0;
     width: 100%;
     border-bottom-color: rgba(140, 140, 140, 0.2);
