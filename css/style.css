@@ -97,11 +97,9 @@ hr {
     border-bottom-color: rgba(140, 140, 140, 0.2);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    z-index: 99;
 }
 
 .headroom {
-    /* display: block; */
     box-shadow: none;
     will-change: transform;
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
@@ -112,6 +110,10 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
+.headroom--top {
+    box-shadow: none;
+    visibility: hidden;
+}
 .headroom--top.headroom--pinned {
     transform: translateY(-100%);
     box-shadow: none;
