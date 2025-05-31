@@ -34,7 +34,10 @@ has become the standard.
         // select your header or whatever element you wish
         const header = document.querySelector("header");
         const options = {
-          offset: 600
+          offset: 600,
+          "classes": {
+            "initial": "header--hidden",
+          }
         }
         const headroom = new Headroom(header, options);
         headroom.init();
