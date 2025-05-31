@@ -102,6 +102,8 @@ hr {
 .headroom {
     box-shadow: none;
     will-change: transform;
+    transform: translateY(-100%);
+    display: none;
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 /* .headroom--unpinned {
@@ -110,10 +112,6 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
-.headroom--top {
-    box-shadow: none;
-    visibility: hidden;
-}
 .headroom--top.headroom--pinned {
     transform: translateY(-100%);
     box-shadow: none;
