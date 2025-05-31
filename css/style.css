@@ -90,20 +90,18 @@ hr {
 
 .resume_top_bar {
     background-color: rgb(255,255,255);
-    position:fixed;
-    top:0;
-    left:0;
+    display: block;
+    position: sticky;
+    top:0px;
+    left:0xp;
     width: 100%;
     border-bottom-color: rgba(140, 140, 140, 0.2);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    box-shadow: 0px 0px 0px 1px rgba(140, 140, 140, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .headroom {
-    display: block;
     will-change: transform;
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 /* .headroom--unpinned {
     transform: translateY(0%);
@@ -111,11 +109,21 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
-.headroom--top.headroom--pinned {
+/* .headroom--top.headroom--pinned { */
+.headroom--top {
+    display: none;
+    position: fixed;
+    box-shadow: none;
     transform: translateY(-100%);
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667ms;
+    visibility: hidden;
 }
 .headroom--not-top {
+    display: block;
     transform: translateY(0%);
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
+    visibility: visible;
+    box-shadow: 0px 0px 0px 1px rgba(140, 140, 140, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .resume_top_margin {
