@@ -111,9 +111,9 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
-/* .headroom--top {
+.headroom--top.headroom--unpinned {
     transform: translateY(-100%);
-} */
+}
 .headroom--not-top {
     transform: translateY(0%);
 }
