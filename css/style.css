@@ -111,7 +111,7 @@ hr {
 .headroom--pinned {
     transform: translateY(-100%);
 } */
-.headroom--top.headroom--unpinned {
+.headroom--top.headroom--pinned {
     transform: translateY(-100%);
 }
 .headroom--not-top {
