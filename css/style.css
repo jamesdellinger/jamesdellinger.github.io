@@ -101,7 +101,7 @@ hr {
 }
 
 .headroom {
-    /* visibility: hidden; */
+    visibility: hidden;
     will-change: transform;
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
     /* transition: transform 200ms linear; */
@@ -113,7 +113,6 @@ hr {
     transform: translateY(-100%);
 } */
 .headroom--top {
-    visibility: hidden;
     transform: translateY(-100%);
 }
 .headroom--not-top {
