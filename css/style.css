@@ -89,7 +89,6 @@ hr {
 }
 
 .resume_top_bar {
-    display: none;
     background-color: rgb(255,255,255);
     position:fixed;
     top:0;
