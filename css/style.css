@@ -109,9 +109,6 @@ hr {
 .headroom--top {
     display: block;
 }
-/* .headroom--pinned {
-    transform: translateY(-100%);
-}  */
 .headroom--top.headroom--pinned {
     box-shadow: none;
     transform: translateY(-100%);
