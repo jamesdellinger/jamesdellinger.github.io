@@ -121,7 +121,11 @@ hr {
     margin-bottom: 24px;
 }
 
-.title_heading {
+.resume_title {
+    font-weight: 400;
+}
+
+.title_container {
     height: 32px;
     max-width: 800px;
     display: flex;
@@ -209,7 +213,7 @@ hr {
         font-size: 2em;
     }
 
-    .title_heading {
+    .title_container {
         margin-top: auto;
         margin-bottom: 30px;
     }
