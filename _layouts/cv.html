@@ -56,9 +56,16 @@ effort disentangling its format and structure.
     {% assign sectionBreak = "<p>[SECTION-BREAK]</p>" %}
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
+      {% if forloop.first %}
+        <section class="top_resume_section">
+          <p>Top Section</p>
+          {{ section }}
+        </section>
+      {% else %}
         <section class="resume_section">
           {{ section }}
         </section>
+      {% endif %}
     {% endfor %}
 
     <div class="resume_bottom_margin">

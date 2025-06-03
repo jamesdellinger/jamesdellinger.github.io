@@ -112,7 +112,11 @@ hr {
 }
 .headroom--not-top {
     display: block;
+    
+    /* I find the LinkedIn-style box shadow a bit distracting. Will leave it here in case 
+    I later change my mind. */
     /* box-shadow: 0px 0px 0px 1px rgba(140, 140, 140, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.3); */
+
     transform: translateY(0%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
