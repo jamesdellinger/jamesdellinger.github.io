@@ -58,7 +58,10 @@ effort disentangling its format and structure.
     {% for section in sectionArray %}
       {% if forloop.first %}
         <section class="resume_section top_resume_section">
-          <p>Top Section</p>
+          <div class="resume_background_image">
+            <img class="full-width full-height" alt="Background Image" src="../images/resume_top_background.jpeg"
+                 style="left:0px;top:0px;">
+          </div>
           {{ section }}
         </section>
       {% else %}
