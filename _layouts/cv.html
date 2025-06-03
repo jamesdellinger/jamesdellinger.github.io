@@ -57,12 +57,14 @@ effort disentangling its format and structure.
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
-        <section class="resume_section top_resume_section">
+        <section class="resume_section resume_top_section">
           <div class="resume_background_image">
-            <img class="full-width full-height" alt="Background Image" src="../images/resume_top_background.jpeg"
-                 style="left:0px;top:0px;">
+            <img alt="Background Image" src="../images/resume_top_background.jpeg"
+                 style="left:0px;top:0px;max-width:800px;">
           </div>
-          {{ section }}
+          <div>
+            {{ section }}
+          </div>
         </section>
       {% else %}
         <section class="resume_section">
