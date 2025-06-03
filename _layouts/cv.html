@@ -59,11 +59,13 @@ effort disentangling its format and structure.
       {% if forloop.first %}
         <section class="resume_section resume_top_section">
           <div class="resume_background_image"
-                style="border-top-left-radius: 8px; border-top-right-radius: 8px;
-                      width:100%; position:relative;">
+                style="position: absolute; 
+                       display: flex; justify-items: center; justify-content: center; align-items: center;
+                       border-top-left-radius: 8px; border-top-right-radius: 8px;
+                       width:100%;">
             <img alt="Background Image" src="../images/resume_top_background.jpeg"
                  style="height: 100%; width: 100%; position: relative; left:0px;top:0px;
-                        border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        box-sizing: inherit; overflow-clip-margin: content-box; overflow: clip;">
           </div>
           <div style="padding-left: 64px; padding-right:64px;">
             {{ section }}
