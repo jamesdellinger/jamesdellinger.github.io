@@ -57,7 +57,7 @@ effort disentangling its format and structure.
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
-        <section class="top_resume_section">
+        <section class="resume_section top_resume_section">
           <p>Top Section</p>
           {{ section }}
         </section>
