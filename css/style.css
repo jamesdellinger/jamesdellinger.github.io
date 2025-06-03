@@ -91,13 +91,14 @@ hr {
     top:0;
     left:0;
     width: 100%;
+    
     /* border-bottom-color: rgba(140, 140, 140, 0.2);
     border-bottom-style: solid;
     border-bottom-width: 1px; */
 
-    border-bottom-color: rgba(140, 140, 140, 0.2);
+    border-bottom-color: rgb(36, 70, 102);
     border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-width: 2px;
 }
 
 .headroom {
