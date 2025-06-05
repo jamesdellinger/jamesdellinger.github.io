@@ -54,12 +54,13 @@ hr {
     margin-right: auto;
     margin-left: auto;
     font-size: 14px;
+    margin-top: 24px;
 }
 
 .resume_section {
     background-color: rgb(255,255,255);
     line-height: 20px;
-    margin-top: 24px;
+    margin-top: 6px;
     margin-bottom: 6px;
     margin-left: 0px;
     margin-right: 0px;
