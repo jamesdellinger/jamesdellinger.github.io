@@ -81,12 +81,35 @@ effort disentangling its format and structure.
             {{ section }}
           </div>
         </section>
+      {% elseif forloop.index0 == 1 %}
+        <section class="resume_section experience">
+          {% assign companyBreak = "<p>[COMPANY-BREAK]</p>" %}
+          {% assign companyArray = section | split: companyBreak %}
+          {% for company in companyArray %}
+            {% if forloop.last %}
+              <div class="company">
+                {{ company }}
+              </div>
+            {% else %}
+              <div class="company">
+                {{ company }}
+                <hr>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </section>
       {% else %}
         <section class="resume_section">
           {{ section }}
         </section>
       {% endif %}
     {% endfor %}
+
+    <!-- Draw a gray vertical line across multiple job titles at the same company. -->
+    <!-- <script>
+      let experienceSection = document.querySelector('.experience')
+      const h3_headers = experienceSection.getElementsByTagName("p");
+    </script> -->
 
     <div class="resume_bottom_margin">
       <footer>
