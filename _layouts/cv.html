@@ -81,7 +81,7 @@ effort disentangling its format and structure.
             {{ section }}
           </div>
         </section>
-      {% elseif forloop.index0 == 1 %}
+      {% elsif forloop.index0 == 1 %}
         <section class="resume_section experience">
           {% assign companyBreak = "<p>[COMPANY-BREAK]</p>" %}
           {% assign companyArray = section | split: companyBreak %}
