@@ -83,7 +83,7 @@ effort disentangling its format and structure.
         </section>
       {% elsif forloop.index0 == 1 %}
         <section class="resume_section experience">
-          {% assign companyBreak = "<p>[COMPANY-BREAK]</p>" %}
+          <!-- {% assign companyBreak = "<p>[COMPANY-BREAK]</p>" %}
           {% assign companyArray = section | split: companyBreak %}
           {% for company in companyArray %}
             {% if forloop.last %}
@@ -96,7 +96,8 @@ effort disentangling its format and structure.
                 <hr>
               </div>
             {% endif %}
-          {% endfor %}
+          {% endfor %} -->
+          {{ section }}
         </section>
       {% else %}
         <section class="resume_section">
