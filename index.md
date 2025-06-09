@@ -12,3 +12,22 @@ title: "James Dellinger's Homepage"
 * [*Distant Force*](https://archive.org/details/distantforcememo0000robe/page/n3/mode/2up)—A history of the Teledyne Corporation and its founder, Dr. Henry Singleton. By Dr. George A. Roberts. Learned about it from my friend [@zachcaceres](https://x.com/zachcaceres/status/1849803042478055883).
 * [*RYAN, the aviator*](https://www.abebooks.com/book-search/isbn/9780070676701/)—The biography of aerospace entrepreneur T. Claude Ryan. By William Wagner.
 * [*The View From Touffou*](https://www.youtube.com/watch?v=FcTB9goxSAg)—David Ogilvy's 1981 in-house instructional video on advertising. Applicable to many things.
+
+<!-- TODO:
+
+- get rid of top banner
+- Title formatting like:
+
+The 
+Homepage 
+of James
+Dellinger
+
+- all really bold
+- put 'James Dellinger' in an orange red color
+- use math function generateed ascii art as gray background over white background color
+- maybe make it animate
+- see if can animate body text to silver/gray shimmer
+- or maybe faint light blue shimmer
+- maybe animate text instead of background
+- maybe just animate links instead of text -->

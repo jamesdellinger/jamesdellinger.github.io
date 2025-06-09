@@ -107,8 +107,36 @@ effort disentangling its format and structure.
 
     <!-- Draw a gray vertical line across multiple job titles at the same company. -->
     <!-- <script>
-      let experienceSection = document.querySelector('.experience')
-      const h3_headers = experienceSection.getElementsByTagName("p");
+      let companies = document.body.getElementsByClassName("company");
+      companies.array.forEach(company => {
+        let jobs = company.querySelectorAll("h3");
+        if (jobs.length > 1) {
+          const jobHeaderCoords = [];
+          const leftShift = 32;
+          for (let i = 1; i < jobs.length; i++) {
+            const rect = jobs[i].getBoundingClientRect();
+            const left  = rect.left + window.scrollX;
+            const top = rect.top + window.scrollY;
+            jobHeaderCoords.push([left, top])
+          }
+
+          // Draw a vertical line from the top to the lowest job headers.
+          const lineTop = jobHeaderCoords[0];
+          const lineBottom = jobHeaderCoords[-1];
+
+          var newLine = document.createElementNS('http://www.w3.org/2000/svg','svg');
+          newLine.setAttribute('x1',linetop[0] - leftShift);
+          newLine.setAttribute('y1',linetop[1]);
+          newLine.setAttribute('x2',lineBottom[0] - leftShift);
+          newLine.setAttribute('y2',lineBottom[1]);
+          newLine.setAttribute("stroke", "black")
+          $("svg").append(newLine);
+
+          // TODO 
+
+
+        }
+      });
     </script> -->
 
     <div class="resume_bottom_margin">
