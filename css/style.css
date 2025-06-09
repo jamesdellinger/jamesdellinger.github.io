@@ -160,15 +160,6 @@ hr {
     margin-bottom: 30px;
 }
 
-.date_city_block {
-    color:var(--slight_transparent);
-    display: block;
-}
-
-.date_city_text {
-    margin-block: 0px;
-}
-
 .company_text {
     margin-block: 0px;
     color: black;
