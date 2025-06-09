@@ -160,22 +160,6 @@ hr {
     margin-bottom: 30px;
 }
 
-.company_text {
-    margin-block: 0px;
-    color: black;
-}
-
-.index_title {
-    line-height: 52px; 
-    max-width:400px;
-}
-
-.index_header {
-    margin-bottom: 1em;
-    font-size: 1.17em;
-    line-height: 28px;
-}
-
 @media all and (max-width: 550px) {
 
     h2 {
@@ -215,7 +199,6 @@ hr {
         border-top-right-radius: 0px;
     }
 
-
     .resume_title {
         font-size: 2em;
     }
@@ -223,19 +206,6 @@ hr {
     .title_container {
         margin-top: auto;
         margin-bottom: 30px;
-    }
-
-    .index_title {
-        font-size: 2em;
-        line-height:42px;
-    }
-
-    .date_city_block {
-        display: flex;
-        flex-direction: column;
-        line-height:0px;
-        justify-content: flex-start;
-        text-indent: 0em;
     }
 }
 
