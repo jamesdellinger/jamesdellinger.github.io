@@ -47,10 +47,9 @@ effort disentangling its format and structure.
     </script>
 
     <!-- Github uses Jekyll to build static webpages. So use Liquid to 
-    split the .md file into sections. (The string "[SECTION-BREAK]"
-    is used to denote section splits in the .md file. It is of course
-    rendered as <p>[SECTION-BREAK]</p> once that .md file has been
-    parsed.) -->
+    split the .md file into sections. (The string "===" is used to denote
+    section splits in the .md file. It is of course rendered as <p>===</p> once 
+    the file has been parsed.) -->
     
     {% assign sectionBreak = "<p>===</p>" %}
     {% assign sectionArray = content | split: sectionBreak %}
