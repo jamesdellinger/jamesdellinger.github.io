@@ -10,12 +10,11 @@ html {
 }
 
 body {
-    max-width: 620px;
-    line-height: 28px;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 14px;
+    margin-top: 24px;
 }
 
 a {
@@ -67,13 +66,13 @@ hr {
     background-color: rgb(244, 242, 238);
 }
 
-.resume_body {
+/* .resume_body {
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
     font-size: 14px;
     margin-top: 24px;
-}
+} */
 
 .resume_section {
     background-color: rgb(255,255,255);
