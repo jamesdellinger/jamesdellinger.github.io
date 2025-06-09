@@ -52,7 +52,7 @@ effort disentangling its format and structure.
     rendered as <p>[SECTION-BREAK]</p> once that .md file has been
     parsed.) -->
     
-    {% assign sectionBreak = "<p>[SECTION-BREAK]</p>" %}
+    {% assign sectionBreak = "<p>===</p>" %}
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
