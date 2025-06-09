@@ -3,14 +3,11 @@
   }
 
 html {
-    /* margin-right: auto; */
-    /* margin-left: auto; */
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* font-size: 17px; */
     background-color: rgb(244, 242, 238);
 }
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
@@ -62,10 +59,6 @@ hr {
     color:rgb(232,232,232);
     background-color:rgb(232,232,232);
 }
-
-/* .resume_html {
-    background-color: rgb(244, 242, 238);
-} */
 
 .resume_section {
     background-color: rgb(255,255,255);
