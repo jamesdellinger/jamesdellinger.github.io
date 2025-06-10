@@ -211,7 +211,7 @@ footer {
 
     header, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
     .top_section_background_image_container, .top_section_background_image,
-    .top_section_profile_pic { 
+    .top_section_profile_pic_container, .top_section_profile_pic { 
         display: none; 
     }
 }
