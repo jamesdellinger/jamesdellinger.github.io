@@ -80,7 +80,7 @@ hr {
     overflow: hidden;
 }
 
-.top_bar {
+header {
     display: none;
     background-color: rgb(255,255,255);
     position:fixed;
@@ -117,16 +117,12 @@ hr {
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 
-footer {
-    text-align: center; 
-}
-
-.title {
+.header_title_text {
     font-size: 18px;
     font-weight: 300;
 }
 
-.title_container {
+.header_title_container {
     height: 32px;
     max-width: 800px;
     display: flex;
@@ -143,6 +139,10 @@ footer {
 .bottom_margin {
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+footer {
+    text-align: center; 
 }
 
 @media all and (max-width: 550px) {
@@ -187,11 +187,11 @@ footer {
         border-top-right-radius: 0px;
     }
 
-    .title {
+    .header_title_text {
         font-size: 2em;
     }
 
-    .title_container {
+    .header_title_container {
         margin-top: auto;
         margin-bottom: 30px;
     }
