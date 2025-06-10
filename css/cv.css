@@ -205,7 +205,7 @@ footer {
         margin-bottom: 0px;
     }
 
-    header { 
+    header, footer, .headroom, .headroom--top, .headroom--pinned .headroom--not-top { 
         display: none; 
     }
 }
