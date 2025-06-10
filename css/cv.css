@@ -56,12 +56,6 @@ hr {
     background-color:rgb(232,232,232);
 }
 
-.top_section {
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow: hidden;
-}
-
 .section {
     background-color: rgb(255,255,255);
     line-height: 20px;
@@ -78,6 +72,12 @@ hr {
     border-bottom-right-radius: 8px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.top_section {
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
 }
 
 header {
