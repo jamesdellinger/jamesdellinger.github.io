@@ -93,6 +93,29 @@ header {
     z-index: 1;
 }
 
+.header_title_text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.header_title_container {
+    height: 32px;
+    max-width: 800px;
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-start;
+    align-items: center;
+    line-height:0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The following four headroom classes ensure that the code in headroom.js
+correctly lowers the header once the user has scrolled down from the 
+page's top and raises it when and if the user scrolls back up to the top. */
+
 .headroom {
     box-shadow: none;
     will-change: transform;
@@ -116,25 +139,6 @@ header {
 
     transform: translateY(0%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
-}
-
-.header_title_text {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.header_title_container {
-    height: 32px;
-    max-width: 800px;
-    display: flex;
-    vertical-align: middle;
-    justify-content: flex-start;
-    align-items: center;
-    line-height:0;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .bottom_margin {
@@ -205,7 +209,8 @@ footer {
         margin-bottom: 0px;
     }
 
-    header, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, .background_image_container { 
+    header, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
+    .background_image_container, .background_image { 
         display: none; 
     }
 }
