@@ -23,11 +23,13 @@ effort disentangling its format and structure.
   <body>
     <header>
       <div class="header_title_container">
-        <div class="pic_container"
+        <div class="header_profile_pic_container"
              style="margin-left: 0px; margin-right: 16px;
                     width: 32px; height: 32px; overflow: hidden;
                     border-radius: 49.9%;">
-          <a href="/"><img style="width: 100%;" src="../images/cv_pic_400.jpeg" alt="Small Profile Pic"></a>
+          <a href="/">
+            <img class="header_profile_pic" style="width: 100%;" src="../images/cv_pic_400.jpeg" alt="Header Profile Pic">
+          </a>
         </div>
         <p class="header_title_text">James Dellinger</p>
       </div>
@@ -56,26 +58,26 @@ effort disentangling its format and structure.
     {% for section in sectionArray %}
       {% if forloop.first %}
         <section class="section top_section">
-          <div class="background_image_container"
+          <div class="top_section_background_image_container"
                 style="position: relative; 
                        display: flex; justify-items: center; justify-content: center; align-items: center;
                        width:100%; overflow: hidden;">
-            <img class="background_image" alt="Background Image" src="../images/resume_top_background.jpeg"
+            <img class="top_section_background_image" alt="Background Image" src="../images/resume_top_background.jpeg"
                  style="height: 100%; width: 100%;
                         left:0px; top:0px;">
           </div>
-          <div class="profile_pic_container"
+          <div class="top_section_profile_pic_container"
                 style="position: relative; margin-top: -112px; margin-left: 32px;
                        width: 160px; height: 160px; overflow: hidden;
                        border-style: solid; border-color: rgb(255,255,255); border-width: 4px; border-radius: 49.9%;">
-            <img style="width: 100%;" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
+            <img class="top_section_profile_pic" style="width: 100%;" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
           </div>
           <div style="padding-left: 64px; padding-right:64px;">
             {{ section }}
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
-        <section class="section experience">
+        <section class="section work_experience">
           {{ section }}
         </section>
       {% else %}

@@ -210,7 +210,7 @@ footer {
     }
 
     header, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
-    .background_image_container, .background_image { 
+    .top_section_background_image_container, .top_section_background_image { 
         display: none; 
     }
 }
