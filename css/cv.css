@@ -214,4 +214,8 @@ footer {
     .top_section_profile_pic_container, .top_section_profile_pic { 
         display: none; 
     }
+
+    h1 {
+        font-size: 36px;
+    }
 }
