@@ -90,6 +90,7 @@ header {
     border-bottom-color: rgba(140, 140, 140, 0.2);
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    z-index: 1;
 }
 
 .headroom {
