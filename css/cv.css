@@ -224,7 +224,11 @@ footer {
     }
 
     h1 {
-        font-size: 36px;
+        font-size: 32px;
+    }
+
+    a {
+        color: black;
     }
 
     .contact_info_printed {
