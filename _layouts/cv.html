@@ -75,6 +75,16 @@ effort disentangling its format and structure.
           <div style="padding-left: 64px; padding-right:64px;">
             {{ section }}
           </div>
+          <!-- Will only display the following section if resume is printed out. -->
+          <div class="contact_info_printed" style="padding-left: 64px; padding-right:64px;">
+            <h3>Contact</h3>
+            <ul>
+              <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->
+              <li><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></li>
+              <li>https://www.kaggle.com/jamesdellinger</li>
+              <li>https://github.com/jamesdellinger</li>
+            </ul>
+          </div>
         </section>
       {% elsif forloop.index0 == 1 %}
         <section class="section work_experience">
