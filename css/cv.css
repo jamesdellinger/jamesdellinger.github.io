@@ -161,8 +161,7 @@ footer {
     }
 
     hr {
-        height: 0px;
-        border-width:0px;
+        display: none;
     }
 
     .html {
@@ -220,7 +219,7 @@ footer {
     header, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
     .top_section_background_image_container, .top_section_background_image,
     .top_section_profile_pic_container, .top_section_profile_pic, 
-    .contact_info_screen_display { 
+    .contact_info_screen_display, hr { 
         display: none; 
     }
 
