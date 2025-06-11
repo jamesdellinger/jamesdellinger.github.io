@@ -77,8 +77,12 @@ effort disentangling its format and structure.
           {% assign subSectionBreak = "<h3" %}
           {% assign subSectionArray = section | split: subSectionBreak %}
           {% for subSection in subSectionArray %}
-            {% if forloop.last %}
-              <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px;               padding-right:64px;">
+            {% if forloop.first %}
+              <div class="top_section_subsection" style="padding-left: 64px; padding-right:64px;">
+                {{ subSection }}
+              </div>
+            {% elsif forloop.last %}
+              <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px; padding-right:64px;">
                 <h3{{ subSection }}
               </div>
             {% else %}
