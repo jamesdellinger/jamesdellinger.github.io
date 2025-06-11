@@ -72,17 +72,28 @@ effort disentangling its format and structure.
                        border-style: solid; border-color: rgb(255,255,255); border-width: 4px; border-radius: 49.9%;">
             <img class="top_section_profile_pic" style="width: 100%;" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
           </div>
-          <div style="padding-left: 64px; padding-right:64px;">
-            {{ section }}
-          </div>
-          <!-- Will only display the following section if resume is printed out. -->
-          <div class="contact_info_printed" style="padding-left: 64px; padding-right:64px;">
+          <!-- Display a specially formatted contacts section (email address visible) 
+               only when the resume is printed out. -->
+          {% assign contactHeaderBreak = "<h3>Contact</h3>" %}
+          {% assign subSectionArray = section | split: contactHeaderBreak %}
+          {% for subSection in subSectionArray %}
+            {% if forloop.last %}
+              <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px;               padding-right:64px;">
+                {{ subSection }}
+              </div>
+            {% else %}
+              <div class="top_section_subsection" style="padding-left: 64px; padding-right:64px;">
+                {{ subSection }}
+              </div>
+            {% endif %}
+          {% endfor %}
+          <div class="top_section_subsection contact_info_printed" style="padding-left: 64px; padding-right:64px;">
             <h3>Contact</h3>
             <ul>
               <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->
               <li><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></li>
-              <li>https://www.kaggle.com/jamesdellinger</li>
-              <li>https://github.com/jamesdellinger</li>
+              <li>kaggle.com/jamesdellinger</li>
+              <li>github.com/jamesdellinger</li>
             </ul>
           </div>
         </section>
