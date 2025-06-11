@@ -76,6 +76,7 @@ effort disentangling its format and structure.
                only when the resume is printed out. -->
           {% assign contactHeaderBreak = "<h3 id=contact>Contact</h3>" %}
           {% assign subSectionArray = section | split: contactHeaderBreak %}
+          <p>{{ subSectionArray.size }}</p>
           {% for subSection in subSectionArray %}
             {% if forloop.last %}
               <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px;               padding-right:64px;">
