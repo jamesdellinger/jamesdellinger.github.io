@@ -74,8 +74,7 @@ effort disentangling its format and structure.
           </div>
           <!-- Display a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->
-          {% assign contactHeaderBreak = "<h3 id=&quot;contact&quot;>Contact</h3>" %}
-          <p>{{contactHeaderBreak}}</p>
+          {% assign contactHeaderBreak = "<h3 id=contact>Contact</h3>" %}
           {% assign subSectionArray = section | split: contactHeaderBreak %}
           {% for subSection in subSectionArray %}
             {% if forloop.last %}
