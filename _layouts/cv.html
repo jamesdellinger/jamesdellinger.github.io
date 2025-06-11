@@ -74,19 +74,18 @@ effort disentangling its format and structure.
           </div>
           <!-- Display a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->
-          {% assign contactHeaderBreak = "<h3&nbsp;id=contact>Contact</h3>" %}
-          {% assign subSectionArray = section | split: contactHeaderBreak %}
+          {% assign subSectionBreak = "<h3" %}
+          {% assign subSectionArray = section | split: subSectionBreak %}
           <p>{{ subSectionArray.size }}</p>
-          <p>{{ contactHeaderBreak }}</p>
+          <p>{{ subSectionBreak }}</p>
           {% for subSection in subSectionArray %}
             {% if forloop.last %}
               <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px;               padding-right:64px;">
-                <h3 id="contact">Contact</h3>
-                {{ subSection }}
+                <h3{{ subSection }}
               </div>
             {% else %}
               <div class="top_section_subsection" style="padding-left: 64px; padding-right:64px;">
-                {{ subSection }}
+                <h3{{ subSection }}
               </div>
             {% endif %}
           {% endfor %}
