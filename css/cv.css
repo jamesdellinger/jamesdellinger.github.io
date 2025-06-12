@@ -238,7 +238,7 @@ footer {
 @media print {
 
     html {
-        background-color: gray;
+        background-color: white;
     }
 
     body {
@@ -246,7 +246,7 @@ footer {
         padding-left: 0in;
         padding-right: 0in;
         max-width: none;
-        font-size: 11pt;
+        font-size: 10.5pt;
         line-height: 20pt;
     }
     
