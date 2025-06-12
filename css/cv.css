@@ -226,6 +226,7 @@ footer {
     body {
         max-width: none;
         font-size: 11pt;
+        line-height: 20pt;
     }
     
     section {
