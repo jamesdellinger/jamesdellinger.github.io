@@ -91,6 +91,40 @@ Maybe adjust padding so that I can do it all under <section>? */
     overflow: hidden;
 }
 
+.top_section_background_image_container {
+    position: relative; 
+    display: flex; 
+    justify-items: center; 
+    justify-content: center; 
+    align-items: center;
+    width:100%; 
+    overflow: hidden;
+}
+
+.top_section_background_image {
+    height: 100%; 
+    width: 100%;
+    left:0px; 
+    top:0px;
+}
+
+.top_section_profile_pic_container {
+    position: relative; 
+    margin-top: -112px; 
+    margin-left: 32px;
+    width: 160px; 
+    height: 160px; 
+    overflow: hidden;
+    border-style: solid; 
+    border-color: rgb(255,255,255); 
+    border-width: 4px; 
+    border-radius: 49.9%;
+}
+
+.top_section_profile_pic {
+    width: 100%;
+}
+
 .top_section_subsection {
     padding-left: 64px; 
     padding-right:64px;

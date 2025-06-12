@@ -55,19 +55,11 @@ effort disentangling its format and structure.
     {% for section in sectionArray %}
       {% if forloop.first %}
         <section class="top_section">
-          <div class="top_section_background_image_container"
-                style="position: relative; 
-                       display: flex; justify-items: center; justify-content: center; align-items: center;
-                       width:100%; overflow: hidden;">
-            <img class="top_section_background_image" alt="Background Image" src="../images/resume_top_background.jpeg"
-                 style="height: 100%; width: 100%;
-                        left:0px; top:0px;">
+          <div class="top_section_background_image_container">
+            <img class="top_section_background_image" alt="Background Image" src="../images/resume_top_background.jpeg">
           </div>
-          <div class="top_section_profile_pic_container"
-                style="position: relative; margin-top: -112px; margin-left: 32px;
-                       width: 160px; height: 160px; overflow: hidden;
-                       border-style: solid; border-color: rgb(255,255,255); border-width: 4px; border-radius: 49.9%;">
-            <img class="top_section_profile_pic" style="width: 100%;" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
+          <div class="top_section_profile_pic_container">
+            <img class="top_section_profile_pic" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
           </div>
           <!-- Display a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->
