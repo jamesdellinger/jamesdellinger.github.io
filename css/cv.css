@@ -57,7 +57,7 @@ hr {
 }
 
 section {
-    background-color: rgb(255,255,255);
+    background-color: white;
     line-height: 20px;
     margin-top: 6px;
     margin-bottom: 6px;
@@ -87,7 +87,7 @@ section {
 
 header {
     display: none;
-    background-color: rgb(255,255,255);
+    background-color: white;
     position:fixed;
     top:0;
     left:0;
@@ -167,7 +167,7 @@ footer {
     }
 
     .html {
-        background-color: rgb(255,255,255);
+        background-color: white;
     }
 
     .body {
@@ -187,10 +187,10 @@ footer {
         border-right-width: 0px;
         border-bottom-width: 0px;
         border-top-width: 0px;
-        border-left-color: rgb(255,255,255);
-        border-right-color: rgb(255,255,255);
-        border-bottom-color: rgb(255,255,255);
-        border-top-color: rgb(255,255,255);
+        border-left-color: white;
+        border-right-color: white;
+        border-bottom-color: white;
+        border-top-color: white;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         border-top-left-radius: 0px;
