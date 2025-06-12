@@ -259,18 +259,15 @@ footer {
     
     section {
         border-width: 0in !important;
-        margin-top: 0in;
+        /* margin-top: 0in;
         margin-bottom: 0in;
         margin-left: 0in;
         margin-right: 0in;
         padding-left: 0in;
-        padding-right: 0in;
+        padding-right: 0in; */
         border-style: none;
         border-color: white;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        border-radius: 0in;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
