@@ -84,8 +84,8 @@ section {
 }
 
 .top_section_background_image_container {
-    margin-left: -64px;
-    margin-right: -64px;
+    margin-left: calc(- var(--section_padding));
+    margin-right: calc(- var(--section_padding));
     display: flex;
 }
 
