@@ -208,7 +208,11 @@ footer {
 
 @media print {
     body {
-        margin-top: 0px;
+        margin-top: .5in;
+        margin-bottom: .5in;
+        margin-left: 1in;
+        margin-right: 1in;
+        font-size: 11pt;
     }
     
     .section {
@@ -225,7 +229,7 @@ footer {
     }
 
     h1 {
-        font-size: 32px;
+        /* font-size: 32px; */
         margin-top: 0px;
         padding-top: 0px;
     }
