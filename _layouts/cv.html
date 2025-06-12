@@ -41,8 +41,9 @@ effort disentangling its format and structure.
     <script>
         // select your header or whatever element you wish
         const header = document.querySelector("header");
+        const scroll_offset = 300;
         const options = {
-          offset: 300
+          offset: scroll_offset,
         }
         const headroom = new Headroom(header, options);
         headroom.init();
