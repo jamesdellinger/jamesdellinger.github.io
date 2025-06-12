@@ -82,7 +82,7 @@ section {
     border-bottom-right-radius: 8px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* TODO: see if I can get rid of the top_section section. 
@@ -100,7 +100,7 @@ Maybe adjust padding so that I can do it all under <section>? */
     justify-items: center; 
     justify-content: center; 
     align-items: center; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .top_section_background_image {
