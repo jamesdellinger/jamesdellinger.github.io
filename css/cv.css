@@ -238,7 +238,7 @@ footer {
 @media print {
 
     html {
-        background-color: white;
+        background-color: gray;
     }
 
     body {
@@ -252,8 +252,6 @@ footer {
         border-width: 0in !important;
         padding: 0in;
         margin: 0in;
-        margin-top: 0;
-        margin-bottom: 0;
         border-style: none;
     }
 
