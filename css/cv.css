@@ -230,8 +230,8 @@ footer {
         border-width: 0in !important;
         margin-top: 0in;
         margin-bottom: 0in;
-        margin-left: 0in;
-        margin-right: 0in;
+        margin-left: 1in;
+        margin-right: 1in;
         padding-left: 0in;
         padding-right: 0in;
         border-style: none;
@@ -256,7 +256,7 @@ footer {
 
     h1 {
         font-size: 17pt;
-        margin-top: 0in;
+        font-weight: 400;
     }
 
     h2 {
