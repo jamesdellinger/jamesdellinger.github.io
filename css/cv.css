@@ -208,6 +208,7 @@ footer {
 
 @media print {
     body {
+        max-width: auto;
         margin-top: .5in;
         margin-bottom: .5in;
         margin-left: 1in;
