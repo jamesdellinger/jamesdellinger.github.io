@@ -94,10 +94,9 @@ Maybe adjust padding so that I can do it all under <section>? */
 } */
 
 .top_section_background_image_container {
-    position: relative;
+    /* position: relative; */
     margin-left: -64px;
     margin-right: -64px;
-    /* display: flex; */
 }
 
 .top_section_background_image {
