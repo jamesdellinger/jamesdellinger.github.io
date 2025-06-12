@@ -18,6 +18,8 @@ body {
     margin-left: auto;
     font-size: 14px;
     margin-top: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 a {
