@@ -132,8 +132,8 @@ Maybe adjust padding so that I can do it all under <section>? */
 }
 
 .top_section_subsection {
-    padding-left: 64px; 
-    padding-right: 64px;
+    /* padding-left: 64px; 
+    padding-right: 64px; */
 }
 
 header {
