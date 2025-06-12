@@ -89,13 +89,11 @@ section {
 Maybe adjust padding so that I can do it all under <section>? */
 
 .top_section {
-    /* padding-left: 0px;
-    padding-right: 0px; */
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .top_section_background_image_container {
-    /* padding-left: -64px;
-    padding-right: -64px; */
     margin-left: -64px;
     margin-right: -64px;
 
