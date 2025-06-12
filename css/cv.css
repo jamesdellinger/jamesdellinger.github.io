@@ -224,8 +224,8 @@ footer {
         max-width: none;
         margin-top: .25in;
         margin-bottom: .25in;
-        margin-left: .75in;
-        margin-right: .75in;
+        margin-left: .7in;
+        margin-right: .7in;
         font-size: 11pt;
     }
     
@@ -258,6 +258,7 @@ footer {
     }
 
     h1 {
+        font-family: "Futura Medium Italic", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 19pt;
         font-weight: 400;
     }
