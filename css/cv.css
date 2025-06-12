@@ -253,14 +253,11 @@ footer {
     }
 
     header, 
-    .header_title_text, 
+    /* .header_title_text, 
     .header_title_container, 
     .header_profile_pic_container, 
-    .header_profile_pic, 
+    .header_profile_pic,  */
     .headroom, 
-    /* .headroom--top, 
-    .headroom--pinned, 
-    .headroom--not-top,  */
     footer,
     .top_section_background_image_container, 
     .top_section_background_image,
