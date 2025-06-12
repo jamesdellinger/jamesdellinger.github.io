@@ -92,9 +92,9 @@ Maybe adjust padding so that I can do it all under <section>? */
 }
 
 .top_section_background_image_container {
-    padding-left: -64px;
+    /* padding-left: -64px;
     padding-right: -64px;
-    position: relative; 
+    position: relative;  */
     display: flex; 
     justify-items: center; 
     justify-content: center; 
