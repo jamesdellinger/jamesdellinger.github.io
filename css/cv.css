@@ -279,9 +279,9 @@ footer {
         color: black;
     }
 
-    a::after {
+    /* a::after {
         content: attr(href);
-    }
+    } */
 
     .contact_info_printed {
         display: block;
