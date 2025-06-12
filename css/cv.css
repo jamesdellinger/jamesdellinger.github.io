@@ -109,7 +109,7 @@ Maybe adjust padding so that I can do it all under <section>? */
     margin-left: -32px;
     width: 160px; 
     height: 160px; 
-    overflow: hidden;
+    /* overflow: hidden; */
     border-style: solid; 
     border-color: white; 
     border-width: 4px; 
