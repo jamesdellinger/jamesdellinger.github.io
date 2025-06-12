@@ -80,6 +80,11 @@ hr {
     overflow: hidden;
 }
 
+.top_section_subsection {
+    padding-left: 64px; 
+    padding-right:64px;
+}
+
 header {
     display: none;
     background-color: rgb(255,255,255);
@@ -209,7 +214,7 @@ footer {
 @media print {
 
     html {
-        background-color: none;
+        background-color: white;
     }
 
     body {
@@ -235,6 +240,11 @@ footer {
         border-bottom-right-radius: 0;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+
+    .top_section_subsection {
+        padding-left: 0in; 
+        padding-right: 0in;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 

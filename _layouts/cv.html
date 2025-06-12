@@ -78,20 +78,20 @@ effort disentangling its format and structure.
           {% assign subSectionArray = section | split: subSectionBreak %}
           {% for subSection in subSectionArray %}
             {% if forloop.first %}
-              <div class="top_section_subsection" style="padding-left: 64px; padding-right:64px;">
+              <div class="top_section_subsection">
                 {{ subSection }}
               </div>
             {% elsif forloop.last %}
-              <div class="top_section_subsection contact_info_screen_display" style="padding-left: 64px; padding-right:64px;">
+              <div class="top_section_subsection contact_info_screen_display">
                 <h3{{ subSection }}
               </div>
             {% else %}
-              <div class="top_section_subsection" style="padding-left: 64px; padding-right:64px;">
+              <div class="top_section_subsection">
                 <h3{{ subSection }}
               </div>
             {% endif %}
           {% endfor %}
-          <div class="top_section_subsection contact_info_printed" style="padding-left: 64px; padding-right:64px;">
+          <div class="top_section_subsection contact_info_printed">
             <h3>Contact</h3>
             <ul>
               <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->
