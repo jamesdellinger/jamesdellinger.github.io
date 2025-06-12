@@ -279,6 +279,10 @@ footer {
         color: black;
     }
 
+    a::after {
+        content: attr(href);
+    }
+
     .contact_info_printed {
         display: block;
     }
