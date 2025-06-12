@@ -259,6 +259,8 @@ footer {
     
     section {
         border-width: 0in !important;
+        padding: 0in;
+        margin: 0in;
         /* margin-top: 0in;
         margin-bottom: 0in;
         margin-left: 0in;
@@ -266,7 +268,7 @@ footer {
         padding-left: 0in;
         padding-right: 0in; */
         border-style: none;
-        border-color: white;
+        /* border-color: white; */
         border-radius: 0in;
     }
 
