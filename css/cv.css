@@ -153,7 +153,6 @@ header {
 /* The following four headroom classes ensure that the code in headroom.js
 correctly lowers the header once the user has scrolled down from the 
 page's top and raises it when and if the user scrolls back up to the top. */
-
 .headroom {
     box-shadow: none;
     will-change: transform;
@@ -216,18 +215,7 @@ footer {
         margin-bottom: 8px;
         margin-left: 8px;
         margin-right: 8px;
-        border-left-width: 0px;
-        border-right-width: 0px;
-        border-bottom-width: 0px;
-        border-top-width: 0px;
-        border-left-color: white;
-        border-right-color: white;
-        border-bottom-color: white;
-        border-top-color: white;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-style: none;
     }
 
     .header_title_text {
@@ -261,15 +249,7 @@ footer {
         border-width: 0in !important;
         padding: 0in;
         margin: 0in;
-        /* margin-top: 0in;
-        margin-bottom: 0in;
-        margin-left: 0in;
-        margin-right: 0in;
-        padding-left: 0in;
-        padding-right: 0in; */
         border-style: none;
-        /* border-color: white; */
-        border-radius: 0in;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
