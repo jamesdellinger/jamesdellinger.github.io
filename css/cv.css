@@ -56,6 +56,9 @@ hr {
     background-color:rgb(232,232,232);
 }
 
+/* TODO: experiment with a bit more left and right section padding. To keep
+fewer characters on each line. */
+
 section {
     background-color: white;
     line-height: 20px;
@@ -222,10 +225,6 @@ footer {
 
     body {
         max-width: none;
-        /* margin-left: .75in;
-        margin-right: .75in;
-        margin-top: .5in;
-        margin-bottom: .5in;  */
         font-size: 11pt;
     }
     
@@ -284,8 +283,8 @@ footer {
 }
 
 @page {
-    margin-top: .5in;
-    margin-bottom: .5in;
+    margin-top: .75in;
+    margin-bottom: .75in;
     margin-left: 1in;
     margin-right: 1in;
   }
