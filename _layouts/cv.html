@@ -53,7 +53,7 @@ effort disentangling its format and structure.
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
-        <section class="top_section">
+        <section>
           <div class="top_section_background_image_container">
             <img class="top_section_background_image" alt="Background Image" src="../images/resume_top_background.jpeg">
           </div>
@@ -68,20 +68,20 @@ effort disentangling its format and structure.
           {% assign subSectionArray = section | split: subSectionBreak %}
           {% for subSection in subSectionArray %}
             {% if forloop.first %}
-              <div class="top_section_subsection">
+              <div >
                 {{ subSection }}
               </div>
             {% elsif forloop.last %}
-              <div class="top_section_subsection contact_info_screen_display">
+              <div class="contact_info_screen_display">
                 <h3{{ subSection }}
               </div>
             {% else %}
-              <div class="top_section_subsection">
+              <div >
                 <h3{{ subSection }}
               </div>
             {% endif %}
           {% endfor %}
-          <div class="top_section_subsection contact_info_printed">
+          <div class="contact_info_printed">
             <h3>Contact</h3>
             <ul>
               <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->

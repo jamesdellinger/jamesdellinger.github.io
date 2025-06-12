@@ -63,9 +63,6 @@ hr {
     background-color:var(--horizontal_rule_color);
 }
 
-/* TODO: experiment with a bit more left and right section padding. To keep
-fewer characters on each line. */
-
 section {
     background-color: white;
     line-height: 20px;
@@ -84,14 +81,6 @@ section {
     border-top-right-radius: 8px;
     overflow: hidden;
 }
-
-/* TODO: see if I can get rid of the top_section section. 
-Maybe adjust padding so that I can do it all under <section>? */
-
-/* .top_section {
-    padding-left: 8px;
-    padding-right: 8px;
-} */
 
 .top_section_background_image_container {
     margin-left: -64px;
