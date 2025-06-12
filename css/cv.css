@@ -84,8 +84,8 @@ section {
 }
 
 .top_section_background_image_container {
-    margin-left: calc(- var(--section_padding));
-    margin-right: calc(- var(--section_padding));
+    margin-left: calc(0px - var(--section_padding));
+    margin-right: calc(0px - var(--section_padding));
     display: flex;
 }
 
