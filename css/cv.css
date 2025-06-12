@@ -223,14 +223,6 @@ footer {
         background-color: white;
     }
 
-    a {
-        color: black;
-    }
-
-    a::after {
-        content: " (" attr(href) ")";
-    }
-
     body {
         margin-top: 0in;
         max-width: none;
@@ -281,6 +273,15 @@ footer {
 
     h3, h4 {
         font-size: 13pt;
+    }
+
+    a {
+        color: black;
+    }
+
+    a::after {
+        font-size: 11pt;
+        content: " (" attr(href) ")";
     }
 
     .contact_info_printed {
