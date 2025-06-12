@@ -96,10 +96,10 @@ Maybe adjust padding so that I can do it all under <section>? */
 .top_section_background_image_container {
     margin-left: -64px;
     margin-right: -64px;
-    display: flex; 
+    /* display: flex; 
     justify-items: center; 
     justify-content: center; 
-    align-items: center;
+    align-items: center; */
     overflow: hidden;
 }
 
