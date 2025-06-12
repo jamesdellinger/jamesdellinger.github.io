@@ -230,11 +230,11 @@ footer {
         padding-left: 0in;
         padding-right: 0in;
         border-style: none;
-        border-color: none;
-        border-bottom-left-radius: none;
-        border-bottom-right-radius: none;
-        border-top-left-radius: none;
-        border-top-right-radius: none;
+        border-color: white;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
