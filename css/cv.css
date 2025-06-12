@@ -97,7 +97,7 @@ Maybe adjust padding so that I can do it all under <section>? */
     /* padding-left: -64px;
     padding-right: -64px; */
     margin-left: -64px;
-    margin-right: 64px;
+    margin-right: -64px;
 
     display: flex; 
     justify-items: center; 
@@ -110,8 +110,8 @@ Maybe adjust padding so that I can do it all under <section>? */
 .top_section_background_image {
     height: 100%; 
     width: 100%;
-    left: 0px; 
-    top: 0px;
+    /* left: 0px; 
+    top: 0px; */
 }
 
 .top_section_profile_pic_container {
