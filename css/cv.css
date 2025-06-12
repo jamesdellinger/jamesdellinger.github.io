@@ -100,11 +100,10 @@ Maybe adjust padding so that I can do it all under <section>? */
     justify-items: center; 
     justify-content: center; 
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .top_section_background_image {
-    /* height: 100%;  */
     width: 100%;
 }
 
