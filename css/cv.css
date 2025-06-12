@@ -208,7 +208,7 @@ footer {
 
 @media print {
     body {
-        max-width: page;
+        max-width: none;
         margin-top: .5in;
         margin-bottom: .5in;
         margin-left: 1in;
@@ -230,9 +230,17 @@ footer {
     }
 
     h1 {
-        /* font-size: 32px; */
+        font-size: 17pt;
         margin-top: 0px;
         padding-top: 0px;
+    }
+
+    h2 {
+        font-size: 15pt;
+    }
+
+    h3, h4 {
+        font-size: 13pt;
     }
 
     a {
