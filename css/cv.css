@@ -222,11 +222,19 @@ footer {
     }
     
     .section {
-        border-width: 0px !important;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        border-width: 0in !important;
+        margin-top: 0in;
+        margin-bottom: 0in;
+        margin-left: 0in;
+        margin-right: 0in;
         padding-left: 0in;
         padding-right: 0in;
+        border-style: none;
+        border-color: none;
+        border-bottom-left-radius: none;
+        border-bottom-right-radius: none;
+        border-top-left-radius: none;
+        border-top-right-radius: none;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
