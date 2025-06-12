@@ -117,7 +117,7 @@ Maybe adjust padding so that I can do it all under <section>? */
 .top_section_profile_pic_container {
     position: relative; 
     margin-top: -112px; 
-    margin-left: -32px;
+    margin-left: -64px;
     width: 160px; 
     height: 160px; 
     overflow: hidden;
