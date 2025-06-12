@@ -57,7 +57,7 @@ effort disentangling its format and structure.
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
-        <section class="section top_section">
+        <section class="top_section">
           <div class="top_section_background_image_container"
                 style="position: relative; 
                        display: flex; justify-items: center; justify-content: center; align-items: center;
@@ -102,11 +102,11 @@ effort disentangling its format and structure.
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
-        <section class="section work_experience">
+        <section class="work_experience">
           {{ section }}
         </section>
       {% else %}
-        <section class="section">
+        <section>
           {{ section }}
         </section>
       {% endif %}
