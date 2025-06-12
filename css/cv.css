@@ -207,10 +207,15 @@ footer {
 }
 
 @media print {
+
+    html {
+        background-color: none;
+    }
+
     body {
         max-width: none;
-        margin-top: .5in;
-        margin-bottom: .5in;
+        margin-top: 0in;
+        margin-bottom: 0in;
         margin-left: 0in;
         margin-right: 0in;
         font-size: 11pt;
@@ -220,6 +225,8 @@ footer {
         border-width: 0px !important;
         margin-top: 0px;
         margin-bottom: 0px;
+        padding-left: 0in;
+        padding-right: 0in;
     }
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
