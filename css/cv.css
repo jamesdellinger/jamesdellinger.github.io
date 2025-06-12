@@ -252,18 +252,15 @@ footer {
         border-style: none;
     }
 
-    header, 
-    /* .header_title_text, 
-    .header_title_container, 
-    .header_profile_pic_container, 
-    .header_profile_pic,  */
+    /* header,  */
     .headroom, 
     footer,
     .top_section_background_image_container, 
-    .top_section_background_image,
+    /* .top_section_background_image, */
     .top_section_profile_pic_container, 
-    .top_section_profile_pic, 
-    .contact_info_screen_display, hr { 
+    /* .top_section_profile_pic,  */
+    .contact_info_screen_display, 
+    hr { 
         display: none; 
     }
 
