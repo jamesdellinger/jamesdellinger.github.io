@@ -5,6 +5,7 @@
     --desktop_header_bottom_border_color: rgba(140, 140, 140, 0.2);
     --desktop_section_border_color: rgb(223,222,219);
     --desktop_background_color: rgb(244, 242, 238);
+    --section_padding: 64px;
   }
 
 html {
@@ -70,8 +71,8 @@ section {
     margin-bottom: 6px;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: var(--section_padding);
+    padding-right: var(--section_padding);
     border-style: solid;
     border-width: 1px;
     border-color: var(--desktop_section_border_color);
