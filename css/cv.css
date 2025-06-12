@@ -222,8 +222,10 @@ footer {
 
     body {
         max-width: none;
-        margin-left: 1in;
-        margin-right: 1in;
+        margin-left: .8in;
+        margin-right: .8in;
+        margin-top: .6in;
+        margin-bottom: .6in;
         font-size: 11pt;
     }
     
