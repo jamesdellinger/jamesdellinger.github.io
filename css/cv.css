@@ -243,6 +243,8 @@ footer {
 
     body {
         margin-top: 0in;
+        padding-left: 0in;
+        padding-right: 0in;
         max-width: none;
         font-size: 11pt;
         line-height: 20pt;
@@ -253,6 +255,8 @@ footer {
         padding: 0in;
         margin: 0in;
         border-style: none;
+        border-radius: 0;
+        border-width: 0;
     }
 
     .headroom, 
