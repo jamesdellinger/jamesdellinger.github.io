@@ -279,10 +279,12 @@ footer {
         color: black;
     }
 
-    a::after {
-        font-size: 11pt;
+    /* Doing this makes the printed font tiny.
+    Solution from: https://stackoverflow.com/a/10634534/8628758
+    TODO: troubleshoot. */
+    /* a::after {
         content: " (" attr(href) ")";
-    }
+    } */
 
     .contact_info_printed {
         display: block;
