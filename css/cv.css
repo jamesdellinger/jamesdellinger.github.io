@@ -96,7 +96,7 @@ section {
 .top_section_profile_pic_container {
     position: relative; 
     margin-top: -112px; 
-    margin-left: -32px;
+    margin-left: calc(0px - var(--section_padding)/2);
     width: 160px; 
     height: 160px; 
     overflow: hidden;
