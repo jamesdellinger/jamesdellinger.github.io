@@ -94,9 +94,9 @@ Maybe adjust padding so that I can do it all under <section>? */
 } */
 
 .top_section_background_image_container {
-    /* position: relative; */
     margin-left: -64px;
     margin-right: -64px;
+    display: flex;
 }
 
 .top_section_background_image {
@@ -119,11 +119,6 @@ Maybe adjust padding so that I can do it all under <section>? */
 .top_section_profile_pic {
     width: 100%;
 }
-
-/* .top_section_subsection {
-    padding-left: 64px; 
-    padding-right: 64px;
-} */
 
 header {
     display: none;
@@ -289,11 +284,6 @@ footer {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
-
-    /* .top_section_subsection {
-        padding-left: 0in; 
-        padding-right: 0in;
-    } */
 
     header, .header_title_text, .header_title_container, .header_profile_pic_container, .header_profile_pic, footer, .headroom, .headroom--top, .headroom--pinned, .headroom--not-top, 
     .top_section_background_image_container, .top_section_background_image,
