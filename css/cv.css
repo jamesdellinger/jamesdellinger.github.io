@@ -6,6 +6,7 @@
     --desktop_section_border_color: rgb(223,222,219);
     --desktop_background_color: rgb(244, 242, 238);
     --section_padding: 64px;
+    --section_margin_top_bottom: 6px;
   }
 
 html {
@@ -67,8 +68,8 @@ hr {
 section {
     background-color: white;
     line-height: 20px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: var(--section_margin_top_bottom);
+    margin-bottom: var(--section_margin_top_bottom);
     margin-left: 0px;
     margin-right: 0px;
     padding-left: var(--section_padding);
@@ -76,10 +77,6 @@ section {
     border-style: solid;
     border-width: 1px;
     border-color: var(--desktop_section_border_color);
-    /* border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px; */
     border-radius: 8px;
     overflow: hidden;
 }
