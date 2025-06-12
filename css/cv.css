@@ -1,9 +1,14 @@
 :root {
     --slight_transparent: rgba(0, 0, 0, 0.65);
+    --horizontal_rule_color: rgb(232,232,232);
+    --link_color: rgb(65,110,210);
+    --desktop_header_bottom_border_color: rgba(140, 140, 140, 0.2);
+    --desktop_section_border_color: rgb(223,222,219);
+    --desktop_background_color: rgb(244, 242, 238);
   }
 
 html {
-    background-color: rgb(244, 242, 238);
+    background-color: var(--desktop_background_color);
 }
 
 body {
@@ -16,7 +21,7 @@ body {
 }
 
 a {
-    color: rgb(65,110,210);
+    color: var(--link_color);
     text-decoration: none;
 }
 
@@ -46,14 +51,14 @@ h5, h6 {
 }
 
 h6 {
-    color:var(--slight_transparent)
+    color: var(--slight_transparent);
 }
 
 hr {
     height: 1px;
     border-width:0px;
-    color:rgb(232,232,232);
-    background-color:rgb(232,232,232);
+    color:var(--horizontal_rule_color);
+    background-color:var(--horizontal_rule_color);
 }
 
 /* TODO: experiment with a bit more left and right section padding. To keep
@@ -70,7 +75,7 @@ section {
     padding-right: 64px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(223,222,219);
+    border-color: var(--desktop_section_border_color);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -98,7 +103,7 @@ header {
     top:0;
     left:0;
     width: 100%;
-    border-bottom-color: rgba(140, 140, 140, 0.2);
+    border-bottom-color: var(--desktop_header_bottom_border_color);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     z-index: 1;
@@ -292,6 +297,7 @@ footer {
     }
 }
 
+/* Printing page margins must be set here. */
 @page {
     margin-top: .75in;
     margin-bottom: .75in;
