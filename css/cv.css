@@ -56,7 +56,7 @@ hr {
     background-color:rgb(232,232,232);
 }
 
-.section {
+section {
     background-color: rgb(255,255,255);
     line-height: 20px;
     margin-top: 6px;
@@ -175,7 +175,7 @@ footer {
         font-weight: auto;
     }
 
-    .section {
+    section {
         line-height: 28px;
         /* padding-left: 8px;
         padding-right: 8px; */
@@ -226,7 +226,7 @@ footer {
         font-size: 11pt;
     }
     
-    .section {
+    section {
         border-width: 0in !important;
         margin-top: 0in;
         margin-bottom: 0in;
