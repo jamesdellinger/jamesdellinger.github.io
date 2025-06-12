@@ -23,23 +23,19 @@ effort disentangling its format and structure.
   <body>
     <header>
       <div class="header_title_container">
-        <div class="header_profile_pic_container"
-             style="margin-left: 0px; margin-right: 16px;
-                    width: 32px; height: 32px; overflow: hidden;
-                    border-radius: 49.9%;">
+        <div class="header_profile_pic_container">
           <a href="/">
-            <img class="header_profile_pic" style="width: 100%;" src="../images/cv_pic_400.jpeg" alt="Header Profile Pic">
+            <img class="header_profile_pic" src="../images/cv_pic_400.jpeg" alt="Header Profile Pic">
           </a>
         </div>
         <p class="header_title_text">James Dellinger</p>
       </div>
     </header>
 
-    <!-- Use headroom.js (https://wicky.nillia.ms/headroom.js/) to gently slide the header down, to make it visible,
-    once the user has begun to scroll down through the resume. -->
+    <!-- Use headroom.js (https://wicky.nillia.ms/headroom.js/) to gently slide the header down, 
+         making it visible once the user has begun to scroll downwards from the top. -->
     <script src="/js/headroom.js"></script>
     <script>
-        // select your header or whatever element you wish
         const header = document.querySelector("header");
         const scroll_offset = 300;
         const options = {

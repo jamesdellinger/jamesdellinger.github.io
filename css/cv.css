@@ -109,11 +109,6 @@ header {
     z-index: 1;
 }
 
-.header_title_text {
-    font-size: 18px;
-    font-weight: 300;
-}
-
 .header_title_container {
     height: 32px;
     max-width: 800px;
@@ -126,6 +121,21 @@ header {
     margin-bottom: 8px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.header_title_text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.header_profile_pic_container {
+    margin-left: 0px; margin-right: 16px;
+    width: 32px; height: 32px; overflow: hidden;
+    border-radius: 49.9%;
+}
+
+.header_profile_pic {
+    width: 100%;
 }
 
 /* The following four headroom classes ensure that the code in headroom.js
