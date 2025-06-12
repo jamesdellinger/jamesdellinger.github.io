@@ -97,7 +97,7 @@ Maybe adjust padding so that I can do it all under <section>? */
     /* padding-left: -64px;
     padding-right: -64px; */
     margin-left: -64px;
-    margin-right: -64px;
+    margin-right: 64px;
 
     display: flex; 
     justify-items: center; 
