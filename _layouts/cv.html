@@ -100,8 +100,13 @@ effort disentangling its format and structure.
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
+        {% assign companiesArray = section | split: "<hr>" %}
         <section id="experience_section">
-          {{ section }}
+        {% for company in companiesArray %}
+          <div class="company">
+            {{ company }}
+          </div>
+        {% endfor %}
         </section>
       {% else %}
         <section>
@@ -112,7 +117,7 @@ effort disentangling its format and structure.
 
     <!-- Draw a gray vertical line across multiple job titles at the same company. -->
     <script>
-      let companies = document.body.getElementsByIdName("experience_section");
+      let companies = document.body.getElementsByClassName("company");
       companies.array.forEach(company => {
       // for (let i = 0; i < companies.length; i++) {
         let jobs = company.querySelectorAll("h4");
