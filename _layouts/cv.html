@@ -101,7 +101,7 @@ effort disentangling its format and structure.
         </section>
       {% elsif forloop.index0 == 1 %}
         <section id="experience_section">
-        {% assign companyBreak = "</hr>" %}
+        {% assign companyBreak = "<hr>" %}
         {% assign companiesArray = section | split: companyBreak %}
         {{ companyBreak }}
         {{ companiesArray.size }}
