@@ -100,7 +100,8 @@ effort disentangling its format and structure.
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
-        {% assign companiesArray = section | split: "<hr>" %}
+        {% assign companyBreak = "<hr>" %}
+        {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
         {% for company in companiesArray %}
           <div class="company">
@@ -115,7 +116,7 @@ effort disentangling its format and structure.
       {% endif %}
     {% endfor %}
 
-    <!-- Draw a gray vertical line across multiple job titles at the same company. -->
+    <!-- Draw a gray vertical line to the left of multiple job titles at the same company. -->
     <script>
       let companies = document.body.getElementsByClassName("company");
       companies.array.forEach(company => {
