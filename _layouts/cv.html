@@ -62,6 +62,14 @@ effort disentangling its format and structure.
               <img class="top_section_profile_pic" alt="Profile Pic" src="../images/cv_pic_400.jpeg">
             </a>
           </div>
+
+          <div class="top_section_profilepic_name_container_mobile"
+               style="display: flex;">
+            <!-- TODO: Make a profile pic and name "James Dellinger's Resume" that will be 
+            visibible only on mobile. place in a flex container. Make the <h1> header
+            invisible in mobile (so that name won't be displayed twice.) -->
+          </div>
+
           <!-- Display a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->
           {% assign subSectionBreak = "<h3" %}
@@ -103,15 +111,16 @@ effort disentangling its format and structure.
     {% endfor %}
 
     <!-- Draw a gray vertical line across multiple job titles at the same company. -->
-    <!-- <script>
-      let companies = document.body.getElementsByClassName("company");
+    <script>
+      let companies = document.body.getElementsByIdName("experience_section");
       companies.array.forEach(company => {
-        let jobs = company.querySelectorAll("h3");
+      // for (let i = 0; i < companies.length; i++) {
+        let jobs = company.querySelectorAll("h4");
         if (jobs.length > 1) {
           const jobHeaderCoords = [];
           const leftShift = 32;
-          for (let i = 1; i < jobs.length; i++) {
-            const rect = jobs[i].getBoundingClientRect();
+          for (let j = 0; j < jobs.length; j++) {
+            const rect = jobs[j].getBoundingClientRect();
             const left  = rect.left + window.scrollX;
             const top = rect.top + window.scrollY;
             jobHeaderCoords.push([left, top])
@@ -120,21 +129,19 @@ effort disentangling its format and structure.
           // Draw a vertical line from the top to the lowest job headers.
           const lineTop = jobHeaderCoords[0];
           const lineBottom = jobHeaderCoords[-1];
-
-          var newLine = document.createElementNS('http://www.w3.org/2000/svg','svg');
+          var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
           newLine.setAttribute('x1',linetop[0] - leftShift);
           newLine.setAttribute('y1',linetop[1]);
           newLine.setAttribute('x2',lineBottom[0] - leftShift);
           newLine.setAttribute('y2',lineBottom[1]);
-          newLine.setAttribute("stroke", "black")
-          $("svg").append(newLine);
+          company.appendChild(newLine);
 
           // TODO 
-
+          
 
         }
       });
-    </script> -->
+    </script>
 
     <footer>
       © <script>document.write(/\d{4}/.exec(Date())[0])</script> James Dellinger
