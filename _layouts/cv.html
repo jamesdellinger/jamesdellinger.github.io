@@ -148,6 +148,10 @@ effort disentangling its format and structure.
           var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
           newSVG.setAttribute('width', '64px');
           newSVG.setAttribute('height', lineBottom[1] - lineTop[1]);
+          newSVG.setAttribute('x1',lineTop[0] - leftShift);
+          newSVG.setAttribute('y1',lineTop[1]);
+          newSVG.setAttribute('x2',lineBottom[0] - leftShift);
+          newSVG.setAttribute('y2',lineBottom[1]);
           var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
           newLine.setAttribute('x1',lineTop[0] - leftShift);
           newLine.setAttribute('y1',lineTop[1]);
