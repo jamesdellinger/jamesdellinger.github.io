@@ -7,6 +7,8 @@
     --desktop_background_color: rgb(244, 242, 238);
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
+    --job_bar_width: 2px;
+    --job_bullet_width: 8px;
   }
 
 html {
@@ -19,6 +21,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     font-size: 14px;
+    font-weight: 400;
     margin-top: 24px;
     padding-left: 8px;
     padding-right: 8px;
@@ -202,10 +205,10 @@ footer {
 .jobBar::before {
     content: "";
     position: absolute;
-    left: calc(-1px - var(--section_padding)/2);
+    left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
     top: 3.6rem;
     height: calc(100% - 2.4rem);
-    width: 2px;
+    width: var(--job_bar_width);
     background-color: var(--horizontal_rule_color);
     box-sizing: border-box;
 }
@@ -214,14 +217,12 @@ footer {
     position: relative;
     display: block;
     border-radius: 49.9%;
-    /* height: .8rem;
-    width: .8rem; */
-    height: 8px;
-    width: 8px;
+    height: var(--job_bullet_width);
+    width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
     top: 2rem;
     left: -3.6rem;
-    margin-bottom: -.8rem
+    margin-bottom: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
 }
 
 @media all and (max-width: 550px) {
