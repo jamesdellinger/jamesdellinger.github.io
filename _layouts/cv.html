@@ -134,7 +134,6 @@ effort disentangling its format and structure.
 
           // Get the coordinates of each job title header.
           const jobHeaderCoords = [];
-          const leftShift = 32;
           for (let j = 0; j < jobs.length; j++) {
             const rect = jobs[j].getBoundingClientRect();
             const left  = rect.left + window.scrollX;
@@ -145,12 +144,14 @@ effort disentangling its format and structure.
           // Draw a vertical line from the top to the lowest job title headers.
           const lineTop = jobHeaderCoords[0];
           const lineBottom = jobHeaderCoords[jobHeaderCoords.length - 1];
+          const svgWidth = 64;
+          const leftShift = svgWidth/2;
           var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
           newSVG.setAttribute('width', '64px');
           newSVG.setAttribute('height', lineBottom[1] - lineTop[1]);
-          newSVG.setAttribute('x1',lineTop[0] - leftShift);
+          newSVG.setAttribute('x1',lineTop[0] - svgWidth);
           newSVG.setAttribute('y1',lineTop[1]);
-          newSVG.setAttribute('x2',lineBottom[0] - leftShift);
+          newSVG.setAttribute('x2',lineBottom[0]);
           newSVG.setAttribute('y2',lineBottom[1]);
           var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
           newLine.setAttribute('x1',lineTop[0] - leftShift);
