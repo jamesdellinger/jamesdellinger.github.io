@@ -198,8 +198,8 @@ footer {
 } */
 
 .company {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /* flex-direction: column; */
     position: relative;
 }
 
