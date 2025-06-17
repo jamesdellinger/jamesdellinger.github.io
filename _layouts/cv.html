@@ -102,7 +102,11 @@ effort disentangling its format and structure.
         </section>
       {% elsif forloop.index0 == 1 %}
         
-        {% capture companyBreak %} <hr> {% end capture %}
+        {% raw %}
+        {{{ section }}}
+        {% endraw %}
+
+        {% assign companyBreak = "<hr>" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
         {{ companyBreak }}
