@@ -200,7 +200,8 @@ footer {
 .company::before {
     content: "";
     position: absolute;
-    left: calc(-3.2rem - 1px);
+    /* left: calc(-3.2rem - 1px); */
+    left: calc(-var(--section_padding)/2 - 1px);
     top: 3.6rem;
     height: calc(100% - 2.4rem);
     width: 2px;
