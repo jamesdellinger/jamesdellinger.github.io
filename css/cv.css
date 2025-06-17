@@ -1,6 +1,7 @@
 :root {
     --slight_transparent: rgba(0, 0, 0, 0.65);
-    --horizontal_rule_color: rgb(232,232,232);
+    /* --horizontal_rule_color: rgb(232,232,232); */
+    --horizontal_rule_color: rgba(140, 140, 140, 0.2);
     --job_bullet_color: rgba(0, 0, 0, 0.3);
     --link_color: rgb(65,110,210);
     --desktop_header_bottom_border_color: rgba(140, 140, 140, 0.2);
@@ -191,12 +192,6 @@ footer {
 .contact_info_printed {
     display: none;
 }
-
-/* line {
-    stroke: var(--horizontal_rule_color);
-    width: 2px;
-    z-index: 99;
-} */
 
 .jobBar {
     display: block;
