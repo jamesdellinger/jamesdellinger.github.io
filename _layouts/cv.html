@@ -106,7 +106,30 @@ effort disentangling its format and structure.
         <section id="experience_section">
         {% for company in companiesArray %}
           <div class="company">
+          {% assign jobBreak = "<h4" %}
+          {% assign jobsArray = company | split: jobBreak %}
+          {% if jobsArray.size > 1 %}
+            {% for job in jobsArray %}
+              {% if forloop.first %}
+                {{ job }}
+              {% else %}
+                <div>
+                  <span class="jobBullet"></span>
+                {% if forloop.last %}
+                  <div class="job">
+                    <h4{{ job }}
+                  </div>
+                {% else %}
+                  <div class="job jobBar">
+                    <h4{{ job }}
+                  </div>
+                {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% else %}
             {{ company }}
+          {% endif %}
           </div>
           {% if forloop.last == false %}
             <hr>
@@ -119,50 +142,6 @@ effort disentangling its format and structure.
         </section>
       {% endif %}
     {% endfor %}
-
-    <!-- Draw a gray vertical line to the left of multiple job titles at the same company. -->
-    <script>
-      let companies = document.body.getElementsByClassName("company");
-      for (let company of companies) {
-      // for (let i = 0; i < companies.length; i++) {
-        let jobs = company.querySelectorAll("h4");
-        if (jobs.length > 1) {
-
-          // Get the coordinates of each job title header.
-          const jobHeaderCoords = [];
-          for (let j = 0; j < jobs.length; j++) {
-            const rect = jobs[j].getBoundingClientRect();
-            const left  = rect.left + window.scrollX;
-            const top = rect.top + window.scrollY;
-            jobHeaderCoords.push([left, top])
-          }
-
-          // Draw a vertical line from the top to the lowest job title headers.
-          const lineTop = jobHeaderCoords[0];
-          const lineBottom = jobHeaderCoords[jobHeaderCoords.length - 1];
-          const svgWidth = 64;
-          const leftShift = svgWidth/2;
-          var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
-          newSVG.setAttribute('width', '64px');
-          newSVG.setAttribute('height', lineBottom[1] - lineTop[1]);
-          newSVG.setAttribute('x1',lineTop[0] - svgWidth);
-          newSVG.setAttribute('y1',lineTop[1]);
-          newSVG.setAttribute('x2',lineBottom[0]);
-          newSVG.setAttribute('y2',lineBottom[1]);
-          var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
-          newLine.setAttribute('x1',lineTop[0] - leftShift);
-          newLine.setAttribute('y1',lineTop[1]);
-          newLine.setAttribute('x2',lineBottom[0] - leftShift);
-          newLine.setAttribute('y2',lineBottom[1]);
-          newSVG.appendChild(newLine);
-          document.body.appendChild(newSVG);
-
-          // TODO 
-          
-
-        }
-      };
-    </script>
 
     <footer>
       © <script>document.write(/\d{4}/.exec(Date())[0])</script> James Dellinger

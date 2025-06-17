@@ -197,13 +197,13 @@ footer {
     z-index: 99;
 } */
 
-.company {
+.jobBar {
     display: block;
     /* flex-direction: column; */
     position: relative;
 }
 
-.company::before {
+.jobBar::before {
     content: "";
     position: absolute;
     left: calc(-1px - var(--section_padding)/2);
