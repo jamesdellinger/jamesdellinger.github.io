@@ -144,7 +144,7 @@ effort disentangling its format and structure.
 
           // Draw a vertical line from the top to the lowest job title headers.
           const lineTop = jobHeaderCoords[0];
-          const lineBottom = jobHeaderCoords[-1];
+          const lineBottom = jobHeaderCoords[jobHeaderCoords.length - 1];
           var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
           newLine.setAttribute('x1',lineTop[0] - leftShift);
           newLine.setAttribute('y1',lineTop[1]);
