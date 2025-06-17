@@ -207,7 +207,7 @@ footer {
     content: "";
     position: absolute;
     /* left: calc(-1px * var(--section_padding)/2 - 1px); */
-    left: calc(-3.2rem - 1px);
+    left: calc(-3.2rem - 32px);
     top: 3.6rem;
     height: calc(100% - 2.4rem);
     width: 2px;
