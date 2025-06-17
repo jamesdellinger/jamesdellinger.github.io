@@ -37,11 +37,13 @@ h1 {
 
 h2 {
     font-size: 20px;
+    font-weight: 600;
     line-height: 25px;
 }
 
 h3, h4 {
     font-size: 16px;
+    font-weight: 600;
     line-height: 24px;
     margin-bottom: 0px;
     margin-top: 16px;
@@ -212,8 +214,10 @@ footer {
     position: relative;
     display: block;
     border-radius: 49.9%;
-    height: .8rem;
-    width: .8rem;
+    /* height: .8rem;
+    width: .8rem; */
+    height: 8px;
+    width: 8px;
     background-color: var(--job_bullet_color);
     top: 2rem;
     left: -3.6rem;
