@@ -205,6 +205,8 @@ footer {
     height: calc(100% - 2.4rem);
     width: 2px;
     background-color: var(--horizontal_rule_color);
+    color: var(--horizontal_rule_color);
+    z-index: 99;
 }
 
 @media all and (max-width: 550px) {
