@@ -100,7 +100,7 @@ effort disentangling its format and structure.
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
-        {% assign companyBreak = "&lt;hr&gt;" %}
+        {% assign companyBreak = "<hr >" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
         {{ companyBreak }}
