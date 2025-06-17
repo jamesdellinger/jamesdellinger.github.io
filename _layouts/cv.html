@@ -127,7 +127,7 @@ effort disentangling its format and structure.
     <!-- Draw a gray vertical line to the left of multiple job titles at the same company. -->
     <script>
       let companies = document.body.getElementsByClassName("company");
-      companies.array.forEach(company => {
+      for (let company of companies) {
       // for (let i = 0; i < companies.length; i++) {
         let jobs = company.querySelectorAll("h4");
         if (jobs.length > 1) {
@@ -154,7 +154,7 @@ effort disentangling its format and structure.
           
 
         }
-      });
+      };
     </script>
 
     <footer>
