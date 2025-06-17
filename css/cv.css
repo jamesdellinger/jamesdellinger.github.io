@@ -191,6 +191,10 @@ footer {
     display: none;
 }
 
+line {
+    stroke: var(--horizontal_rule_color);
+}
+
 @media all and (max-width: 550px) {
 
     h2 {
