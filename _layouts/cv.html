@@ -22,6 +22,7 @@ effort disentangling its format and structure.
   </head>
   <body>
     <header>
+      <!-- TODO: prevent header from being visible in Safari when it should be hidden -->
       <div class="header_title_container">
         <div class="header_profile_pic_container">
           <a href="/">
@@ -100,7 +101,8 @@ effort disentangling its format and structure.
           </div>
         </section>
       {% elsif forloop.index0 == 1 %}
-        {% assign companyBreak = "<hr >" %}
+        
+        {% capture companyBreak %} <hr> {% end capture %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
         {{ companyBreak }}
