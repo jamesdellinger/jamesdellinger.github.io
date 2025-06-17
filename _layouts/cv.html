@@ -105,14 +105,10 @@ effort disentangling its format and structure.
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
         {% for company in companiesArray %}
-          {% if forloop.last %}
-            <div class="company">
-              {{ company }}
-            </div>
-          {% else %}
-            <div class="company">
-              {{ company }}
-            </div>
+          <div class="company">
+            {{ company }}
+          </div>
+          {% if forloop.last == false %}
             <hr>
           {% endif %}
         {% endfor %}
