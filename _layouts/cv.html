@@ -145,12 +145,16 @@ effort disentangling its format and structure.
           // Draw a vertical line from the top to the lowest job title headers.
           const lineTop = jobHeaderCoords[0];
           const lineBottom = jobHeaderCoords[jobHeaderCoords.length - 1];
+          var newSVG = document.createElementNS('http://www.w3.org/2000/svg','svg');
+          newSVG.setAttribute('width', '64px');
+          newSVG.setAttribute('height', lineTop[1] - lineBottom[1]);
           var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
           newLine.setAttribute('x1',lineTop[0] - leftShift);
           newLine.setAttribute('y1',lineTop[1]);
           newLine.setAttribute('x2',lineBottom[0] - leftShift);
           newLine.setAttribute('y2',lineBottom[1]);
-          company.appendChild(newLine);
+          newSVG.appendChild(newLine);
+          company.appendChild(newSVG);
 
           // TODO 
           
