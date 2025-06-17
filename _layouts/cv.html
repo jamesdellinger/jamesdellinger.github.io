@@ -104,13 +104,17 @@ effort disentangling its format and structure.
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
-        {{ companyBreak }}
-        {{ companiesArray.size }}
         {% for company in companiesArray %}
-          <div class="company">
-            {{ company }}
-          </div>
-          <hr>
+          {% if forloop.last %}
+            <div class="company">
+              {{ company }}
+            </div>
+          {% else %}
+            <div class="company">
+              {{ company }}
+            </div>
+            <hr>
+          {% endif %}
         {% endfor %}
         </section>
       {% else %}
