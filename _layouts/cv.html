@@ -102,7 +102,7 @@ effort disentangling its format and structure.
         </section>
       {% elsif forloop.index0 == 1 %}
         
-        {{{ section }}}
+        {{ section }}
 
         {% assign companyBreak = "<hr>" %}
         {% assign companiesArray = section | split: companyBreak %}
