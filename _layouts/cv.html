@@ -131,6 +131,8 @@ effort disentangling its format and structure.
       // for (let i = 0; i < companies.length; i++) {
         let jobs = company.querySelectorAll("h4");
         if (jobs.length > 1) {
+
+          // Get the coordinates of each job title header.
           const jobHeaderCoords = [];
           const leftShift = 32;
           for (let j = 0; j < jobs.length; j++) {
@@ -140,12 +142,12 @@ effort disentangling its format and structure.
             jobHeaderCoords.push([left, top])
           }
 
-          // Draw a vertical line from the top to the lowest job headers.
+          // Draw a vertical line from the top to the lowest job title headers.
           const lineTop = jobHeaderCoords[0];
           const lineBottom = jobHeaderCoords[-1];
           var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
-          newLine.setAttribute('x1',linetop[0] - leftShift);
-          newLine.setAttribute('y1',linetop[1]);
+          newLine.setAttribute('x1',lineTop[0] - leftShift);
+          newLine.setAttribute('y1',lineTop[1]);
           newLine.setAttribute('x2',lineBottom[0] - leftShift);
           newLine.setAttribute('y2',lineBottom[1]);
           company.appendChild(newLine);
