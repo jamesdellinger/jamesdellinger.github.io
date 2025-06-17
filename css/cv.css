@@ -194,6 +194,7 @@ footer {
 line {
     stroke: var(--horizontal_rule_color);
     width: 2px;
+    z-index: 99;
 }
 
 @media all and (max-width: 550px) {
