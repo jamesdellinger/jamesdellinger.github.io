@@ -213,7 +213,7 @@ footer {
     box-sizing: border-box;
 }
 
-/* .jobBullet {
+.jobBullet {
     position: relative;
     display: block;
     border-radius: 49.9%;
@@ -221,9 +221,9 @@ footer {
     width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
     top: 2rem;
-    left: -3.6rem;
-    margin-bottom: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
-} */
+    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
+    margin-bottom: calc(0px - var(--job_bullet_width));
+}
 
 @media all and (max-width: 550px) {
 
