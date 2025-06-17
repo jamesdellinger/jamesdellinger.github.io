@@ -191,10 +191,20 @@ footer {
     display: none;
 }
 
-line {
+/* line {
     stroke: var(--horizontal_rule_color);
     width: 2px;
     z-index: 99;
+} */
+
+.company::before {
+    content: "";
+    position: absolute;
+    left: calc(-3.2rem - 1px);
+    top: 3.6rem;
+    height: calc(100% - 2.4rem);
+    width: 2px;
+    background-color: var(--horizontal_rule_color);
 }
 
 @media all and (max-width: 550px) {
