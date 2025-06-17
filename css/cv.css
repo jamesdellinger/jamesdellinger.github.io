@@ -199,7 +199,7 @@ footer {
 
 .company::before {
     content: "";
-    position: absolute;
+    position: relative;
     /* left: calc(-3.2rem - 1px); */
     left: calc(-1px * var(--section_padding)/2 - 1px);
     top: 3.6rem;
