@@ -8,13 +8,14 @@
     --desktop_background_color: rgb(244, 242, 238);
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
+    --p-margin_top_bottom: 14px;
     --h3_h4_line_height: 24px;
     --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
     --h3_h4_margin_top: var(--h3_h4_fontsize);
     --job_bullet_width: calc(var(--h3_h4_line_height)/3);
     --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
     --job_bar_top: var(--h3_h4_line_height);
-    --job_bar_height: calc(100% + var(--h3_h4_margin_top));
+    --job_bar_height: calc(100%);
     --job_bar_width: 2px;
   }
 
@@ -32,6 +33,11 @@ body {
     margin-top: 24px;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+p {
+    margin-top: var(--p-margin_top_bottom);
+    margin-bottom: var(--p-margin_top_bottom);
 }
 
 a {
