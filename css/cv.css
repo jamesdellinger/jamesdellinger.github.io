@@ -209,7 +209,7 @@ footer {
     content: "";
     position: absolute;
     left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
-    top: 3.6rem;
+    top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2 + var(--h3_h4_margin_top) + 8px);
     height: calc(100% - 2.4rem);
     width: var(--job_bar_width);
     background-color: var(--horizontal_rule_color);
@@ -223,7 +223,7 @@ footer {
     height: var(--job_bullet_width);
     width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
-    top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2 + var(--h3_h4_margin_top) + 2px);
+    top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2 + var(--h3_h4_margin_top));
     left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
     margin-bottom: calc(0px - var(--job_bullet_width));
 }
