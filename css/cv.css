@@ -4,7 +4,8 @@
     --horizontal_rule_color: rgba(140, 140, 140, 0.2);
     --job_bullet_color: rgba(0, 0, 0, 0.3);
     --link_color: rgb(65,110,210);
-    --desktop_section_border_color: rgb(223,222,219);
+    /* --desktop_section_border_color: rgb(223,222,219); */
+    --desktop_section_border_color: rgba(0,0,0,.15);
     --desktop_background_color: rgb(244, 242, 238);
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
@@ -215,7 +216,7 @@ footer {
 }
 
 .jobBar::before {
-    /* content: ""; */
+    content: "";
     position: absolute;
     left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
     top: var(--job_bar_top);
