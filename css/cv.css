@@ -222,7 +222,7 @@ footer {
     height: var(--job_bullet_width);
     width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
-    top: calc(0px - var(--job_bullet_width)/2 -  var(--h3_h4_line_height)/2);
+    top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2);
     left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
     margin-bottom: calc(0px - var(--job_bullet_width));
 }
