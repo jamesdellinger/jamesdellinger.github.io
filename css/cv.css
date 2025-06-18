@@ -238,28 +238,6 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
-/* .testJobBulletTop {
-    position: relative;
-    display: block;
-    border-radius: 49.9%;
-    height: var(--job_bullet_width);
-    width: var(--job_bullet_width);
-    background-color: rgba(78, 104, 220, 0.3);
-    top: calc(var(--job_bullet_top) - var(--job_bullet_width)/2);
-    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
-}
-
-.testJobBulletBottom {
-    position: relative;
-    display: block;
-    border-radius: 49.9%;
-    height: var(--job_bullet_width);
-    width: var(--job_bullet_width);
-    background-color: rgba(78, 104, 220, 0.3);
-    top: calc(var(--job_bullet_top) + var(--job_bullet_width)/2);
-    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
-} */
-
 @media all and (max-width: 550px) {
 
     h2 {
