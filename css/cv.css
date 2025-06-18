@@ -11,6 +11,7 @@
     --job_bar_width: 2px;
     --job_bullet_width: 8px;
     --h3_h4_line_height: 24px;
+    --h3_h4_margin_top: 16px;
   }
 
 html {
@@ -51,7 +52,7 @@ h3, h4 {
     font-weight: 600;
     line-height: var(--h3_h4_line_height);
     margin-bottom: 0px;
-    margin-top: 16px;
+    margin-top: var(--h3_h4_margin_top);
 }
 
 h5, h6 {
