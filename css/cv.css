@@ -229,6 +229,7 @@ footer {
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
+    margin-bottom: calc(0px - var(--job_bullet_width));
 }
 
 /* .testJobBulletTop {
