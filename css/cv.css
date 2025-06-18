@@ -215,14 +215,13 @@ footer {
 }
 
 .jobBar::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
     top: var(--job_bar_top);
     height: var(--job_bar_height);
     width: var(--job_bar_width);
     background-color: var(--horizontal_rule_color);
-    /* box-sizing: border-box; */
 }
 
 .jobBullet {
