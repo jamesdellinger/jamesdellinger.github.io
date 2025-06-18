@@ -12,8 +12,8 @@
     --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
     --h3_h4_margin_top: var(--h3_h4_fontsize);
     --job_bullet_width: calc(var(--h3_h4_line_height)/3);
-    /* --job_bullet_top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2 + var(--h3_h4_margin_top)); */
-    --job_bullet_top: calc(var(--h3_h4_margin_top) + 2*var(--job_bullet_width));
+    /* --job_bullet_top: calc(var(--h3_h4_margin_top) + 2*var(--job_bullet_width)); */
+    --job_bullet_top: calc(4*var(--h3_h4_line_height)/3);
     --job_bar_top: var(--h3_h4_line_height);
     --job_bar_height: calc(100% + var(--h3_h4_margin_top));
     --job_bar_width: 2px;
