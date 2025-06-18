@@ -222,7 +222,7 @@ footer {
     height: var(--job_bar_height);
     width: var(--job_bar_width);
     background-color: var(--horizontal_rule_color);
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .jobBullet {
