@@ -208,7 +208,7 @@ footer {
     content: "";
     position: absolute;
     left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
-    top: calc(0px + var(--h3_h4_line_height)/2 - var(--job_bullet_width)/2 + var(--h3_h4_margin_top));
+    top: calc(0px);
     height: calc(100%);
     width: var(--job_bar_width);
     background-color: var(--horizontal_rule_color);
