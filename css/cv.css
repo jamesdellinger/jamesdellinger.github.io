@@ -1,4 +1,5 @@
 :root {
+    /* TODO: change desktop_section_border_color to rgba if possible. */
     --slight_transparent: rgba(0, 0, 0, 0.65);
     --horizontal_rule_color: rgba(140, 140, 140, 0.2);
     --job_bullet_color: rgba(0, 0, 0, 0.3);
@@ -9,6 +10,7 @@
     --section_margin_top_bottom: 6px;
     --job_bar_width: 2px;
     --job_bullet_width: 8px;
+    --h3_h4_line_height: 24px;
   }
 
 html {
@@ -47,7 +49,7 @@ h2 {
 h3, h4 {
     font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
+    line-height: var(--h3_h4_line_height);
     margin-bottom: 0px;
     margin-top: 16px;
 }
