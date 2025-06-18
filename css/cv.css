@@ -15,7 +15,7 @@
     --job_bullet_width: calc(var(--h3_h4_line_height)/3);
     --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
     --job_bar_top: var(--h3_h4_line_height);
-    --job_bar_height: calc(100% - var(--h3_h4_line_height));
+    --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_bar_width: 2px;
   }
 
