@@ -1,5 +1,4 @@
 :root {
-    /* TODO: change desktop_section_border_color to rgba if possible. */
     --h6_font_color: rgba(0, 0, 0, 0.65);
     --horizontal_rule_color: rgba(140, 140, 140, 0.2);
     --job_bullet_color: rgba(0, 0, 0, 0.3);
@@ -18,6 +17,20 @@
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_bar_width: 2px;
   }
+
+/* TODO: 
+  
+      maybe make <p> line text wrap sooner
+
+      experiment with drawing an outlined shape at each item: circles for jobs, squares for education, triangles for languages, and a hexagon for hobbies.
+      try and automatically alter the coloring of these shapes, dividing a spectrum (between two colors) into the number of items in a section.
+      e.g. job circles go from blue-gray to purple-gray. 
+
+      will need to widen headers that separate companies.
+
+      also try drawing little up-pointing arrowheads to go in-between the first and last jobs of a multi-job company. Use css or svg.
+
+      also make sure job bullets are invisible when printing. */
 
 html {
     background-color: var(--desktop_background_color);
