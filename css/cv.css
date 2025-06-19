@@ -346,6 +346,10 @@ footer {
         font-size: 13pt;
     }
 
+    h6 {
+        color: black;
+    }
+
     a {
         color: black;
     }
