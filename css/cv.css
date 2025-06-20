@@ -260,7 +260,7 @@ footer {
     display: block;
     border-radius: 0%;
     clip-path: inset(3px 3px);
-    height: 8px;
+    height: 16px;
     width: 16px;
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
