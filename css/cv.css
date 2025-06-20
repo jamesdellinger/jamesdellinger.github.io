@@ -255,6 +255,14 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
+path {
+    /* fill: var(--job_bullet_color); */
+    stroke: "#323232";
+    stroke-width: "2";
+    stroke-linecap: "round";
+    stroke-linejoin: "round";
+}
+
 .jobBulletChevron {
     position: relative;
     display: block;
