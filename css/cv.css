@@ -270,6 +270,7 @@ footer {
 /* }  */
 
 .jobBulletChevron {
+    display: block;
     --r:0px; /* border radius */
   
     width: 8px;
