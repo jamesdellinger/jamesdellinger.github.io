@@ -111,22 +111,27 @@ effort disentangling its format and structure.
           <div class="company">
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
-          {% if jobsArray.size > 1 %}
+          {% assign n_jobs = jobsArray.size %}
+          {% last_index = n_jobs | minus: 1 %}
+          {% if n_jobs > 2 %}
             {% for job in jobsArray %}
               {% if forloop.first %}
+                <!-- First "job" is just the company info, not an actual job position. -->
                 {{ job }}
               {% else %}
                 <div>
-                  <span class="jobBullet"></span>
+                {% if forloop.index0 > 1 and forloop.index0 < last_index and n_jobs > 3 %}
+                  <span class="jobBulletChevron"></span>
+                {% else %}
+                  <span class="jobBulletCircle"></span>
+                {% endif %}
                 {% if forloop.last %}
                   <div class="job">
-                    <h4{{ job }}
-                  </div>
                 {% else %}
                   <div class="job jobBar">
-                    <h4{{ job }}
-                  </div>
                 {% endif %}
+                <h4{{ job }}
+                </div>
                 </div>
               {% endif %}
             {% endfor %}

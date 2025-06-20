@@ -32,6 +32,10 @@
 
       also make sure job bullets are invisible when printing. */
 
+
+/* <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 13.5L12.3003 10.8003V10.8003C12.1344 10.6344 11.8656 10.6344 11.6997 10.8003V10.8003L9 13.5" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> */
+
+
 html {
     background-color: var(--desktop_background_color);
 }
@@ -238,10 +242,23 @@ footer {
     border-radius: 1px;
 }
 
-.jobBullet {
+.jobBulletCircle {
     position: relative;
     display: block;
     border-radius: 49.9%;
+    height: var(--job_bullet_width);
+    width: var(--job_bullet_width);
+    background-color: var(--job_bullet_color);
+    top: var(--job_bullet_top);
+    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
+    margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
+                                                           automatically increasing its height by var(--job_bullet_width) px. */
+}
+
+.jobBulletChevron {
+    position: relative;
+    display: block;
+    border-radius: 0%;
     height: var(--job_bullet_width);
     width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
