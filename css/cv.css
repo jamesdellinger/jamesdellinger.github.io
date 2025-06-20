@@ -272,6 +272,8 @@ footer {
 .jobBulletChevron {
     display: block;
     --r:0px; /* border radius */
+    top: var(--job_bullet_top);
+    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     );
   
     width: 8px;
     aspect-ratio: 1/cos(30deg);
