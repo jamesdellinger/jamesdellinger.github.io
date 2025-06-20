@@ -269,12 +269,14 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 /* } */ 
 
+
+
 .jobBulletChevron, .jobBulletChevron:before, .jobBulletChevron:after {
-     width: 8px; height: 8px; }
+     width: 4em; height: 4em; }
 .jobBulletChevron {
     overflow: hidden;
     position: relative;
-    /* margin: 7em auto 0; */
+    margin: 7em auto 0;
     border-radius: 20%;
     transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
     cursor: pointer;
