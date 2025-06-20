@@ -259,9 +259,9 @@ footer {
     position: relative;
     display: block;
     border-radius: 0%;
-    clip-path: inset(3px 3px);
-    height: var(--job_bullet_width);
-    width: var(--job_bullet_width);
+    /* clip-path: inset(3px 3px); */
+    height: 8px;
+    width: 16px;
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
