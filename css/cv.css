@@ -260,11 +260,6 @@ footer {
     display: block;
     border-radius: 0%;
     clip-path: path("M15 13.5L12.3003 10.8003V10.8003C12.1344 10.6344 11.8656 10.6344 11.6997 10.8003V10.8003L9 13.5");
-    fill-rule: evenodd;
-    stroke-linecap: round;
-    stroke-linejoin: "round";
-    stroke-width: "2";
-    stroke: "#323232";
     height: 24px;
     width: 16px;
     background-color: var(--job_bullet_color);
@@ -273,6 +268,23 @@ footer {
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 } 
+
+.jobBulletChevron {
+    --r:0px; /* border radius */
+  
+    width: 8px;
+    aspect-ratio: 1/cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
+    --webkit-mask:
+      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+      radial-gradient(var(--r) at left  var(--_g)),
+      radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    /* background: linear-gradient(45deg,#FA6900,#C02942); */
+    background: var(--job_bullet_color);
+  }
 
 
 /* If we make it a triangle:  */
