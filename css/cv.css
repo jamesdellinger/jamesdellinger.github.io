@@ -255,11 +255,11 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
-.jobBulletChevron {
+/* .jobBulletChevron {
     position: relative;
     display: block;
     border-radius: 0%;
-    /* clip-path: inset(3px 3px); */
+    clip-path: inset(3px 3px);
     height: 8px;
     width: 16px;
     background-color: var(--job_bullet_color);
@@ -267,6 +267,34 @@ footer {
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
+/* } */ 
+
+.jobBulletChevron, .jobBulletChevron:before, .jobBulletChevron:after {
+     width: 8px; height: 8px; }
+.jobBulletChevron {
+    overflow: hidden;
+    position: relative;
+    /* margin: 7em auto 0; */
+    border-radius: 20%;
+    transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+    cursor: pointer;
+    pointer-events: none;
+} 
+.jobBulletChevron:before, .jobBulletChevron:after {
+    position: absolute;
+    background: var(--job_bullet_color);
+    pointer-events: auto;
+    content: "";
+}
+.jobBulletChevron:before {
+    border-radius: 20% 20% 20% 53%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.jobBulletChevron:after {
+    border-radius: 20% 20% 53% 20%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(-30deg) scaleY(.866) translateX(24%);
 }
 
 @media all and (max-width: 550px) {
