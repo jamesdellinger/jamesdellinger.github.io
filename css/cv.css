@@ -264,7 +264,7 @@ footer {
     width: 16px;
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
-    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 2px);
+    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
