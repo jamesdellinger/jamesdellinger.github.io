@@ -112,7 +112,7 @@ effort disentangling its format and structure.
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
-          {% last_index = n_jobs | minus: 1 %}
+          {% assign last_index = n_jobs | minus: 1 %}
           {% if n_jobs > 2 %}
             {% for job in jobsArray %}
               {% if forloop.first %}
