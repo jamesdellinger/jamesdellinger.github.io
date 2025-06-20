@@ -255,20 +255,16 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
-path {
-    /* fill: var(--job_bullet_color); */
-    stroke: "#323232";
-    stroke-width: "2";
-    stroke-linecap: "round";
-    stroke-linejoin: "round";
-}
-
 .jobBulletChevron {
     position: relative;
     display: block;
     border-radius: 0%;
     clip-path: path("M15 13.5L12.3003 10.8003V10.8003C12.1344 10.6344 11.8656 10.6344 11.6997 10.8003V10.8003L9 13.5");
     fill-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: "round";
+    stroke-width: "2";
+    stroke: "#323232";
     height: 24px;
     width: 16px;
     background-color: var(--job_bullet_color);
