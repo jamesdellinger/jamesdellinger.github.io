@@ -16,6 +16,7 @@
     --job_bar_top: var(--h3_h4_line_height);
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_bar_width: 2px;
+    --job_chevron_width: calc(1.75 * var(--job_bullet_width));
   }
 
 /* TODO: 
@@ -257,14 +258,13 @@ footer {
 
 .jobBulletChevron {
     background-color: var(--job_bullet_color);
-    margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
-                                                           automatically increasing its height by var(--job_bullet_width) px. */
+    margin-bottom: calc(0px - var(--job_bullet_width));
     position: relative;
     display: block;
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: var(--job_bullet_width);
-    width: calc(1.75 * var(--job_bullet_width));
+    width: var(--job_chevron_width);
     fill: blue;
 }
 
