@@ -267,60 +267,10 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 } 
 
-/* .chevronSVG {
-    xmlns: "http://www.w3.org/2000/svg"
-    height: "24";  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"
-} */
-
-/* .jobBulletChevron {
-    display: block;
-    --r:0px; 
+.chevronSVG {
     top: var(--job_bullet_top);
-    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     );
-  
-    width: 8px;
-    aspect-ratio: 1/cos(30deg);
-    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
-    --webkit-mask:
-      conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
-       0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
-      radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
-      radial-gradient(var(--r) at left  var(--_g)),
-      radial-gradient(var(--r) at right var(--_g));
-    clip-path: polygon(50% 0,100% 100%,0 100%);
-    background: var(--job_bullet_color);
-  } */
-
-
-/* If we make it a triangle:  */
-
-/* .jobBulletChevron, .jobBulletChevron:before, .jobBulletChevron:after {
-     width: 4em; height: 4em; }
-.jobBulletChevron {
-    overflow: hidden;
-    position: relative;
-    margin: 7em auto 0;
-    border-radius: 20%;
-    transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
-    cursor: pointer;
-    pointer-events: none;
-} 
-.jobBulletChevron:before, .jobBulletChevron:after {
-    position: absolute;
-    background: rgb(178, 178, 178);
-    pointer-events: auto;
-    content: "";
+    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2);
 }
-.jobBulletChevron:before {
-    border-radius: 20% 20% 20% 53%;
-    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
-            skewX(30deg) scaleY(.866) translateX(-24%);
-}
-.jobBulletChevron:after {
-    border-radius: 20% 20% 53% 20%;
-    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
-            skewX(-30deg) scaleY(.866) translateX(24%);
-} */
 
 @media all and (max-width: 550px) {
 
