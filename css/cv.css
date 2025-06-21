@@ -270,7 +270,8 @@ footer {
 
 .chevronSVG {
     top: var(--job_bullet_top);
-    calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px)
+    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
+    margin-bottom: calc(0px - var(--job_bullet_width));
 }
 
 @media all and (max-width: 550px) {
