@@ -258,7 +258,6 @@ footer {
 .jobBulletChevron {
     position: relative;
     display: block;
-    border-radius: 0%;
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: var(--job_bullet_width);
@@ -273,7 +272,6 @@ footer {
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: 8px; 
     fill: blue;
-    clip-path: path("M17.657 15.657a1 1 0 0 1-.707-.293L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-.707 1.707z");
 }
 
 @media all and (max-width: 550px) {
