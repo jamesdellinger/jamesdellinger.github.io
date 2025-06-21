@@ -256,21 +256,19 @@ footer {
 }
 
 .jobBulletChevron {
-    position: relative;
-    display: block;
-    top: var(--job_bullet_top);
-    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
-    height: var(--job_bullet_width);
-    /* width: 14px; */
+    /* top: var(--job_bullet_top);
+    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px); */
     background-color: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 } 
 
 .chevronSVG {
+    position: relative;
+    display: block;
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
-    height: 8px; 
+    height: var(--job_bullet_width);
     fill: blue;
 }
 
