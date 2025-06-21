@@ -263,7 +263,7 @@ footer {
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: var(--job_bullet_width);
     /* width: 16px; */
-    aspect-ratio: 1.75;
+    /* aspect-ratio: 1.75;
     clip-path: shape(from 2.09% 96.34%,
                      curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,
                      line to 50% 30.18%,
@@ -274,11 +274,12 @@ footer {
                      curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,
                      line to 2.09% 78.66%,
                      curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,
-                     close);
-    clip-path: path("M5.29289 15.7071C5.68342 16.0976 6.31658 16.0976 6.70711 15.7071L12 10.4142L17.2929 15.7071C17.6834 16.0976 18.3166 16.0976 18.7071 15.7071C19.0976 15.3166 19.0976 14.6834 18.7071 14.2929L12.7071 8.29289C12.3166 7.90237 11.6834 7.90237 11.2929 8.29289L5.29289 14.2929C4.90237 14.6834 4.90237 15.3166 5.29289 15.7071Z");
-    fill-rule: evenodd; 
-    clip-rule: evenodd;
-    -webkit-clip-path: shape(from 2.09% 96.34%, curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,line to 50% 30.18%,line to 87.81% 96.34%,curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,line to 55.05% 3.66%,curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,line to 2.09% 78.66%,curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,close);
+                     close); */
+    clip-path: shape(from 41.42% 2.93%,curve by 17.17% 0% with 5.58% -3.91%/11.59% -3.91%,curve by 9.62% 12.49% with 3.51% 2.46%/6.52% 6.82%,curve by 10.7% 22.1% with 3.01% 5.51%/6.44% 12.92%,line by 19.47% 42.01%,curve by 0% 16.95% with 2.17% 4.68%/2.17% 12.27%,smooth by -7.86% 0% with -5.69% 4.68%,line by -19.3% -41.65%,curve by -10.2% -21.14% with -4.47% -9.63%/-7.58% -16.34%,curve by -5.86% -7.97% with -2.57% -4.71%/-4.3% -6.88%,curve by -10.3% 0% with -3.35% -2.35%/-6.95% -2.35%,curve by -5.86% 7.97% with -1.56% 1.09%/-3.29% 3.26%,curve by -10.2% 21.14% with -2.62% 4.8%/-5.74% 11.51%,line by -19.3% 41.65%,curve by -7.86% 0% with -2.17% 4.68%/-5.69% 4.68%,smooth by 0% -16.95% with -2.17% -12.27%,line by 19.47% -42.01%,curve by 10.7% -22.1% with 4.26% -9.19%/7.69% -16.59%,curve by 9.62% -12.49% with 3.1% -5.67%/6.11% -10.03%,close);
+    aspect-ratio: 2.157;
+
+    /* clip-path: path("M5.29289 15.7071C5.68342 16.0976 6.31658 16.0976 6.70711 15.7071L12 10.4142L17.2929 15.7071C17.6834 16.0976 18.3166 16.0976 18.7071 15.7071C19.0976 15.3166 19.0976 14.6834 18.7071 14.2929L12.7071 8.29289C12.3166 7.90237 11.6834 7.90237 11.2929 8.29289L5.29289 14.2929C4.90237 14.6834 4.90237 15.3166 5.29289 15.7071Z");
+    -webkit-clip-path: shape(from 2.09% 96.34%, curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,line to 50% 30.18%,line to 87.81% 96.34%,curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,line to 55.05% 3.66%,curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,line to 2.09% 78.66%,curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,close); */
     background-color: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
