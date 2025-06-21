@@ -255,11 +255,7 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
-/* .jobBulletChevron {
-
-}  */
-
-.chevronSVG {
+.jobBulletChevron {
     background-color: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
