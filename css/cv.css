@@ -255,11 +255,11 @@ footer {
                                                            automatically increasing its height by var(--job_bullet_width) px. */
 }
 
-/* .jobBulletChevron {
+.jobBulletChevron {
     position: relative;
     display: block;
     border-radius: 0%;
-    clip-path: path("M15 13.5L12.3003 10.8003V10.8003C12.1344 10.6344 11.8656 10.6344 11.6997 10.8003V10.8003L9 13.5");
+    clip-path: shape(from 2.09% 96.34%,curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,line to 50% 30.18%,line to 87.81% 96.34%,curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,line to 55.05% 3.66%,curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,line to 2.09% 78.66%,curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,close);;
     height: 24px;
     width: 16px;
     background-color: var(--job_bullet_color);
@@ -267,11 +267,11 @@ footer {
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
-/* }  */
+} 
 
-.jobBulletChevron {
+/* .jobBulletChevron {
     display: block;
-    --r:0px; /* border radius */
+    --r:0px; 
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     );
   
@@ -285,9 +285,8 @@ footer {
       radial-gradient(var(--r) at left  var(--_g)),
       radial-gradient(var(--r) at right var(--_g));
     clip-path: polygon(50% 0,100% 100%,0 100%);
-    /* background: linear-gradient(45deg,#FA6900,#C02942); */
     background: var(--job_bullet_color);
-  }
+  } */
 
 
 /* If we make it a triangle:  */
