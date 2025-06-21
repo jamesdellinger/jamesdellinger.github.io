@@ -262,28 +262,6 @@ footer {
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: var(--job_bullet_width);
-    /* width: 16px; */
-    /* aspect-ratio: 1.75;
-    clip-path: shape(from 2.09% 96.34%,
-                     curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,
-                     line to 50% 30.18%,
-                     line to 87.81% 96.34%,
-                     curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,
-                     curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,
-                     line to 55.05% 3.66%,
-                     curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,
-                     line to 2.09% 78.66%,
-                     curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,
-                     close); */
-
-    /* clip-path: shape(from 41.16% 5.86%,curve to 58.84% 5.86% with 46.04% -1.95%/53.96% -1.95%,line to 96.34% 65.86%,curve to 96.34% 94.14% with 101.22% 73.67%/101.22% 86.33%,curve to 78.66% 94.14% with 91.46% 101.95%/83.54% 101.95%,line to 50% 48.28%,line to 21.34% 94.14%,curve to 3.66% 94.14% with 16.46% 101.95%/8.54% 101.95%,curve to 3.66% 65.86% with -1.22% 86.33%/-1.22% 73.67%,line to 41.16% 5.86%,close);
-    aspect-ratio: 1.6; */
-
-    clip-path: shape(from 85.77% 95.82%,curve to 97.56% 95.82% with 89.03% 101.39%/94.31% 101.39%,curve to 97.56% 75.61% with 100.81% 90.24%/100.81% 81.19%,line to 55.89% 4.18%,curve to 44.11% 4.18% with 52.64% -1.39%/47.36% -1.39%,line to 2.44% 75.61%,curve to 2.44% 95.82% with -0.81% 81.19%/-0.81% 90.24%,curve to 14.23% 95.82% with 5.7% 101.39%/10.97% 101.39%,line to 50% 34.49%,line to 85.77% 95.82%,close);
-    aspect-ratio: 1.714;
-
-    /* clip-path: path("M5.29289 15.7071C5.68342 16.0976 6.31658 16.0976 6.70711 15.7071L12 10.4142L17.2929 15.7071C17.6834 16.0976 18.3166 16.0976 18.7071 15.7071C19.0976 15.3166 19.0976 14.6834 18.7071 14.2929L12.7071 8.29289C12.3166 7.90237 11.6834 7.90237 11.2929 8.29289L5.29289 14.2929C4.90237 14.6834 4.90237 15.3166 5.29289 15.7071Z");
-    -webkit-clip-path: shape(from 2.09% 96.34%, curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,line to 50% 30.18%,line to 87.81% 96.34%,curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,line to 55.05% 3.66%,curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,line to 2.09% 78.66%,curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,close); */
     background-color: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
                                                            automatically increasing its height by var(--job_bullet_width) px. */
