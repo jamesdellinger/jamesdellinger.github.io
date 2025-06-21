@@ -276,6 +276,8 @@ footer {
                      curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,
                      close);
     clip-path: path("M5.29289 15.7071C5.68342 16.0976 6.31658 16.0976 6.70711 15.7071L12 10.4142L17.2929 15.7071C17.6834 16.0976 18.3166 16.0976 18.7071 15.7071C19.0976 15.3166 19.0976 14.6834 18.7071 14.2929L12.7071 8.29289C12.3166 7.90237 11.6834 7.90237 11.2929 8.29289L5.29289 14.2929C4.90237 14.6834 4.90237 15.3166 5.29289 15.7071Z");
+    fill-rule: evenodd; 
+    clip-rule: evenodd;
     -webkit-clip-path: shape(from 2.09% 96.34%, curve to 12.19% 96.34% with 4.88% 101.22%/9.4% 101.22%,line to 50% 30.18%,line to 87.81% 96.34%,curve to 97.91% 96.34% with 90.6% 101.22%/95.12% 101.22%,curve to 97.91% 78.66% with 100.7% 91.46%/100.7% 83.54%,line to 55.05% 3.66%,curve to 44.95% 3.66% with 52.26% -1.22%/47.74% -1.22%,line to 2.09% 78.66%,curve to 2.09% 96.34% with -0.7% 83.54%/-0.7% 91.46%,close);
     background-color: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
