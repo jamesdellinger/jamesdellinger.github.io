@@ -272,7 +272,6 @@ footer {
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
     height: 8px; 
-    width: 100%;
     fill: blue;
 }
 
