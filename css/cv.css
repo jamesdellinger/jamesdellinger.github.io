@@ -257,16 +257,15 @@ footer {
 }
 
 .jobBulletChevron {
-    background-color: var(--job_bullet_color);
+    /* background-color: blue; */
+    fill: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width));
     position: relative;
     display: block;
     top: var(--job_bullet_top);
-    /* TODO: set proper horiz position */
     left: calc(0px - var(--job_chevron_width)/2 - var(--section_padding)/2);
     height: var(--job_bullet_width);
     width: var(--job_chevron_width);
-    fill: blue;
 }
 
 @media all and (max-width: 550px) {
