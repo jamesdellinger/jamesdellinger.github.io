@@ -262,7 +262,8 @@ footer {
     position: relative;
     display: block;
     top: var(--job_bullet_top);
-    left: calc(0px - var(--job_bullet_width)/2 - var(--section_padding)/2     - 4px);
+    /* TODO: set proper horiz position */
+    left: calc(0px - var(--job_chevron_width)/2 - var(--section_padding)/2);
     height: var(--job_bullet_width);
     width: var(--job_chevron_width);
     fill: blue;
