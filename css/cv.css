@@ -10,6 +10,7 @@
     --body_max_width: 800px;
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
+    --section_border_width: 1px;
     --p-margin_top_bottom: 14px;
     --h3_h4_line_height: 24px;
     --job_bar_width: 2px;
@@ -96,7 +97,7 @@ h6 {
 
 hr {
     height: 1px;
-    width: calc(var(--body_max_width) - 2*var(--section_padding) + var(--section_padding)/8);
+    width: calc(var(--body_max_width) - 2*var(--section_padding) -2*var(--section_border_width) + 2*var(--section_padding)/8);
     border-width:0px;
     color:var(--horizontal_rule_color);
     background-color:var(--horizontal_rule_color);
@@ -112,7 +113,7 @@ section {
     padding-left: var(--section_padding);
     padding-right: var(--section_padding);
     border-style: solid;
-    border-width: 1px;
+    border-width: var(--section_border_width);
     border-color: var(--desktop_section_border_color);
     border-radius: 8px;
     overflow: hidden;
