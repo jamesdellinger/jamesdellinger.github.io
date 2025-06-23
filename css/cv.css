@@ -99,8 +99,8 @@ h6 {
 hr {
     height: 1px;
     width: calc(var(--body_max_width) -2*var(--section_border_width));
-    padding-left: var(--hr_padding);
-    padding-right: var(--hr_padding);
+    margin-left: var(--hr_padding);
+    margin-right: var(--hr_padding);
     border-width:0px;
     color:var(--horizontal_rule_color);
     background-color:var(--horizontal_rule_color);
