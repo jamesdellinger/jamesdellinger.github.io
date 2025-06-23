@@ -255,7 +255,7 @@ footer {
        span from automatically increasing its height by var(--job_bullet_width) px. */
     margin-bottom: calc(0px - var(--job_bullet_width));
 }
-sizing and calculations are not perfect, but the display settings work, you will need to tweak the
+
 .jobBulletChevron {
     fill: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width));
