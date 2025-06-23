@@ -180,7 +180,7 @@ header {
 
 .header_profile_pic_container {
     /* margin-left: 0px;  */
-    margin-left: 16px; 
+    margin-left: 18px; 
     margin-right: 16px;
     width: var(--header_profile_pic_width); 
     height: var(--header_profile_pic_width); 
