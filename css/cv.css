@@ -26,7 +26,7 @@
     --job_bar_top: var(--h3_h4_line_height);
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
-  }
+}
 
 /* TODO: 
   
@@ -35,10 +35,6 @@
       experiment with drawing an outlined shape at each item: circles for jobs, squares for education, triangles for languages, and a hexagon for hobbies.
       try and automatically alter the coloring of these shapes, dividing a spectrum (between two colors) into the number of items in a section.
       e.g. job circles go from blue-gray to purple-gray. 
-
-      will need to widen headers that separate companies.
-
-      also try drawing little up-pointing arrowheads to go in-between the first and last jobs of a multi-job company. Use css or svg.
 
       also make sure job bullets are invisible when printing. */
 
