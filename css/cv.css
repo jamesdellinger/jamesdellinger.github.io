@@ -8,7 +8,7 @@
 
     --top_section_profile_pic_width: 160px;
     --body_max_width: 800px;
-    --section_padding: 128px;
+    --section_padding: 64px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
     --hr_side_margin: 0px;
@@ -18,6 +18,7 @@
     --p-margin_top_bottom: 14px;
     --h3_h4_line_height: 24px;
     --job_bar_width: 2px;
+    --header_profile_pic_width: 32px;
 
     --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
     --h3_h4_margin_top: var(--h3_h4_fontsize);
@@ -29,14 +30,11 @@
 }
 
 /* TODO: 
-  
-      maybe make <p> line text wrap sooner
-
       experiment with drawing an outlined shape at each item: circles for jobs, squares for education, triangles for languages, and a hexagon for hobbies.
       try and automatically alter the coloring of these shapes, dividing a spectrum (between two colors) into the number of items in a section.
       e.g. job circles go from blue-gray to purple-gray. 
 
-      also make sure job bullets are invisible when printing. */
+      make sure job bullets are invisible when printing. */
 
 html {
     background-color: var(--desktop_background_color);
@@ -162,8 +160,8 @@ header {
 }
 
 .header_title_container {
-    height: 32px;
-    max-width: 800px;
+    height: var(--header_profile_pic_width);
+    max-width: var(--body_max_width);
     display: flex;
     vertical-align: middle;
     justify-content: flex-start;
@@ -183,8 +181,8 @@ header {
 .header_profile_pic_container {
     margin-left: 0px; 
     margin-right: 16px;
-    width: 32px; 
-    height: 32px; 
+    width: var(--header_profile_pic_width); 
+    height: var(--header_profile_pic_width); 
     overflow: hidden;
     border-radius: 49.9%;
 }
