@@ -169,7 +169,8 @@ header {
     line-height:0;
     margin-top: 8px;
     margin-bottom: 8px;
-    margin-left: auto;
+    /* margin-left: auto; */
+    margin-left: 64px;
     margin-right: auto;
 }
 
