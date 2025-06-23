@@ -11,7 +11,10 @@
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
-    --hr_side_margin: calc(0px - 2*var(--section_padding)/8);
+    --hr_side_margin: 0px;
+    /* Had thought wider horiz rules in between companies would set them apart nicely.
+    But actually just made the resume look uneven. */
+    /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
     --p-margin_top_bottom: 14px;
     --h3_h4_line_height: 24px;
     --job_bar_width: 2px;
