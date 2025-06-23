@@ -170,6 +170,7 @@ header {
     margin-top: 8px;
     margin-bottom: 8px;
     /* margin-left: auto; */
+    /* Experiment with having header title on left side: */
     margin-left: 32px;
     margin-right: auto;
 }
