@@ -5,17 +5,20 @@
     --link_color: rgb(65,110,210);
     --desktop_section_border_color: rgb(223,222,219);
     --desktop_background_color: rgb(244, 242, 238);
+
+    --top_section_profile_pic_width: 160px;
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
     --p-margin_top_bottom: 14px;
     --h3_h4_line_height: 24px;
+    --job_bar_width: 2px;
+
     --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
     --h3_h4_margin_top: var(--h3_h4_fontsize);
     --job_bullet_width: calc(var(--h3_h4_line_height)/3);
     --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
     --job_bar_top: var(--h3_h4_line_height);
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
-    --job_bar_width: 2px;
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
   }
 
@@ -32,10 +35,6 @@
       also try drawing little up-pointing arrowheads to go in-between the first and last jobs of a multi-job company. Use css or svg.
 
       also make sure job bullets are invisible when printing. */
-
-
-/* <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 13.5L12.3003 10.8003V10.8003C12.1344 10.6344 11.8656 10.6344 11.6997 10.8003V10.8003L9 13.5" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> */
-
 
 html {
     background-color: var(--desktop_background_color);
@@ -129,10 +128,10 @@ section {
 
 .top_section_profile_pic_container {
     position: relative; 
-    margin-top: -112px; 
+    margin-top: calc(0px - .7*var(--top_section_profile_pic_width));  
     margin-left: calc(0px - var(--section_padding)/2);
-    width: 160px; 
-    height: 160px; 
+    width: var(--top_section_profile_pic_width); 
+    height: var(--top_section_profile_pic_width); 
     overflow: hidden;
     border-style: solid; 
     border-color: white; 
@@ -252,17 +251,20 @@ footer {
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
     left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
-    margin-bottom: calc(0px - var(--job_bullet_width)); /* Very important to prevent the div containing this span from 
-                                                           automatically increasing its height by var(--job_bullet_width) px. */
+    /* Setting margin-bottom very important to prevent the div containing this 
+       span from automatically increasing its height by var(--job_bullet_width) px. */
+    margin-bottom: calc(0px - var(--job_bullet_width));
 }
-
+sizing and calculations are not perfect, but the display settings work, you will need to tweak the
 .jobBulletChevron {
-    /* background-color: blue; */
     fill: var(--job_bullet_color);
     margin-bottom: calc(0px - var(--job_bullet_width));
     position: relative;
     display: block;
     top: var(--job_bullet_top);
+    /* Safari will shift the SVG's <path> to the right by 1 pixel.
+       No idea why this happens. Won't bother correcting for it, as
+       any solution would be too kludgey. */
     left: calc(0px - var(--job_chevron_width)/2 - var(--section_padding)/2);
     height: var(--job_bullet_width);
     width: var(--job_chevron_width);
