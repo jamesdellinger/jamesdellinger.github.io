@@ -7,6 +7,7 @@
     --desktop_background_color: rgb(244, 242, 238);
 
     --top_section_profile_pic_width: 160px;
+    --body_max_width: 800px;
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
     --p-margin_top_bottom: 14px;
@@ -42,7 +43,7 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    max-width: 800px;
+    max-width: var(--body_max_width);
     margin-right: auto;
     margin-left: auto;
     font-size: 14px;
@@ -95,6 +96,7 @@ h6 {
 
 hr {
     height: 1px;
+    width: calc(var(--body_max_width) - 2*var(--section_padding) + var(--section_padding)/8);
     border-width:0px;
     color:var(--horizontal_rule_color);
     background-color:var(--horizontal_rule_color);
