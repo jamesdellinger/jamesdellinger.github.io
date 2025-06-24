@@ -204,7 +204,11 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 .headroom--top {
-    display: block;
+    /* display: block; */
+
+    display: none;
+    transform: translateY(0%);
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 .headroom--not-top {
     display: block;
