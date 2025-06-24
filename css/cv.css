@@ -201,7 +201,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 .headroom--top {
     display: block;
@@ -212,7 +212,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
        it here in case I later change my mind. */
     /* box-shadow: 0px 0px 0px 1px var(--horizontal_rule_color), 0px 4px 4px rgba(0, 0, 0, 0.3); */
     transform: translateY(0%);
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 .headroom--top.headroom--pinned {
     /* Must combine .headroom--top and .headroom--pinned.
@@ -221,7 +221,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
     /* Do not set the display property here. */
     box-shadow: none;
     transform: translateY(-100%);
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 
 
