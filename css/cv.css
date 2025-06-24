@@ -196,6 +196,7 @@ header {
 correctly lowers the header once the user has scrolled down from the 
 page's top and raises it when and if the user scrolls back up to the top. */
 .headroom {
+    /* No need to set display: none here because we set it in the header {} section. */
     /* display: none; */
     display: block;
     box-shadow: none;
@@ -214,7 +215,9 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transform: translateY(0%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
-.headroom--pinned { /* "pinned" means scrolling upwards */
+.headroom--pinned {
+    /* "pinned" means scrolling upwards */
+    /* Do not set the display property here. */
     box-shadow: none;
     transform: translateY(-100%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
