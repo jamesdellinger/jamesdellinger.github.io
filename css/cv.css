@@ -181,7 +181,7 @@ section {
 }
 
 header {
-    display: none;
+    /* display: none; */
     background-color: white;
     position:fixed;
     top:0;
@@ -196,6 +196,7 @@ header {
 correctly lowers the header once the user has scrolled down from the 
 page's top and raises it when and if the user scrolls back up to the top. */
 .headroom {
+    display: none;
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
