@@ -208,8 +208,13 @@ page's top and raises it when and if the user scrolls back up to the top. */
 
     display: none;
 }
+
+.headroom--not-top {
+    display: block;
+}
+
 /* .headroom--not-top { */
-.headroom--not-top, .headroom--unpinned {
+.headroom--not-top.headroom--unpinned {
     display: block;
     /* I find the LinkedIn-style box shadow a bit distracting. But I will leave 
        it here in case I later change my mind. */
