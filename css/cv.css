@@ -201,7 +201,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
 .headroom {
     /* No need to set display: none here because we set it in the header {} section. */
     /* display: none; */
-    display: block;
+    /* display: block; */
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
