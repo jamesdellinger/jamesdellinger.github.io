@@ -185,8 +185,7 @@ header {
     display: block; 
     visibility: hidden;
     background-color: white;
-    /* position:fixed; */
-    position: absolute;
+    position:fixed;
     overflow: auto;
     top:0;
     left:0;
