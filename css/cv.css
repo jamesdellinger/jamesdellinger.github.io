@@ -146,19 +146,6 @@ section {
     width: 100%;
 }
 
-header {
-    display: none;
-    background-color: white;
-    position:fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    border-bottom-color: var(--horizontal_rule_color);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    z-index: 1;
-}
-
 .header_title_container {
     height: var(--header_profile_pic_width);
     max-width: var(--body_max_width);
@@ -193,12 +180,24 @@ header {
     width: 100%;
 }
 
-
+header {
+    display: none; /* Important to set this here. To keep header from flickering on initial page load. */
+    background-color: white;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom-color: var(--horizontal_rule_color);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 1;
+}
 /* The following four headroom classes ensure that the code in headroom.js
 correctly lowers the header once the user has scrolled down from the 
 page's top and raises it when and if the user scrolls back up to the top. */
 .headroom {
-    display: none;
+    /* display: none; */
+    display: block;
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
