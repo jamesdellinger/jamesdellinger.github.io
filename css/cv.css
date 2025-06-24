@@ -181,8 +181,7 @@ section {
 }
 
 header {
-    /* display: none; */
-    display: none !important;
+    display: none;
     background-color: white;
     position:fixed;
     top:0;
@@ -203,12 +202,10 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
 .headroom--top {
-    /* display: block; */
-    display: block !important;
+    display: block;
 }
 .headroom--not-top {
-    /* display: block; */
-    display: block !important;
+    display: block;
     /* I find the LinkedIn-style box shadow a bit distracting. Will leave it here in case 
     I later change my mind. */
     /* box-shadow: 0px 0px 0px 1px var(--horizontal_rule_color), 0px 4px 4px rgba(0, 0, 0, 0.3); */
