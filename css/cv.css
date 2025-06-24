@@ -201,7 +201,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
 }
 .headroom--top {
     display: block;
@@ -223,6 +223,9 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transform: translateY(-100%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
 }
+
+
+
 
 footer {
     margin-top: 30px;
