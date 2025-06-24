@@ -186,7 +186,7 @@ header {
     visibility: hidden;
     background-color: white;
     position:fixed;
-    overflow: hidden;
+    overflow:scroll;
     top:0;
     left:0;
     width: 100%;
