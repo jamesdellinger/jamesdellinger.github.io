@@ -214,9 +214,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transform: translateY(0%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 0s;
 }
-.headroom--pinned {
-    display: none;
-    
+.headroom--pinned { /* "pinned" means up-scrolling" */
     box-shadow: none;
     transform: translateY(-100%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
