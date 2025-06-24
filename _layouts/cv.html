@@ -36,13 +36,13 @@ effort disentangling its format and structure.
     <script src="/js/headroom.js"></script>
     <script>
         const header = document.querySelector("header");
-        const scroll_offset = 5; // 300; // Num pixels that must be scrolled before headroom.js changes header's class from --top to --not_top.
+        const scroll_offset = 300; // Num pixels that must be scrolled before headroom.js changes header's class from --top to --not_top.
         const options = {
           offset: scroll_offset,
-          tolerance: {
-            up : 0,
-            down : 3, // Must be lower than scroll offset, otherwise headroom.js won't ever set the header as --pinned or --unpinned.
-          },
+          // tolerance: {
+          //   up : 0,
+          //   down : 3,
+          // },
           // classes : {
           //   // when element is initialised
           //   initial : "headroom--frozen",
