@@ -183,6 +183,7 @@ section {
 header {
     /* Important to set `display: none` here. To keep header from flickering on initial page load. */
     display: block; 
+    visibility: hidden;
     background-color: white;
     position:fixed;
     top:0;
