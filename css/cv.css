@@ -188,7 +188,8 @@ header {
     position: fixed;
     /* Unfortunately, Safari allows headers to bounce when overscrolled
     horizontally or vertically. Even StackOverflow suffers from this. 
-    Perhaps one day Safari will support the css overscroll-behavior property. */
+    Perhaps one day Safari will support the css overscroll-behavior property.
+    See: https://dev.to/mpuckett/the-holy-grail-web-app-shell-with-header-and-footer-for-iphone-549j */
     overscroll-behavior: contain;
     top:0;
     left:0;
@@ -202,7 +203,6 @@ header {
 correctly lowers the header once the user has scrolled down from the 
 page's top and raises it when and if the user scrolls back up to the top. */
 .headroom {
-    /* Don't set `display: none` here. To prevent header flicker upon page loading. */
     box-shadow: none;
     will-change: transform;
     transform: translateY(-100%);
@@ -227,6 +227,10 @@ page's top and raises it when and if the user scrolls back up to the top. */
     box-shadow: none;
     transform: translateY(-100%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
+}
+
+.headroom--pinned.headroom--top {
+    visibility: hidden;
 }
 
 
