@@ -181,7 +181,7 @@ section {
 }
 
 header {
-    display: none;
+    display: none !important;
     background-color: white;
     position:fixed;
     top:0;
