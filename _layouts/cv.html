@@ -40,6 +40,10 @@ effort disentangling its format and structure.
         const scroll_offset = 300;
         const options = {
           offset: scroll_offset,
+          classes : {
+            // when element is initialised
+            initial : "headroom",
+          }
         }
         const headroom = new Headroom(header, options);
         headroom.init();
