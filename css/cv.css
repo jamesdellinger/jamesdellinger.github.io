@@ -172,6 +172,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     padding-left: 8px;
+    padding-right: 8px;
 }
 
 .header_title_text {
@@ -180,9 +181,8 @@ header {
 }
 
 .header_profile_pic_container {
-    /* margin-left: 0px;  */
-    margin-left: 18px; 
-    margin-right: 16px;
+    margin-left: 0px; 
+    margin-right: calc(var(--header_profile_pic_width)/2);
     width: var(--header_profile_pic_width); 
     height: var(--header_profile_pic_width); 
     overflow: hidden;
