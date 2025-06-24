@@ -181,11 +181,14 @@ section {
 }
 
 header {
-    /* Important to set `display: none` here. To keep header from flickering on initial page load. */
     display: block; 
+    /* Important to set `visibility: hidden` here. To keep header from flickering on initial page load. */
     visibility: hidden;
     background-color: white;
     position: fixed;
+    /* Unfortunately, Safari allows headers to bounce when overscrolled
+    horizontally or vertically. Even StackOverflow suffers from this. 
+    Perhaps one day Safari will support the css overscroll-behavior property. */
     overscroll-behavior: contain;
     top:0;
     left:0;
