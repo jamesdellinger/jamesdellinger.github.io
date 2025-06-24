@@ -146,7 +146,7 @@ section {
     width: 100%;
 }
 
-header {
+/* header {
     display: none;
     background-color: white;
     position:fixed;
@@ -157,7 +157,7 @@ header {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     z-index: 1;
-}
+} */
 
 .header_title_container {
     height: var(--header_profile_pic_width);
@@ -217,6 +217,19 @@ page's top and raises it when and if the user scrolls back up to the top. */
     box-shadow: none;
     transform: translateY(-100%);
     transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear 667s;
+}
+
+header {
+    display: none;
+    background-color: white;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom-color: var(--horizontal_rule_color);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 1;
 }
 
 footer {
