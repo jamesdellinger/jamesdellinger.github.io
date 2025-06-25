@@ -371,7 +371,7 @@ footer {
         font-size: 18pt;
         font-weight: 350;
         margin-top: 0pt;
-        margin-bottom: .5in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
+        margin-bottom: .55625in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
     }
 
     h2 {
