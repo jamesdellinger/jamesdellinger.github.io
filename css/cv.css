@@ -316,6 +316,10 @@ footer {
         font-weight: default;
     }
 
+    footer {
+        color: var(--h6_font_color);
+    }
+
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     hr, 
@@ -324,15 +328,6 @@ footer {
     .header_title_container, .header_profile_pic_container,
     .header_profile_pic, .header_title_text{
         display: none;
-    }
-
-    .header_title_text {
-        font-size: 2em;
-    }
-
-    .header_title_container {
-        margin-top: auto;
-        margin-bottom: 30px;
     }
 }
 
