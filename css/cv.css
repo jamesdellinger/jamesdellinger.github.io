@@ -29,13 +29,6 @@
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 }
 
-/* TODO: 
-      experiment with drawing an outlined shape at each item: circles for jobs, squares for education, triangles for languages, and a hexagon for hobbies.
-      try and automatically alter the coloring of these shapes, dividing a spectrum (between two colors) into the number of items in a section.
-      e.g. job circles go from blue-gray to purple-gray. 
-
-      make sure job bullets are invisible when printing. */
-
 html {
     background-color: var(--desktop_background_color);
 }
@@ -369,14 +362,13 @@ footer {
     }
 
     h1 {
-        /* font-family: "Futura", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; */
         font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
         text-transform: uppercase;
         font-size: 18pt;
         font-weight: 350;
         margin-top: 0pt;
-        margin-bottom: .5in;
+        margin-bottom: .625in;
     }
 
     h2 {
@@ -413,4 +405,4 @@ footer {
     margin-bottom: .625in;
     margin-left: 1.125in;
     margin-right: 1.125in;
-  }
+}
