@@ -39,14 +39,6 @@ effort disentangling its format and structure.
         const scroll_offset = 300; // Num pixels that must be scrolled before headroom.js changes header's class from --top to --not_top.
         const options = {
           offset: scroll_offset,
-          // tolerance: {
-          //   up : 0,
-          //   down : 3,
-          // },
-          // classes : {
-          //   // when element is initialised
-          //   initial : "headroom--frozen",
-          // }
         }
         const headroom = new Headroom(header, options);
         headroom.init();

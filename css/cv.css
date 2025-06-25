@@ -363,7 +363,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info_screen_display, 
-    hr, .jobBar, .jobBar::before, .jobBulletCircle, .jobBulletChevron { 
+    hr, .jobBulletCircle, .jobBulletChevron { 
         display: none; 
     }
 
