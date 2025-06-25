@@ -310,18 +310,12 @@ footer {
         font-weight: auto;
     }
 
-    /* h1, h2, h3, h4, h5, h6 {
-        margin: default;
-        line-height: default;
-        font-size: default;
-        font-weight: default;
-    } */
-
     footer {
         color: var(--h6_font_color);
         margin-bottom: calc(var(--p-margin_top_bottom) + var(--footer_margin_top_bottom));
     }
 
+    h1,
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     hr, 
