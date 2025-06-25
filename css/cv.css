@@ -210,7 +210,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
        gently slides down once page is scrolled down from the top. Offset
        distance from page top, at which header slide-down begins, is defined
        in cv.html, the template file. */
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear; /* 0s; */
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear;
 }
 .headroom--top {
     visibility: hidden;
@@ -221,7 +221,7 @@ page's top and raises it when and if the user scrolls back up to the top. */
        it here in case I later change my mind. */
     /* box-shadow: 0px 0px 0px 1px var(--horizontal_rule_color), 0px 4px 4px rgba(0, 0, 0, 0.3); */
     transform: translateY(0%);
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear; /* 0s; */
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear;
 }
 .headroom--top.headroom--pinned {
     /* Must combine .headroom--top and .headroom--pinned.
@@ -232,8 +232,8 @@ page's top and raises it when and if the user scrolls back up to the top. */
     transform: translateY(-100%);
     /* Very important to set the header hiding transition precisely like I do below. 
        Ensures that Safari will re-hide the header if/when user scrolls back to the
-       the top of the page. */
-    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 667ms linear; /* 0s; */
+       the top of the page. `visibility 667ms` ensures that the header gently slides up.*/
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 667ms linear;
 }
 
 footer {
