@@ -288,7 +288,7 @@ footer {
 
 @media all and (max-width: 550px) {
     html {
-        background-color: gray; /* white; */
+        background-color: white;
     }
 
     body {
@@ -309,12 +309,12 @@ footer {
         font-weight: auto;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    /* h1, h2, h3, h4, h5, h6 {
         margin: default;
         line-height: default;
         font-size: default;
         font-weight: default;
-    }
+    } */
 
     footer {
         color: var(--h6_font_color);
