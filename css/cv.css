@@ -287,20 +287,11 @@ footer {
 }
 
 @media all and (max-width: 550px) {
-
-    h2 {
-        margin-top: auto;
-    }
-
-    hr {
-        display: none;
-    }
-
-    .html {
+    html {
         background-color: white;
     }
 
-    .body {
+    body {
         font-size: 17px;
         font-weight: auto;
     }
@@ -316,6 +307,19 @@ footer {
         border-style: none;
     }
 
+    h2 {
+        margin-top: auto;
+    }
+
+    .top_section_background_image_container, 
+    .top_section_profile_pic_container, 
+    .contact_info_screen_display, 
+    hr, 
+    .jobBulletCircle, .jobBulletChevron,
+    .contact_info_printed {
+        display: none;
+    }
+
     .header_title_text {
         font-size: 2em;
     }
@@ -323,10 +327,6 @@ footer {
     .header_title_container {
         margin-top: auto;
         margin-bottom: 30px;
-    }
-
-    .contact_info_printed {
-        display: none;
     }
 }
 
@@ -390,12 +390,16 @@ footer {
         color: black;
     }
 
-    /* Doing this makes the printed font tiny.
-    Solution from: https://stackoverflow.com/a/10634534/8628758
-    TODO: troubleshoot. */
-    a::after {
+    /* To display URLs for selected links when printed out.
+       From: https://stackoverflow.com/a/10634534/8628758 
+       
+       Will not use for the time being, as I include too 
+       many links that I wish not to print out. Won't
+       make a special class, as that would require the
+       insertion of html code in the markdown file.*/
+    /* a::after {
         content: " (" attr(href) ")";
-    }
+    } */
 
     .contact_info_printed {
         display: block;
