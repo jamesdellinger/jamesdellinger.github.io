@@ -16,6 +16,7 @@
     But actually just made the resume look uneven. */
     /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
     --p-margin_top_bottom: 14px;
+    --footer_margin_top_bottom: 30px;
     --h3_h4_line_height: 24px;
     --job_bar_width: 2px;
     --header_profile_pic_width: 32px;
@@ -233,8 +234,8 @@ page's top and raises it when and if the user scrolls back up to the top. */
 }
 
 footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: var(--footer_margin_top_bottom);
+    margin-bottom: var(--footer_margin_top_bottom);
     text-align: center; 
 }
 
@@ -318,6 +319,7 @@ footer {
 
     footer {
         color: var(--h6_font_color);
+        margin-bottom: calc(var(--p-margin_top_bottom) + var(--footer_margin_top_bottom));
     }
 
     .top_section_background_image_container, 
