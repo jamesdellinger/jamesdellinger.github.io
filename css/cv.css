@@ -297,11 +297,11 @@ footer {
         padding-left: 16px;
         padding-right: 16px;
         font-size: 17px;
+        line-height: 28px;
         font-weight: auto;
     }
 
     section {
-        line-height: 28px;
         padding: 0px;
         margin: 0px;
         border-width: 0px;
@@ -309,15 +309,20 @@ footer {
         border-style: none;
     }
 
-    h2 {
-        margin-top: auto;
+    h1, h2, h3, h4, h5, h6 {
+        margin: revert;
+        line-height: revert;
+        font-size: revert;
+        font-weight: revert;
     }
 
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     hr, 
     .jobBulletCircle, .jobBulletChevron,
-    .contact_info_printed {
+    .contact_info_printed,
+    .header_title_container, .header_profile_pic_container,
+    .header_profile_pic, .header_title_text{
         display: none;
     }
 
