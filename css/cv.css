@@ -363,12 +363,13 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info_screen_display, 
-    hr { 
+    hr, .jobBar, .jobBar::before, .jobBulletCircle, .jobBulletChevron { 
         display: none; 
     }
 
     h1 {
-        font-family: "Futura", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        /* font-family: "Futura", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
         text-transform: uppercase;
         font-size: 18pt;
