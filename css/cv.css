@@ -27,6 +27,9 @@
     --job_bar_top: var(--h3_h4_line_height);
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
+
+    --print_margin_top_bottom: .625in;
+    --print_margin_left_right: 1.125in;
 }
 
 html {
@@ -368,7 +371,7 @@ footer {
         font-size: 18pt;
         font-weight: 350;
         margin-top: 0pt;
-        margin-bottom: .625in;
+        margin-bottom: .5in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
     }
 
     h2 {
@@ -401,8 +404,8 @@ footer {
 
 /* Printing page margins must be set here. */
 @page {
-    margin-top: .625in;
-    margin-bottom: .625in;
-    margin-left: 1.125in;
-    margin-right: 1.125in;
+    margin-top: var(--print_margin_top_bottom);
+    margin-bottom: var(--print_margin_top_bottom);
+    margin-left: var(--print_margin_left_right);
+    margin-right: var(--print_margin_left_right);
 }
