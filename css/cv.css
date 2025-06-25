@@ -349,7 +349,7 @@ footer {
         line-height: 20pt;
     }
     
-    section {
+    section, #experience_section {
         border-width: 0in !important;
         padding: 0in;
         margin: 0in;
@@ -363,7 +363,8 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info_screen_display, 
-    hr, .jobBulletCircle, .jobBulletChevron { 
+    hr, 
+    .jobBulletCircle, .jobBulletChevron { 
         display: none; 
     }
 
