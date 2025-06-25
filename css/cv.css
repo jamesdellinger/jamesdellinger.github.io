@@ -293,21 +293,15 @@ footer {
 
     body {
         margin: 0px;
-        padding-top: 8px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-top: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
         font-size: 17px;
         font-weight: auto;
     }
 
     section {
         line-height: 28px;
-        /* padding-left: 8px;
-        padding-right: 8px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        margin-left: 8px;
-        margin-right: 8px; */
         padding: 0px;
         margin: 0px;
         border-width: 0px;
