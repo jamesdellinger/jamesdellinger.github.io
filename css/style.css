@@ -23,6 +23,10 @@ section {
     margin-bottom: 30px;
 }
 
+h1 {
+    line-height: 35px;
+}
+
 a {
     color: rgb(65,110,210);
     text-decoration: none;
