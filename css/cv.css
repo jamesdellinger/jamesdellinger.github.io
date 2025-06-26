@@ -320,7 +320,7 @@ footer {
         align-items: center;
         line-height:0;
         margin-top: calc(var(--profile_pic_width_mobile)/2);
-        margin-bottom: calc(3*var(--profile_pic_width_mobile));
+        margin-bottom: calc(2*var(--profile_pic_width_mobile));
     }
 
     .profile_pic_container_mobile {
