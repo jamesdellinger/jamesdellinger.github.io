@@ -31,7 +31,6 @@
 
     --profile_pic_width_mobile: 48px;
     --padding_left_right_mobile: 16px;
-    --padding_top_mobile: 20px;
 
     --print_margin_top_bottom: .625in;
     --print_margin_left_right: 1.125in;
@@ -298,7 +297,6 @@ footer {
 
     body {
         margin: 0px;
-        /* padding-top: var(--padding_top_mobile); */
         padding-left: var(--padding_left_right_mobile);
         padding-right: var(--padding_left_right_mobile);
         font-size: 17px;
@@ -321,8 +319,8 @@ footer {
         justify-content: flex-start;
         align-items: center;
         line-height:0;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 0px;
+        margin-bottom: 10px;
     }
 
     .profile_pic_container_mobile {
