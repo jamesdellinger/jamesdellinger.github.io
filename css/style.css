@@ -19,6 +19,10 @@ body {
     padding-right: 16px;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
 a {
     color: rgb(65,110,210);
     text-decoration: none;
