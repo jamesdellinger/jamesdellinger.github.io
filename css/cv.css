@@ -313,7 +313,8 @@ footer {
     }
 
     h2 {
-        font-size: unset;
+        font-size: initial;
+        margin: initial;
     }
 
     .top_section_profile_pic_title_container_mobile {
