@@ -29,7 +29,7 @@
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 
-    --profile_pic_width_mobile: 64px;
+    --profile_pic_width_mobile: 48px;
 
     --print_margin_top_bottom: .625in;
     --print_margin_left_right: 1.125in;
