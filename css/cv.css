@@ -312,9 +312,19 @@ footer {
         font-weight: auto;
     }
 
-    h2, h3 {
-        font-size: revert;
-        margin: revert;
+    h2 {
+        font-size: 26px;
+        margin: 22px ;
+    }
+
+    h3, h4 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    h2, h3, h4 {
+        line-height: inherit;
     }
 
     .top_section_profile_pic_title_container_mobile {
