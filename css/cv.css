@@ -319,8 +319,8 @@ footer {
         justify-content: flex-start;
         align-items: center;
         line-height:0;
-        margin-top: 0px;
-        margin-bottom: 10px;
+        margin-top: calc(var(--profile_pic_width_mobile)/2);
+        margin-bottom: calc(3*var(--profile_pic_width_mobile));
     }
 
     .profile_pic_container_mobile {
