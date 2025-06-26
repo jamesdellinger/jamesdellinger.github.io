@@ -34,8 +34,7 @@ footer {
 }
 
 .title {
-    line-height: 52px; 
-    max-width:400px;
+    font-size: 34px;
 }
 
 @media all and (max-width: 550px) {
