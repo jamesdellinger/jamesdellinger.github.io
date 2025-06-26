@@ -239,7 +239,7 @@ footer {
     text-align: center; 
 }
 
-.contact_info_printed {
+.contact_info_printed, .top_section_profile_pic_title_container_mobile {
     display: none;
 }
 
@@ -356,7 +356,8 @@ footer {
     .top_section_profile_pic_container, 
     .contact_info_screen_display, 
     hr, 
-    .jobBulletCircle, .jobBulletChevron { 
+    .jobBulletCircle, .jobBulletChevron,
+    .top_section_profile_pic_title_container_mobile { 
         display: none; 
     }
 
