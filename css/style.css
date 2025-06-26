@@ -238,15 +238,3 @@ hr {
         text-indent: 0em;
     }
 }
-
-@media print {
-    .resume_section {
-        border-width: 0px !important;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    header { 
-        display: none; 
-    }
-}
