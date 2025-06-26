@@ -28,13 +28,13 @@ a {
     text-decoration: none;
 }
 
+.title_name_text {
+    color: orangered;
+}
+
 footer {
     color:var(--slight_transparent);
     text-align: center; 
-}
-
-.title {
-    font-size: 34px;
 }
 
 @media all and (max-width: 550px) {
