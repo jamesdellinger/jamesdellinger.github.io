@@ -3,10 +3,11 @@
   }
 
 html {
-    background-color: white;
+    background-color: gray;
 }
 
 body {
+    background-color: white;
     font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px;
     line-height: 28px;
