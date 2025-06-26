@@ -312,6 +312,10 @@ footer {
         font-weight: auto;
     }
 
+    h2 {
+        font-size: unset;
+    }
+
     .top_section_profile_pic_title_container_mobile {
         height: var(--profile_pic_width_mobile);
         display: flex;
