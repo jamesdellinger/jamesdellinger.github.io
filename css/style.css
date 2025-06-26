@@ -29,15 +29,9 @@ footer {
     text-align: center; 
 }
 
-.index_title {
+.title {
     line-height: 52px; 
     max-width:400px;
-}
-
-.index_header {
-    margin-bottom: 1em;
-    font-size: 1.17em;
-    line-height: 28px;
 }
 
 @media all and (max-width: 550px) {
