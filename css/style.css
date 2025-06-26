@@ -3,13 +3,14 @@
   }
 
 html {
-    margin-right: auto;
-    margin-left: auto;
-    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    background-color: white;
 }
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    margin-right: auto;
+    margin-left: auto;
     max-width: 800px;
     line-height: 28px;
     padding-left: 8px;
