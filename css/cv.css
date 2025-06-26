@@ -29,6 +29,8 @@
     --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 
+    --profile_pic_width_mobile: 64px;
+
     --print_margin_top_bottom: .625in;
     --print_margin_left_right: 1.125in;
 }
@@ -311,7 +313,7 @@ footer {
     }
 
     .top_section_profile_pic_title_container_mobile {
-        height: var(--header_profile_pic_width);
+        height: var(--profile_pic_width_mobile);
         display: flex;
         vertical-align: middle;
         justify-content: flex-start;
@@ -323,9 +325,9 @@ footer {
 
     .profile_pic_container_mobile {
         margin-left: 0px; 
-        margin-right: calc(var(--header_profile_pic_width)/2);
-        width: var(--header_profile_pic_width); 
-        height: var(--header_profile_pic_width); 
+        margin-right: calc(var(--profile_pic_width_mobile)/2);
+        width: var(--profile_pic_width_mobile); 
+        height: var(--profile_pic_width_mobile); 
         overflow: hidden;
         border-radius: 49.9%;
     }
@@ -335,7 +337,7 @@ footer {
     }
 
     .title_text_mobile {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 600;
     }
 
