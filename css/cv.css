@@ -312,7 +312,6 @@ footer {
 
     .top_section_profile_pic_title_container_mobile {
         height: var(--header_profile_pic_width);
-        max-width: var(--body_max_width);
         display: flex;
         vertical-align: middle;
         justify-content: flex-start;
@@ -320,10 +319,6 @@ footer {
         line-height:0;
         margin-top: 8px;
         margin-bottom: 8px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 8px;
-        padding-right: 8px;
     }
 
     .profile_pic_container_mobile {
@@ -341,7 +336,7 @@ footer {
 
     .title_text_mobile {
         font-size: 17px;
-        font-weight: 300;
+        font-weight: 600;
     }
 
     footer {
