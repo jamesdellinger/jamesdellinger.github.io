@@ -30,6 +30,8 @@
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 
     --profile_pic_width_mobile: 48px;
+    --padding_left_right_mobile: 16px;
+    --padding_top_mobile: 20px;
 
     --print_margin_top_bottom: .625in;
     --print_margin_left_right: 1.125in;
@@ -296,9 +298,9 @@ footer {
 
     body {
         margin: 0px;
-        padding-top: 20px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-top: var(--padding_top_mobile);
+        padding-left: var(--padding_left_right_mobile);
+        padding-right: var(--padding_left_right_mobile);
         font-size: 17px;
     }
 
@@ -325,7 +327,7 @@ footer {
 
     .profile_pic_container_mobile {
         margin-left: 0px; 
-        margin-right: calc(var(--profile_pic_width_mobile)/2);
+        margin-right: var(--padding_left_right_mobile);
         width: var(--profile_pic_width_mobile); 
         height: var(--profile_pic_width_mobile); 
         overflow: hidden;
