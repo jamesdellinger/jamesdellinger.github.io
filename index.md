@@ -19,19 +19,10 @@ title: "James Dellinger's Homepage"
 
 <!-- TODO:
 
-- get rid of top banner
-- Title formatting like:
-
-The 
-Homepage 
-of James
-Dellinger
-
-- all really bold
-- put 'James Dellinger' in an orange red color
 - use math function generateed ascii art as gray background over white background color
 - maybe make it animate
 - see if can animate body text to silver/gray shimmer
 - or maybe faint light blue shimmer
 - maybe animate text instead of background
-- maybe just animate links instead of text -->
+- maybe just animate links instead of text 
+-->
