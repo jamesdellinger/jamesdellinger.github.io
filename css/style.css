@@ -3,7 +3,7 @@
   }
 
 html {
-    background-color: gray;
+    background-color: white;
 }
 
 body {
@@ -18,7 +18,6 @@ body {
     margin-bottom: 0px;
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 8px;
 }
 
 section {
