@@ -3,10 +3,9 @@
     --moderate_transparent: rgba(0, 0, 0, 0.47);
   }
 
-html {
+/* html {
     background-color: white;
-    color: white;
-}
+} */
 
 body {
     background-color: white;
