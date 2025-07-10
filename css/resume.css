@@ -1,0 +1,459 @@
+:root {
+    --h6_font_color: rgba(0, 0, 0, 0.65);
+    --horizontal_rule_color: rgba(140, 140, 140, 0.2);
+    --job_bullet_color: rgba(0, 0, 0, 0.3);
+    --link_color: rgb(65,110,210);
+    --desktop_section_border_color: rgb(223,222,219);
+    --desktop_background_color: rgb(244, 242, 238);
+
+    --top_section_profile_pic_width: 160px;
+    --body_max_width: 800px;
+    --section_padding: 64px;
+    --section_margin_top_bottom: 6px;
+    --section_border_width: 1px;
+    --hr_side_margin: 0px;
+    /* Had thought wider horiz rules in between companies would set them apart nicely.
+    But actually just made the resume look uneven. */
+    /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
+    --p-margin_top_bottom: 14px;
+    --footer_margin_top_bottom: 30px;
+    --h3_h4_line_height: 24px;
+    --job_bar_width: 2px;
+    --header_profile_pic_width: 32px;
+
+    --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
+    --h3_h4_margin_top: var(--h3_h4_fontsize);
+    --job_bullet_width: calc(var(--h3_h4_line_height)/3);
+    --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
+    --job_bar_top: var(--h3_h4_line_height);
+    --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
+    --job_chevron_width: calc(1.75 * var(--job_bullet_width));
+
+    --profile_pic_width_mobile: 44px;
+    --padding_left_right_mobile: 16px;
+
+    --print_margin_top_bottom: .625in;
+    --print_margin_left_right: 1.125in;
+}
+
+html {
+    background-color: var(--desktop_background_color);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: var(--body_max_width);
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+p {
+    margin-top: var(--p-margin_top_bottom);
+    margin-bottom: var(--p-margin_top_bottom);
+}
+
+a {
+    color: var(--link_color);
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 300; 
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+h3, h4 {
+    font-size: var(--h3_h4_fontsize);
+    font-weight: 600;
+    line-height: var(--h3_h4_line_height);
+    margin-bottom: 0px;
+    margin-top: var(--h3_h4_margin_top);
+}
+
+h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 20px;
+    margin: 0px;
+}
+
+h6 {
+    color: var(--h6_font_color);
+}
+
+hr {
+    height: 1px;
+    width: calc(var(--body_max_width) -2*var(--section_border_width));
+    margin-left: var(--hr_side_margin);
+    margin-right: var(--hr_side_margin);
+    border-width:0px;
+    color:var(--horizontal_rule_color);
+    background-color:var(--horizontal_rule_color);
+}
+
+section {
+    background-color: white;
+    line-height: 20px;
+    margin-top: var(--section_margin_top_bottom);
+    margin-bottom: var(--section_margin_top_bottom);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: var(--section_padding);
+    padding-right: var(--section_padding);
+    border-style: solid;
+    border-width: var(--section_border_width);
+    border-color: var(--desktop_section_border_color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.top_section_background_image_container {
+    margin-left: calc(0px - var(--section_padding));
+    margin-right: calc(0px - var(--section_padding));
+    display: flex;
+}
+
+.top_section_background_image {
+    width: 100%;
+}
+
+.top_section_profile_pic_container {
+    position: relative; 
+    margin-top: calc(0px - .7*var(--top_section_profile_pic_width));  
+    margin-left: calc(0px - var(--section_padding)/2);
+    width: var(--top_section_profile_pic_width); 
+    height: var(--top_section_profile_pic_width); 
+    overflow: hidden;
+    border-style: solid; 
+    border-color: white; 
+    border-width: 4px; 
+    border-radius: 49.9%;
+}
+
+.top_section_profile_pic {
+    width: 100%;
+}
+
+.header_title_container {
+    height: var(--header_profile_pic_width);
+    max-width: var(--body_max_width);
+    display: flex;
+    vertical-align: middle;
+    justify-content: flex-start;
+    align-items: center;
+    line-height:0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.header_title_text {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.header_profile_pic_container {
+    margin-left: 0px; 
+    margin-right: calc(var(--header_profile_pic_width)/2);
+    width: var(--header_profile_pic_width); 
+    height: var(--header_profile_pic_width); 
+    overflow: hidden;
+    border-radius: 49.9%;
+}
+
+.header_profile_pic {
+    width: 100%;
+}
+
+header {
+    display: block; 
+    /* Important to set `visibility: hidden` here. To keep header from flickering on initial page load. */
+    visibility: hidden;
+    background-color: white;
+    position: fixed;
+    /* Unfortunately, Safari allows headers to bounce when overscrolled
+    horizontally or vertically. Even StackOverflow suffers from this. 
+    Perhaps one day Safari will support the css overscroll-behavior property.
+    See: https://dev.to/mpuckett/the-holy-grail-web-app-shell-with-header-and-footer-for-iphone-549j */
+    overscroll-behavior: contain;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom-color: var(--horizontal_rule_color);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 1;
+}
+/* The following four headroom classes ensure that the code in headroom.js
+correctly lowers the header once the user has scrolled down from the 
+page's top and raises it when and if the user scrolls back up to the top. */
+.headroom {
+    box-shadow: none;
+    will-change: transform;
+    transform: translateY(-100%);
+    /* Be sure to set the transition exactly like below, so that hidden header
+       gently slides down once page is scrolled down from the top. Offset
+       distance from page top, at which header slide-down begins, is defined
+       in cv.html, the template file. */
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear;
+}
+.headroom--top {
+    visibility: hidden;
+}
+.headroom--not-top {
+    visibility: visible;
+    /* I find the LinkedIn-style box shadow a bit distracting. But I will leave 
+       it here in case I later change my mind. */
+    /* box-shadow: 0px 0px 0px 1px var(--horizontal_rule_color), 0px 4px 4px rgba(0, 0, 0, 0.3); */
+    transform: translateY(0%);
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 0s linear;
+}
+.headroom--top.headroom--pinned {
+    /* Must combine .headroom--top and .headroom--pinned.
+       Why? Because want header visible when away from page top. */
+    /* "pinned" means scrolling upwards */
+    /* Do not set the display property here. */
+    box-shadow: none;
+    transform: translateY(-100%);
+    /* Very important to set the header hiding transition precisely like I do below. 
+       Ensures that Safari will re-hide the header if/when user scrolls back to the
+       the top of the page. `visibility 667ms` ensures that the header gently slides up.*/
+    transition: box-shadow 667ms ease-in-out, transform 667ms ease-in-out, visibility 667ms linear;
+}
+
+footer {
+    margin-top: var(--footer_margin_top_bottom);
+    margin-bottom: var(--footer_margin_top_bottom);
+    text-align: center; 
+}
+
+.contact_info_printed, .top_section_profile_pic_title_container_mobile {
+    display: none;
+}
+
+.jobBar {
+    display: block;
+    position: relative;
+}
+
+.jobBar::before {
+    content: "";
+    position: absolute;
+    left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
+    top: var(--job_bar_top);
+    height: var(--job_bar_height);
+    width: var(--job_bar_width);
+    background-color: var(--horizontal_rule_color);
+    border-radius: 1px;
+}
+
+.jobBulletCircle {
+    position: relative;
+    display: block;
+    border-radius: 49.9%;
+    height: var(--job_bullet_width);
+    width: var(--job_bullet_width);
+    background-color: var(--job_bullet_color);
+    top: var(--job_bullet_top);
+    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
+    /* Setting margin-bottom very important to prevent the div containing this 
+       span from automatically increasing its height by var(--job_bullet_width) px. */
+    margin-bottom: calc(0px - var(--job_bullet_width));
+}
+
+.jobBulletChevron {
+    fill: var(--job_bullet_color);
+    margin-bottom: calc(0px - var(--job_bullet_width));
+    position: relative;
+    display: block;
+    top: var(--job_bullet_top);
+    /* Safari will shift the SVG's <path> to the right by 1 pixel.
+       No idea why this happens. Won't bother correcting for it, as
+       any solution would be too kludgey. */
+    left: calc(0px - var(--job_chevron_width)/2 - var(--section_padding)/2);
+    height: var(--job_bullet_width);
+    width: var(--job_chevron_width);
+}
+
+@media all and (max-width: 550px) {
+    html {
+        background-color: white;
+    }
+
+    body {
+        margin: 0px;
+        padding-left: var(--padding_left_right_mobile);
+        padding-right: var(--padding_left_right_mobile);
+        font-size: 17px;
+    }
+
+    section {
+        padding: 0px;
+        margin: 0px;
+        border-width: 0px;
+        border-radius: 0%;
+        border-style: none;
+        line-height: 28px;
+        font-weight: auto;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    h3, h4 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        line-height: inherit;
+    }
+
+    .top_section_profile_pic_title_container_mobile {
+        height: var(--profile_pic_width_mobile);
+        display: flex;
+        vertical-align: middle;
+        justify-content: flex-start;
+        align-items: center;
+        line-height:0;
+        margin-top: calc(var(--padding_left_right_mobile));
+        margin-bottom: calc(5*var(--padding_left_right_mobile)/2);
+    }
+
+    .profile_pic_container_mobile {
+        margin-left: 0px; 
+        margin-right: var(--padding_left_right_mobile);
+        width: var(--profile_pic_width_mobile); 
+        height: var(--profile_pic_width_mobile); 
+        overflow: hidden;
+        border-radius: 49.9%;
+    }
+
+    .profile_pic_mobile {
+        width: 100%;
+    }
+
+    .title_text_mobile {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    footer {
+        color: var(--h6_font_color);
+        margin-bottom: calc(var(--p-margin_top_bottom) + var(--footer_margin_top_bottom));
+    }
+
+    h1,
+    .top_section_background_image_container, 
+    .top_section_profile_pic_container, 
+    hr, 
+    .jobBulletCircle, .jobBulletChevron,
+    .contact_info_printed,
+    .header_title_container, .header_profile_pic_container,
+    .header_profile_pic, .header_title_text{
+        display: none;
+    }
+}
+
+@media print {
+    html {
+        background-color: white;
+    }
+
+    body {
+        margin-top: 0in;
+        padding-left: 0in;
+        padding-right: 0in;
+        max-width: none;
+        font-size: 10.5pt;
+        line-height: 20pt;
+    }
+    
+    section, #experience_section {
+        border-width: 0in !important;
+        padding: 0in;
+        margin: 0in;
+        border-style: none;
+        border-radius: 0;
+        border-width: 0;
+    }
+
+    .headroom, 
+    footer,
+    .top_section_background_image_container, 
+    .top_section_profile_pic_container, 
+    .contact_info_screen_display, 
+    hr, 
+    .jobBulletCircle, .jobBulletChevron,
+    .top_section_profile_pic_title_container_mobile { 
+        display: none; 
+    }
+
+    h1 {
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 18pt;
+        font-weight: 350;
+        margin-top: 0pt;
+        margin-bottom: .55625in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
+    }
+
+    h2 {
+        font-size: 15pt;
+    }
+
+    h3, h4 {
+        font-size: 13pt;
+    }
+
+    h6 {
+        color: black;
+    }
+
+    a {
+        color: black;
+    }
+
+    /* To display URLs for selected links when printed out.
+       From: https://stackoverflow.com/a/10634534/8628758 
+       
+       Will not use for the time being, as I include too 
+       many links that I wish not to print out. Won't
+       make a special class, as that would require the
+       insertion of html code in the markdown file.*/
+    /* a::after {
+        content: " (" attr(href) ")";
+    } */
+
+    .contact_info_printed {
+        display: block;
+    }
+}
+
+/* Printing page margins must be set here. */
+@page {
+    margin-top: var(--print_margin_top_bottom);
+    margin-bottom: var(--print_margin_top_bottom);
+    margin-left: var(--print_margin_left_right);
+    margin-right: var(--print_margin_left_right);
+}
