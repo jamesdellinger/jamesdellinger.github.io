@@ -15,7 +15,8 @@
     /* Had thought wider horiz rules in between companies would set them apart nicely.
     But actually just made the resume look uneven. */
     /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
-    --p-margin_top_bottom: 14px;
+    --p_margin_top_bottom: 14px;
+    --body_text_max_width: 540px;
     --footer_margin_top_bottom: 30px;
     --h3_h4_line_height: 24px;
     --job_bar_width: 2px;
@@ -26,7 +27,7 @@
     --job_bullet_width: calc(var(--h3_h4_line_height)/3);
     --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
     --job_bar_top: var(--h3_h4_line_height);
-    --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p-margin_top_bottom));
+    --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p_margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 
     --profile_pic_width_mobile: 44px;
@@ -53,9 +54,9 @@ body {
 }
 
 p {
-    margin-top: var(--p-margin_top_bottom);
-    margin-bottom: var(--p-margin_top_bottom);
-    max-width: 540px;
+    margin-top: var(--p_margin_top_bottom);
+    margin-bottom: var(--p_margin_top_bottom);
+    max-width: var(--body_text_max_width);
 }
 
 a {
@@ -360,7 +361,7 @@ footer {
 
     footer {
         color: var(--h6_font_color);
-        margin-bottom: calc(var(--p-margin_top_bottom) + var(--footer_margin_top_bottom));
+        margin-bottom: calc(var(--p_margin_top_bottom) + var(--footer_margin_top_bottom));
     }
 
     h1,
