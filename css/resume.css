@@ -55,7 +55,7 @@ body {
 p {
     margin-top: var(--p-margin_top_bottom);
     margin-bottom: var(--p-margin_top_bottom);
-    margin-right: 100px;
+    max-width: 500px;
 }
 
 a {
