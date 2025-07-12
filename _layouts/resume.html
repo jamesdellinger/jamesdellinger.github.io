@@ -109,6 +109,9 @@ effort disentangling its format and structure.
         <!-- Display a gray bar and bullet to the left when there are multiple
         job titles held under one company.   -->
         {% for company in companiesArray %}
+          <!-- TODO: Break up h3 header to place date info on right side. -->
+          
+
           <div class="company">
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
