@@ -92,14 +92,17 @@ h3 {
 .company_name_city {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 0px;
 }
 
 .company_name {
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
 .date {
     color: var(--gray_font_color);
+    margin-bottom: 0px;
 }
 
 h4 {
