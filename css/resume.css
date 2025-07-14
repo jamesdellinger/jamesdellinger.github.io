@@ -84,6 +84,16 @@ h3, h4 {
     margin-top: var(--h3_h4_margin_top);
 }
 
+.company_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company_name_city {
+    display: flex;
+    justify-content: flex-start;
+}
+
 h5, h6 {
     font-size: inherit;
     font-weight: inherit;

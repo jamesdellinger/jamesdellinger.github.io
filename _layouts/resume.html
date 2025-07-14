@@ -121,12 +121,12 @@ effort disentangling its format and structure.
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           <p class="company_name">{{ companyNameText }}</p>
           {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
-          <p class="city"> ({{ companyCity }})</p></div>
+          <p class="city">&nbsp;({{ companyCity }})</p></div>
           {% assign companyDate = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDate }}</p></div>
           {{ companyBody }}
           
-          <!-- Markdown files uses the <h4> tag to list multiple job titles under a single company. -->
+          <!-- Markdown file uses the <h4> tag to list multiple job titles under a single company. -->
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
