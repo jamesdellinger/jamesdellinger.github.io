@@ -114,28 +114,18 @@ effort disentangling its format and structure.
           <!-- Break apart markdown h3 header and reform it into:
             <h3 id="company_id"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></h3> -->
           {% assign companyHeaderBreak = "</h3>" %}
-          {% assign companyArray = company | split: companyHeaderBreak %}
-          {% assign companyHeader = companyArray.first %}
-          {% assign companyHeaderArray = companyHeader | split: ", " %}
-          {% for tag in companyHeaderArray %}
-            <!-- Company name -->
-            {% if forloop.first %}
-              <div class="company_name_city">
-              {% assign companyName = tag | split: "<h3" | last %}
-              {% assign companyHeaderID = companyName | split: ">" | first %}
-              <h3 {{ companyHeaderID }}>
-              {% assign companyNameText = companyName | split: ">" | last %}
-              <p class="company_name">{{ companyNameText }}</p>
-            <!-- Company date -->
-            {% elsif forloop.last %}
-              <p class="date">{{ tag }}</p></h3>
-            <!-- Company city -->
-            {% else %}
-              <p class="city">{{ tag }}</p></div>
-            {% endif %}
-          {% endfor %}
-
-          {% assign companyBody = companyArray.last %}
+          {% assign companyHeader = company | split: companyHeaderBreak | first %}
+          {% assign companyBody = company | split: companyHeaderBreak | last %}
+          {% assign companyName = companyHeader | split: " (" | first %}
+          <div class="company_name_city">
+          {% assign companyNameID = companyName | split: ">" | first %}
+          {{ companyNameId }}>
+          {% assign companyNameText = companyName | split: ">" | last %}
+          <p class="company_name">{{ companyNameText }}</p>
+          {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
+          <p class="city">{{ companyCity }}</p></div>
+          {% assign companyDate = companyHeader | split: "), " | last %}
+          <p class="date">{{ companyDate }}</p></h3>
           {{ companyBody }}
           
           <!-- Markdown files uses the <h4> tag to list multiple job titles under a single company. -->
