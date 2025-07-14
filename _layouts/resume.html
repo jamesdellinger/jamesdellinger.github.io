@@ -111,17 +111,17 @@ effort disentangling its format and structure.
         {% for company in companiesArray %}
           <div class="company">
           <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
-          <!-- Break apart markdown h3 header and reform it into:
-            <h3 id="company_id"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></h3> -->
+          <!-- Break apart markdown h3 header and re-form it into:
+            <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
           <div class="company_header">
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
-          <p class="company_name"> ({{ companyNameText }})</p>
+          <p class="company_name">{{ companyNameText }}</p>
           {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
-          <p class="city">{{ companyCity }}</p></div>
+          <p class="city"> ({{ companyCity }})</p></div>
           {% assign companyDate = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDate }}</p></div>
           {{ companyBody }}
