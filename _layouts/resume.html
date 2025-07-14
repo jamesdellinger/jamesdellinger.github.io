@@ -112,15 +112,18 @@ effort disentangling its format and structure.
           <div class="company">
           <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
           {% assign companyHeaderBreak = "</h3>" %}
-          {% assign companyArray = company | split companyHeaderBreak %}
+          {% assign companyArray = company | split: companyHeaderBreak %}
           {% assign companyHeader = companyArray.first %}
-          {% assign companyHeaderArray = companyHeader | split ", " %}
+          {% assign companyHeaderArray = companyHeader | split: ", " %}
           {% for tag in companyHeaderArray %}
             <!-- Company name -->
             {% if forloop.first %}
-              <div>
-              {% assign companyNameText = tag | split "<h3>" | last}
-              <h3><p class="company_name">{{ companyNameText }}</p>
+              <div class="company_name_city">
+              {% assign companyName = tag | split: "<h3" | last %}
+              {% assign companyHeaderID = companyName | split: ">" | first %}
+              <h3 {{ companyHeaderID }}>
+              {% assign companyNameText = companyName | split: ">" | last %}
+              <p class="company_name">{{ companyNameText }}</p>
             <!-- Company date -->
             {% elsif forloop.last %}
               <p class="date">{{ tag }}</p></h3>
