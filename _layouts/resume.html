@@ -111,6 +111,8 @@ effort disentangling its format and structure.
         {% for company in companiesArray %}
           <div class="company">
           <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
+          <!-- Break apart markdown h3 header and reform it into:
+            <h3 id="company_id"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></h3> -->
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyArray = company | split: companyHeaderBreak %}
           {% assign companyHeader = companyArray.first %}
@@ -166,8 +168,6 @@ effort disentangling its format and structure.
                 </div>
               {% endif %}
             {% endfor %}
-          {% else %}
-            {{ company }}
           {% endif %}
           </div>
           {% if forloop.last == false %}
