@@ -119,8 +119,6 @@ effort disentangling its format and structure.
           <div class="company_name_city">
           {% assign companyName = companyHeader | split: " (" | first %}
           {{ companyName }}
-          {% assign companyNameID = companyName | split: ">" | first %}
-          {{ companyNameId }}>
           {% assign companyNameText = companyName | split: ">" | last %}
           <p class="company_name">{{ companyNameText }}</p>
           {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
