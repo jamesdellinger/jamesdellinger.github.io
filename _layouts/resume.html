@@ -116,15 +116,14 @@ effort disentangling its format and structure.
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
+          <div class="company_header">
           <div class="company_name_city">
-          {% assign companyName = companyHeader | split: " (" | first %}
-          {{ companyName }}
-          {% assign companyNameText = companyName | split: ">" | last %}
-          <p class="company_name">{{ companyNameText }}</p>
+          {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
+          <p class="company_name"> ({{ companyNameText }})</p>
           {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">{{ companyCity }}</p></div>
           {% assign companyDate = companyHeader | split: "), " | last %}
-          <p class="date">{{ companyDate }}</p></h3>
+          <p class="date">{{ companyDate }}</p></div>
           {{ companyBody }}
           
           <!-- Markdown files uses the <h4> tag to list multiple job titles under a single company. -->
