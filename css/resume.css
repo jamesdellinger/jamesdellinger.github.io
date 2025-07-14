@@ -1,5 +1,5 @@
 :root {
-    --h6_font_color: rgba(0, 0, 0, 0.65);
+    --gray_font_color: rgba(0, 0, 0, 0.65);
     --horizontal_rule_color: rgba(140, 140, 140, 0.2);
     --job_bullet_color: rgba(0, 0, 0, 0.3);
     --link_color: rgb(65,110,210);
@@ -99,7 +99,7 @@ h3, h4 {
 }
 
 .date {
-    color: var(--h6_font_color);
+    color: var(--gray_font_color);
 }
 
 h5, h6 {
@@ -110,7 +110,7 @@ h5, h6 {
 }
 
 h6 {
-    color: var(--h6_font_color);
+    color: var(--gray_font_color);
 }
 
 hr {
@@ -378,7 +378,7 @@ footer {
     }
 
     footer {
-        color: var(--h6_font_color);
+        color: var(--gray_font_color);
         margin-bottom: calc(var(--p_margin_top_bottom) + var(--footer_margin_top_bottom));
     }
 
