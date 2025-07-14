@@ -112,7 +112,8 @@ effort disentangling its format and structure.
           <div class="company">
           <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
           {% assign companyHeaderBreak = "</h3>" %}
-          {% assign companyHeader = company | split companyHeaderBreak | first %}
+          {% assign companyArray = company | split companyHeaderBreak %}
+          {% assign companyHeader = companyArray.first %}
           {% assign companyHeaderArray = companyHeader | split ", " %}
           {% for tag in companyHeaderArray %}
             <!-- Company name -->
@@ -128,8 +129,8 @@ effort disentangling its format and structure.
               <p class="city">{{ tag }}</p></div>
             {% endif %}
           {% endfor %}
-          
-          {% assign companyBody = company | split companyHeaderBreak | last %}
+
+          {% assign companyBody = companyArray.last %}
           {{ companyBody }}
           
           <!-- Markdown files uses the <h4> tag to list multiple job titles under a single company. -->
