@@ -116,8 +116,9 @@ effort disentangling its format and structure.
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
-          {% assign companyName = companyHeader | split: " (" | first %}
           <div class="company_name_city">
+          {% assign companyName = companyHeader | split: " (" | first %}
+          {{ companyName }}
           {% assign companyNameID = companyName | split: ">" | first %}
           {{ companyNameId }}>
           {% assign companyNameText = companyName | split: ">" | last %}
