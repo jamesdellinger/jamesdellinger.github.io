@@ -138,9 +138,9 @@ effort disentangling its format and structure.
           {{ n_jobs }}
           {% if n_jobs == 1 %}
                 {% assign jobNameText = jobsArray | slice: 0 | split: "<" | first | split: "<" | last %}
-                {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | last %} 
+                {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | split: </p> | first %} 
                 <div class="job_header_name">{{ jobNameText }}</div>
-                <div class="job_description_text"><p>{{ jobDescriptionText }}</div>
+                <div class="job_description_text"><p>{{ jobDescriptionText }}</p></div>
           {% else %}
             {% assign last_index = n_jobs | minus: 1 %}
             {% for item in jobsArray %}
