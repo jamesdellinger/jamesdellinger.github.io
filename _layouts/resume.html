@@ -112,6 +112,11 @@ effort disentangling its format and structure.
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
+          {% if forloop.first %}
+            <!-- Make sure Experience <h2> header placed at top of experience section. -->
+            {% assign experienceSectionHeader = companyHeader | split: "</h2>" | first %}
+            {{ experienceSectionHeader }}</h2>
+          {% endif %}
           <div class="company">
           <div class="company_header">
           <div class="company_name_city">
