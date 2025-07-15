@@ -126,20 +126,27 @@ effort disentangling its format and structure.
           <p class="city">&nbsp;({{ companyCity }})</p></div>
           {% assign companyDate = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDate }}</p></div>
+
+
           {{ companyBody }}
           
 
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
-          {% assign last_index = n_jobs | minus: 1 %}
           {% if n_jobs > 2 %}
-            <!-- Display a gray bar and bullet to the left when there are multiple
-            job titles held under one company.   -->
-            <!-- Markdown file uses the <h4> tag to list multiple job titles under a single company. -->
+            <!-- Need to know if multiple job titles listed under one company. So that we can 
+            display a gray bar and bullet to the left of each job title when this is the case.
+
+            The markdown file uses the <h4> tag to display job titles.
+              
+            When splitting up a company section using "<h4" the first item only contains the
+            company header. So if a company has two job titles, n_jobs would be 3.
+            The first "job" is just the company info, not an actual job position.-->
+
+            {% assign last_index = n_jobs | minus: 1 %}
             {% for job in jobsArray %}
               {% if forloop.first %}
-                <!-- First "job" is just the company info, not an actual job position. -->
                 {{ job }}
               {% else %}
                 <div>
