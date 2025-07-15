@@ -105,17 +105,14 @@ effort disentangling its format and structure.
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
-
-        <!-- Display a gray bar and bullet to the left when there are multiple
-        job titles held under one company.   -->
+        <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
+        <!-- Break apart markdown h3 header and re-form it into:
+          <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
         {% for company in companiesArray %}
-          <div class="company">
-          <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
-          <!-- Break apart markdown h3 header and re-form it into:
-            <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
+          <div class="company">
           <div class="company_header">
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
@@ -126,12 +123,15 @@ effort disentangling its format and structure.
           <p class="date">{{ companyDate }}</p></div>
           {{ companyBody }}
           
-          <!-- Markdown file uses the <h4> tag to list multiple job titles under a single company. -->
+
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = company | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
           {% assign last_index = n_jobs | minus: 1 %}
           {% if n_jobs > 2 %}
+            <!-- Display a gray bar and bullet to the left when there are multiple
+            job titles held under one company.   -->
+            <!-- Markdown file uses the <h4> tag to list multiple job titles under a single company. -->
             {% for job in jobsArray %}
               {% if forloop.first %}
                 <!-- First "job" is just the company info, not an actual job position. -->
