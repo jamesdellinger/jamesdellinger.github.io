@@ -16,6 +16,7 @@
     But actually just made the resume look uneven. */
     /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
     --p_margin_top_bottom: 14px;
+    --body_fontsize: 14px;
     --body_text_max_width: 540px;
     --footer_margin_top_bottom: 30px;
     --h3_h4_line_height: 24px;
@@ -46,7 +47,7 @@ body {
     max-width: var(--body_max_width);
     margin-right: auto;
     margin-left: auto;
-    font-size: 14px;
+    font-size: var(--body_fontsize);
     font-weight: 400;
     margin-top: 24px;
     padding-left: 8px;
@@ -110,7 +111,7 @@ h3 {
 }
 
 h4 {
-    font-size: 14px;
+    font-size: var(--body_fontsize);
     font-weight: 400;
     margin-top: 0px;
 }
