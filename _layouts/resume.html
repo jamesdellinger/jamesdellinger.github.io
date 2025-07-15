@@ -135,7 +135,7 @@ effort disentangling its format and structure.
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = companyBody | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
-          {{ n_jobs }}
+          {{ jobsArray }}
           {% if n_jobs == 1 %}
                 {% assign jobNameText = jobsArray | slice: 0 | split: "<" | first | split: "<" | last %}
                 {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | split: </p> | first %} 
