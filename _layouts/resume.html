@@ -141,7 +141,7 @@ effort disentangling its format and structure.
           <!-- The standard situation, a company has one job title. -->
           {% elsif n_jobs == 2 %}
             {% assign jobNameText = jobsArray | split: "</h4>" | first | split: ">" | last %}
-            {% assign jobDescriptionText = jobsArray | split "</h4>" | last %} 
+            {% assign jobDescriptionText = jobsArray | split: "</h4>" | last %} 
             <div class="job_header_name">{{ jobNameText }}</div>
             <div class="job_description_text">{{ jobDescriptionText }}</div>
           <!-- When a company has two or more job titles. -->
