@@ -84,12 +84,12 @@ h3 {
     margin-top: var(--h3_h4_margin_top);
 }
 
-.company_header {
+.company_header, .job_header_name_date {
     display: flex;
     justify-content: space-between;
 }
 
-.company_name_city, .job_header_name_city {
+.company_name_city {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0px;

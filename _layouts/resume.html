@@ -168,7 +168,7 @@ effort disentangling its format and structure.
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header_name_city"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header_name_date"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
               <div class="job_description_text">{{ jobDescriptionText }}</div>
               </div>
               </div>
