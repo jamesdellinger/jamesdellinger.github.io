@@ -138,7 +138,7 @@ effort disentangling its format and structure.
           {% if n_jobs == 1 %}
                 {% assign jobNameText = jobsArray | slice: 0 | split: "<" | first | split: "<" | last %}
                 {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | last %} 
-                <div class="job_header_single">{{ jobNameText }}</div>
+                <div class="job_header_name">{{ jobNameText }}</div>
                 <div class="job_description_text"><p>{{ jobDescriptionText }}
           {% else %}
             {% assign last_index = n_jobs | minus: 1 %}
@@ -168,7 +168,7 @@ effort disentangling its format and structure.
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header_multiple"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header_name_city"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
               <div class="job_description_text">{{ jobDescriptionText }}</div>
               </div>
               </div>
