@@ -101,6 +101,7 @@ effort disentangling its format and structure.
             </ul>
           </div>
         </section>
+
       {% elsif forloop.index0 == 1 %}
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
@@ -122,19 +123,64 @@ effort disentangling its format and structure.
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           <p class="company_name">{{ companyNameText }}</p>
-          {% assign companyCity = companyHeader | split: " (" | last | split: ")" | first %}
-          <p class="city">&nbsp;({{ companyCity }})</p></div>
-          {% assign companyDate = companyHeader | split: "), " | last %}
-          <p class="date">{{ companyDate }}</p></div>
+          {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
+          <p class="city">&nbsp;({{ companyCityText }})</p></div>
+          {% assign companyDateText = companyHeader | split: "), " | last %}
+          <p class="date">{{ companyDateText }}</p></div>
 
 
-          {{ companyBody }}
-          
-
+          <!-- Separate job title header <h4> header from job description text. 
+          Handle special case where one company has multiple job titles 
+          (and thus multiple <h4> headers). -->
           {% assign jobBreak = "<h4" %}
-          {% assign jobsArray = company | split: jobBreak %}
+          {% assign jobsArray = companyBody | split: jobBreak %}
           {% assign n_jobs = jobsArray.size %}
-          {% if n_jobs > 2 %}
+          {% if n_jobs == 1 %}
+                {% assign jobNameText = jobsArray | slice: 0 | split: "<" | first | split: "<" | last %}
+                {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | last %} 
+                <div class="job_header_single">{{ jobNameText }}</div>
+                <div class="job_description_text"><p>{{ jobDescriptionText }}
+          {% else %}
+            {% assign last_index = n_jobs | minus: 1 %}
+            {% for item in jobsArray %}
+              <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
+            
+              When there are three or more jobs, middle jobs get chevrons while
+              top and bottom jobs get bullets. When there are only two jobs, all
+              jobs get bullets. We also draw a vertical gray bar in between bullets/chevrons. -->
+              
+              <div>
+              {% if forloop.index0 > 1 and forloop.index0 < last_index and n_jobs > 3 %}
+                <!-- Useful for cropping SVG borders to image content: https://svgcrop.com/ -->
+                <svg class="jobBulletChevron" xmlns="http://www.w3.org/2000/svg" viewBox="5.36 8 13.3 7.66">
+                  <path d="M17.657 15.657a1 1 0 0 1-.707-.293L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-.707 1.707z"/>
+                </svg>
+              {% else %}
+                <span class="jobBulletCircle"></span>
+              {% endif %}
+              {% if forloop.last %}
+                <div class="job">
+              {% else %}
+                <div class="job jobBar">
+              {% endif %}
+
+              <!-- Format job headers. -->
+              {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
+              {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
+              {% assign jobDescriptionText = item | split: "</h4>" | last %}
+              <div class="job_header_multiple"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_description_text">{{ jobDescriptionText }}</div>
+              </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+
+
+          <!-- Old Way: -->
+          <!-- {% assign jobBreak = "<h4" %}
+          {% assign jobsArray = companyBody | split: jobBreak %}
+          {% assign n_jobs = jobsArray.size %}
+          {% if n_jobs > 2 %} -->
             <!-- Need to know if multiple job titles listed under one company. So that we can 
             display a gray bar and bullet to the left of each job title when this is the case.
 
@@ -144,15 +190,15 @@ effort disentangling its format and structure.
             company header. So if a company has two job titles, n_jobs would be 3.
             The first "job" is just the company info, not an actual job position.-->
 
-            {% assign last_index = n_jobs | minus: 1 %}
+            <!-- {% assign last_index = n_jobs | minus: 1 %}
             {% for job in jobsArray %}
               {% if forloop.first %}
                 {{ job }}
               {% else %}
                 <div>
-                {% if forloop.index0 > 1 and forloop.index0 < last_index and n_jobs > 3 %}
+                {% if forloop.index0 > 1 and forloop.index0 < last_index and n_jobs > 3 %} -->
                   <!-- Useful for cropping SVG borders to image content: https://svgcrop.com/ -->
-                  <svg class="jobBulletChevron" xmlns="http://www.w3.org/2000/svg" viewBox="5.36 8 13.3 7.66">
+                  <!-- <svg class="jobBulletChevron" xmlns="http://www.w3.org/2000/svg" viewBox="5.36 8 13.3 7.66">
                     <path d="M17.657 15.657a1 1 0 0 1-.707-.293L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-.707 1.707z"/>
                   </svg>
                 {% else %}
@@ -169,7 +215,10 @@ effort disentangling its format and structure.
               {% endif %}
             {% endfor %}
           {% endif %}
-          </div>
+          </div> -->
+          <!-- Old Way. -->
+
+
           {% if forloop.last == false %}
             <hr>
           {% endif %}
