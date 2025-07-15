@@ -139,7 +139,7 @@ effort disentangling its format and structure.
                 {% assign jobNameText = jobsArray | slice: 0 | split: "<" | first | split: "<" | last %}
                 {% assign jobDescriptionText = jobsArray | slice: 0 | split: "<p>" | last %} 
                 <div class="job_header_name">{{ jobNameText }}</div>
-                <div class="job_description_text"><p>{{ jobDescriptionText }}
+                <div class="job_description_text"><p>{{ jobDescriptionText }}</div>
           {% else %}
             {% assign last_index = n_jobs | minus: 1 %}
             {% for item in jobsArray %}
