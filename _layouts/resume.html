@@ -146,6 +146,9 @@ effort disentangling its format and structure.
             <div class="job_description_text"><p>{{ jobDescriptionText }}</p></div>
           <!-- When a company has two or more job titles. -->
           {% else %}
+            <!-- TODO: May place a company description above job headers when a company has multiple jobs.
+            Check for this situation. -->
+
             {% assign last_index = n_jobs | minus: 1 %}
             {% for item in jobsArray %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
@@ -173,7 +176,7 @@ effort disentangling its format and structure.
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header_name_date"><div class="job_header">{{ jobNameText }}</div><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header_name_date"><p class="job_header_name">{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
               <div class="job_description_text">{{ jobDescriptionText }}</div>
               </div>
               </div>
