@@ -8,6 +8,7 @@
 
     --top_section_profile_pic_width: 160px;
     --body_max_width: 800px;
+    --body_text_max_width: 540px;
     --section_padding: 64px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
@@ -15,20 +16,23 @@
     /* Had thought wider horiz rules in between companies would set them apart nicely.
     But actually just made the resume look uneven. */
     /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
-    --p_margin_top_bottom: 14px;
-    --body_fontsize: 14px;
-    --body_text_max_width: 540px;
     --footer_margin_top_bottom: 30px;
-    --h3_h4_line_height: 24px;
-    --job_bar_width: 2px;
     --header_profile_pic_width: 32px;
 
-    --h3_h4_fontsize: calc(2*var(--h3_h4_line_height)/3);
-    --h3_h4_margin_top: var(--h3_h4_fontsize);
-    --job_bullet_width: calc(var(--h3_h4_line_height)/3);
-    --job_bullet_top: calc(var(--h3_h4_margin_top) + var(--job_bullet_width));
-    --job_bar_top: var(--h3_h4_line_height);
-    --job_bar_height: calc(100% - var(--h3_h4_line_height) + var(--h3_h4_margin_top) + var(--p_margin_top_bottom));
+    --body_fontsize: 14px;
+    --p_margin_top_bottom: 14px;
+    --h3_line_height: 24px;
+    --h3_fontsize: calc(2*var(--h3_line_height)/3);
+    --h3_margin_top: var(--h3_fontsize);
+    --h4_line_height: 20px;
+    --h4_fontsize: var(var(--body_fontsize));
+    --h4_margin_top: 0px;
+
+    --job_bullet_width: 8px;
+    --job_bullet_top: calc(var(--h4_margin_top) + var(--job_bullet_width));
+    --job_bar_top: var(--h4_line_height);
+    --job_bar_width: 2px;
+    --job_bar_height: calc(100% - var(--h4_line_height) + var(--h4_margin_top) + var(--p_margin_top_bottom));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width));
 
     --profile_pic_width_mobile: 44px;
@@ -78,11 +82,19 @@ h2 {
 }
 
 h3 {
-    font-size: var(--h3_h4_fontsize);
+    font-size: var(--h3_fontsize);
     font-weight: 600;
-    line-height: var(--h3_h4_line_height);
+    line-height: var(--h3_line_height);
     margin-bottom: 0px;
-    margin-top: var(--h3_h4_margin_top);
+    margin-top: var(--h3_margin_top);
+}
+
+h4 {
+    font-size: var(--h4_fontsize);
+    font-weight: 400;
+    line-height: var(--h4_line_height);
+    margin-bottom: 0px;
+    margin-top: var(--h4_margin_top);
 }
 
 .company_header, .job_header_name_date {
