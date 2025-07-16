@@ -150,7 +150,7 @@ effort disentangling its format and structure.
             the job headers, when a company has multiple jobs. -->
             {% assign jobsArrayFirstItemArray = jobsArray | first | split: "</p" %}
             {% if jobsArrayFirstItemArray.size > 1 %}
-              {% assign companyDescriptionText = jobsArrayFirstItemArray | first %}
+              {% assign companyDescriptionText = jobsArrayFirstItemArray | first | split: ">" | last %}
               <p class="company_description_text">{{ companyDescriptionText }}</p>
             {% endif %}
 
