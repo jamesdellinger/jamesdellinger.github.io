@@ -155,8 +155,6 @@ effort disentangling its format and structure.
               <p class="company_description_text">{{ companyDescriptionText }}</p>
             {% endif %}
 
-            {{ n_jobs }}
-            {{ last_index }}
             <!-- If there was no company description, first item of jobs array will
             be empty. Either way, we should get rid of it before formatting each
             job heading under a single company.  -->
@@ -164,7 +162,6 @@ effort disentangling its format and structure.
             {% assign n_jobs = n_jobs | minus: 1 %}
             {% assign last_index = last_index | minus: 1 %}
 
-            
             {% for item in jobsArray %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
             
@@ -173,7 +170,7 @@ effort disentangling its format and structure.
               jobs get bullets. We also draw a vertical gray bar in between bullets/chevrons. -->
               
               <div>
-              {% if forloop.index0 > 1 and forloop.index0 < last_index and n_jobs > 3 %}
+              {% if forloop.index0 > 0 and forloop.index0 < last_index and n_jobs > 2 %}
                 <!-- Useful for cropping SVG borders to image content: https://svgcrop.com/ -->
                 <svg class="jobBulletChevron" xmlns="http://www.w3.org/2000/svg" viewBox="5.36 8 13.3 7.66">
                   <path d="M17.657 15.657a1 1 0 0 1-.707-.293L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414l5.657-5.657a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-.707 1.707z"/>
