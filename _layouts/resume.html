@@ -149,10 +149,8 @@ effort disentangling its format and structure.
             <!-- Check to see if a company description is included before
             the job headers, when a company has multiple jobs. -->
             {% assign jobsArrayFirstItemArray = jobsArray | first | split: "</p" %}
-            {{ jobsArrayFirstItemArray }}
-            {{ jobsArrayFirstItemArray.size }}
             {% if jobsArrayFirstItemArray.size > 1 %}
-              {% assign companyDescriptionText = jobsArrayFirstItemArray | first %}
+              {% assign companyDescriptionText = jobsArrayFirstItemArray | last %}
               <p class="company_description_text">{{ companyDescriptionText }}</p>
             {% endif %}
 
