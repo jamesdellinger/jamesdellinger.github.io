@@ -146,16 +146,18 @@ effort disentangling its format and structure.
             <div class="job_description_text"><p>{{ jobDescriptionText }}</p></div>
           <!-- When a company has two or more job titles. -->
           {% else %}
+            {% assign last_index = n_jobs | minus: 1 %}
             <!-- Check to see if a company description is included before
             the job headers, when a company has multiple jobs. -->
             {% assign jobsArrayFirstItemArray = jobsArray | first | split: "</p" %}
             {% if jobsArrayFirstItemArray.size > 1 %}
               {% assign companyDescriptionText = jobsArrayFirstItemArray | first | split: ">" | last %}
               <p class="company_description_text">{{ companyDescriptionText }}</p>
+              {% assign jobsArray = jobsArray | slice: 1, last_index %}
             {% endif %}
 
 
-            {% assign last_index = n_jobs | minus: 1 %}
+            
             {% for item in jobsArray %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
             
