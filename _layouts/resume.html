@@ -154,6 +154,8 @@ effort disentangling its format and structure.
               {% assign companyDescriptionText = jobsArrayFirstItemArray | first | split: ">" | last %}
               <p class="company_description_text">{{ companyDescriptionText }}</p>
               {% assign jobsArray = jobsArray | slice: 1, last_index %}
+              {% assign n_jobs = n_jobs | minus: 1 %}
+              {% assign last_index = last_index | minus: 1 %}
             {% endif %}
 
 
