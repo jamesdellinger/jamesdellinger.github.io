@@ -142,7 +142,7 @@ effort disentangling its format and structure.
           {% elsif n_jobs == 2 %}
             {% assign jobNameText = jobsArray | split: "</h4>" | first | split: ">" | last %}
             {% assign jobDescriptionText = jobsArray | split: "</h4>" | last | split: "<p>" | last | split: "</p>" | first  %} 
-            <div class="job_header_name">{{ jobNameText }}</div>
+            <div class="job_header">{{ jobNameText }}</div>
             <div class="job_description_text"><p>{{ jobDescriptionText }}</p></div>
           <!-- When a company has two or more job titles. -->
           {% else %}
@@ -173,7 +173,7 @@ effort disentangling its format and structure.
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header_name_date"><p>{{ jobNameText }}</p><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header_name_date"><div class="job_header">{{ jobNameText }}</div><p class="date">{{ jobDateText }}</p></div>
               <div class="job_description_text">{{ jobDescriptionText }}</div>
               </div>
               </div>
