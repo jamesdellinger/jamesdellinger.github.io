@@ -154,10 +154,12 @@ effort disentangling its format and structure.
               {% assign companyDescriptionText = jobsArrayFirstItemArray | first | split: ">" | last %}
               <p class="company_description_text">{{ companyDescriptionText }}</p>
             {% endif %}
- 
 
             {{ n_jobs }}
             {{ last_index }}
+            <!-- If there was no company description, first item of jobs array will
+            be empty. Either way, we should get rid of it before formatting each
+            job heading under a single company.  -->
             {% assign jobsArray = jobsArray | slice: 1, last_index %}
             {% assign n_jobs = n_jobs | minus: 1 %}
             {% assign last_index = last_index | minus: 1 %}
