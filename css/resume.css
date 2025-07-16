@@ -29,7 +29,7 @@
     --h4_margin_top: var(--p_margin_top_bottom);
 
     --job_bullet_width: 8px;
-    --job_bullet_top: calc(var(--h4_margin_top) + var(--job_bullet_width));
+    --job_bullet_top: calc(var(--h4_margin_top) + (var(--h4_line_height) - var(--job_bullet_width))/2);
     --job_bar_top: var(--h4_line_height);
     --job_bar_width: 2px;
     --job_bar_height: calc(100% - var(--h4_line_height) + var(--h4_margin_top) + var(--p_margin_top_bottom));
