@@ -102,10 +102,10 @@ effort disentangling its format and structure.
           </div>
         </section>
 
-      <!-- {% elsif forloop.index0 == 1 %} -->
-      {% elsif section | split: "</h2>" | first | split: ">" | last == "Experience" %}
-        {% assign test = section | split: "</h2>" | first | split: ">" | last %}
-        {{test}}
+      {% elsif forloop.index0 == 1 %}
+        {% if section | split: "</h2>" | first | split: ">" | last == "Experience" %}
+          {{ "Success" }}
+        {% endif %}
         <!-- If section is Experience section. -->
         <section id="experience_section">
         {% assign companyBreak = "<hr />" %}
