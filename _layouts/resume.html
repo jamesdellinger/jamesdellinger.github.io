@@ -103,8 +103,7 @@ effort disentangling its format and structure.
         </section>
 
       <!-- {% elsif forloop.index0 == 1 %} -->
-      {% elsif section | split: '"' | slice: 1 | contains "experience" %}
-        {{section | split: '"' | slice: 1}}
+      {% elsif section | split: "</h2>" | first | contains "Experience" %}
         <!-- If section is Experience section. -->
         <section id="experience_section">
         {% assign companyBreak = "<hr />" %}
