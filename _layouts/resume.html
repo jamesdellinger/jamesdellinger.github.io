@@ -106,7 +106,7 @@ effort disentangling its format and structure.
       {% elsif section | split: '"' | slice: 1 | contains "experience" %}
         {{section | split: '"' | slice: 1}}
         <!-- If section is Experience section. -->
-        <section id="experience_section"></section>
+        <section id="experience_section">
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
         <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
