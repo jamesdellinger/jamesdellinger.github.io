@@ -103,13 +103,7 @@ effort disentangling its format and structure.
         </section>
 
       {% elsif forloop.index0 == 1 %}
-        {% if section | split: ">Experience</h2>" | size | == 3 %}
-          {{ "Success" }}
-          {% assign test = section | split: ">Experience</h2>" | size %}
-          {{ test }}
-          {{ section | split: "</h2>" | first | split: ">" | last == "Experience" }}
-        {% endif %}
-        <!-- If section is Experience section. -->
+        <!-- Experience section always second section. -->
         <section id="experience_section">
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
@@ -207,8 +201,8 @@ effort disentangling its format and structure.
           {% endif %}
         {% endfor %}
         </section>
-      {% elsif section | split: "n" | first == "Educatio" %}
-        <!-- If section is education section. -->
+        {% elsif forloop.index0 == 3 %}
+        <!-- Education section always fourth section. -->
         <section id="education_section">
           {{ section }}
         </section>
