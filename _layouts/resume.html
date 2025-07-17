@@ -103,7 +103,8 @@ effort disentangling its format and structure.
         </section>
 
       {% elsif forloop.index0 == 1 %}
-        <!-- Experience section -->
+      {% elsif section | split: "ce" | first == "Experien" %}
+        <!-- If section is Experience section. -->
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
@@ -201,13 +202,13 @@ effort disentangling its format and structure.
           {% endif %}
         {% endfor %}
         </section>
-      <!-- TODO: create filter to detect if section is education section   -->
       {% elsif section | split: "n" | first == "Educatio" %}
+        <!-- If section is education section. -->
         <section id="education_section">
           {{ section }}
         </section>
       {% elsif forloop.last %}
-        <!-- Hobby and languages section. -->
+        <!-- Hobby and languages section always comes last. -->
         <section>
           {{ section }}
         </section>
