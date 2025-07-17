@@ -103,6 +103,7 @@ effort disentangling its format and structure.
         </section>
 
       {% elsif forloop.index0 == 1 %}
+        <!-- Experience section -->
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
         <section id="experience_section">
@@ -127,7 +128,6 @@ effort disentangling its format and structure.
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
           {% assign companyDateText = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDateText }}</p></div>
-
 
           <!-- Separate job title header <h4> header from job description text. 
           Handle special case where one company has multiple job titles 
@@ -201,8 +201,17 @@ effort disentangling its format and structure.
           {% endif %}
         {% endfor %}
         </section>
+      <!-- TODO: create filter to detect if section is education section   -->
+      {% elsif section | split: "n" | first == "Educatio" %}
+        <section id="education_section">
+          {{ section }}
+        </section>
+      {% elsif forloop.last %}
+        <!-- Hobby and languages section. -->
+        <section>
+          {{ section }}
+        </section>
       {% else %}
-      <!-- TODO: get education section formatted. -->
         <section>
           {{ section }}
         </section>
