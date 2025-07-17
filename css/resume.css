@@ -21,11 +21,11 @@
 
     --body_fontsize: 14px;
     --p_margin_top_bottom: 14px;
-    --h3_line_height: 24px;
-    --h3_fontsize: calc(2*var(--h3_line_height)/3);
+    --h3_line_height: 20px;
+    --h3_fontsize: var(--body_fontsize);
     --h3_margin_top: var(--h3_fontsize);
     --h4_line_height: 20px;
-    --h4_fontsize: var(var(--body_fontsize));
+    --h4_fontsize: var(--body_fontsize);
     --h4_margin_top: var(--p_margin_top_bottom);
 
     --job_bullet_width: 8px;
