@@ -104,7 +104,7 @@ effort disentangling its format and structure.
 
       <!-- {% elsif forloop.index0 == 1 %} -->
       {% elsif section | split: "</h2>" | first | contains "Experience" %}
-        {% assign test = section | split: "</h2>" | first | contains "Experience" %}
+        {% assign test = section | split: "</h2>" | first %}
         {{test}}
         <!-- If section is Experience section. -->
         <section id="experience_section">
