@@ -103,11 +103,12 @@ effort disentangling its format and structure.
         </section>
 
       <!-- {% elsif forloop.index0 == 1 %} -->
+      {{ section | split: "ce" | first }}
       {% elsif section | split: "ce" | first == "Experien" %}
         <!-- If section is Experience section. -->
+        <section id="experience_section"></section>
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
-        <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
         <!-- Break apart markdown h3 header and re-form it into:
           <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
