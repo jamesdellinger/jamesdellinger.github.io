@@ -103,8 +103,9 @@ effort disentangling its format and structure.
         </section>
 
       {% elsif forloop.index0 == 1 %}
-        {% if section | split: "</h2>" | first | split: ">" | last == "Experience" %}
+        {% if section | split: ">Experience</h2>" | size == 2 %}
           {{ "Success" }}
+
           {{ section | split: "</h2>" | first | split: ">" | last == "Experience" }}
         {% endif %}
         <!-- If section is Experience section. -->
