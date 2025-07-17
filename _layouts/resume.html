@@ -103,7 +103,7 @@ effort disentangling its format and structure.
         </section>
 
       {% elsif forloop.index0 == 1 %}
-        {% if section | split: ">Experience</h2>" | size == 3 %}
+        {% if section | split: ">Experience</h2>" | size | == 3 %}
           {{ "Success" }}
 
           {{ section | split: "</h2>" | first | split: ">" | last == "Experience" }}
