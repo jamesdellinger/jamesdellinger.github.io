@@ -149,17 +149,6 @@ h4 {
     margin-top: 0px;
 }
 
-h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: 20px;
-    margin: 0px;
-}
-
-h6 {
-    color: var(--gray_font_color);
-}
-
 hr {
     height: 1px;
     width: calc(var(--body_max_width) -2*var(--section_border_width));
@@ -419,7 +408,7 @@ footer {
         width: 100%;
     }
 
-    .title_text_mobile {
+    .name_header_mobile {
         font-size: 30px;
         font-weight: 600;
     }
