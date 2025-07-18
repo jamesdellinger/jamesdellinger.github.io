@@ -134,6 +134,14 @@ h4 {
     margin-top: 0px;
 }
 
+.languages_text {
+    margin-bottom: 0px;
+}
+
+.hobbies_text {
+    margin-top: 0px;
+}
+
 h4 {
     font-size: var(--body_fontsize);
     font-weight: 400;
