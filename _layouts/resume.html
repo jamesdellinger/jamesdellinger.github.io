@@ -23,6 +23,8 @@ effort disentangling its format and structure.
   <body>
     <!-- Get text of individual's name, to use at the resume title. -->
     {% assign nameText = content | split: "</h1>" | first | split: ">" | last %}
+
+    <!-- Drop-down header for desktop display. -->
     <header>
       <div class="header_title_container">
         <div class="header_profile_pic_container">
@@ -56,6 +58,8 @@ effort disentangling its format and structure.
     {% for section in sectionArray %}
       {% if forloop.first %}
         <section id="top_section">
+
+          <!-- Background banner and profile pic for desktop display. -->
           <div class="top_section_background_image_container">
             <img class="top_section_background_image" alt="Background Image" src="../images/resume_top_background.jpeg">
           </div>
@@ -65,8 +69,7 @@ effort disentangling its format and structure.
             </a>
           </div>
 
-          <div class="name_header_contact_info"></div>
-
+          <!-- Profile pic and name header for mobile display. -->
           <div class="top_section_profile_pic_title_container_mobile">
             <div class="profile_pic_container_mobile">
               <a href="/">
@@ -76,8 +79,10 @@ effort disentangling its format and structure.
             <p class="name_header_mobile">{{ nameText }}</p>
           </div>
 
-
-
+          <!-- Name header and contact info for desktop and print display. -->
+          <div class="name_header_contact_info">
+            <h1>{{ nameText }}</h1>
+          </div>
 
           <!-- Displays a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->

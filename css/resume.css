@@ -106,7 +106,7 @@ h4 {
     margin-top: var(--h4_margin_top);
 }
 
-.company_header, .job_header_name_date, .major_header_date {
+.company_header, .job_header_name_date, .major_header_date, .name_header_contact_info {
     display: flex;
     justify-content: space-between;
 }
