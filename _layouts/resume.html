@@ -217,8 +217,8 @@ effort disentangling its format and structure.
         <!-- Languages/hobbies section always comes last. -->
         <section id="lanuages_hobbies_section">
           <!-- TODO: resume here -->
-           {% assign languagesText = sector | split: "</p>" | first | split: ">" | last %}
-           {% assign hobbiesText =  sector | split: "<p>" | last | split: "<" | first %}
+          {% assign languagesText = sector | split: "</p>" | first %}
+          {% assign hobbiesText =  sector | split: "<p>" | last | split: "<" | first %}
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
         </section>
