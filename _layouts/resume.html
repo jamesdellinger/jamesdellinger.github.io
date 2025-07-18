@@ -207,8 +207,9 @@ effort disentangling its format and structure.
           {% assign educationH2Header = section | split: "<h4" | first %}
           {{ educationH2Header }}
           {% assign  majorNameText = section | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
-          {% assign  gradDateText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 1,2 %}
-          <div class="major_header_date"><h4 class="majorNameText">{{ majorNameText }}</h4><p class="education_date">{{ gradDateText }}</p></div>
+          {% assign  degreeText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 1 %}
+          {% assign  gradDateText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 2 %}
+          <div class="major_header_date"><h4 class="majorNameText">{{ majorNameText }}</h4><p class="education_date">{{ degreeText }}, {{ gradDateText }}</p></div>
           {% assign  educationDescriptionText = section | split: "<p>" | last | split: "</p" | first %}
           <p class="education_description">{{ educationDescriptionText  }}</p>
         </section>
