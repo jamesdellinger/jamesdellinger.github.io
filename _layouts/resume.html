@@ -216,11 +216,12 @@ effort disentangling its format and structure.
       {% elsif forloop.last %}
         <!-- Languages/hobbies section always comes last. -->
         <section id="lanuages_hobbies_section">
-          <!-- TODO: resume here -->
           {% assign languagesText = section | split: "</p>" | first | split: ">" | last %}
           {% assign hobbiesText =  section | split: "<p>" | last | split: "<" | first %}
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
+
+          {{ section }}
         </section>
       {% else %}
         <section>
