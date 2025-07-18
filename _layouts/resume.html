@@ -92,14 +92,18 @@ effort disentangling its format and structure.
                 <p class="location">{{ locationText }}</p>
               {% elsif item contains "@" %}
                 {% assign desktopEmailAddressText = item | split: ">" | last %}
-                <p class="desktop_email">{{ desktopEmailAddressText }}</p>
-                <p class="print_email"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></p>
+                <p class="email">{{ desktopEmailAddressText }}</p>
+                <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></p>
               {% elsif item contains "<a" %}
-                {{ item }}</p>
+                <p class="contact_link">{{ item | split: "p>" | last }}</p>
               {% endif %}
             {% endfor %}
             </div>
           </div>
+
+          <!-- Objective header and objective text. -->
+          {% assign objective = section | split: "</h1>" | last  %}
+          {{ objective }}
 
           <!-- Displays a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->

@@ -303,7 +303,7 @@ footer {
     text-align: center; 
 }
 
-.contact_info_printed, .top_section_profile_pic_title_container_mobile {
+.email_print, .contact_info_printed, .top_section_profile_pic_title_container_mobile {
     display: none;
 }
 
@@ -463,6 +463,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info_screen_display, 
+    .email, .contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron,
     .top_section_profile_pic_title_container_mobile { 
