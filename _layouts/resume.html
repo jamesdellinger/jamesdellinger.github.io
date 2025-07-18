@@ -82,6 +82,19 @@ effort disentangling its format and structure.
           <!-- Name header and contact info for desktop and print display. -->
           <div class="name_header_contact_info">
             <h1>{{ nameText }}</h1>
+            <!-- Contact info listed in <p> tags, in between the </h1> tag of the name header, and the 
+            <h2> tag of the Objective header. -->
+            {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2>" | first | split: "</p>" %}
+            {% for item in contactInfoArray %}
+              {% if item contains ", " %}
+                {% assign locationText = item | split: ">" | last %}
+                <p class="location">{{ locationText }}</p>
+              {% elsif item contains "@" %}
+                {% assign desktopEmailAddressText = item | split: ">" | last %}
+                <p class="desktop_email">{{ desktopEmailAddressText }}</p>
+                <p class="print_email"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></p>
+              {% endif %}
+            {% endfor %}
           </div>
 
           <!-- Displays a specially formatted contacts section (email address visible) 

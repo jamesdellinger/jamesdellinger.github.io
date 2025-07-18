@@ -126,7 +126,7 @@ h4 {
     margin-bottom: 0px;
 }
 
-.date, .education_date {
+.date, .education_date, .location {
     color: var(--gray_font_color);
     margin-bottom: 0px;
 }
