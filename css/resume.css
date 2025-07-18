@@ -462,7 +462,6 @@ footer {
     footer,
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
-    .contact_info_screen_display, 
     .email, .contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron,
@@ -507,7 +506,7 @@ footer {
         content: " (" attr(href) ")";
     } */
 
-    .contact_info_printed, .email_print {
+    .email_print {
         display: block;
     }
 }

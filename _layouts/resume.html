@@ -93,6 +93,7 @@ effort disentangling its format and structure.
               {% elsif item contains "@" %}
                 {% assign desktopEmailAddressText = item | split: ">" | last %}
                 <p class="email">{{ desktopEmailAddressText }}</p>
+                <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->
                 <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></p>
               {% elsif item contains "<a" %}
                 <p class="contact_link">{{ item | split: "p>" | last }}</p>
