@@ -78,6 +78,7 @@ h1 {
 h2 {
     font-size: 17px;
     font-weight: 500;
+    text-transform: uppercase;
     line-height: 25px;
 }
 
