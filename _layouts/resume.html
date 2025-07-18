@@ -23,8 +23,6 @@ effort disentangling its format and structure.
   <body>
     <!-- Get text of individual's name, to use at the resume title. -->
     {% assign nameText = content | split: "</h1>" | first | split: ">" | last %}
-    {{ nameText }}
-
     <header>
       <div class="header_title_container">
         <div class="header_profile_pic_container">
@@ -32,7 +30,7 @@ effort disentangling its format and structure.
             <img class="header_profile_pic" src="../images/resume_pic_400.jpeg" alt="Header Profile Pic">
           </a>
         </div>
-        <p class="header_title_text">James Dellinger</p>
+        <p class="header_title_text">{{ nameText }}</p>
       </div>
     </header>
     <!-- Use headroom.js (https://wicky.nillia.ms/headroom.js/) to gently slide the header down, 
@@ -75,7 +73,7 @@ effort disentangling its format and structure.
                 <img class="profile_pic_mobile" src="../images/resume_pic_400.jpeg" alt="Profile Pic">
               </a>
             </div>
-            <p class="name_header_mobile">James Dellinger</p>
+            <p class="name_header_mobile">{{ nameText }}</p>
           </div>
 
 
