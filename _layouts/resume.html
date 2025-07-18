@@ -220,8 +220,6 @@ effort disentangling its format and structure.
           {% assign hobbiesText =  section | split: "<p>" | last | split: "</p" | first %}
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
-
-          {{ section }}
         </section>
       {% else %}
         <section>
