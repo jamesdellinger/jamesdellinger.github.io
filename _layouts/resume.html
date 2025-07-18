@@ -201,7 +201,7 @@ effort disentangling its format and structure.
           {% endif %}
         {% endfor %}
         </section>
-        {% elsif forloop.index0 == 3 %}
+      {% elsif forloop.index0 == 3 %}
         <!-- Education section always fourth section. -->
         <section id="education_section">
           {% assign  majorNameText = section | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
