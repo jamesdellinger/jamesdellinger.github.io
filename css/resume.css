@@ -507,7 +507,7 @@ footer {
         content: " (" attr(href) ")";
     } */
 
-    .contact_info_printed {
+    .contact_info_printed, .email_print {
         display: block;
     }
 }
