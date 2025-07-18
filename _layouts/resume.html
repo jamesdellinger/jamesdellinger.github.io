@@ -102,8 +102,8 @@ effort disentangling its format and structure.
           </div>
 
           <!-- Objective header and objective text. -->
-          {% assign objective = section | split: "</h1>" | last  %}
-          {{ objective }}
+          {% assign objective = section | split: "<h2" | last  %}
+          <h2{{ objective }}
 
           <!-- Displays a specially formatted contacts section (email address visible) 
                only when the resume is printed out. -->
