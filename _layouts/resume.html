@@ -221,6 +221,8 @@ effort disentangling its format and structure.
           {% assign hobbiesText =  sector | split: "<p>" | last | split: "<" | first %}
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
+
+          {{ sector }}
         </section>
       {% else %}
         <section>
