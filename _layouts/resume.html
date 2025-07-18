@@ -204,8 +204,11 @@ effort disentangling its format and structure.
         {% elsif forloop.index0 == 3 %}
         <!-- Education section always fourth section. -->
         <section id="education_section">
-          
-          {{ section }}
+          {% assign  majorNameText = section | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
+          {% assign  gradDateText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 1,2 %}
+          <div class="major_header_date"><h4 class="majorNameText">{{ majorNameText }}</h4><p class="date">{{ gradDateText }}</p></div>
+          {% assign  educationDescriptionText = section | split: "<p>" | last | split: "</p" | first %}
+          <p class="education_description">{{ educationDescriptionText  }}</p>
         </section>
       {% elsif forloop.last %}
         <!-- Hobby and languages section always comes last. -->
