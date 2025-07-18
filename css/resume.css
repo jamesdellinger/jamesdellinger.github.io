@@ -125,9 +125,13 @@ h4 {
     margin-bottom: 0px;
 }
 
-.date {
+.date, .education_date {
     color: var(--gray_font_color);
     margin-bottom: 0px;
+}
+
+.education_date {
+    margin-top: 0px;
 }
 
 h4 {
