@@ -60,7 +60,8 @@ effort disentangling its format and structure.
     section splits in the .md file. It is of course rendered as <p>===</p> once 
     the file has been parsed.) -->
     
-    {% assign sectionBreak = "<p>===</p>" %}
+    <!-- {% assign sectionBreak = "<p>===</p>" %}  "<hr />" -->
+    {% assign sectionBreak = "<hr />" %}
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
       {% if forloop.first %}
