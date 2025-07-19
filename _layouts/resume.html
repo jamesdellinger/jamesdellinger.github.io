@@ -106,7 +106,11 @@ effort disentangling its format and structure.
               {% endif %}
             {% endfor %}
             </div>
-          </div>          
+          </div>
+
+          <!-- Objective header and objective text. -->
+          {% assign objective = section | split: "<h2" | last  %}
+          <h2{{ objective }}          
         </section> 
 
       {% elsif forloop.index0 == 1 %}
