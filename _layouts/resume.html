@@ -121,7 +121,7 @@ effort disentangling its format and structure.
         {% assign companiesArray = section | split: companyBreak %}
         <!-- EXPERIENCE header inside the first item. Each subsequent
         item contains a single company. -->
-        {{ companiesArray | slice: 0 }}
+        {{ companiesArray | slice: 0 | split: "</h2>" | first }}</h2>
         <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
         <!-- Break apart markdown h3 header and re-form it into:
           <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
