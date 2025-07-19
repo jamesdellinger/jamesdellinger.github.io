@@ -11,6 +11,10 @@ in the reader's mind without forcing him to spend too much
 effort disentangling its format and structure.
 -->
 
+<!-- Github uses Jekyll to build static webpages. Thus, I use 
+Liquid to fit the content of the resume's markdown file
+into the html template defined below. -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,6 +65,9 @@ effort disentangling its format and structure.
     the file has been parsed.) -->
     
     <!-- {% assign sectionBreak = "<p>===</p>" %}  "<hr />" -->
+    
+    <!-- In the markdown file I use a horizontal rule to delineate each section.
+    It is rendered in html as "<hr />" -->
     {% assign sectionBreak = "<hr />" %}
     {% assign sectionArray = content | split: sectionBreak %}
     {% for section in sectionArray %}
