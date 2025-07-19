@@ -145,7 +145,7 @@ effort disentangling its format and structure.
           
         </section> 
       <!-- {% elsif forloop.index0 == 1 %} -->
-      {% elsif section | split: "</h2>" | first | contains "Experience" %}
+      {% elsif section | split: "</h2>" | first | contains: "Experience" %}
       <!-- TODO: use 'contains' for conditional checks instead of splitting the string and sseeing how large the resulting array is.
         -->
 
