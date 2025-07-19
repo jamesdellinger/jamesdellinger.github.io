@@ -24,6 +24,13 @@ effort disentangling its format and structure.
     <!-- Get text of individual's name, to use at the resume title. -->
     {% assign nameText = content | split: "</h1>" | first | split: ">" | last %}
 
+    <!-- Assume contact email address is first.lastname@gmail.com. We'll reverse 
+    it and display that reversed email address in HTML. We'll use CSS to 
+    display the un-reversed email whenever the resume is printed out. This 
+    simple and robust trick should prevent virtually all scraping.
+    From https://superuser.com/a/235965 -->
+    {% assign reversedEmail = nameText | reverse | split: " " | join: "." | prepend: "moc.liamg@" %}
+
     <!-- Drop-down header for desktop display. -->
     <header>
       <div class="header_title_container">
@@ -93,8 +100,7 @@ effort disentangling its format and structure.
               {% elsif item contains "@" %}
                 {% assign desktopEmailAddressText = item | split: ">" | last %}
                 <p class="email">{{ desktopEmailAddressText }}</p>
-                <!-- Use a robust and simple css obfuscation technique from https://superuser.com/a/235965 -->
-                <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@regnilled.semaj</span></p>
+                <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
               {% elsif item contains "<a" %}
                 <p class="contact_link">{{ item | split: "p>" | last }}</p>
               {% endif %}
