@@ -29,8 +29,7 @@ effort disentangling its format and structure.
     display the un-reversed email whenever the resume is printed out. This 
     simple and robust trick should prevent virtually all scraping.
     From https://superuser.com/a/235965 -->
-    {% assign reversedEmail = nameText | split: "" | reverse | join:"" | split: " " | join: "." | prepend: "moc.liamg@" %}
-    {{ reversedEmail }}
+    {% assign reversedEmail = nameText | split: "" | reverse | join:"" | split: " " | join: "." | downcase | prepend: "moc.liamg@" %}
 
     <!-- Drop-down header for desktop display. -->
     <header>
