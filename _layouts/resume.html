@@ -144,11 +144,9 @@ effort disentangling its format and structure.
 
           
         </section> 
+        
       {% elsif forloop.index0 == 1 %}
-      <!-- TODO: use 'contains' for conditional checks instead of splitting the string and sseeing how large the resulting array is.
-        -->
-
-        <!-- Experience section always second section. -->
+      <!-- Experience section always second section. -->
         <section id="experience_section">
         {% assign companyBreak = "<hr />" %}
         {% assign companiesArray = section | split: companyBreak %}
