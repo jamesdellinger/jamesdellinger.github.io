@@ -121,7 +121,7 @@ effort disentangling its format and structure.
         {% assign companiesArray = section | split: companyBreak %}
         <!-- EXPERIENCE header inside the first item. Each subsequent
         item contains a single company. -->
-        {{ companiesArray | slice: 0 | split: "</h2>" | first }}</h2>
+        {{ companiesArray | slice: 0 }}
         <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
         <!-- Break apart markdown h3 header and re-form it into:
           <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
@@ -131,9 +131,9 @@ effort disentangling its format and structure.
           {% assign companyBody = company | split: companyHeaderBreak | last %}
           <!-- {% if forloop.first %}
             <!-- Make sure Experience <h2> header placed at top of experience section. -->
-            {% assign experienceSectionHeader = companyHeader | split: "</h2>" | first %}
-            {{ experienceSectionHeader }}</h2>
-          {% endif %} -->
+            <!-- {% assign experienceSectionHeader = companyHeader | split: "</h2>" | first %} -->
+            <!-- {{ experienceSectionHeader }}</h2> -->
+          <!-- {% endif %} --> -->
           <div class="company">
           <div class="company_header">
           <div class="company_name_city">
