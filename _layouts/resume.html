@@ -59,13 +59,6 @@ into the html template defined below. -->
         headroom.init();
     </script>
 
-    <!-- Github uses Jekyll to build static webpages. So use Liquid to 
-    split the .md file into sections. (The string "===" is used to denote
-    section splits in the .md file. It is of course rendered as <p>===</p> once 
-    the file has been parsed.) -->
-    
-    <!-- {% assign sectionBreak = "<p>===</p>" %}  "<hr />" -->
-    
     <!-- In the markdown file I use a horizontal rule to delineate each section.
     It is rendered in html as "<hr />" -->
     {% assign sectionBreak = "<hr />" %}
@@ -137,11 +130,6 @@ into the html template defined below. -->
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
-          <!-- {% if forloop.first %}
-            <!-- Make sure Experience <h2> header placed at top of experience section. -->
-            <!-- {% assign experienceSectionHeader = companyHeader | split: "</h2>" | first %} -->
-            <!-- {{ experienceSectionHeader }}</h2> -->
-          <!-- {% endif %} -->
           <div class="company">
           <div class="company_header">
           <div class="company_name_city">
@@ -184,7 +172,6 @@ into the html template defined below. -->
             {% assign jobsArray = jobsArray | slice: 1, last_index %}
             {% assign n_jobs = n_jobs | minus: 1 %}
             {% assign last_index = last_index | minus: 1 %}
-
             {% for item in jobsArray %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
             
