@@ -140,39 +140,31 @@ into the html template defined below. -->
           {% assign companyDateText = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDateText }}</p></div>
 
-          <!-- Separate job title header <h4> header from job description text. 
-          Handle special case where one company has multiple job titles 
-          (and thus multiple <h4> headers). -->
+          <!-- Markdown file stores each job inside its on <h4> header. 
+            A single company will have at least one job. If a company 
+            has multiple jobs, they may or may not be preceded by a 
+            company description. -->
           {% assign jobBreak = "<h4" %}
           {% assign jobsArray = companyBody | split: jobBreak %}
-          {% assign n_jobs = jobsArray.size %}
-          <!-- Some companies may not have a job title. In this situation just display the job description. -->
-          {% if n_jobs == 1 %}
-            <div class="job_description_text">{{ companyBody }}</div>
-          <!-- The standard situation, a company has one job title. -->
-          {% elsif n_jobs == 2 %}
+          <!-- The first item of the jobs array will either be empty, or contain the company's description. -->
+          {% if jobsArray | slice: 0 | contains "<p>" %}
+            {% assign companyDescriptionText = jobsArray | slice: 0 | split: "p>" | last | split: "<" | first %}
+            <p class="company_description">{{ companyDescriptionText }}</p>
+          {% endif %}
+
+          {% assign n_jobs = jobsArray.size | minus: 1 %}
+          <!-- The standard situation, a company has one job title and no company description text. -->
+          {% elsif n_jobs == 1 %}
             {% assign jobNameText = jobsArray | split: "</h4>" | first | split: ">" | last %}
             {% assign jobDescriptionText = jobsArray | split: "</h4>" | last | split: "<p>" | last | split: "</p>" | first  %} 
             <div class="job_header">{{ jobNameText }}</div>
-            <div class="job_description_text"><p>{{ jobDescriptionText }}</p></div>
-          <!-- When a company has two or more job titles. -->
+            <div class="job_description"><p>{{ jobDescriptionText }}</p></div>
+          <!-- When a company has zero, or two+ job titles. -->
           {% else %}
             {% assign last_index = n_jobs | minus: 1 %}
-            <!-- Check to see if a company description is included before
-            the job headers, when a company has multiple jobs. -->
-            {% assign jobsArrayFirstItemArray = jobsArray | first | split: "</p" %}
-            {% if jobsArrayFirstItemArray.size > 1 %}
-              {% assign companyDescriptionText = jobsArrayFirstItemArray | first | split: ">" | last %}
-              <p class="company_description_text">{{ companyDescriptionText }}</p>
-            {% endif %}
-
-            <!-- If there was no company description, first item of jobs array will
-            be empty. Either way, we should get rid of it before formatting each
-            job heading under a single company.  -->
-            {% assign jobsArray = jobsArray | slice: 1, last_index %}
-            {% assign n_jobs = n_jobs | minus: 1 %}
-            {% assign last_index = last_index | minus: 1 %}
-            {% for item in jobsArray %}
+            <!-- First item of jobs array either contained a company description 
+             or was empty. -->
+            {% for item in jobsArray offset: 1 %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
               When there are three or more jobs, middle jobs get chevrons while
               top and bottom jobs get bullets. When there are only two jobs, all
