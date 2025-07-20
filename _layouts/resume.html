@@ -134,7 +134,7 @@ into the html template defined below. -->
           <div class="company_header">
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
-          <p class="company_name">{{ companyNameText }}</p>
+          <h3 class="company_name">{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
           {% assign companyDateText = companyHeader | split: "), " | last %}
@@ -174,7 +174,6 @@ into the html template defined below. -->
             {% assign last_index = last_index | minus: 1 %}
             {% for item in jobsArray %}
               <!-- Define gray bullets/chevrons/vertical bars to appear in left margin.
-            
               When there are three or more jobs, middle jobs get chevrons while
               top and bottom jobs get bullets. When there are only two jobs, all
               jobs get bullets. We also draw a vertical gray bar in between bullets/chevrons. -->
