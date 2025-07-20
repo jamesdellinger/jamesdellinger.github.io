@@ -150,10 +150,12 @@ into the html template defined below. -->
 
           <!-- TODO: sort company description out:  -->
 
-          {% if jobsArray | slice: 0 | contains "<p>" %}
+          {{ jobsArray | slice: 0 }}
+
+          <!-- {% if jobsArray | slice: 0 | contains "<p>" %}
             {% assign companyDescriptionText = jobsArray | slice: 0 | split: "p>" | last | split: "<" | first %}
             <p class="company_description">{{ companyDescriptionText }}</p>
-          {% endif %}
+          {% endif %} -->
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
           <!-- The standard situation, a company has one job title and no company description text. -->
