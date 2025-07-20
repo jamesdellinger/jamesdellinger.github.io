@@ -154,7 +154,7 @@ into the html template defined below. -->
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
           <!-- The standard situation, a company has one job title and no company description text. -->
-          {% elsif n_jobs == 1 %}
+          {% if n_jobs == 1 %}
             {% assign jobNameText = jobsArray | split: "</h4>" | first | split: ">" | last %}
             {% assign jobDescriptionText = jobsArray | split: "</h4>" | last | split: "<p>" | last | split: "</p>" | first  %} 
             <div class="job_header">{{ jobNameText }}</div>
