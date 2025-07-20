@@ -137,6 +137,8 @@ into the html template defined below. -->
           <h3 class="company_name">{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
+
+          <!-- TODO: place dates to the right of job titles. -->
           {% assign companyDateText = companyHeader | split: "), " | last %}
           <p class="date">{{ companyDateText }}</p></div>
 
@@ -227,7 +229,7 @@ into the html template defined below. -->
     {% endfor %}
 
     <footer>
-      © <script>document.write(/\d{4}/.exec(Date())[0])</script> James Dellinger
+      © <script>document.write(/\d{4}/.exec(Date())[0])</script>{{ nameText }}
     </footer>
   </body>
 </html>
