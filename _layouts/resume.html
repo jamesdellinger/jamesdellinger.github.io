@@ -152,7 +152,7 @@ into the html template defined below. -->
             {% assign jobNameText = jobsArray | slice: 1 | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
             {% assign jobDateText = jobsArray | slice: 1 | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
             {% assign jobDescriptionText = jobsArray | slice: 1 | split: "</h4>" | last | split: "<p>" | last | split: "<" | first %}
-            <div class="job_header"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+            <div class="job_header_name_date_container"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
             <div class="job_description"><p>{{ jobDescriptionText }}</p></div>
 
           <!-- When a company has zero, or two+ job titles. -->
@@ -182,10 +182,15 @@ into the html template defined below. -->
               {% endif %}
 
               <!-- Format job headers. -->
-              {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
-              {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+              {% id forloop.first %}
+                {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
+                {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
+                <div class="job_header_name_date_container"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+              {% else %}
+                {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last %}
+                <div class="job_header_name_only"><h4 class="job_header_name">{{ jobNameText }}</h4></div>
+              {% endif %}
               <div class="job_description">{{ jobDescriptionText }}</div>
               </div>
               </div>

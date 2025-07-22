@@ -95,7 +95,7 @@ h4 {
     font-weight: 400;
     line-height: var(--h4_line_height);
     margin-bottom: 0px;
-    margin-top: var(--h4_margin_top);
+    margin-top: 0px;
 }
 
 .job_header_name {
@@ -111,12 +111,12 @@ h4 {
     flex-direction: column;
 }
 
-.job_header, .major_header_date, .contact_info {
+.job_header_name_date_container, .major_header_date, .contact_info {
     display: flex;
     justify-content: space-between;
 }
 
-.company_name_city {
+.company_name_city, .job_header_name_only {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0px;
@@ -134,6 +134,7 @@ h4 {
 .date, .education_date, .location {
     color: var(--gray_font_color);
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .education_date {
