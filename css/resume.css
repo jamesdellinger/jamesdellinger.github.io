@@ -96,6 +96,7 @@ h4 {
     line-height: var(--h4_line_height);
     margin-bottom: 0px;
     margin-top: var(--h4_margin_top);
+    text-decoration: underline;
 }
 
 .name_header_contact_info {
