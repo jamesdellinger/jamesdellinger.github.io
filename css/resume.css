@@ -98,14 +98,6 @@ h4 {
     margin-top: 0px;
 }
 
-.job_header_name {
-    font-size: var(--h4_fontsize);
-    font-weight: 400;
-    line-height: var(--h4_line_height);
-    margin-bottom: 0px;
-    margin-top: var(--h4_margin_top);
-}
-
 .name_header_contact_info {
     display: flex;
     flex-direction: column;
