@@ -131,16 +131,11 @@ into the html template defined below. -->
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
           {% assign companyBody = company | split: companyHeaderBreak | last %}
           <div class="company">
-          <div class="company_header">
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           <h3 class="company_name">{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
-
-          <!-- TODO: place dates to the right of job titles. -->
-          {% assign companyDateText = companyHeader | split: "), " | last %}
-          <p class="date">{{ companyDateText }}</p></div>
 
           <!-- Markdown file stores each job inside its on <h4> header. 
             A single company will have at least one job. If a company 
@@ -155,9 +150,11 @@ into the html template defined below. -->
           <!-- The standard situation, a company has one job title and no company description text. -->
           {% if n_jobs == 1 %}
             {% assign jobNameText = jobsArray | slice: 1 | split: "</h4>" | first | split: ">" | last %}
+            {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
             {% assign jobDescriptionText = jobsArray | slice: 1 | split: "</h4>" | last | split: "<p>" | last | split: "<" | first %}
-            <div class="job_header">{{ jobNameText }}</div>
+            <div class="job_header"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
             <div class="job_description"><p>{{ jobDescriptionText }}</p></div>
+
           <!-- When a company has zero, or two+ job titles. -->
           {% else %}
             {% assign last_index = n_jobs | minus: 1 %}
@@ -188,7 +185,7 @@ into the html template defined below. -->
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              <div class="job_header_name_date"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
               <div class="job_description">{{ jobDescriptionText }}</div>
               </div>
               </div>
