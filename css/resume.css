@@ -26,7 +26,7 @@
     --h3_margin_top: var(--h3_fontsize);
     --h4_line_height: 20px;
     --h4_fontsize: var(--body_fontsize);
-    --h4_margin_top: var(--p_margin_top_bottom);
+    --h4_margin_top: 0px;
 
     --job_bullet_width: 8px;
     --job_bullet_top: calc(var(--h4_margin_top) + (var(--h4_line_height) - var(--job_bullet_width))/2);
@@ -95,7 +95,7 @@ h4 {
     font-weight: 400;
     line-height: var(--h4_line_height);
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: var(--h4_margin_top);
 }
 
 .name_header_contact_info {
