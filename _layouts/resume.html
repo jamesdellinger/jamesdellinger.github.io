@@ -117,15 +117,12 @@ into the html template defined below. -->
       {% elsif forloop.index0 == 1 %}
       <!-- Experience section always second section. -->
         <section id="experience_section">
-        <!-- {% assign companyBreak = "<hr />" %} -->
         {% assign companyBreak = "<h3" %}
         {% assign companiesArray = section | split: companyBreak %}
         <!-- EXPERIENCE header inside the first item. Each subsequent
         item contains a single company. -->
         {{ companiesArray | slice: 0 }}
-        <!-- Markdown file uses the <h3> tag to display company name, city, and dates -->
-        <!-- Break apart markdown h3 header and re-form it into:
-          <div class="company_header"><div class="company_name_city><p class="company_name">NAME</p><p class="city">CITY</p></div><p class="date">DATE</p></div> -->
+        <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeaderBreak = "</h3>" %}
           {% assign companyHeader = company | split: companyHeaderBreak | first %}
@@ -133,7 +130,7 @@ into the html template defined below. -->
           <div class="company">
           <div class="company_name_city">
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
-          <h3 class="company_name">{{ companyNameText }}</h3>
+          <h3>{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
 
