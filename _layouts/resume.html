@@ -183,7 +183,7 @@ into the html template defined below. -->
 
               <!-- Format job headers. -->
               {% assign jobDescriptionText = item | split: "</h4>" | last %}
-              {% id forloop.first %}
+              {% if forloop.first %}
                 {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
                 {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
                 <div class="job_header_name_date_container"><h4 class="job_header_name">{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
