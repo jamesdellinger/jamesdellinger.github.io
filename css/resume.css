@@ -117,6 +117,7 @@ h4 {
 
 .city {
     margin-bottom: 0px;
+    margin-top: var(--h3_margin_top);
 }
 
 .date, .education_date, .location {
