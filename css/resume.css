@@ -23,7 +23,7 @@
     --p_margin_top_bottom: 14px;
     --h3_line_height: 20px;
     --h3_fontsize: var(--body_fontsize);
-    --h3_margin_top: var(--h3_fontsize);
+    --h3_margin_top: 0px; /*var(--h3_fontsize); */
     --h4_line_height: 20px;
     --h4_fontsize: var(--body_fontsize);
     --h4_margin_top: 0px;
