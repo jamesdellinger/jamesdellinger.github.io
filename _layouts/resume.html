@@ -197,8 +197,7 @@ into the html template defined below. -->
           {% endif %}
         {% endfor %}
         </section>
-      <!-- {% elsif forloop.index0 == 3 %} -->
-      {% elsif section contains "education" %}
+      {% elsif forloop.index0 == 3 %}
         <!-- Education section always fourth section. -->
         <section id="education_section">
           {% assign educationH2Header = section | split: "<h4" | first %}
