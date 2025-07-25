@@ -88,17 +88,12 @@ into the html template defined below. -->
           </div>
 
           <!-- Name header and contact info for desktop/mobile and print display.
-           In the markdown file, location is directly under name, and email 
-           directly under location. All subsequent lines will be links to
-           other websites, like github or kaggle. -->
+           In the markdown file, location is directly under name (which is inside
+           and <h1> tag). Email is directly under location. All subsequent lines 
+           will be links to other websites, like github or kaggle. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first %}
-          {% for item in contactInfoArray %}
-            {{ item }}
-          {% endfor %}
-          {% assign locationText = section | split: "</h1>" | last | split: "</p>" | first | split: ">" | last %}
-          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" %}
-          <!-- {% assign last_index =  %} -->
-          {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p>" | slice: 2, -1 %}
+          {% assign locationText = contactInfoArray | slice: 0 | strip_html %}
+          {% assign emailAddressText = contactInfoArray | slice: 1 | strip_html %}
           <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location">{{ locationText }}</p>
@@ -108,7 +103,7 @@ into the html template defined below. -->
                   <p class="email_screen">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
                 <div style="display: flex;">
-                {% for item in contactLinkArray %}
+                {% for item in contactLinkArray | offset: 2 %}
                   <p class="contact_link">{{ item | split: "</p>" | first }}</p>
                 {% endfor %}
                 </div>
