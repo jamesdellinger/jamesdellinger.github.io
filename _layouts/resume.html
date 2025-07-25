@@ -91,7 +91,8 @@ into the html template defined below. -->
            In the markdown file, location is directly under name, and email 
            directly under location. All subsequent lines will be links to
            other websites, like github or kaggle. -->
-          {% for item in section | split: "</h1>" | last | split: "<h2" | first %}
+          {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first %}
+          {% for item in contactInfoArray %}
             {{ item }}
           {% endfor %}
           {% assign locationText = section | split: "</h1>" | last | split: "</p>" | first | split: ">" | last %}
