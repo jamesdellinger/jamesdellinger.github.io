@@ -120,11 +120,10 @@ into the html template defined below. -->
       {% elsif forloop.index0 == 1 %}
       <!-- Experience section always second section. -->
         <section id="experience_section">
-        {% assign companyBreak = "<h3" %}
-        {% assign companiesArray = section | split: companyBreak %}
+        <!-- Markdown file uses the <h3> tag to display company name and city. -->
+        {% assign companiesArray = section | split: "<h3" %}
         <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
-        <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeader = company | split: "</h3>" | first %}
           {% assign companyBody = company | split: "</h3>" | last %}
@@ -140,8 +139,7 @@ into the html template defined below. -->
             A single company will have at least one job. If a company 
             has multiple jobs, they may or may not be preceded by a 
             company description. -->
-          {% assign jobBreak = "<h4" %}
-          {% assign jobsArray = companyBody | split: jobBreak %}
+          {% assign jobsArray = companyBody | split: "<h4" %}
           <!-- The first item of the jobs array will either be empty, or contain the company's description. -->
           {{ jobsArray | slice: 0 }}
 
