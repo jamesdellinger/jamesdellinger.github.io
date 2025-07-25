@@ -92,7 +92,7 @@ into the html template defined below. -->
            directly under location. All subsequent lines will be links to
            other websites, like github or kaggle. -->
           {% assign locationText = section | split: "</h1>" | last | split: "</p>" | first | split: ">" | last %}
-          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 | split: "</p" | first %}
+          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" %}
           <!-- {% assign last_index =  %} -->
           {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p>" | slice: 2, -1 %}
           <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
