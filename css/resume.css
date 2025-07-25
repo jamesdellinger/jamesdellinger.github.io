@@ -79,7 +79,8 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    /* line-height: 25px; */
+    margin-top: var(--p_margin_top_bottom);
+    margin-bottom: var(--p_margin_top_bottom);
 }
 
 h3 {
