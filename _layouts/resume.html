@@ -141,7 +141,7 @@ into the html template defined below. -->
             company description. -->
           {% assign jobsArray = companyBody | split: "<h4" %}
           <!-- The first item of the jobs array will either be empty, or contain the company's description. -->
-          {{ jobsArray | slice: 0 }}
+          {{ jobsArray | first }}
 
           <!-- TODO: see if I can get rid of the repeated code used to set job headers in a variety of situations. -->
 
