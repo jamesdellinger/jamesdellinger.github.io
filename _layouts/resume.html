@@ -26,7 +26,6 @@ into the html template defined below. -->
   </head>
   <body>
     <!-- Get text of individual's name, to use at the resume title. -->
-    <!-- {% assign nameText = content | split: "</h1>" | first | split: ">" | last %} -->
     {% assign nameText = content | split: "</h1>" | first | strip_html %}
 
     <!-- Assume contact email address is first.lastname@gmail.com. We'll reverse 
@@ -127,7 +126,8 @@ into the html template defined below. -->
         {% assign companiesArray = section | split: companyBreak %}
         <!-- EXPERIENCE header inside the first item. Each subsequent
         item contains a single company. -->
-        {{ companiesArray | slice: 0 }}
+        <!-- {{ companiesArray | slice: 0 }} -->
+        {{ companiesArray | first }}
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeaderBreak = "</h3>" %}
@@ -135,6 +135,7 @@ into the html template defined below. -->
           {% assign companyBody = company | split: companyHeaderBreak | last %}
           <div class="company">
           <div class="company_name_city">
+          <!-- TODO: see if can use strip_html -->
           {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           <h3>{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
