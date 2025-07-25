@@ -88,7 +88,7 @@ into the html template defined below. -->
           </div>
 
           <!-- Name header and contact info for desktop and print display. -->
-          {% assign locationText = section | split: "</h1>" | last | split: ">" | last | split: "<" | first %}
+          {% assign locationText = section | split: "</h1>" | last | split: "p>" | last | split: "</p" | first %}
           {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 | split: ">" | first %}
           <!-- {% assign last_index =  %} -->
           {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p>" | slice: 2, -1 %}
