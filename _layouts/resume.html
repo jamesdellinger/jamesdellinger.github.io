@@ -124,15 +124,12 @@ into the html template defined below. -->
         <section id="experience_section">
         {% assign companyBreak = "<h3" %}
         {% assign companiesArray = section | split: companyBreak %}
-        <!-- EXPERIENCE header inside the first item. Each subsequent
-        item contains a single company. -->
-        <!-- {{ companiesArray | slice: 0 }} -->
+        <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% for company in companiesArray offset: 1 %}
-          {% assign companyHeaderBreak = "</h3>" %}
-          {% assign companyHeader = company | split: companyHeaderBreak | first %}
-          {% assign companyBody = company | split: companyHeaderBreak | last %}
+          {% assign companyHeader = company | split: "</h3>" | first %}
+          {% assign companyBody = company | split: "</h3>" | last %}
           <div class="company">
           <div class="company_name_city">
           <!-- TODO: see if can use strip_html -->
