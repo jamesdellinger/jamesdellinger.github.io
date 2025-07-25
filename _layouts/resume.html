@@ -87,9 +87,12 @@ into the html template defined below. -->
             <p class="name_header_mobile">{{ nameText }}</p>
           </div>
 
-          <!-- Name header and contact info for desktop and print display. -->
+          <!-- Name header and contact info for desktop/mobile and print display.
+           In the markdown file, location is directly under name, and email 
+           directly under location. All subsequent lines will be links out 
+           to other websites, like github or kaggle. -->
           {% assign locationText = section | split: "</h1>" | last | split: "</p>" | first | split: ">" | last %}
-          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 %}
+          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 | split: "</p" | first | split: ">" | last %}
           <!-- {% assign last_index =  %} -->
           {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p>" | slice: 2, -1 %}
           <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
@@ -98,7 +101,7 @@ into the html template defined below. -->
             </div>
             <div class="contact_info" style="display: flex; flex-direction: column;">
                 <div style="display: flex;"></div>
-                  <p class="email">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+                  <p class="email_screen">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
                 <div style="display: flex;">
                 {% for item in contactLinkArray %}
