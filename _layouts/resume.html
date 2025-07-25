@@ -106,9 +106,9 @@ into the html template defined below. -->
                 </div>
                 <div style="display: flex;">
                 {% for item in contactLinkArray %}
-                  {% unless item == empty %}
+                  {% if item | contains: "<a>" %}
                     <p class="contact_link">{{ item | split: "p>" | last }}</p>
-                  {% endunless %}
+                  {% endif %}
                 {% endfor %}
                 </div>
             </div>
