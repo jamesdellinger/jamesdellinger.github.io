@@ -93,6 +93,8 @@ into the html template defined below. -->
            will be links to other websites, like github or kaggle. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first %}
           {% assign locationText = contactInfoArray | slice: 0 %}
+          {{ contactInfoArray }}
+          {{ locationText }}
           {% assign emailAddressText = contactInfoArray | slice: 1 | strip_html %}
           <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
             <div style="display: flex; flex-direction: column;">
