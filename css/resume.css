@@ -99,7 +99,7 @@ h4 {
     text-decoration: underline;
 }
 
-.name_header_contact_info {
+.name_and_contact_info {
     display: flex;
     flex-direction: column;
 }

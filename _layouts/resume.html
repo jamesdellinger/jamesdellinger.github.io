@@ -88,24 +88,22 @@ into the html template defined below. -->
           </div>
 
           <!-- Name header and contact info for desktop and print display. -->
-          <div class="name_header_contact_info">
-            <h1>{{ nameText }}</h1>
-            <!-- Contact info listed in <p> tags, in between the </h1> tag of the name header, and the 
-            <h2> tag of the Objective header. -->
-            {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2>" | first | split: "</p>" %}
-            <div class="contact_info">
-            {% for item in contactInfoArray %}
-              {% if item contains ", " %}
-                {% assign locationText = item | split: ">" | last %}
-                <p class="location">{{ locationText }}</p>
-              {% elsif item contains "@" %}
-                {% assign desktopEmailAddressText = item | split: ">" | last %}
-                <p class="email">{{ desktopEmailAddressText }}</p>
+           {% assign locationText = section | split: "</h1>" | last | split: ">" | last | split: "<" | first %}
+           {% assign emailAddressText = section | split: "</h1>" | last | split: "</p> | slice: 1 | split: ">" | first %}
+           {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p> | slice: 2, -1 }
+          <div class="name_and_contact_info" style="display: flex;">
+            <div style="display: flex; flex-direction: column;">
+              <h1>{{ nameText }}</h1>
+              <p class="location">{{ locationText }}</p>
+            </div>
+            <div class="contact_info" style="display: flex; flex-direction: column;">
+                <p class="email">{{ emailAddressText }}</p>
                 <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
-              {% elsif item contains "<a" %}
-                <p class="contact_link">{{ item | split: "p>" | last }}</p>
-              {% endif %}
-            {% endfor %}
+                <div style="display: flex;"
+                {% for item in contactLinkArray %}
+                  <p class="contact_link">{{ item | split: "p>" | last }}</p>
+                {% endfor %}
+                </div>
             </div>
           </div>
 
@@ -142,6 +140,8 @@ into the html template defined below. -->
           {% assign jobsArray = companyBody | split: jobBreak %}
           <!-- The first item of the jobs array will either be empty, or contain the company's description. -->
           {{ jobsArray | slice: 0 }}
+
+          <!-- TODO: see if I can get rid of the repeated code used to set job headers in a variety of situations. -->
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
           <!-- The standard situation, a company has one job title and no company description text. -->
