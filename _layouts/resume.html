@@ -92,9 +92,8 @@ into the html template defined below. -->
            and <h1> tag). Email is directly under location. All subsequent lines 
            will be links to other websites, like github or kaggle. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first | split: "</p>" %}
-          {{ contactInfoArray | first | strip_html }}
-          {% assign locationText = contactInfoArray | slice: 0 | strip_html %}
-          {% assign emailAddressText = contactInfoArray | slice: 1 | strip_html %}
+          {% assign locationText = contactInfoArray | first | strip_html %}
+          {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
           <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location">{{ locationText }}</p>
