@@ -26,7 +26,8 @@ into the html template defined below. -->
   </head>
   <body>
     <!-- Get text of individual's name, to use at the resume title. -->
-    {% assign nameText = content | split: "</h1>" | first | split: ">" | last %}
+    <!-- {% assign nameText = content | split: "</h1>" | first | split: ">" | last %} -->
+    {% assign nameText = content | split: "</h1>" | first | strip_html %}
 
     <!-- Assume contact email address is first.lastname@gmail.com. We'll reverse 
     it and display that reversed email address in HTML. We'll use CSS to 
