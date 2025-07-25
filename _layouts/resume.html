@@ -130,7 +130,8 @@ into the html template defined below. -->
           <div class="company">
           <div class="company_name_city">
           <!-- TODO: see if can use strip_html -->
-          {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
+          <!-- {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %} -->
+          {% assign companyNameText = companyHeader | split: " (" | first | strip_html %}
           <h3>{{ companyNameText }}</h3>
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <p class="city">&nbsp;({{ companyCityText }})</p></div>
