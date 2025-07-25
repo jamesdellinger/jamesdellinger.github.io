@@ -104,7 +104,7 @@ into the html template defined below. -->
                 <div style="display: flex;">
                   <p class="email_screen">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
-                <div style="display: flex;">
+                <div style="display: flex; justify-content: space-between;">
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
                     <p class="contact_link">{{ item | split: "p>" | last }}</p>
