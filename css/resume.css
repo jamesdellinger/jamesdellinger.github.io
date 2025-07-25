@@ -79,7 +79,7 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    line-height: 25px;
+    /* line-height: 25px; */
 }
 
 h3 {
