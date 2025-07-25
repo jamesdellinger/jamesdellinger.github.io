@@ -104,7 +104,7 @@ into the html template defined below. -->
                 </div>
                 <div style="display: flex;">
                 {% for item in contactInfoArray | offset: 2 %}
-                  <p class="contact_link">{{ item | split: ">" | last }}</p>
+                  <p class="contact_link">{{ item }}</p>
                 {% endfor %}
                 </div>
             </div>
