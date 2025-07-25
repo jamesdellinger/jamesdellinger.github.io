@@ -103,7 +103,7 @@ into the html template defined below. -->
                   <p class="email_screen">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
                 <div style="display: flex;">
-                {% for item in contactLinkArray | offset: 2 %}
+                {% for item in contactInfoArray | offset: 2 %}
                   <p class="contact_link">{{ item | split: ">" | first }}</p>
                 {% endfor %}
                 </div>
