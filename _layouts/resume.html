@@ -127,14 +127,10 @@ into the html template defined below. -->
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeader = company | split: "</h3>" | first %}
           {% assign companyBody = company | split: "</h3>" | last %}
-          <div class="company">
-          <div class="company_name_city">
-          <!-- TODO: see if can use strip_html -->
-          <!-- {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %} -->
-          {% assign companyNameText = companyHeader | split: " (" | first | strip_html %}
-          <h3>{{ companyNameText }}</h3>
+          {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
-          <p class="city">&nbsp;({{ companyCityText }})</p></div>
+          <div class="company">
+          <div class="company_name_city"><h3>{{ companyNameText }}</h3><p class="city">&nbsp;({{ companyCityText }})</p></div>
 
           <!-- Markdown file stores each job inside its on <h4> header. 
             A single company will have at least one job. If a company 
