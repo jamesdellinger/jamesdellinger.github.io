@@ -89,19 +89,20 @@ into the html template defined below. -->
 
           <!-- Name header and contact info for desktop and print display. -->
           {% assign locationText = section | split: "</h1>" | last | split: "</p>" | first | split: ">" | last %}
-          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 | split: ">" | last %}
+          {% assign emailAddressText = section | split: "</h1>" | last | split: "</p>" | slice: 1 %}
           <!-- {% assign last_index =  %} -->
           {% assign contactLinkArray = section | split: "</h1>" | last | split: "</p>" | slice: 2, -1 %}
-          <div class="name_and_contact_info" style="display: flex;">
+          <div class="name_and_contact_info" style="display: flex; justify-content: space-between;">
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location">{{ locationText }}</p>
             </div>
             <div class="contact_info" style="display: flex; flex-direction: column;">
-                <p class="email">{{ emailAddressText }}</p>
-                <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+                <div style="display: flex;"></div>
+                  <p class="email">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+                </div>
                 <div style="display: flex;">
                 {% for item in contactLinkArray %}
-                  <p class="contact_link">{{ item | split: "p>" | last }}</p>
+                  <p class="contact_link">{{ item | split: "</p>" | first }}</p>
                 {% endfor %}
                 </div>
             </div>
