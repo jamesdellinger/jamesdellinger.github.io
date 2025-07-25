@@ -99,10 +99,10 @@ h4 {
     text-decoration: underline;
 }
 
-.name_and_contact_info {
+/* .name_and_contact_info {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .job_header_name_date_container, .major_header_date, .contact_info {
     display: flex;
