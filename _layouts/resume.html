@@ -59,10 +59,8 @@ into the html template defined below. -->
         headroom.init();
     </script>
 
-    <!-- In the markdown file I use a horizontal rule to delineate each section.
-    It is rendered in html as "<hr />" -->
-    {% assign sectionBreak = "<hr />" %}
-    {% assign sectionArray = content | split: sectionBreak %}
+    <!-- In the markdown file I use a horizontal rule to delineate each section, which is rendered in html as "<hr />" -->
+    {% assign sectionArray = content | split: "<hr />" %}
     {% for section in sectionArray %}
       {% if forloop.first %}
         <section id="top_section">
