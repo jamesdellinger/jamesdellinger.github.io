@@ -185,7 +185,7 @@ into the html template defined below. -->
               {% if jobHeaderText | split: ", " | size > 2 %}
                 {% assign jobDateText = jobHeaderText | split: ", " | slice: 1 | append: " ," | append: jobHeaderText | split: ", " | slice: 2 %}
               {% else %}
-                {% assign jobDateText = jobHeaderText | split: ", " | first %}
+                {% assign jobDateText = jobHeaderText | split: ", " | last %}
               {% endif %}
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
             {% endif %}
