@@ -125,17 +125,27 @@ into the html template defined below. -->
         <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
         {% for company in companiesArray offset: 1 %}
-          {% assign companyHeader = company | split: "</h3>" | first %}
-          {% assign companyBody = company | split: "</h3>" | last %}
-          {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
+          {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | strip_html %}
+          {% assign companyCityText = "" %}
+          {% if companyHeaderText contains " (" %}
+            {% assign companyCityText = companyHeadertext | split: " (" | last | prepend: " (" %}
+            {% assign companyHeaderText = companyHeadertext | split: " (" | first %}
+          {% endif %}
+          <div class="company">
+          <div class="company_name_city"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
+          
+
+          
+          <!-- {% assign companyNameText = companyHeader | split: " (" | first | split: ">" | last %}
           {% assign companyCityText = companyHeader | split: " (" | last | split: ")" | first %}
           <div class="company">
-          <div class="company_name_city"><h3>{{ companyNameText }}</h3><p class="city">&nbsp;({{ companyCityText }})</p></div>
+          <div class="company_name_city"><h3>{{ companyHeaderText }}</h3><p class="city">&nbsp;({{ companyCityText }})</p></div> -->
 
           <!-- Markdown file stores each job inside its on <h4> header. 
             A single company will have at least one job. If a company 
             has multiple jobs, they may or may not be preceded by a 
             company description. -->
+          {% assign companyBody = company | split: "</h3>" | last %}
           {% assign jobsArray = companyBody | split: "<h4" %}
           {{ jobsArray | first }}
 
