@@ -122,7 +122,7 @@ into the html template defined below. -->
         <section id="experience_or_education_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign companiesArray = section | split: "<h3" %}
-        <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
+        <!-- Section <h2> header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
 
         {% for company in companiesArray offset: 1 %}
@@ -173,6 +173,9 @@ into the html template defined below. -->
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
             {% endif %}
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
+
+            <!-- TODO: experiment with placing job description on same line as job header. -->
+
             <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             <div class="job_description">{{ jobDescriptionText }}</div>
             </div> <!-- Closes out the jobBar div -->
