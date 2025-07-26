@@ -117,7 +117,8 @@ into the html template defined below. -->
           <h2{{ objective }}          
         </section> 
 
-      {% elsif section | split: "</h2>" | first contains "experience" %}
+      {% elsif forloop.index0 == 1 %}
+        <!-- Experience section always comes second. -->
         <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign companiesArray = section | split: "<h3" %}
@@ -186,7 +187,8 @@ into the html template defined below. -->
         {% endfor %}
         </section>
       
-      {% elsif section | split: "</h2>" | first contains "education" %}
+        {% elsif forloop.index0 == 3 %}
+        <!-- Education section always comes fourth. -->
         <section id="education_section">
           {% assign educationH2Header = section | split: "<h4" | first %}
           {{ educationH2Header }}
