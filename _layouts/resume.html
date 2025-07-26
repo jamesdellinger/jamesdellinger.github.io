@@ -117,7 +117,7 @@ into the html template defined below. -->
           <h2{{ objective }}          
         </section> 
 
-      {% elsif forloop.index0 == 1 %}
+      {% elsif forloop.index0 == 1 or forloop.index0 == 3 %}
         <!-- Experience section always comes second. -->
         <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
@@ -199,18 +199,7 @@ into the html template defined below. -->
         {% endfor %}
         </section>
       
-        {% elsif forloop.index0 == 3 %}
-        <!-- Education section always comes fourth. -->
-        <section id="education_section">
-          {% assign educationH2Header = section | split: "<h4" | first %}
-          {{ educationH2Header }}
-          {% assign  majorNameText = section | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
-          {% assign  degreeText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 1 %}
-          {% assign  gradDateText = section | split: "</h4>" | first | split: ">" | last | split: ", " | slice: 2 %}
-          <div class="major_header_date"><h4 class="major_name_text">{{ majorNameText }}</h4><p class="education_date">{{ degreeText }}, {{ gradDateText }}</p></div>
-          {% assign  educationDescriptionText = section | split: "<p>" | last | split: "</p" | first %}
-          <p class="education_description">{{ educationDescriptionText  }}</p>
-        </section>
+
 
       {% elsif forloop.last %}
         <!-- Languages/hobbies section always comes last. -->
