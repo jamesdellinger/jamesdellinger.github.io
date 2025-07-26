@@ -182,7 +182,7 @@ into the html template defined below. -->
             {% assign jobHeaderText = item | split: "</h4>" | first | split: ">" | last | strip_html %}
             {% assign jobDateText = "" %}
             {% if jobHeaderText contains ", " %}
-              {% assign jobDateText = jobHeaderText | split: ", " | slice: 1 %}
+              {% assign jobDateText = jobHeaderText | split: ", " | slice: 1, 2 %}
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
             {% endif %}
             <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
