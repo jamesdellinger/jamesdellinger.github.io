@@ -166,14 +166,13 @@ into the html template defined below. -->
 
             <!-- Format job headers. -->
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
-
-            {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
-            {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
-            {% if jobDateText == empty %}
-              <div class="job_header_name_only"><h4>{{ jobNameText }}</h4></div>
-            {% else %}
-              <div class="job_header_name_date_container"><h4>{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+            {% assign jobHeaderText = item | split: "</h4>" | first | strip_html %}
+            {% assign jobDateText = "" %}
+            {% if jobHeaderText contains ", " %}
+              {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
+              {% assign jobDateText = jobheaderText | split: ", " | last %}
             {% endif %}
+            <div class="job_header_name_date_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
 
 
             <!-- {% if forloop.first %}
