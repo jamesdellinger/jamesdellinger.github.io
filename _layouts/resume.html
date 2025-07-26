@@ -167,26 +167,14 @@ into the html template defined below. -->
             {% endif %}
 
             <!-- Format job header. Include date if markdown file listed it in the job header, after a comma. -->
-
-            <!-- TODO: generalize code below so that it can also handle dates as they are formatted
-            in the markdown file's education section.
-            i.e. should handle both:
-
-            #### Instructor, Sep 2008–Aug 2011
-
-            and
-
-            #### Major—Economics, B.A., 2004 
-            -->
-
             {% assign jobHeaderText = item | split: "</h4>" | first | split: ">" | last | strip_html %}
             {% assign jobDateText = "" %}
             {% if jobHeaderText contains ", " %}
               {% assign jobDateText = jobHeaderText | split: ", " | last %}
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
             {% endif %}
-            <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
+            <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             <div class="job_description">{{ jobDescriptionText }}</div>
             </div> <!-- Closes out the jobBar div -->
           {% endfor %}
