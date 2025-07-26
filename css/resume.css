@@ -105,7 +105,7 @@ h4 {
     flex-direction: column;
 } */
 
-.job_header_name_date_container, .major_header_date, .contact_info {
+.job_header_container, .major_header_date, .contact_info {
     display: flex;
     justify-content: space-between;
 }

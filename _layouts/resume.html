@@ -164,20 +164,20 @@ into the html template defined below. -->
               <div>
             {% endif %}
 
-            <!-- Format job headers. -->
+            <!-- Format job header. Include date if markdown file listed it in the job header, after a comma. -->
             {% assign jobHeaderText = item | split: "</h4>" | first | split: ">" | last | strip_html %}
             {% assign jobDateText = "" %}
             {% if jobHeaderText contains ", " %}
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
-              {% assign jobDateText = jobheaderText | split: ", " | last %}
+              {% assign jobDateText = jobHeaderText | split: ", " | last %}
             {% endif %}
-            <div class="job_header_name_date_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
+            <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
 
             <!-- {% if forloop.first %}
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
               {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
-              <div class="job_header_name_date_container"><h4>{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
+              <div class="job_header_container"><h4>{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
             {% else %}
               {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last %}
               <div class="job_header_name_only"><h4>{{ jobNameText }}</h4></div>
