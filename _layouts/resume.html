@@ -212,7 +212,8 @@ into the html template defined below. -->
       {% elsif forloop.last %}
         <!-- Languages/hobbies section always comes last. -->
         <section id="lanuages_hobbies_section">
-          {% assign languagesText = section | split: "</p>" | first | split: ">" | last %}
+          <!-- {% assign languagesText = section | split: "</p>" | first | split: ">" | last %} -->
+          {% assign languagesText = section | split: "</p>" | first | strip_html %}
           {% assign hobbiesText =  section | split: "<p>" | last | split: "</p" | first %}
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
