@@ -141,8 +141,7 @@ into the html template defined below. -->
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
           {% assign last_index = n_jobs | minus: 1 %}
-
-          <div>
+          <div> <!-- Very important. This div will hold the job bullets/chevrons. -->
           {% for item in jobsArray offset: 1 %}
             <!-- When there are three or more jobs, middle jobs get chevrons while
             top and bottom jobs get bullets. 
@@ -174,10 +173,10 @@ into the html template defined below. -->
             <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
             <div class="job_description">{{ jobDescriptionText }}</div>
-            </div>
+            </div> <!-- Closes out the jobBar div -->
           {% endfor %}
-          </div>
-          </div>
+          </div> <!-- Closes the jobs section div holding the bullets/chevrons -->
+          </div> <!-- Closes the company div -->
 
           {% if forloop.last == false %}
             <hr>
