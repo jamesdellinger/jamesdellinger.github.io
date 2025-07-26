@@ -124,15 +124,14 @@ into the html template defined below. -->
         {% assign companiesArray = section | split: "<h3" %}
         <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
+        
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | last %}
-          {{ companyHeadertext }}
-          {{ companyHeadertext | split: " (" | last | split: ")" | first }}
           {% assign companyCityText = "" %}
-          {% if companyHeaderText contains " (" %}
+          <!-- {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeadertext | split: " (" | last | prepend: " (" %}
-            <!-- {% assign companyHeaderText = companyHeadertext | split: " (" | first %} -->
-          {% endif %}
+            {% assign companyHeaderText = companyHeadertext | split: " (" | first %}
+          {% endif %} -->
           <div class="company">
           <div class="company_name_city"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
           
