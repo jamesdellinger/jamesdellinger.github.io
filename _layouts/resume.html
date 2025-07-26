@@ -117,7 +117,6 @@ into the html template defined below. -->
           <h2{{ objective }}          
         </section> 
 
-      
       {% elsif section | split: "</h2>" | first contains "experience" %}
       <!-- Experience section always second section. -->
         <section id="experience_section">
@@ -187,7 +186,8 @@ into the html template defined below. -->
           {% endif %}
         {% endfor %}
         </section>
-      {% elsif forloop.index0 == 3 %}
+      
+      {% elsif section | split: "</h2>" | first contains "education" %}
         <!-- Education section always fourth section. -->
         <section id="education_section">
           {% assign educationH2Header = section | split: "<h4" | first %}
@@ -199,6 +199,7 @@ into the html template defined below. -->
           {% assign  educationDescriptionText = section | split: "<p>" | last | split: "</p" | first %}
           <p class="education_description">{{ educationDescriptionText  }}</p>
         </section>
+
       {% elsif forloop.last %}
         <!-- Languages/hobbies section always comes last. -->
         <section id="lanuages_hobbies_section">
@@ -207,6 +208,7 @@ into the html template defined below. -->
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
         </section>
+        
       {% else %}
         <section>
           {{ section }}
