@@ -137,9 +137,8 @@ into the html template defined below. -->
           <div class="company_header_container"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
 
           <!-- Markdown file stores each job inside its on <h4> header. --> 
-          {% assign companyBody = company | split: "</h3>" | last %}
           {% assign jobsArray = company | split: "</h3>" | last | split: "<h4" %}
-          <!-- If there is a company description, it will be inside the jobsArray's first item. -->
+          <!-- If there is a company description, it will be in the first item. -->
           {{ jobsArray | first }}
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
