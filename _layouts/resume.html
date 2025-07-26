@@ -118,8 +118,8 @@ into the html template defined below. -->
         </section> 
 
       {% elsif forloop.index0 == 1 or forloop.index0 == 3 %}
-        <!-- Experience section always comes second. -->
-        <section id="experience_section">
+        <!-- Experience section always comes second. Education section is always fourth. -->
+        <section id="experience_or_education_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign companiesArray = section | split: "<h3" %}
         <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
