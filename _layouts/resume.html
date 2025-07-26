@@ -173,16 +173,6 @@ into the html template defined below. -->
             {% endif %}
             <div class="job_header_container"><h4>{{ jobHeaderText }}</h4><p class="date">{{ jobDateText }}</p></div>
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
-
-            <!-- {% if forloop.first %}
-              {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | split: ", " | first %}
-              {% assign jobDateText = item | split: "</h4>" | first | split: ">" | last | split: ", " | last %}
-              <div class="job_header_container"><h4>{{ jobNameText }}</h4><p class="date">{{ jobDateText }}</p></div>
-            {% else %}
-              {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last %}
-              <div class="job_header_name_only"><h4>{{ jobNameText }}</h4></div>
-            {% endif %} -->
-
             <div class="job_description">{{ jobDescriptionText }}</div>
             </div>
           {% endfor %}
