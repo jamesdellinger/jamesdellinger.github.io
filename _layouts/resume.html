@@ -117,7 +117,8 @@ into the html template defined below. -->
           <h2{{ objective }}          
         </section> 
 
-      {% elsif forloop.index0 == 1 %}
+      
+      {% elsif section | split: "</h2>" | first contains "EDUCATION" %}
       <!-- Experience section always second section. -->
         <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
