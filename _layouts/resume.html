@@ -130,7 +130,7 @@ into the html template defined below. -->
           {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | last %}
           {% assign companyCityText = "" %}
           {% if companyHeaderText contains " (" %}
-            {% assign companyCityText = companyHeaderText | split: " (" | last %}
+            {% assign companyCityText = companyHeaderText | split: " (" | last | prepend: " (" %}
           {% endif %}
           <div class="company">
           <div class="company_name_city"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
