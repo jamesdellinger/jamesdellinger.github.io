@@ -125,8 +125,8 @@ into the html template defined below. -->
         <!-- EXPERIENCE header inside the first item. Each subsequent item contains a company. -->
         {{ companiesArray | first }}
         {% for company in companiesArray offset: 1 %}
-          {{ company | split: "</h3>" | first | split: ">" | last }}
           {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | last %}
+          {{ companyHeaderText }}
           {% assign companyCityText = "" %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeadertext | split: " (" | last | prepend: " (" %}
