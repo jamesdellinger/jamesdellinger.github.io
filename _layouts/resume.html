@@ -118,7 +118,6 @@ into the html template defined below. -->
         </section> 
 
       {% elsif section | split: "</h2>" | first contains "experience" %}
-      <!-- Experience section always second section. -->
         <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign companiesArray = section | split: "<h3" %}
@@ -188,7 +187,6 @@ into the html template defined below. -->
         </section>
       
       {% elsif section | split: "</h2>" | first contains "education" %}
-        <!-- Education section always fourth section. -->
         <section id="education_section">
           {% assign educationH2Header = section | split: "<h4" | first %}
           {{ educationH2Header }}
@@ -208,7 +206,7 @@ into the html template defined below. -->
           <p class="languages_text">{{ languagesText }}</p>
           <p class="hobbies_text">{{ hobbiesText }}</p>
         </section>
-        
+
       {% else %}
         <section>
           {{ section }}
