@@ -126,7 +126,7 @@ into the html template defined below. -->
         {{ companiesArray | first }}
         {% for company in companiesArray offset: 1 %}
           {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | last %}
-          {{ companyHeadertext | split: " (" | last | split: ")" | first }}
+          {{ companyHeadertext }}
           {{ companyHeadertext | split: " (" | last | split: ")" | first }}
           {% assign companyCityText = "" %}
           {% if companyHeaderText contains " (" %}
@@ -141,7 +141,7 @@ into the html template defined below. -->
           <!-- {% assign companyNameText = companyHeaderText | split: " (" | first | split: ">" | last %}
           {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first %}
           <div class="company">
-          <div class="company_name_city"><h3>{{ companyHeaderText }}</h3><p class="city">&nbsp;({{ companyCityText }})</p></div> -->
+          <div class="company_name_city"><h3>{{ companyNameText }}</h3><p class="city">&nbsp;({{ companyCityText }})</p></div> -->
 
           <!-- Markdown file stores each job inside its on <h4> header. 
             A single company will have at least one job. If a company 
