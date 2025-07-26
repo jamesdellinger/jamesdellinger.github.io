@@ -167,6 +167,11 @@ into the html template defined below. -->
             {% endif %}
 
             <!-- Format job header. Include date if markdown file listed it in the job header, after a comma. -->
+
+            <!-- TODO: generalize code below so that it can also handle dates as they are formatted
+            in the markdown file's education section.
+            i.e. #### Major—Economics, B.A., 2004 -->
+
             {% assign jobHeaderText = item | split: "</h4>" | first | split: ">" | last | strip_html %}
             {% assign jobDateText = "" %}
             {% if jobHeaderText contains ", " %}
