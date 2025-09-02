@@ -180,10 +180,10 @@ into the html template defined below. -->
             <!-- Old: -->
 
             <!-- New: -->
-            {% assign jobDescriptionText = jobDescriptionText | prepend: ": " %}
+            {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %}
             <div style="display: flex; justify-content: space-between;">
-              <div style="display: flex; justify-content: flex-start;"><h4>{{ jobHeaderText }}</h4><p>{{ jobDescriptionText }}</p></div>
-              <div><p class="date">{{ jobDateText }}</p></div>
+              <div><h4>{{ jobHeaderText }}</h4><p>{{ jobDescriptionText }}</p></div>
+              <p class="date">{{ jobDateText }}</p>
             </div>
 
 
