@@ -131,6 +131,7 @@ into the html template defined below. -->
           {% assign companyCityText = "" %}
           {% assign companyDateText = "" %}
           {% if companyHeaderText contains ", " %}
+            {% assign companyHeaderArray = companyHeaderText |  split: ", " %}
             {% assign companyDateText = companyHeaderArray | last | strip_html %}
             {% assign companyHeaderText = companyHeaderArray | first %}
           {% endif %}
@@ -222,6 +223,10 @@ into the html template defined below. -->
         <section id="education_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign degreesArray = section | split: "<h3" %}
+        <!-- Section <h2> header inside the first item. Each subsequent item contains a degree. -->
+        {{ degreesArray | first }}
+        {% for degree in degreesArray offset: 1 %}
+        {% endfor %}
         </section>
       
       {% elsif forloop.last %}
