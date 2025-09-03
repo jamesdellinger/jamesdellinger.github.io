@@ -153,6 +153,8 @@ hr {
     border-width:0px;
     color:var(--horizontal_rule_color);
     background-color:var(--horizontal_rule_color);
+    margin-top: 0px;
+    margin-bottom: 14px;
 }
 
 section {
