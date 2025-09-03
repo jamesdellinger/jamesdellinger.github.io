@@ -117,9 +117,9 @@ into the html template defined below. -->
           <h2{{ objective }}          
         </section> 
 
-      {% elsif forloop.index0 == 1 or forloop.index0 == 3 %}
+      {% elsif forloop.index0 == 1 %}
         <!-- Experience section always comes second. Education section is always fourth. -->
-        <section id="experience_or_education_section">
+        <section id="experience_section">
         <!-- Markdown file uses the <h3> tag to display company name and city. -->
         {% assign companiesArray = section | split: "<h3" %}
         <!-- Section <h2> header inside the first item. Each subsequent item contains a company. -->
@@ -131,15 +131,7 @@ into the html template defined below. -->
           {% assign companyCityText = "" %}
           {% assign companyDateText = "" %}
           {% if companyHeaderText contains ", " %}
-            <!-- If there are two commas, we're in the education section and want to display 
-            the degree name and year it was attained. -->
-            {% assign companyHeaderArray = companyHeaderText | split: ", " %}
-            {% if companyHeaderArray.size > 2 %}
-              {% assign companyDateText = companyHeaderArray[1] | strip_html | append: ",&nbsp;" %}
-              {% assign companyDateText = companyHeaderArray | last | strip_html | prepend: companyDateText %}
-            {% else %}
-              {% assign companyDateText = companyHeaderArray | last | strip_html %}
-            {% endif %}
+            {% assign companyDateText = companyHeaderArray | last | strip_html %}
             {% assign companyHeaderText = companyHeaderArray | first %}
           {% endif %}
           {% if companyHeaderText contains " (" %}
@@ -224,6 +216,12 @@ into the html template defined below. -->
           {% endif %}
         {% endfor %}
         </section>
+      
+      {% elsif forloop.index0 == 3 %}
+        <!-- Experience section always comes second. Education section is always fourth. -->
+        <section id="education_section">
+        <!-- Markdown file uses the <h3> tag to display company name and city. -->
+        {% assign degreesArray = section | split: "<h3" %}
       
       {% elsif forloop.last %}
         <!-- Languages/hobbies section always comes last. -->
