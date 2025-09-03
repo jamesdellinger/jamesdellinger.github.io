@@ -137,7 +137,7 @@ into the html template defined below. -->
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
-            {% assign companyHeaderText = companyHeaderText | split: " (" | first %}
+            {% assign companyHeaderText = companyHeaderText | split: " (" | first | strip_html %}
           {% endif %}
 
           <div class="company">
@@ -226,6 +226,7 @@ into the html template defined below. -->
         <!-- Section <h2> header inside the first item. Each subsequent item contains a degree. -->
         {{ degreesArray | first }}
         {% for degree in degreesArray offset: 1 %}
+          <!-- TODO: format as each degree as desired -->
         {% endfor %}
         </section>
       
