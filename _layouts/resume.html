@@ -148,7 +148,10 @@ into the html template defined below. -->
           <!-- Markdown file stores each job inside its on <h4> header. --> 
           {% assign jobsArray = company | split: "</h3>" | last | split: "<h4" %}
           <!-- If there is a company description, it will be in the first item. -->
-          <p style="margin-top: 0px; text-indent: 20px;">{{ jobsArray | first }}</p>
+          {% assign companyDescriptionText = jobsArray | first | strip_html %}
+          {% if companyDescriptionText | size > 5 %}
+              <p style="margin-top: 0px; text-indent: 20px;">{{ companyDescriptionText }}</p>
+          {% endif %}
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
           {% assign last_index = n_jobs | minus: 1 %}
