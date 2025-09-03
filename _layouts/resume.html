@@ -235,7 +235,7 @@ into the html template defined below. -->
           {% assign degreeHeaderText = degree | split: "</h3>" | first | split: ">" | last %}
           {% assign degreeHeaderArray = degreeHeaderText | split: ", " %}
           {% assign univNameText = degreeHeaderArray | first | strip_html %}
-          {% assign degreeNameText = degreeHeaderArray[1] | strip_html | prepend: "&nbsp;" | append: ",&nbsp;" %}
+          {% assign degreeNameText = degreeHeaderArray[1] | strip_html | prepend: "—" | append: ",&nbsp;" %}
           {% assign degreeDateText = degreeHeaderArray | last | strip_html %}
           <div class="degree">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
