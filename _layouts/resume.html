@@ -232,6 +232,17 @@ into the html template defined below. -->
         {{ degreesArray | first }}
         {% for degree in degreesArray offset: 1 %}
           <!-- TODO: format as each degree as desired -->
+          {% assign degreeHeaderText = degree | split: "</h3>" | first | split: ">" | last %}
+          {% assign degreeHeaderArray = degreeHeaderText | split: ", " %}
+          {% assign univNameText = degreeHeaderArray | first | strip_html %}
+          {% assign degreeNameText = degreeHeaderArray[1] | strip_html | prepend: "&nbsp;" | append: ",&nbsp;" %}
+          {% assign degreeDateText = degreeHeaderArray | last | strip_html %}
+          <div class="degree">
+            <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
+              <h3>{{ univNameText }}</h3>
+              <p>{{ degreeNameText }}</p>
+              <p>{{ degreeDateText }}</p>
+          </div>
         {% endfor %}
         </section>
       
