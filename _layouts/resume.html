@@ -149,6 +149,7 @@ into the html template defined below. -->
           {% assign jobsArray = company | split: "</h3>" | last | split: "<h4" %}
           <!-- If there is a company description, it will be in the first item. -->
           {% assign companyDescriptionText = jobsArray | first | strip_html %}
+          {{ companyDescriptionText | size }}
           {% if companyDescriptionText | size > 5 %}
               <p style="margin-top: 0px; text-indent: 20px;">{{ companyDescriptionText }}</p>
           {% endif %}
