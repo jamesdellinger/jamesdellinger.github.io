@@ -132,7 +132,7 @@ into the html template defined below. -->
           {% assign companyDateText = "" %}
           {% if companyHeaderText contains ", " %}
             {% assign companyCityText = companyHeaderText | split: ", " | last | strip_html %}
-            {% assign companyHeaderText = companyHeaderText | split ", " | first %}
+            {% assign companyHeaderText = companyHeaderText | split: ", " | first %}
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
