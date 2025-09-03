@@ -131,8 +131,16 @@ into the html template defined below. -->
           {% assign companyCityText = "" %}
           {% assign companyDateText = "" %}
           {% if companyHeaderText contains ", " %}
-            {% assign companyDateText = companyHeaderText | split: ", " | last | strip_html %}
-            {% assign companyHeaderText = companyHeaderText | split: ", " | first %}
+            <!-- If there are two commas, we're in the education section and want to display 
+            the degree name and year it was attained. -->
+            {% assign companyHeaderArray = companyHeaderText | split: ", " %}
+            {% if companyHeaderArray.size > 2 %}
+              {% assign companyDateText = companyHeaderArray[1] | strip_html | append: ",&nbsp;" %}
+              {% assign companyDateText = companyHeaderArray | last | strip_html | prepend: companyDateText %}
+            {% else %}
+              {% assign companyDateText = companyHeaderArray | last | strip_html %}
+            {% endif %}
+            {% assign companyHeaderText = companyHeaderArray | first %}
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
