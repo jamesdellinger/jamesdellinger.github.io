@@ -240,9 +240,11 @@ into the html template defined below. -->
           <div class="degree">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
               <h3>{{ univNameText }}</h3>
-              <p>{{ degreeNameText }}</p>
-              <p>{{ degreeDateText }}</p>
+              <p style="margin-top: 0px; margin-bottom: 0px;">{{ degreeNameText }}</p>
+              <p style="margin-top: 0px; margin-bottom: 0px;">{{ degreeDateText }}</p>
           </div>
+          {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}
+          <p style="margin-top: 0px; margin-bottom: 14px; text-indent: 20px;">{{ degreeDescriptionText }}</p>
         {% endfor %}
         </section>
       
