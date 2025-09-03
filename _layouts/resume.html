@@ -134,7 +134,11 @@ into the html template defined below. -->
           {% if companyHeaderText contains "–" %}
             {% assign companyHeaderArray = companyHeaderText |  split: ", " %}
             {% assign companyDateText = companyHeaderArray | last | strip_html %}
-            {% assign companyHeaderText = companyHeaderArray | first | append: ", " | append: companyHeaderArray[1] %}
+            {% if companyHeaderArray.size > 2 %}
+              {% assign companyHeaderText = companyHeaderArray | first | append: ", " | append: companyHeaderArray[1] %}
+            {% else %}
+              {% assign companyHeaderText = companyHeaderArray | first | strip_html %}
+            {% endif %}
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
