@@ -129,12 +129,23 @@ into the html template defined below. -->
           <!-- Format company header. Include city if markdown file listed it in the company header, inside parentheses. -->
           {% assign companyHeaderText = company | split: "</h3>" | first | split: ">" | last %}
           {% assign companyCityText = "" %}
+          {% assign companyDateText = "" %}
+          {% if companyHeaderText contains ", " %}
+            {% assign companyCityText = companyHeaderText | split: ", " | last | strip_html %}
+            {% assign companyHeaderText = companyHeaderText | split ", " | first %}
+          {% endif %}
           {% if companyHeaderText contains " (" %}
-            {% assign companyCityText = companyHeaderText | split: " (" | last | prepend: "&nbsp;(" %}
+            {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
             {% assign companyHeaderText = companyHeaderText | split: " (" | first %}
           {% endif %}
+
+          
+
           <div class="company">
-          <div class="company_header_container"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
+          <div style="display: flex;justify-content: space-between; margin-bottom: 0px;">
+            <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
+            <p class="date">{{ companyDateText }}</p>
+          </div>
 
           <!-- Markdown file stores each job inside its on <h4> header. --> 
           {% assign jobsArray = company | split: "</h3>" | last | split: "<h4" %}
