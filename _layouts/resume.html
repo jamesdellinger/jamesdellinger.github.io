@@ -131,15 +131,13 @@ into the html template defined below. -->
           {% assign companyCityText = "" %}
           {% assign companyDateText = "" %}
           {% if companyHeaderText contains ", " %}
-            {% assign companyCityText = companyHeaderText | split: ", " | last | strip_html %}
+            {% assign companyDateText = companyHeaderText | split: ", " | last | strip_html %}
             {% assign companyHeaderText = companyHeaderText | split: ", " | first %}
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html | prepend: "&nbsp;(" | append: ")" %}
             {% assign companyHeaderText = companyHeaderText | split: " (" | first %}
           {% endif %}
-
-          
 
           <div class="company">
           <div style="display: flex;justify-content: space-between; margin-bottom: 0px;">
