@@ -231,7 +231,6 @@ into the html template defined below. -->
         <!-- Section <h2> header inside the first item. Each subsequent item contains a degree. -->
         {{ degreesArray | first }}
         {% for degree in degreesArray offset: 1 %}
-          <!-- TODO: format as each degree as desired -->
           {% assign degreeHeaderText = degree | split: "</h3>" | first | split: ">" | last %}
           {% assign degreeHeaderArray = degreeHeaderText | split: ", " %}
           {% assign univNameText = degreeHeaderArray | first | strip_html %}
