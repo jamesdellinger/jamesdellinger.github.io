@@ -98,14 +98,14 @@ into the html template defined below. -->
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location" style="margin-top: 4px;">{{ locationText }}</p>
             </div>
-            <div class="contact_info" style="display: flex; align-items: flex-end; margin-right: -30px">
+            <div class="contact_info" style="display: flex; align-items: flex-end; margin-right: -20px">
                 <div style="display: flex;">
-                  <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 30px;">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+                  <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px;">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
                 <div style="display: flex;">
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
-                    <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: 30px">{{ item | split: "p>" | last }}</p>
+                    <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px">{{ item | split: "p>" | last }}</p>
                   {% endif %}
                 {% endfor %}
                 </div>
