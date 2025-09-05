@@ -100,12 +100,16 @@ into the html template defined below. -->
             </div>
             <div class="contact_info" style="display: flex; align-items: flex-end;">
                 <div style="display: flex;">
-                  <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 10px;">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+                  <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px;">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
                 <div style="display: flex;">
+                {% assign contactItemPadding = 20 %}
                 {% for item in contactLinkArray %}
+                  {% if forloop.last %}
+                    {% assign contactItemPadding = 0 %}
+                  {% endif %}
                   {% if item contains "href" %}
-                    <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px;">{{ item | split: "p>" | last }}</p>
+                    <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: {{ contactItemPadding }}px">{{ item | split: "p>" | last }}</p>
                   {% endif %}
                 {% endfor %}
                 </div>
