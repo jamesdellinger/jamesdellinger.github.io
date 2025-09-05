@@ -6,12 +6,11 @@ has become the standard.
 Why this matters: when looking at a resume on a screen, this 
 look and feel adds the least amount of cognitive overload 
 to readers. In other words, it "gets out of the way" the 
-quickest. It lets the resume's content lodge itself
-in the reader's mind without forcing him to spend too much 
-effort disentangling its format and structure.
+most quickly, allowing the reader to focus on the content
+without having to consciously figure out the resume's structure.
 -->
 
-<!-- Github uses Jekyll to build static webpages. Thus, I use 
+<!-- Github uses Jekyll to build static webpages. So I can use 
 Liquid to fit the content of the resume's markdown file
 into the html template defined below. -->
 
@@ -94,7 +93,7 @@ into the html template defined below. -->
           {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
           {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 1 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
-          <div class="name_and_contact_info" style="display: flex; justify-content: space-between; margin-top: 24px; margin-bottom: 24px;">
+          <div class="name_and_contact_info" style="display: flex; justify-content: space-between; margin-top: 21px; margin-bottom: 21px;">
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location" style="margin-top: 4px;">{{ locationText }}</p>
             </div>
