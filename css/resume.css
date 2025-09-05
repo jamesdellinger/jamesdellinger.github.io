@@ -28,12 +28,12 @@
     --h4_fontsize: var(--body_fontsize);
     --h4_margin_top: 0px;
 
-    --job_bullet_width: 6px; /* 8px; */
+    --job_bullet_width: 8px; /* 8px; */
     --job_bullet_top: calc(var(--h4_margin_top) + (var(--h4_line_height) - var(--job_bullet_width))/2);
     --job_bar_top: calc(var(--h4_line_height) + var(--h4_margin_top));
     --job_bar_width: 2px;
     --job_bar_height: calc(100% - var(--h4_line_height) + var(--p_margin_top_bottom) + var(--h4_margin_top));
-    --job_chevron_width: calc(2 * var(--job_bullet_width)); /* calc(1.75 * var(--job_bullet_width)); */
+    --job_chevron_width: calc(1.75 * var(--job_bullet_width)); /* calc(1.75 * var(--job_bullet_width)); */
 
     --profile_pic_width_mobile: 44px;
     --padding_left_right_mobile: 16px;
