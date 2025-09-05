@@ -28,7 +28,7 @@
     --h4_fontsize: var(--body_fontsize);
     --h4_margin_top: 0px;
 
-    --job_bullet_width: 8px;
+    --job_bullet_width: 6px;
     --job_bullet_top: calc(var(--h4_margin_top) + (var(--h4_line_height) - var(--job_bullet_width))/2);
     --job_bar_top: calc(var(--h4_line_height) + var(--h4_margin_top));
     --job_bar_width: 2px;
