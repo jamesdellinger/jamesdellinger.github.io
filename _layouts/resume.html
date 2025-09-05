@@ -98,11 +98,11 @@ into the html template defined below. -->
             <div style="display: flex; flex-direction: column;">
               <h1>{{ nameText }}</h1><p class="location" style="margin-top: 4px;">{{ locationText }}</p>
             </div>
-            <div class="contact_info" style="display: flex; flex-direction: column;">
+            <div class="contact_info" style="display: flex;">
                 <div style="display: flex;">
                   <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px;">{{ emailAddressText }}</p><p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 </div>
-                <div style="display: flex; justify-content: space-between;">
+                <div style="display: flex;">
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
                     <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px;">{{ item | split: "p>" | last }}</p>
