@@ -91,7 +91,7 @@ into the html template defined below. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first | split: "</p>" %}
           {% assign locationText = contactInfoArray | first | strip_html %}
           {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
-          {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 1 %}
+          {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 2 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
           <div class="name_and_contact_info" style="display: flex; flex-direction: column;; margin-top: 21px; margin-bottom: 21px;">
             <h1>{{ nameText }}</h1>
@@ -101,11 +101,11 @@ into the html template defined below. -->
                 <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
                 <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px;">{{ emailAddressText }}</p>
                 {% assign padding_right = 20 %}
-                {% for item in contactLinkArray | limit: contactLinkArray.size - 2 %}
+                {% for item in contactLinkArray %}
                   {% if forloop.last %}
                     {% assign padding_right = 0 %}
                   {% endif %}
-                  {{ contactLinkArray.size - 2 }}
+                  {{ contactLinkArray.size }}
                   {% if item contains "href" %}
                     <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: {{ padding_right }}px">{{ item | split: "p>" | last }}</p>
                   {% endif %}
