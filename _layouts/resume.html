@@ -95,10 +95,10 @@ into the html template defined below. -->
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
           <div class="name_and_contact_info" style="display: flex; flex-direction: column;; margin-top: 21px; margin-bottom: 21px;">
             <h1>{{ nameText }}</h1>
-            <div class="contact_info" style="display: flex; justify-content: space-between; margin-top: 4px;">
+            <div class="location_and_contact_info" style="display: flex; justify-content: space-between; margin-top: 4px;">
+              <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
               <p class="location">{{ locationText }}</p>
-              <div style="display: flex;">
-                <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
+              <div class="contact_info" style="display: flex;">
                 <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px;">{{ emailAddressText }}</p>
                 {% assign padding_right = 20 %}
                 {% for item in contactLinkArray %}
