@@ -91,7 +91,7 @@ into the html template defined below. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first | split: "</p>" %}
           {% assign locationText = contactInfoArray | first | strip_html %}
           {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
-          {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 2 %}
+          {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 3 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
           <div class="name_and_contact_info" style="display: flex; flex-direction: column;; margin-top: 21px; margin-bottom: 21px;">
             <h1>{{ nameText }}</h1>
