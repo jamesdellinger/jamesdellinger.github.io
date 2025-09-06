@@ -105,6 +105,7 @@ into the html template defined below. -->
                   {% if forloop.index0 == contactLinkArray.size - 2 %}
                     {% assign padding_right = 0 %}
                   {% endif %}
+                  {{ contactLinkArray.size }}
                   {% if item contains "href" %}
                     <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: {{ padding_right }}px">{{ item | split: "p>" | last }}</p>
                   {% endif %}
