@@ -505,6 +505,11 @@ footer {
     .email_print {
         display: inline;
     }
+
+    .name_and_contact_info {
+        margin-top: 0in;
+        margin-bottom: 0in;
+    }
 }
 
 /* Printing page margins must be set here. */
