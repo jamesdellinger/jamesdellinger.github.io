@@ -102,10 +102,12 @@ h4 {
     text-decoration: underline;
 }
 
-/* .name_and_contact_info {
-    display: flex;
-    flex-direction: column;
-} */
+.name_and_contact_info{
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 21px; 
+    margin-bottom: 21px;
+}
 
 .job_header_container, .major_header_date, .contact_info {
     display: flex;

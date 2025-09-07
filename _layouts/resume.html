@@ -93,7 +93,7 @@ into the html template defined below. -->
           {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
           {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 3 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
-          <div class="name_and_contact_info" style="display: flex; flex-direction: column; margin-top: 21px; margin-bottom: 21px;">
+          <div class="name_and_contact_info">
             <h1>{{ nameText }}</h1>
             <div class="location_and_contact_info" style="display: flex; justify-content: space-between; margin-top: 4px;">
               <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
