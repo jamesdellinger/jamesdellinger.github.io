@@ -504,11 +504,13 @@ footer {
 
     .email_print {
         display: inline;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .name_and_contact_info {
-        margin-top: 0in;
-        margin-bottom: 0in;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
