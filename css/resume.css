@@ -502,9 +502,9 @@ footer {
         content: " (" attr(href) ")";
     } */
 
-    /* .email_print {
-        display: block;
-    } */
+    .email_print {
+        display: inline;
+    }
 }
 
 /* Printing page margins must be set here. */
