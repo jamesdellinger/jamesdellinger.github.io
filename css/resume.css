@@ -514,6 +514,10 @@ footer {
         margin-top: 0;
         margin-bottom: 0;
     }
+
+    .location, .date {
+        color: black;
+    }
 }
 
 /* Printing page margins must be set here. */
