@@ -38,7 +38,7 @@
     --profile_pic_width_mobile: 44px;
     --padding_left_right_mobile: 16px;
 
-    --print_margin_top_bottom: .325in;
+    --print_margin_top_bottom: .4375in; /* 7/16 in */
     --print_margin_left_right: .75in;
 }
 
