@@ -102,9 +102,10 @@ into the html template defined below. -->
                 <p class="email_screen">{{ emailAddressText }}</p>
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
-                    <p class="contact_link">{{ item | split: "p>" | last }}</p>
                     {% if forloop.last %}
                       <p class="last_contact_link">{{ item | split: "p>" | last }}</p>
+                    {% else %}
+                      <p class="contact_link">{{ item | split: "p>" | last }}</p>
                     {% endif %}
                   {% endif %}
                 {% endfor %}
