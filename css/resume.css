@@ -19,6 +19,7 @@
     --footer_margin_top_bottom: 30px;
     --header_profile_pic_width: 32px;
 
+    --screen_indent_width: 20px;
     --body_fontsize: 14px;
     --p_margin_top_bottom: 14px;
     --h3_line_height: 20px;
@@ -122,7 +123,7 @@ h4 {
 .email_screen, .contact_link, .last_contact_link {
     margin-top: 0px; 
     margin-bottom: 0px;
-    padding-right: 20px;
+    padding-right: var(--screen_indent_width);
 }
 
 .last_contact_link {
@@ -480,7 +481,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info,
-    .email_screen, .contact_link,
+    .email_screen, .contact_link, .last_contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron,
     .top_section_profile_pic_title_container_mobile { 
