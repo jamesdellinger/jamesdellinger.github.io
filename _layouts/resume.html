@@ -93,20 +93,19 @@ into the html template defined below. -->
           {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
           {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 3 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
-          <div class="name_and_contact_info">
+          <div class="name_and_contact_links_container">
             <h1>{{ nameText }}</h1>
-            <div class="location_and_contact_info" style="display: flex; justify-content: space-between; margin-top: 4px;">
+            <div class="location_and_contact_links">
               <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
               <p class="location">{{ locationText }}</p>
-              <div class="contact_info" style="display: flex;">
-                <p class="email_screen" style="margin-top: 0px; margin-bottom: 0px; padding-right: 20px;">{{ emailAddressText }}</p>
-                {% assign padding_right = 20 %}
+              <div class="contact_links">
+                <p class="email_screen">{{ emailAddressText }}</p>
                 {% for item in contactLinkArray %}
-                  {% if forloop.last %}
-                    {% assign padding_right = 0 %}
-                  {% endif %}
                   {% if item contains "href" %}
-                    <p class="contact_link" style="margin-top: 0px; margin-bottom: 0px; padding-right: {{ padding_right }}px">{{ item | split: "p>" | last }}</p>
+                    <p class="contact_link">{{ item | split: "p>" | last }}</p>
+                    {% if forloop.last %}
+                      <p class="last_contact_link">{{ item | split: "p>" | last }}</p>
+                    {% endif %}
                   {% endif %}
                 {% endfor %}
               </div>

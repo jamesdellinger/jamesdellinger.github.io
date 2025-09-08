@@ -102,11 +102,31 @@ h4 {
     text-decoration: underline;
 }
 
-.name_and_contact_info{
+.name_and_contact_links_container {
     display: flex; 
     flex-direction: column; 
     margin-top: 21px; 
     margin-bottom: 21px;
+}
+
+.location_and_contact_links {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 4px;
+}
+
+.contact_links {
+    display: flex;
+}
+
+.email_screen, .contact_link, .last_contact_link {
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    padding-right: 20px;
+}
+
+.last_contact_link {
+    padding-right: 0px;
 }
 
 .job_header_container, .major_header_date, .contact_info {
