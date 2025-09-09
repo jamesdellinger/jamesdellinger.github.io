@@ -62,7 +62,7 @@ into the html template defined below. -->
     {% assign sectionArray = content | split: "<hr />" %}
     {% for section in sectionArray %}
       {% if forloop.first %}
-        <section id="top_section">
+        <section id="top_section" class="top_section">
 
           <!-- Background banner and profile pic for desktop display. -->
           <div class="top_section_background_image_container">

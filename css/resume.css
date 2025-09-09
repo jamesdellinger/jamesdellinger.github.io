@@ -82,7 +82,7 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: var(--company_gap);
+    margin-top: 0px;
     margin-bottom: var(--company_gap);
 }
 
@@ -195,11 +195,17 @@ section {
     margin-right: 0px;
     padding-left: var(--section_padding);
     padding-right: var(--section_padding);
+    padding-top: var(--company_gap);
+    padding-bottom: var(--company_gap);
     border-style: solid;
     border-width: var(--section_border_width);
     border-color: var(--desktop_section_border_color);
     border-radius: 8px;
     overflow: hidden;
+}
+
+.top_section {
+    padding-top: 0px;
 }
 
 .top_section_background_image_container {
