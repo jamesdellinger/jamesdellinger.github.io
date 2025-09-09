@@ -146,7 +146,11 @@ into the html template defined below. -->
             {% assign companyHeaderText = companyHeaderText | split: " (" | first | strip_html %}
           {% endif %}
 
-          <div class="company">
+          {% if forloop.last %}
+            <div class="last_company">
+          {% else %}
+            <div class="company">
+          {% endif %}
           <div class="company_header_container">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
             <p class="date">{{ companyDateText }}</p>

@@ -137,6 +137,10 @@ ul {
     margin-bottom: var(--company_gap);
 }
 
+.last_company {
+    margin-bottom: 0px;
+}
+
 .company_header_container {
     display: flex; 
     justify-content: space-between; 
