@@ -232,11 +232,11 @@ into the html template defined below. -->
           <div class="degree">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
               <h3>{{ univNameText }}</h3>
-              <p style="margin-top: 0px; margin-bottom: 0px;">{{ degreeNameText }}</p>
-              <p style="margin-top: 0px; margin-bottom: 0px;">{{ degreeDateText }}</p>
+              <p>{{ degreeNameText }}</p>
+              <p>{{ degreeDateText }}</p>
           </div>
           {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}
-          <p style="margin-top: 0px; margin-bottom: 14px; text-indent: 20px;">{{ degreeDescriptionText }}</p>
+          <p style="text-indent: 20px;">{{ degreeDescriptionText }}</p>
         {% endfor %}
         </section>
       
@@ -245,8 +245,8 @@ into the html template defined below. -->
         <section id="lanuages_hobbies_section">
           {% assign languagesText = section | split: "</p>" | first | strip_html %}
           {% assign hobbiesText =  section | split: "<p>" | last | split: "</p" | first %}
-          <p class="languages_text">{{ languagesText }}</p>
-          <p class="hobbies_text">{{ hobbiesText }}</p>
+          <p>{{ languagesText }}</p>
+          <p>{{ hobbiesText }}</p>
         </section>
 
       {% else %}

@@ -155,21 +155,9 @@ ul {
     margin-top: var(--h3_margin_top);
 }
 
-.date, .education_date, .location {
+.date, .location {
     color: var(--gray_font_color);
     margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.education_date {
-    margin-top: 0px;
-}
-
-.languages_text {
-    margin-bottom: 0px;
-}
-
-.hobbies_text {
     margin-top: 0px;
 }
 
