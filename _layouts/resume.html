@@ -198,7 +198,11 @@ into the html template defined below. -->
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
             {% assign jobDescriptionText = jobDescriptionText | strip_html %}
             {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %}
-            <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
+            {% if forloop.last %}
+              <div class="job_container">
+            {% else %}
+              <div class="last_job_container">
+            {% endif %}
               <div style="max-width: 500px; margin-left: 20px; text-indent: -20px;">
                 <span style="font-size: 14px;
                               font-weight: 400;
