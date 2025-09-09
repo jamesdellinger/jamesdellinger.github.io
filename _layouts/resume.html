@@ -199,9 +199,9 @@ into the html template defined below. -->
             {% assign jobDescriptionText = jobDescriptionText | strip_html %}
             {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %}
             {% if forloop.last %}
-              <div class="job_container">
-            {% else %}
               <div class="last_job_container">
+            {% else %}
+              <div class="job_container">
             {% endif %}
               <div style="max-width: 500px; margin-left: 20px; text-indent: -20px;">
                 <span style="font-size: 14px;
@@ -209,9 +209,10 @@ into the html template defined below. -->
                               line-height: 20px;
                               margin-bottom: 0px;
                               margin-top: 0px;
-                              text-decoration: underline;">{{ jobHeaderText }}</span><span>{{ jobDescriptionText }}</span></div>
+                              text-decoration: underline;">{{ jobHeaderText }}</span><span>{{ jobDescriptionText }}</span>
+              </div>
               <p class="date" style="margin-right: 20px;">{{ jobDateText }}</p>
-            </div>
+            </div> <!-- Closes the job_container or last_job_container div -->
 
             </div> <!-- Closes out the jobBar div -->
           {% endfor %}
