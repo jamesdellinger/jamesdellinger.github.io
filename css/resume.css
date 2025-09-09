@@ -24,10 +24,8 @@
     --body_fontsize: 14px;
     --h3_line_height: 20px;
     --h3_fontsize: var(--body_fontsize);
-    --h3_margin_top: 0px; /*var(--h3_fontsize); */
     --h4_line_height: 20px;
     --h4_fontsize: var(--body_fontsize);
-    --h4_margin_top: 0px;
 
     --job_bullet_width: 8px; /* 8px; */
     --job_bullet_top: calc(var(--h4_margin_top) + (var(--h4_line_height) - var(--job_bullet_width))/2);
@@ -91,7 +89,7 @@ h3 {
     font-weight: 600;
     line-height: var(--h3_line_height);
     margin-bottom: 0px;
-    margin-top: var(--h3_margin_top);
+    margin-top: 0px;
 }
 
 h4 {
@@ -99,7 +97,7 @@ h4 {
     font-weight: 400;
     line-height: var(--h4_line_height);
     margin-bottom: 0px;
-    margin-top: var(--h4_margin_top);
+    margin-top: 0px;
     text-decoration: underline;
 }
 
@@ -158,12 +156,6 @@ ul {
 .date, .location {
     color: var(--gray_font_color);
     margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-h4 {
-    font-size: var(--body_fontsize);
-    font-weight: 400;
     margin-top: 0px;
 }
 
