@@ -203,14 +203,14 @@ into the html template defined below. -->
             {% else %}
               <div class="job_container">
             {% endif %}
-              <div style="display: flex; align-content: flex-start; max-width: 500px; ">
+              <div style="max-width: 500px; margin-left: 20px; text-indent: -20px;">
                 <!-- TODO: place jobHeaderText inside a <h4> and then place inside a <div>. Like I do with company headers. -->
-                <h4 style="   font-size: 14px;
+                <span style="   font-size: 14px;
                               font-weight: 400;
                               line-height: 20px;
                               margin-bottom: 0px;
                               margin-top: 0px;
-                              text-decoration: underline;">{{ jobHeaderText }}</h4><span style="margin-left: 20px; text-indent: -20px;">{{ jobDescriptionText }}</span>
+                              text-decoration: underline;">{{ jobHeaderText }}</span><span>{{ jobDescriptionText }}</span>
               </div>
               <p class="date" style="margin-right: 20px;">{{ jobDateText }}</p>
             </div> <!-- Closes the job_container or last_job_container div -->
