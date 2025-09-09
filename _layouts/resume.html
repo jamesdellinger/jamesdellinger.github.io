@@ -147,7 +147,7 @@ into the html template defined below. -->
           {% endif %}
 
           <div class="company">
-          <div style="display: flex; justify-content: space-between; margin-bottom: 0px;">
+          <div class="company_header_container">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
             <p class="date">{{ companyDateText }}</p>
           </div>
@@ -192,13 +192,6 @@ into the html template defined below. -->
               {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
             {% endif %}
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
-
-
-
-            <!-- TODO: experiment with placing job description on same line as job header. -->
-            <!-- Old: -->
-
-            <!-- New: -->
             {% assign jobDescriptionText = jobDescriptionText | strip_html %}
             {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %}
             <div style="display: flex; justify-content: space-between; margin-bottom: 14px;">
@@ -211,7 +204,6 @@ into the html template defined below. -->
                               text-decoration: underline;">{{ jobHeaderText }}</span><span>{{ jobDescriptionText }}</span></div>
               <p class="date" style="margin-right: 20px;">{{ jobDateText }}</p>
             </div>
-
 
             </div> <!-- Closes out the jobBar div -->
           {% endfor %}

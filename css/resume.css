@@ -19,9 +19,10 @@
     --footer_margin_top_bottom: 30px;
     --header_profile_pic_width: 32px;
 
+    --company_gap: 14px;
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
-    --p_margin_top_bottom: 14px;
+    /* --p_margin_top_bottom: 14px; */
     --h3_line_height: 20px;
     --h3_fontsize: var(--body_fontsize);
     --h3_margin_top: 0px; /*var(--h3_fontsize); */
@@ -60,8 +61,10 @@ body {
 }
 
 p {
-    margin-top: var(--p_margin_top_bottom);
-    margin-bottom: var(--p_margin_top_bottom);
+    /* margin-top: var(--p_margin_top_bottom);
+    margin-bottom: var(--p_margin_top_bottom); */
+    margin-top: 0px;
+    margin-bottom: 0px;
     max-width: var(--body_text_max_width);
 }
 
@@ -130,15 +133,19 @@ h4 {
     padding-right: 0px;
 }
 
-.job_header_container, .major_header_date, .contact_info {
-    display: flex;
-    justify-content: space-between;
+.company {
+    margin-bottom: var(--company_gap);
 }
 
 .company_header_container {
-    display: flex;
-    justify-content: flex-start;
+    display: flex; 
+    justify-content: space-between; 
     margin-bottom: 0px;
+}
+
+.job_header_container, .major_header_date, .contact_info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .city {
