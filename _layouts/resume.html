@@ -152,7 +152,7 @@ into the html template defined below. -->
             <div class="company_or_degree_container">
           {% endif %}
           <div class="company_header_container">
-            <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
+            <div style="display: flex; justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
             <p class="date">{{ companyDateText }}</p>
           </div>
 
@@ -203,9 +203,9 @@ into the html template defined below. -->
             {% else %}
               <div class="job_container">
             {% endif %}
-              <div style="max-width: 500px; margin-left: 20px; text-indent: -20px;">
+              <div style="display: flex; justify-content: flex-start; max-width: 500px; margin-left: 20px; text-indent: -20px;">
                 <!-- TODO: place jobHeaderText inside a <h4> and then place inside a <div>. Like I do with company headers. -->
-                <h4 style="font-size: 14px;
+                <h4 style="   font-size: 14px;
                               font-weight: 400;
                               line-height: 20px;
                               margin-bottom: 0px;
