@@ -153,7 +153,7 @@ ul {
     margin-bottom: 0px;
 }
 
-.job_container {
+.job_container, .last_job_container {
     display: flex; 
     justify-content: space-between; 
     margin-bottom: var(--job_gap);
