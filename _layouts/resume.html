@@ -147,9 +147,9 @@ into the html template defined below. -->
           {% endif %}
 
           {% if forloop.last %}
-            <div class="last_company">
+            <div class="last_company_or_degree_container">
           {% else %}
-            <div class="company">
+            <div class="company_or_degree_container">
           {% endif %}
           <div class="company_header_container">
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="city">{{ companyCityText }}</p></div>
@@ -233,14 +233,19 @@ into the html template defined below. -->
           {% assign univNameText = degreeHeaderArray | first | strip_html %}
           {% assign degreeNameText = degreeHeaderArray[1] | strip_html | prepend: "—" | append: ",&nbsp;" %}
           {% assign degreeDateText = degreeHeaderArray | last | strip_html %}
-          <div class="degree">
+          {% if forloop.last %}
+            <div class="last_company_or_degree_container">
+          {% else %}
+            <div class="company_or_degree_container">
+          {% endif %}
             <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
               <h3>{{ univNameText }}</h3>
               <p>{{ degreeNameText }}</p>
               <p>{{ degreeDateText }}</p>
-          </div>
+            </div>
           {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}
           <p style="text-indent: 20px;">{{ degreeDescriptionText }}</p>
+          </div>
         {% endfor %}
         </section>
       
