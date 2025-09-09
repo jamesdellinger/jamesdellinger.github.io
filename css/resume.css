@@ -9,17 +9,23 @@
     --top_section_profile_pic_width: 160px;
     --body_max_width: 800px;
     --body_text_max_width: 600px;
-    --section_padding: 64px;
+    --section_horz_padding: 64px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
     --hr_side_margin: 0px;
     /* Had thought wider horiz rules in between companies would set them apart nicely.
     But actually just made the resume look uneven. */
-    /* --hr_side_margin: calc(0px - 2*var(--section_padding)/8); */
+    /* --hr_side_margin: calc(0px - 2*var(--section_horz_padding)/8); */
     --footer_margin_top_bottom: 30px;
     --header_profile_pic_width: 32px;
 
+    /* Define vertical spacing. */
+    --section_vert_padding: 14px;
+    --section_title_gap: 14px;
     --company_gap: 14px;
+    --job_gap: 14px;
+
+
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
     --h3_line_height: 20px;
@@ -81,7 +87,7 @@ h2 {
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 0px;
-    margin-bottom: var(--company_gap);
+    margin-bottom: var(--section_title_gap);
 }
 
 h3 {
@@ -133,11 +139,11 @@ ul {
     padding-right: 0px;
 }
 
-.company {
+.company_or_degree_container {
     margin-bottom: var(--company_gap);
 }
 
-.last_company {
+.last_company_or_degree_container {
     margin-bottom: 0px;
 }
 
@@ -182,10 +188,10 @@ section {
     margin-bottom: var(--section_margin_top_bottom);
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: var(--section_padding);
-    padding-right: var(--section_padding);
-    padding-top: var(--company_gap);
-    padding-bottom: var(--company_gap);
+    padding-left: var(--section_horz_padding);
+    padding-right: var(--section_horz_padding);
+    padding-top: var(--section_vert_padding);
+    padding-bottom: var(--section_vert_padding);
     border-style: solid;
     border-width: var(--section_border_width);
     border-color: var(--desktop_section_border_color);
@@ -198,8 +204,8 @@ section {
 }
 
 .top_section_background_image_container {
-    margin-left: calc(0px - var(--section_padding));
-    margin-right: calc(0px - var(--section_padding));
+    margin-left: calc(0px - var(--section_horz_padding));
+    margin-right: calc(0px - var(--section_horz_padding));
     display: flex;
 }
 
@@ -210,7 +216,7 @@ section {
 .top_section_profile_pic_container {
     position: relative; 
     margin-top: calc(0px - .7*var(--top_section_profile_pic_width));  
-    margin-left: calc(0px - var(--section_padding)/2);
+    margin-left: calc(0px - var(--section_horz_padding)/2);
     width: var(--top_section_profile_pic_width); 
     height: var(--top_section_profile_pic_width); 
     overflow: hidden;
@@ -332,7 +338,7 @@ footer {
 .jobBar::before {
     content: "";
     position: absolute;
-    left: calc(0px - var(--job_bar_width)/2 - var(--section_padding)/2);
+    left: calc(0px - var(--job_bar_width)/2 - var(--section_horz_padding)/2);
     top: var(--job_bar_top);
     height: var(--job_bar_height);
     width: var(--job_bar_width);
@@ -348,7 +354,7 @@ footer {
     width: var(--job_bullet_width);
     background-color: var(--job_bullet_color);
     top: var(--job_bullet_top);
-    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_padding)/2);
+    left: calc(0px - var(--job_bullet_width)/2 -  var(--section_horz_padding)/2);
     /* Setting margin-bottom very important to prevent the div containing this 
        span from automatically increasing its height by var(--job_bullet_width) px. */
     margin-bottom: calc(0px - var(--job_bullet_width));
@@ -363,7 +369,7 @@ footer {
     /* Safari will shift the SVG's <path> to the right by 1 pixel.
        No idea why this happens. Won't bother correcting for it, as
        any solution would be too kludgey. */
-    left: calc(0px - var(--job_chevron_width)/2 - var(--section_padding)/2);
+    left: calc(0px - var(--job_chevron_width)/2 - var(--section_horz_padding)/2);
     height: var(--job_bullet_width);
     width: var(--job_chevron_width);
 }
