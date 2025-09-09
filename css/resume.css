@@ -22,7 +22,6 @@
     --company_gap: 14px;
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
-    /* --p_margin_top_bottom: 14px; */
     --h3_line_height: 20px;
     --h3_fontsize: var(--body_fontsize);
     --h3_margin_top: 0px; /*var(--h3_fontsize); */
@@ -61,8 +60,6 @@ body {
 }
 
 p {
-    /* margin-top: var(--p_margin_top_bottom);
-    margin-bottom: var(--p_margin_top_bottom); */
     margin-top: 0px;
     margin-bottom: 0px;
     max-width: var(--body_text_max_width);
@@ -85,8 +82,8 @@ h2 {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: var(--p_margin_top_bottom);
-    margin-bottom: var(--p_margin_top_bottom);
+    margin-top: var(--company_gap);
+    margin-bottom: var(--company_gap);
 }
 
 h3 {
@@ -186,7 +183,7 @@ hr {
     color:var(--horizontal_rule_color);
     background-color:var(--horizontal_rule_color);
     margin-top: 0px;
-    margin-bottom: 14px;
+    margin-bottom: var(--company_gap);
 }
 
 section {
