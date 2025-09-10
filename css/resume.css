@@ -132,13 +132,14 @@ ul {
 
 .email_screen, .contact_link, .last_contact_link {
     margin-top: 0px; 
-    margin-bottom: 0px;
-    padding-right: var(--screen_indent_width);
+    /* margin-bottom: 0px; */
+    /* padding-right: var(--screen_indent_width); */
+    padding-left: var(--screen_indent_width);
 }
 
-.last_contact_link {
+/* .last_contact_link {
     padding-right: 0px;
-}
+} */
 
 .company_or_degree_container {
     margin-bottom: var(--company_gap);
