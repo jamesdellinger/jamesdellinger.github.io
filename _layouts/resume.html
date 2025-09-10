@@ -226,16 +226,16 @@ into the html template defined below. -->
           {% assign degreeHeaderText = degree | split: "</h3>" | first | split: ">" | last %}
           {% assign degreeHeaderArray = degreeHeaderText | split: ", " %}
           {% assign univNameText = degreeHeaderArray | first | strip_html %}
-          {% assign degreeNameText = degreeHeaderArray[1] | strip_html | prepend: "—" | append: ",&nbsp;" %}
+          {% assign degreeNameText = degreeHeaderArray[1] | strip_html %}
           {% assign degreeDateText = degreeHeaderArray | last | strip_html %}
           {% if forloop.last %}
             <div class="last_company_or_degree_container">
           {% else %}
             <div class="company_or_degree_container">
           {% endif %}
-            <div style="display: flex;justify-content: flex-start; margin-bottom: 0px;">
+            <div style="display: flex; justify-content: flex-start; margin-bottom: 0px;">
               <h3>{{ univNameText }}</h3>
-              <p>{{ degreeNameText }}</p>
+              <p class="degree_name">{{ degreeNameText }}</p>
               <p>{{ degreeDateText }}</p>
             </div>
           {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}

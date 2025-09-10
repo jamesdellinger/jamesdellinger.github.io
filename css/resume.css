@@ -201,6 +201,14 @@ ul {
     margin-right: 20px;
 }
 
+.degree_name::before {
+    content: "—"
+}
+
+.degree_name::after {
+    content: ",\00a0"
+}
+
 .language_hobbies_text {
     margin-left: 20px; 
     text-indent: -20px;
