@@ -160,7 +160,7 @@ ul {
 }
 
 .company_city::before {
-    content: " (";
+    content: "&nbsp;(";
 }
 
 .company_city::after {
@@ -200,6 +200,11 @@ ul {
     color: var(--gray_font_color);
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+.language_hobbies_text {
+    margin-left: 20px; 
+    text-indent: -20px;
 }
 
 hr {
