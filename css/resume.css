@@ -193,10 +193,12 @@ ul {
     justify-content: space-between;
 }
 
-.date, .location {
+.location, .company_date, .job_date {
     color: var(--gray_font_color);
-    margin-bottom: 0px;
-    margin-top: 0px;
+}
+
+.job_date {
+    margin-right: 20px;
 }
 
 .language_hobbies_text {
