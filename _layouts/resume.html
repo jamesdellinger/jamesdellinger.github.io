@@ -157,7 +157,7 @@ into the html template defined below. -->
           <!-- If there is a company description, it will be in the first item. -->
           {% assign companyDescriptionText = jobsArray | first | strip_html %}
           {% if companyDescriptionText.size > 1 %}
-              <p classs="company_description">{{ companyDescriptionText }}</p>
+              <p class="company_description">{{ companyDescriptionText }}</p>
           {% endif %}
 
           {% assign n_jobs = jobsArray.size | minus: 1 %}
