@@ -24,7 +24,7 @@
     --section_title_gap: 14px;
     --company_gap: 14px;
     --job_gap: 14px;
-
+    
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
@@ -161,7 +161,7 @@ ul {
 }
 
 .company_description {
-    text-indent: 20px;
+    text-indent: var(--screen_indent_width);
 }
 
 .job_container, .last_job_container {
@@ -176,8 +176,8 @@ ul {
 
 .job_description_container {
     max-width: 500px; 
-    margin-left: 20px; 
-    text-indent: -20px;
+    margin-left: var(--screen_indent_width); 
+    text-indent: calc(-1*var(--screen_indent_width));
 }
 
 .job_description_text {
@@ -198,7 +198,7 @@ ul {
 }
 
 .job_date {
-    margin-right: 20px;
+    margin-right: var(--screen_indent_width);
 }
 
 .degree_name::before {
@@ -215,12 +215,12 @@ ul {
 }
 
 .language_hobbies_text {
-    margin-left: 20px; 
-    text-indent: -20px;
+    margin-left: var(--screen_indent_width);
+    text-indent: calc(-1*var(--screen_indent_width));
 }
 
 .degree_description {
-    text-indent: 20px;
+    text-indent: var(--screen_indent_width);
 }
 
 hr {
