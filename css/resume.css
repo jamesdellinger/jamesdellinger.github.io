@@ -10,8 +10,6 @@
     --body_max_width: 800px;
     --body_text_max_width: 600px;
     --section_horz_padding: 64px;
-    --section_margin_top_bottom: 6px;
-    --section_border_width: 1px;
     --hr_side_margin: 0px;
     /* Had thought wider horiz rules in between companies would set them apart nicely.
     But actually just made the resume look uneven. */
@@ -20,6 +18,8 @@
     --header_profile_pic_width: 32px;
 
     /* Define vertical spacing. */
+    --section_margin_top_bottom: 6px;
+    --section_border_width: 1px;
     --section_vert_padding: 14px;
     --section_title_gap: 14px;
     --company_gap: 14px;
@@ -38,7 +38,7 @@
     --job_bullet_top: calc((var(--h4_line_height) - var(--job_bullet_width))/2);
     --job_bar_top: calc(var(--h4_line_height) + var(--h4_margin_top));
     --job_bar_width: 2px;
-    --job_bar_height: calc(100% - var(--h4_line_height) + var(--p_margin_top_bottom) + var(--h4_margin_top));
+    --job_bar_height: calc(100% - var(--h4_line_height));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width)); /* calc(1.75 * var(--job_bullet_width)); */
 
     --profile_pic_width_mobile: 44px;
