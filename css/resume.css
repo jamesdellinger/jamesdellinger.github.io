@@ -160,11 +160,11 @@ ul {
 }
 
 .company_city::before {
-    content: "("
+    content: " (";
 }
 
 .company_city::after {
-    content: ")"
+    content: ")";
 }
 
 .job_container, .last_job_container {
