@@ -164,7 +164,13 @@ ul {
     margin-bottom: 0px;
 }
 
-.job_header_container, .major_header_date, .contact_info {
+.job_description_container {
+    max-width: 500px; 
+    margin-left: 20px; 
+    text-indent: -20px;
+}
+
+.major_header_date, .contact_info {
     display: flex;
     justify-content: space-between;
 }
