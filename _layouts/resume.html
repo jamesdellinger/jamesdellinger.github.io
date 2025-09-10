@@ -233,13 +233,13 @@ into the html template defined below. -->
           {% else %}
             <div class="company_or_degree_container">
           {% endif %}
-            <div style="display: flex; justify-content: flex-start; margin-bottom: 0px;">
+            <div class="univ_degree_date_container">
               <h3>{{ univNameText }}</h3>
               <p class="degree_name">{{ degreeNameText }}</p>
               <p>{{ degreeDateText }}</p>
             </div>
           {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}
-          <p style="text-indent: 20px;">{{ degreeDescriptionText }}</p>
+          <p class="degree_description">{{ degreeDescriptionText }}</p>
           </div>
         {% endfor %}
         </section>
