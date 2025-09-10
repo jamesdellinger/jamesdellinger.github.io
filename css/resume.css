@@ -28,6 +28,7 @@
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
+    --section_line_height: 20px;
     --h3_line_height: 20px;
     --h3_fontsize: var(--body_fontsize);
     --h4_line_height: 20px;
@@ -237,7 +238,7 @@ hr {
 
 section {
     background-color: white;
-    line-height: 20px;
+    line-height: var(--section_line_height);
     margin-top: var(--section_margin_top_bottom);
     margin-bottom: var(--section_margin_top_bottom);
     margin-left: 0px;
