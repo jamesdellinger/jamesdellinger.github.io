@@ -170,6 +170,10 @@ ul {
     text-indent: -20px;
 }
 
+.job_description_text::before {
+    content: ":&nbsp;";
+}
+
 .major_header_date, .contact_info {
     display: flex;
     justify-content: space-between;

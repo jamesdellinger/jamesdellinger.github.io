@@ -197,14 +197,14 @@ into the html template defined below. -->
             {% endif %}
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
             {% assign jobDescriptionText = jobDescriptionText | strip_html %}
-            {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %}
+            <!-- {% assign jobDescriptionText = jobDescriptionText | prepend: ":&nbsp;" %} -->
             {% if forloop.last %}
               <div class="last_job_container">
             {% else %}
               <div class="job_container">
             {% endif %}
               <div class="job_description_container"> 
-                <h4>{{ jobHeaderText }}</h4><span>{{ jobDescriptionText }}</span>
+                <h4>{{ jobHeaderText }}</h4><span class="job_description_text">{{ jobDescriptionText }}</span>
               </div>
               <p class="date" style="margin-right: 20px;">{{ jobDateText }}</p>
             </div> <!-- Closes the job_container or last_job_container div -->
