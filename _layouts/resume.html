@@ -95,9 +95,9 @@ into the html template defined below. -->
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
           <div class="name_and_contact_links_container">
             <h1>{{ nameText }}</h1>
-            <div class="location_and_contact_links">
+            <div class="my_location_and_contact_links">
               <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
-              <p class="location">{{ locationText }}</p>
+              <p class="my_location">{{ locationText }}</p>
               <div class="contact_links_container">
                 <p class="email_screen">{{ emailAddressText }}</p>
                 {% for item in contactLinkArray %}

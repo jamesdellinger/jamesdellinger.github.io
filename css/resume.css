@@ -120,7 +120,7 @@ ul {
     margin-bottom: calc(var(--section_vert_padding)*1.5);
 }
 
-.location_and_contact_links {
+.my_location_and_contact_links {
     display: flex; 
     justify-content: space-between; 
     margin-top: 4px;
@@ -193,7 +193,7 @@ ul {
     justify-content: space-between;
 }
 
-.location, .company_date, .job_date {
+.my_location, .company_date, .job_date {
     color: var(--gray_font_color);
 }
 
@@ -578,7 +578,7 @@ footer {
         margin-bottom: 0;
     }
 
-    .location, .date {
+    .my_location, .date {
         color: black;
     }
 }
