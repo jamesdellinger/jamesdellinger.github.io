@@ -160,6 +160,10 @@ ul {
     content: ")";
 }
 
+.company_description {
+    text-indent: 20px;
+}
+
 .job_container, .last_job_container {
     display: flex; 
     justify-content: space-between; 
