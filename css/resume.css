@@ -24,7 +24,7 @@
     --section_title_gap: 14px;
     --company_gap: 14px;
     --job_gap: 14px;
-    
+    --location_and_contact_links_gap: 4px;
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
@@ -123,7 +123,7 @@ ul {
 .my_location_and_contact_links {
     display: flex; 
     justify-content: space-between; 
-    margin-top: 4px;
+    margin-top: var(--location_and_contact_links_gap);
 }
 
 .contact_links_container {
