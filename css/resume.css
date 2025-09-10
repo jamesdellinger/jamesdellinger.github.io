@@ -171,7 +171,7 @@ ul {
 }
 
 .job_description_text::before {
-    content: ":&nbsp;";
+    content: ": ";
 }
 
 .major_header_date, .contact_info {
