@@ -170,6 +170,10 @@ ul {
     text-indent: -20px;
 }
 
+.job_description_text {
+    display: inline;
+}
+
 .job_description_text::before {
     content: ": ";
 }
