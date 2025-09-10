@@ -17,14 +17,21 @@
     --footer_margin_top_bottom: 30px;
     --header_profile_pic_width: 32px;
 
-    /* Define vertical spacing. */
+    /* Define vertical spacing for screen. */
+    --location_and_contact_links_gap: 4px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
     --section_vert_padding: 14px;
     --section_title_gap: 14px;
     --company_gap: 14px;
     --job_gap: 14px;
-    --location_and_contact_links_gap: 4px;
+
+    /* Vertical spacing for print. */
+    --print_location_and_contact_links_gap: 4px;
+    --print_section_vert_padding: 14px;
+    --print_section_title_gap: 14px;
+    --print_company_gap: 14px;
+    --print_job_gap: 14px;
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
@@ -36,7 +43,7 @@
 
     --job_bullet_width: 8px; /* 8px; */
     --job_bullet_top: calc((var(--h4_line_height) - var(--job_bullet_width))/2);
-    --job_bar_top: calc(var(--h4_line_height));
+    --job_bar_top: var(--h4_line_height);
     --job_bar_width: 2px;
     --job_bar_height: calc(100% - var(--h4_line_height) + var(--job_gap));
     --job_chevron_width: calc(1.75 * var(--job_bullet_width)); /* calc(1.75 * var(--job_bullet_width)); */
