@@ -126,7 +126,7 @@ ul {
     margin-top: 4px;
 }
 
-.contact_links {
+.contact_links_container {
     display: flex;
 }
 
@@ -145,13 +145,18 @@ ul {
 .company_header_container {
     display: flex; 
     justify-content: space-between; 
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
 }
 
-.company_city {
+.company_name_city_container {
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+/* .company_city {
     margin-bottom: 0px;
     margin-top: var(--h3_margin_top);
-}
+} */
 
 .company_city::before {
     content: "\00a0(";

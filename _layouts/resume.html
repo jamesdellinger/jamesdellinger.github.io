@@ -98,7 +98,7 @@ into the html template defined below. -->
             <div class="location_and_contact_links">
               <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
               <p class="location">{{ locationText }}</p>
-              <div class="contact_links">
+              <div class="contact_links_container">
                 <p class="email_screen">{{ emailAddressText }}</p>
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
@@ -139,7 +139,7 @@ into the html template defined below. -->
           {% endif %}
           {% if companyHeaderText contains " (" %}
             {% assign companyCityText = companyHeaderText | split: " (" | last | split: ")" | first | strip_html %}
-            {% assign companyHeaderText = companyHeaderText | split: " (" | first | strip_html %}
+            {% assign companyNameText = companyHeaderText | split: " (" | first | strip_html %}
           {% endif %}
 
           {% if forloop.last %}
@@ -148,7 +148,7 @@ into the html template defined below. -->
             <div class="company_or_degree_container">
           {% endif %}
           <div class="company_header_container">
-            <div style="display: flex; justify-content: flex-start; margin-bottom: 0px;"><h3>{{ companyHeaderText }}</h3><p class="company_city">{{ companyCityText }}</p></div>
+            <div class="company_name_city_container"><h3>{{ companyNameText }}</h3><p class="company_city">{{ companyCityText }}</p></div>
             <p class="date">{{ companyDateText }}</p>
           </div>
 
@@ -189,7 +189,7 @@ into the html template defined below. -->
             {% assign jobDateText = "" %}
             {% if jobHeaderText contains ", " %}
               {% assign jobDateText = jobHeaderText | split: ", " | last %}
-              {% assign jobHeaderText = jobHeaderText | split: ", " | first %}
+              {% assign jobNameText = jobHeaderText | split: ", " | first %}
             {% endif %}
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
             {% assign jobDescriptionText = jobDescriptionText | strip_html %}
@@ -199,7 +199,7 @@ into the html template defined below. -->
               <div class="job_container">
             {% endif %}
               <div class="job_description_container"> 
-                <h4>{{ jobHeaderText }}</h4><p class="job_description_text">{{ jobDescriptionText }}</p>
+                <h4>{{ jobNameText }}</h4><p class="job_description_text">{{ jobDescriptionText }}</p>
               </div>
               <p class="date" style="margin-right: 20px;">{{ jobDateText }}</p>
             </div> <!-- Closes the job_container or last_job_container div -->
