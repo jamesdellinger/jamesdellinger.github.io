@@ -154,6 +154,19 @@ ul {
     margin-bottom: 0px;
 }
 
+.company_city {
+    margin-bottom: 0px;
+    margin-top: var(--h3_margin_top);
+}
+
+.company_city::before {
+    content: "("
+}
+
+.company_city::after {
+    content: ")"
+}
+
 .job_container, .last_job_container {
     display: flex; 
     justify-content: space-between; 
@@ -181,11 +194,6 @@ ul {
 .major_header_date, .contact_info {
     display: flex;
     justify-content: space-between;
-}
-
-.city {
-    margin-bottom: 0px;
-    margin-top: var(--h3_margin_top);
 }
 
 .date, .location {
