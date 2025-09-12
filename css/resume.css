@@ -18,6 +18,7 @@
     --header_profile_pic_width: 32px;
 
     /* Define vertical spacing for screen. */
+    --name_and_contact_links_container_margin_top_bottom: calc(var(--section_vert_padding)*1.5);
     --location_and_contact_links_gap: 4px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
@@ -27,6 +28,8 @@
     --job_gap: 14px;
 
     /* Vertical spacing for print. */
+    --print_name_and_contact_links_container_margin_top: 0in;
+    --print_name_and_contact_links_container_margin_bottom: .25in;
     --print_location_and_contact_links_gap: 2px;
     --print_section_vert_padding: 0px;
     --print_section_title_gap: 14px;
@@ -124,8 +127,8 @@ ul {
 .name_and_contact_links_container {
     display: flex; 
     flex-direction: column; 
-    margin-top: calc(var(--section_vert_padding)*1.5);
-    margin-bottom: calc(var(--section_vert_padding)*1.5);
+    margin-top: var(--name_and_contact_links_container_margin_top_bottom);
+    margin-bottom: var(--name_and_contact_links_container_margin_top_bottom);
 }
 
 .my_location_and_contact_links {
@@ -606,8 +609,8 @@ footer {
     .name_and_contact_links_container {
         display: flex; 
         flex-direction: column; 
-        margin-top: calc(var(--print_section_vert_padding)*1.5);
-        margin-bottom: calc(var(--print_section_vert_padding)*1.5);
+        margin-top: var(--print_name_and_contact_links_container_margin_top);
+        margin-bottom: var(--print_name_and_contact_links_container_margin_bottom);
     }
 
     .my_location_and_contact_links {
@@ -616,7 +619,7 @@ footer {
         margin-top: var(--print_location_and_contact_links_gap);
     }
 
-    .my_location, .date {
+    .my_location, .company_date, .job_date {
         color: black;
     }
 
