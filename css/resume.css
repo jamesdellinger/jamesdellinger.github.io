@@ -577,8 +577,9 @@ footer {
         font-style: italic;
         text-transform: uppercase;
         font-size: 18pt;
+        line-height: 30pt;
         font-weight: 350;
-        margin-top: 0pt;
+        margin-top: 0in;
         margin-bottom: 0in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
     }
 
