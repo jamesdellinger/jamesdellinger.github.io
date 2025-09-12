@@ -28,7 +28,7 @@
     --job_gap: 14px;
 
     /* Vertical spacing for print. */
-    --print_body_font_size: 10pt;
+    --print_body_font_size: 10.5pt;
     --print_body_line_height: 20pt;
     --print_name_and_contact_links_container_margin_top: 0in;
     --print_name_and_contact_links_container_margin_bottom: .25in;
@@ -532,18 +532,28 @@ footer {
         background-color: white;
     }
 
+    body, p, h2, h3, h4 {
+        font-size: var(--print_body_font_size);
+        line-height: var(--print_body_line_height);
+    }
+
+    a, .my_location, .company_date, .job_date {
+        color: black;
+    }
+
     body {
         margin-top: 0in;
         padding-left: 0in;
         padding-right: 0in;
         max-width: none;
-        font-size: var(--print_body_font_size);
-        line-height: var(--print_body_line_height);
     }
     
     section, #experience_section {
         border-width: 0in !important;
-        padding: 0in;
+        padding-left: 0in;
+        padding-right: 0in;
+        padding-top: var(--print_section_vert_padding);
+        padding-bottom: var(--print_section_vert_padding);
         margin: 0in;
         border-style: none;
         border-radius: 0;
@@ -573,21 +583,9 @@ footer {
     }
 
     h2 {
-        font-size: var(--print_body_font_size);
         margin-bottom: var(--print_section_title_gap);
     }
 
-    h3, h4 {
-        font-size: var(--print_body_font_size);
-    }
-
-    h6 {
-        color: black;
-    }
-
-    a {
-        color: black;
-    }
 
     /* To display URLs for selected links when printed out.
        From: https://stackoverflow.com/a/10634534/8628758 
@@ -604,12 +602,12 @@ footer {
         display: inline;
         margin-top: 0;
         margin-bottom: 0;
-        size: var(--print_location_and_contact_links_size);
+        font-size: var(--print_location_and_contact_links_size);
         line-height: var(--print_location_and_contact_links_line_height);
     }
 
     .my_location {
-        size: var(--print_location_and_contact_links_size);
+        font-size: var(--print_location_and_contact_links_size);
         line-height: var(--print_location_and_contact_links_line_height);
     }
 
@@ -626,10 +624,6 @@ footer {
         margin-top: var(--print_location_and_contact_links_gap);
     }
 
-    .my_location, .company_date, .job_date {
-        color: black;
-    }
-
     .company_or_degree_container {
         margin-bottom: var(--print_company_gap);
     }
@@ -641,7 +635,7 @@ footer {
     }
     
     .last_job_container {
-        margin-bottom: 0px;
+        margin-bottom: 0in;
     }
 }
 
