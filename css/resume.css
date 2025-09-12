@@ -623,8 +623,9 @@ footer {
     .my_location_and_contact_links_container {
         display: flex; 
         justify-content: space-between; 
+        padding-left: 25%;
+        padding-right: 25%;
         margin-top: var(--print_location_and_contact_links_gap);
-        max-width: 50%;
     }
 
     .company_or_degree_container {
