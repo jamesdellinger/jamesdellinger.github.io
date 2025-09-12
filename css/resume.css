@@ -27,8 +27,8 @@
     --job_gap: 14px;
 
     /* Vertical spacing for print. */
-    --print_location_and_contact_links_gap: 4px;
-    --print_section_vert_padding: 14px;
+    --print_location_and_contact_links_gap: 2px;
+    --print_section_vert_padding: 0px;
     --print_section_title_gap: 14px;
     --print_company_gap: 14px;
     --print_job_gap: 14px;
@@ -548,7 +548,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info,
-    .email_screen, .contact_link, .last_contact_link,
+    .email_screen, .contact_links_container, .contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron,
     .top_section_profile_pic_title_container_mobile { 
@@ -567,6 +567,11 @@ footer {
 
     h2 {
         font-size: 10.5pt;
+    }
+
+    h2 {
+        font-size: 10.5pt;
+        margin-bottom: var(--print_section_title_gap);
     }
 
     h3, h4 {
@@ -599,12 +604,34 @@ footer {
     }
 
     .name_and_contact_links_container {
-        margin-top: 0;
-        margin-bottom: 0;
+        display: flex; 
+        flex-direction: column; 
+        margin-top: calc(var(--print_section_vert_padding)*1.5);
+        margin-bottom: calc(var(--print_section_vert_padding)*1.5);
+    }
+
+    .my_location_and_contact_links {
+        display: flex; 
+        justify-content: space-between; 
+        margin-top: var(--print_location_and_contact_links_gap);
     }
 
     .my_location, .date {
         color: black;
+    }
+
+    .company_or_degree_container {
+        margin-bottom: var(--print_company_gap);
+    }
+
+    .job_container, .last_job_container {
+        display: flex; 
+        justify-content: space-between; 
+        margin-bottom: var(--print_job_gap);
+    }
+    
+    .last_job_container {
+        margin-bottom: 0px;
     }
 }
 
