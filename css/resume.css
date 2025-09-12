@@ -135,7 +135,7 @@ ul {
     margin-bottom: var(--name_and_contact_links_container_margin_top_bottom);
 }
 
-.my_location_and_contact_links {
+.my_location_and_contact_links_container {
     display: flex; 
     justify-content: space-between; 
     margin-top: var(--location_and_contact_links_gap);
@@ -579,6 +579,7 @@ footer {
         font-size: 18pt;
         line-height: 30pt;
         font-weight: 350;
+        text-align: center;
         margin-top: 0in;
         margin-bottom: 0in; /* Setting slightly smaller than page top margin keeps name title better positioned when printing. */
     }
@@ -619,10 +620,11 @@ footer {
         margin-bottom: var(--print_name_and_contact_links_container_margin_bottom);
     }
 
-    .my_location_and_contact_links {
+    .my_location_and_contact_links_container {
         display: flex; 
         justify-content: space-between; 
         margin-top: var(--print_location_and_contact_links_gap);
+        max-width: 50%;
     }
 
     .company_or_degree_container {
