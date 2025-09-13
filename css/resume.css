@@ -34,7 +34,7 @@
     --print_name_and_contact_links_container_margin_bottom: .125in;
     --print_location_and_contact_links_gap: 0in;
     --print_location_and_contact_links_size: 9pt;
-    --print_location_and_contact_links_line_height: 13pt;
+    --print_location_and_contact_links_line_height: 9pt;
     --print_section_vert_padding: .125in;
     --print_section_title_gap: .02in;
     --print_company_gap: .1in;
@@ -577,7 +577,7 @@ footer {
         font-style: italic;
         text-transform: uppercase;
         font-size: 18pt;
-        line-height: 20pt;
+        line-height: 18pt;
         font-weight: 350;
         text-align: center;
         margin-top: 0in;
