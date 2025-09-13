@@ -36,9 +36,9 @@
     --print_location_and_contact_links_size: 9pt;
     --print_location_and_contact_links_line_height: 13pt;
     --print_section_vert_padding: .125in;
-    --print_section_title_gap: .03125in;
+    --print_section_title_gap: .02in;
     --print_company_gap: .1in;
-    --print_job_gap: .05in;
+    --print_job_gap: .04in;
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
