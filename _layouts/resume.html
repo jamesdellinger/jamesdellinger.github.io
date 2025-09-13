@@ -90,7 +90,7 @@ into the html template defined below. -->
            will be links to other websites, like github or kaggle. -->
           {% assign contactInfoArray = section | split: "</h1>" | last | split: "<h2" | first | split: "</p>" %}
           {% assign locationText = contactInfoArray | first | strip_html %}
-          {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html %}
+          {% assign emailAddressText = contactInfoArray | slice: 1 | first | strip_html | lstrip %}
           {% assign contactInfoArrayLastIndex = contactInfoArray.size | minus: 3 %}
           {% assign contactLinkArray = contactInfoArray | slice: 2, contactInfoArrayLastIndex %}
           <div class="name_and_contact_links_container">
