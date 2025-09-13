@@ -30,7 +30,7 @@
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
     --print_body_line_height: 15pt;
-    --print_location_and_contact_links_gap: .01in;
+    --print_location_and_contact_links_gap: .04in;
     --print_location_and_contact_links_size: 9pt;
     --print_location_and_contact_links_line_height: 9pt;
     --print_section_vert_padding: .1in;
