@@ -39,6 +39,8 @@
     --print_name_and_contact_links_container_margin_bottom: calc(var(--print_section_vert_padding)*2);
     --print_company_gap: .1in;
     --print_job_gap: .04in;
+    --print_margin_top_bottom: .4in;
+    --print_margin_left_right: .75in;
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
@@ -57,9 +59,6 @@
 
     --profile_pic_width_mobile: 44px;
     --padding_left_right_mobile: 16px;
-
-    --print_margin_top_bottom: .4375in; /* 7/16 in */
-    --print_margin_left_right: .75in;
 }
 
 html {
