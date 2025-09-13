@@ -39,7 +39,7 @@
     --print_name_and_contact_links_container_margin_bottom: calc(var(--print_section_vert_padding)*2);
     --print_company_gap: .1in;
     --print_job_gap: .04in;
-    --print_margin_top_bottom: .4in;
+    --print_margin_top_bottom: .3125in; /* 5/16 in */
     --print_margin_left_right: .75in;
 
     --screen_indent_width: 20px;
