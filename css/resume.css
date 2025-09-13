@@ -29,7 +29,7 @@
 
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
-    --print_body_line_height: 20pt;
+    --print_body_line_height: 12pt;
     --print_name_and_contact_links_container_margin_top: 0in;
     --print_name_and_contact_links_container_margin_bottom: .25in;
     --print_location_and_contact_links_gap: 0in;
