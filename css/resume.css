@@ -35,7 +35,7 @@
     --print_location_and_contact_links_line_height: 9pt;
     --print_section_vert_padding: .1in;
     --print_section_title_gap: .02in;
-    --print_name_and_contact_links_container_margin_top: 0in;
+    --print_name_and_contact_links_container_margin_top: .01in;
     --print_name_and_contact_links_container_margin_bottom: calc(var(--print_section_vert_padding)*2);
     --print_company_gap: .1in;
     --print_job_gap: .04in;
