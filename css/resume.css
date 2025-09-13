@@ -614,7 +614,7 @@ footer {
     }
 
     .my_location::before {
-        content: "\00a0\00a0\00a0\00a0\00a0";
+        content: "\00a0\00a0⋅\00a0\00a0";
     }
 
     .name_and_contact_links_container {
