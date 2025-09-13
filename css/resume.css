@@ -39,7 +39,7 @@
     --print_name_and_contact_links_container_margin_bottom: calc(var(--print_section_vert_padding)*2);
     --print_company_gap: .1in;
     --print_job_gap: .04in;
-    --print_margin_top_bottom: .3125in; /* 5/16 in */
+    --print_margin_top_bottom: .375in; /* 3/8 in */
     --print_margin_left_right: .875in; /* 7/8 in */
 
     --screen_indent_width: 20px;
@@ -542,6 +542,7 @@ footer {
 
     body {
         margin-top: 0in;
+        margin-bottom: 0in;
         padding-left: 0in;
         padding-right: 0in;
         max-width: none;
