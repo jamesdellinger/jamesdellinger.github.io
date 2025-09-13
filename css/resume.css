@@ -622,9 +622,7 @@ footer {
 
     .my_location_and_contact_links_container {
         display: flex; 
-        justify-content: space-between; 
-        padding-left: 30%;
-        padding-right: 30%;
+        justify-content: center; 
         margin-top: var(--print_location_and_contact_links_gap);
     }
 
