@@ -38,7 +38,7 @@
     --print_section_vert_padding: .125in;
     --print_section_title_gap: .03125in;
     --print_company_gap: .1in;
-    --print_job_gap: .0625in;
+    --print_job_gap: .05in;
 
     --screen_indent_width: 20px;
     --body_fontsize: 14px;
