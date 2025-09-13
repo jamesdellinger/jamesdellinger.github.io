@@ -34,9 +34,9 @@
     --print_name_and_contact_links_container_margin_bottom: .25in;
     --print_location_and_contact_links_gap: 0in;
     --print_location_and_contact_links_size: 9pt;
-    --print_location_and_contact_links_line_height: 18pt;
-    --print_section_vert_padding: .25in;
-    --print_section_title_gap: .25in;
+    --print_location_and_contact_links_line_height: 13pt;
+    --print_section_vert_padding: .125in;
+    --print_section_title_gap: .125in;
     --print_company_gap: 14px;
     --print_job_gap: 14px;
 
