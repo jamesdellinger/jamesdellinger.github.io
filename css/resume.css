@@ -472,9 +472,13 @@ footer {
 
     h3, h4 {
         line-height: inherit;
-        font-size: 19px;
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+
+    h3 {
+        font-size: 19px;
+        font-weight: 300;
     }
 
     h4 {
