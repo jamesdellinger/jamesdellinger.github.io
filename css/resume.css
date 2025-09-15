@@ -516,6 +516,10 @@ footer {
         flex-direction: column;
     }
 
+    .company_city {
+        color: var(--gray_font_color);
+    }
+
     .company_city::before {
         content: "";
     }
