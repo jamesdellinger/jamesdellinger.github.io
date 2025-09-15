@@ -557,7 +557,7 @@ footer {
     }
 
     .job_description_text::before {
-        content: "";
+        content: none;
     }
 
     .job_date_mobile {
