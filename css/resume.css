@@ -565,6 +565,11 @@ footer {
         color: var(--gray_font_color);
     }
 
+    .job_date_mobile::before {
+        content: "\00a0\00a0⋅\00a0\00a0";
+        color: black
+    }
+
     footer {
         color: var(--gray_font_color);
         margin-bottom: calc(var(--p_margin_top_bottom) + var(--footer_margin_top_bottom));
