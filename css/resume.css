@@ -487,10 +487,6 @@ footer {
         font-weight: 500;
     }
 
-    h4::after {
-        content: ":";
-    }
-
     .top_section_profile_pic_title_container_mobile {
         height: var(--profile_pic_width_mobile);
         display: flex;
