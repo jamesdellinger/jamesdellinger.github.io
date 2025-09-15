@@ -547,6 +547,7 @@ footer {
     .job_description_container {
         margin-left: 0px;
         text-indent: 0px;
+        max-width: none;
     }
 
     .job_description_text {
@@ -561,6 +562,7 @@ footer {
 
     .job_date_mobile {
         display: inline;
+        color: var(--gray_font_color);
     }
 
     footer {
