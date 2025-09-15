@@ -27,6 +27,9 @@
     --company_gap: 14px;
     --job_gap: 14px;
 
+    /* Vertical spacing for mobile. */
+    --section_title_gap__mobile: 20px;
+
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
     --print_body_line_height: 15pt;
@@ -466,9 +469,9 @@ footer {
     }
 
     h2 {
-        font-size: 26px;
-        margin-top: 22px;
-        margin-bottom: 22px;
+        font-size: 21px;
+        margin-top: 0px;
+        margin-bottom: var(--section_title_gap__mobile);
     }
 
     h3, h4 {
