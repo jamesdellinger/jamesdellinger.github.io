@@ -394,7 +394,8 @@ footer {
     text-align: center; 
 }
 
-.email_print, .contact_info_printed, .top_section_profile_pic_title_container_mobile {
+.email_print, .contact_info_printed, .top_section_profile_pic_title_container_mobile,
+.job_date_mobile {
     display: none;
 }
 
@@ -480,7 +481,7 @@ footer {
         font-size: 19px;
         font-weight: 600;
     }
-
+    
     h4 {
         font-size: 17px;
         text-decoration: none;
@@ -567,7 +568,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     hr, 
-    .jobBulletCircle, .jobBulletChevron,
+    .jobBulletCircle, .jobBulletChevron, .job_date,
     .contact_info_printed,
     .header_title_container, .header_profile_pic_container,
     .header_profile_pic, .header_title_text{
@@ -620,7 +621,7 @@ footer {
     .contact_info,
     .email_screen, .contact_links_container, .contact_link,
     hr, 
-    .jobBulletCircle, .jobBulletChevron,
+    .jobBulletCircle, .jobBulletChevron, .job_date_mobile,
     .top_section_profile_pic_title_container_mobile { 
         display: none; 
     }
