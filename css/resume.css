@@ -199,7 +199,7 @@ ul {
 }
 
 .job_description_text::before {
-    content: ":\00a0";
+    content: ":\00a0\00a0";
 }
 
 .major_header_date, .contact_info {
