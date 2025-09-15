@@ -189,7 +189,6 @@ ul {
 }
 
 .job_description_container {
-    display: inline;
     max-width: 500px; 
     margin-left: var(--screen_indent_width); 
     text-indent: calc(-1*var(--screen_indent_width));
