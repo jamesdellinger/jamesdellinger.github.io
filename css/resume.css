@@ -532,27 +532,27 @@ footer {
     }
 
     .company_city::before {
-        content: "";
+        content: none;
     }
 
     .company_city::after {
-        content: "";
+        content: none;
     }
 
     .company_description {
-        text-indent: 0px;
+        text-indent: none;
         padding-left: 20px;
     }
 
     .job_description_container {
         margin-left: 0px;
-        text-indent: 0px;
+        text-indent: none;
         max-width: none;
     }
 
     .job_description_text {
         display: block;
-        text-indent: 0px;
+        text-indent: none;
         padding-left: 20px;
     }
 
