@@ -469,7 +469,8 @@ footer {
     }
 
     h2 {
-        font-size: 21px;
+        font-size: 24px;
+        font-weight: 300;
         margin-top: 0px;
         margin-bottom: var(--section_title_gap__mobile);
     }
