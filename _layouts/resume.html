@@ -185,7 +185,7 @@ into the html template defined below. -->
             {% endif %}
 
             <!-- Format job header. Include date if markdown file listed it in the job header, after a comma. -->
-            {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | strip_html %}
+            {% assign jobNameText = item | split: "</h4>" | first | split: ">" | last | strip_html | strip %}
             {% assign jobDateText = "" %}
             {% if jobNameText contains ", " %}
               {% assign jobDateText = jobNameText | split: ", " | last %}
