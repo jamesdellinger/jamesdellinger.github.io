@@ -528,6 +528,10 @@ footer {
         display: block;
     }
 
+    .job_description_text::before {
+        content: "";
+    }
+
     footer {
         color: var(--gray_font_color);
         margin-bottom: calc(var(--p_margin_top_bottom) + var(--footer_margin_top_bottom));
