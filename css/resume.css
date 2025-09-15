@@ -478,12 +478,13 @@ footer {
 
     h3 {
         font-size: 19px;
-        font-weight: 300;
+        font-weight: 500; /* 600; */
     }
 
     h4 {
         font-size: 17px;
         text-decoration: none;
+        font-weight: 400;
     }
 
     h4::after {
