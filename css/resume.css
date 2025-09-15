@@ -507,7 +507,7 @@ footer {
     }
 
     .company_header_container {
-        align-items: flex-end;
+        flex-direction: column;
     }
 
     .company_name_city_container {
