@@ -192,7 +192,7 @@ into the html template defined below. -->
               {% assign jobNameText = jobNameText | split: ", " | first %}
             {% endif %}
             {% assign jobDescriptionText = item | split: "</h4>" | last %}
-            {% assign jobDescriptionText = jobDescriptionText | strip_html %}
+            {% assign jobDescriptionText = jobDescriptionText | strip_html | strip %}
             {% if forloop.last %}
               <div class="last_job_container">
             {% else %}
