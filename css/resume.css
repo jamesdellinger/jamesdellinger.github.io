@@ -509,6 +509,11 @@ footer {
         font-weight: 600;
     }
 
+    .company_name_city_container {
+        display: flex; 
+        flex-direction: column; 
+    }
+
     footer {
         color: var(--gray_font_color);
         margin-bottom: calc(var(--p_margin_top_bottom) + var(--footer_margin_top_bottom));
