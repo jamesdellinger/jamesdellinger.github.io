@@ -543,7 +543,8 @@ footer {
     .name_and_contact_links_container {
         margin-top: calc(var(--mobile_section_vert_padding)*2);
         margin-bottom: calc(var(--mobile_section_vert_padding)*2);
-        padding-left: calc(var(--profile_pic_width_mobile)+ var(--padding_left_right_mobile));
+        padding-left: calc(var(--profile_pic_width_mobile) + var(--padding_left_right_mobile));
+        padding-left: 60px;
     }
 
     .my_location_and_contact_links_container {
