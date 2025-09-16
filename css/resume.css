@@ -550,8 +550,8 @@ footer {
         flex-direction: column;
     }
 
-    .contact_link::before {
-        content: none;
+    .contact_link {
+        padding-left: 0px;
     }
 
     .company_or_degree_container {
