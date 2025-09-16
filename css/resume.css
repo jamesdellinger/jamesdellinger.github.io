@@ -28,8 +28,7 @@
     --job_gap: 14px;
 
     /* Vertical spacing for mobile. */
-    --mobile_section_title_gap: 20px;
-    --mobile_section_margin_top_bottom: 0px;
+    --mobile_section_title_gap: 10px;
     --mobile_section_padding_top_bottom: 15px;
 
     /* Vertical spacing for print. */
@@ -467,8 +466,7 @@ footer {
 
     section {
         padding: 0px;
-        margin-top: var(--mobile_section_margin_top_bottom);
-        margin-bottom: var(--mobile_section_margin_top_bottom);
+        margin: 0px;
         padding-top: var(--mobile_section_padding_top_bottom);
         padding-bottom: var(--mobile_section_padding_top_bottom);
         border-width: 0px;
