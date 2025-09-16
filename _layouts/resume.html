@@ -98,13 +98,15 @@ into the html template defined below. -->
             <div class="my_location_and_contact_links_container">
               <p class="email_print"><span style="unicode-bidi:bidi-override; direction: rtl;">{{ reversedEmail }}</span></p>
               <p class="my_location">{{ locationText }}</p>
-              <div class="contact_links_container">
+              <div class="email_contact_links_container">
                 <p class="email_screen">{{ emailAddressText }}</p>
+                <div class="contact_links_container">
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
                       <p class="contact_link">{{ item | split: "p>" | last }}</p>
                   {% endif %}
                 {% endfor %}
+                </div>
               </div>
             </div>
           </div>

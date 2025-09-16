@@ -146,7 +146,7 @@ ul {
     margin-top: var(--location_and_contact_links_gap);
 }
 
-.contact_links_container {
+.email_contact_links_container {
     display: flex;
 }
 
@@ -546,8 +546,12 @@ footer {
         flex-direction: column;
     }
 
-    .contact_links_container {
+    .email_contact_links_container {
         flex-direction: column;
+    }
+
+    .contact_links_container {
+        display: flex;
     }
 
     .contact_link {
@@ -699,7 +703,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info,
-    .email_screen, .contact_links_container, .contact_link,
+    .email_screen, .email_contact_links_container, .contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron, .job_date_mobile,
     .top_section_profile_pic_title_container_mobile { 
