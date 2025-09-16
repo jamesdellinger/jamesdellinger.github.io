@@ -566,8 +566,7 @@ footer {
     }
 
     .company_description {
-        text-indent: 20px;
-        /* padding-left: 20px; */
+        text-indent: 0px;
     }
     
     .job_container, .last_job_container {
@@ -586,8 +585,7 @@ footer {
 
     .job_description_text {
         display: block;
-        text-indent: 20px;
-        /* padding-left: 20px; */
+        text-indent: 0px;
     }
 
     .job_description_text::before {
