@@ -579,7 +579,7 @@ footer {
     }
     
     .degree_name::after {
-        content: none;
+        content: ",\00a0";
     }
     
     .univ_degree_date_container {
