@@ -253,7 +253,7 @@ into the html template defined below. -->
         <section class="last_section" id="lanuages_hobbies_section">
           <!-- Place two spaces after colon, to keep consistent with format in between each job title and description. -->
           {% assign languagesText = section | split: "</p>" | first | strip_html | replace_first: ": ", ":&nbsp;&nbsp;" %}
-          {% assign hobbiesText =  section | split: "<p>" | last | split: "</p" | first | strip_html | replace_first: ": ", ":&nbsp;&nbsp;" %}
+          {% assign hobbiesText =  section | split: "<p>" | last | split: "</p" | first | replace_first: ": ", ":&nbsp;&nbsp;" %}
           <p class="language_hobbies_text">{{ languagesText }}</p>
           <p class="language_hobbies_text">{{ hobbiesText }}</p>
         </section>
