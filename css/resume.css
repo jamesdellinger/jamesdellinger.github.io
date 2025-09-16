@@ -567,6 +567,7 @@ footer {
 
     .company_description {
         text-indent: 0px;
+        margin-bottom: var(--mobile_section_vert_padding);
     }
     
     .job_container, .last_job_container {
