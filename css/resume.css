@@ -226,9 +226,13 @@ ul {
     content: ",\00a0";
 }
 
-.univ_degree_date_container {
+.univ_name_degree_date_container {
     display: flex; 
     justify-content: flex-start;
+}
+
+.univ_degree_date_container {
+    display: inline;
 }
 
 .language_hobbies_text {
@@ -582,7 +586,7 @@ footer {
         content: ",\00a0";
     }
     
-    .univ_degree_date_container {
+    .univ_name_degree_date_container {
         display: flex; 
         justify-content: flex-start;
     }
