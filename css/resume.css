@@ -514,7 +514,8 @@ footer {
         align-items: center;
         line-height:0;
         margin-top: calc(var(--padding_left_right_mobile));
-        margin-bottom: calc(5*var(--padding_left_right_mobile)/2);
+        /* margin-bottom: calc(5*var(--padding_left_right_mobile)/2); */
+        margin-bottom: 0px;
     }
 
     .profile_pic_container_mobile {
@@ -533,6 +534,20 @@ footer {
     .name_header_mobile {
         font-size: 30px;
         font-weight: 600;
+    }
+
+    .name_and_contact_links_container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .my_location_and_contact_links_container {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .contact_links_container {
+        flex-direction: column;
     }
 
     .company_or_degree_container {
