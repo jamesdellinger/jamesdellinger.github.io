@@ -150,6 +150,10 @@ ul {
     display: flex;
 }
 
+.contact_links_container {
+    display: flex;
+}
+
 .contact_link {
     padding-left: var(--screen_indent_width);
 }
