@@ -219,11 +219,11 @@ ul {
 }
 
 .degree_name::before {
-    content: "—"
+    content: "—";
 }
 
 .degree_name::after {
-    content: ",\00a0"
+    content: ",\00a0";
 }
 
 .univ_degree_date_container {
@@ -572,6 +572,19 @@ footer {
     .job_date_mobile::before {
         content: "\00a0\00a0⋅\00a0\00a0";
         color: black
+    }
+
+    .degree_name::before {
+        content: none;
+    }
+    
+    .degree_name::after {
+        content: none;
+    }
+    
+    .univ_degree_date_container {
+        display: flex; 
+        justify-content: flex-start;
     }
 
     footer {
