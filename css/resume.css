@@ -29,7 +29,8 @@
 
     /* Vertical spacing for mobile. */
     --mobile_section_title_gap: 20px;
-    --mobile_section_margin_top_bottom: 15px;
+    --mobile_section_margin_top_bottom: 0px;
+    --mobile_section_padding_top_bottom: 5px;
 
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
@@ -468,11 +469,17 @@ footer {
         padding: 0px;
         margin-top: var(--mobile_section_margin_top_bottom);
         margin-bottom: var(--mobile_section_margin_top_bottom);
+        padding-top: var(--mobile_section_padding_top_bottom);
+        padding-bottom: var(--mobile_section_padding_top_bottom);
         border-width: 0px;
         border-radius: 0%;
         border-style: none;
         line-height: 28px;
         font-weight: auto;
+    }
+
+    .top_section {
+        padding-top: 0px;
     }
 
     h2 {
