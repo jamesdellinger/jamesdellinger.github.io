@@ -558,16 +558,12 @@ footer {
         justify-content: flex-start;
     }
 
-    .contact_link {
-        padding-left: 0px;
-    }
-
-    .first_contact_link {
+    .contact_link, .first_contact_link {
         padding-left: 0px;
     }
 
     .contact_link::before {
-        content: "\00a0\00a0⋅\00a0\00a0";
+        content: "\00a0\00a0\00a0⋅\00a0\00a0\00a0";
     }
 
     .company_or_degree_container {
