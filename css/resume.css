@@ -535,7 +535,7 @@ footer {
     }
 
     .name_header_mobile {
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 600;
         line-height: var(--profile_pic_width_mobile);
     }
