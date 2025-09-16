@@ -516,7 +516,7 @@ footer {
         vertical-align: middle;
         justify-content: flex-start;
         align-items: center;
-        line-height:0;
+        /* line-height:0; */
         margin-top: calc(var(--padding_left_right_mobile));
         /* margin-bottom: calc(5*var(--padding_left_right_mobile)/2); */
         margin-bottom: 0px;
@@ -538,6 +538,7 @@ footer {
     .name_header_mobile {
         font-size: 30px;
         font-weight: 600;
+        line-height: var(--profile_pic_width_mobile);
     }
 
     .name_and_contact_links_container {
