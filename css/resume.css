@@ -555,7 +555,8 @@ footer {
     }
 
     .contact_links_container {
-        justify-content: space-between;
+        justify-content: flex-start;
+        column-gap: 30px;
     }
 
     .contact_link {
