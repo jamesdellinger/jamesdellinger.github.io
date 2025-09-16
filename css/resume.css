@@ -28,7 +28,8 @@
     --job_gap: 14px;
 
     /* Vertical spacing for mobile. */
-    --section_title_gap__mobile: 20px;
+    --mobile_section_title_gap: 20px;
+    --mobile_section_margin_top_bottom: 15px;
 
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
@@ -465,7 +466,8 @@ footer {
 
     section {
         padding: 0px;
-        margin: 0px;
+        margin-top: var(--mobile_section_margin_top_bottom);
+        margin-bottom: var(--mobile_section_margin_top_bottom);
         border-width: 0px;
         border-radius: 0%;
         border-style: none;
@@ -477,7 +479,7 @@ footer {
         font-size: 23px;
         font-weight: 300;
         margin-top: 0px;
-        margin-bottom: var(--section_title_gap__mobile);
+        margin-bottom: var(--mobile_section_title_gap);
     }
 
     h3, h4 {
