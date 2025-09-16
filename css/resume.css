@@ -154,7 +154,7 @@ ul {
     display: flex;
 }
 
-.contact_link {
+.contact_link, .first_contact_link {
     padding-left: var(--screen_indent_width);
 }
 
@@ -559,6 +559,10 @@ footer {
     }
 
     .contact_link {
+        padding-left: 0px;
+    }
+
+    .first_contact_link {
         padding-left: 0px;
     }
 
