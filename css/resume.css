@@ -537,8 +537,8 @@ footer {
     }
 
     .name_and_contact_links_container {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: calc(var(--mobile_section_vert_padding)*2);
+        margin-bottom: calc(var(--mobile_section_vert_padding)*2);
     }
 
     .my_location_and_contact_links_container {
