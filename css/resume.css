@@ -22,16 +22,16 @@
     --location_and_contact_links_gap: 4px;
     --section_margin_top_bottom: 6px;
     --section_border_width: 1px;
-    --section_vert_padding: 14px;
+    --section_vert_padding: 14px; /* Actual gap between any two sections is always 2*<section_vert_padding> */
     --section_title_gap: 14px;
     --company_gap: 14px;
     --job_gap: 14px;
 
     /* Vertical spacing for mobile. */
     --mobile_section_title_gap: 5px;
-    --mobile_section_padding_top_bottom: 15px;
-    --mobile_company_gap: 15px;
-    --mobile_job_gap: 10px;
+    --mobile_section_vert_padding: 15px;
+    --mobile_company_gap: 20px;
+    --mobile_job_gap: 15px;
 
     /* Vertical spacing for print. */
     --print_body_font_size: 10.5pt;
@@ -469,8 +469,8 @@ footer {
     section {
         padding: 0px;
         margin: 0px;
-        padding-top: var(--mobile_section_padding_top_bottom);
-        padding-bottom: var(--mobile_section_padding_top_bottom);
+        padding-top: var(--mobile_section_vert_padding);
+        padding-bottom: var(--mobile_section_vert_padding);
         border-width: 0px;
         border-radius: 0%;
         border-style: none;
