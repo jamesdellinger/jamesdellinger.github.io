@@ -615,6 +615,10 @@ footer {
         flex-direction: column;
     }
 
+    .degree_description {
+        text-indent: 0px;
+    }
+
     footer {
         color: var(--gray_font_color);
         padding-bottom: var(--mobile_section_vert_padding);
