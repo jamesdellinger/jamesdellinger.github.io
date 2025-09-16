@@ -239,8 +239,7 @@ into the html template defined below. -->
           {% endif %}
             <div class="univ_degree_date_container">
               <h3>{{ univNameText }}</h3>
-              <p class="degree_name">{{ degreeNameText }}</p>
-              <p>{{ degreeDateText }}</p>
+              <div><p class="degree_name">{{ degreeNameText }}</p><p>{{ degreeDateText }}</p></div>
             </div>
           {% assign degreeDescriptionText = degree | split: "</h3>" | last | strip_html %}
           <p class="degree_description">{{ degreeDescriptionText }}</p>
