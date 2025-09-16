@@ -103,7 +103,11 @@ into the html template defined below. -->
                 <div class="contact_links_container">
                 {% for item in contactLinkArray %}
                   {% if item contains "href" %}
+                    {% if forloop.first %} 
+                      <p class="first_contact_link">{{ item | split: "p>" | last }}</p>
+                    {% else %}
                       <p class="contact_link">{{ item | split: "p>" | last }}</p>
+                    {% endif %}
                   {% endif %}
                 {% endfor %}
                 </div>

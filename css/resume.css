@@ -556,11 +556,14 @@ footer {
 
     .contact_links_container {
         justify-content: flex-start;
-        column-gap: 40px;
     }
 
     .contact_link {
         padding-left: 0px;
+    }
+
+    .contact_link::before {
+        content: "\00a0\00a0⋅\00a0\00a0";
     }
 
     .company_or_degree_container {
@@ -708,7 +711,7 @@ footer {
     .top_section_background_image_container, 
     .top_section_profile_pic_container, 
     .contact_info,
-    .email_screen, .email_contact_links_container, .contact_link,
+    .email_screen, .email_contact_links_container, .contact_link, .first_contact_link,
     hr, 
     .jobBulletCircle, .jobBulletChevron, .job_date_mobile,
     .top_section_profile_pic_title_container_mobile { 
